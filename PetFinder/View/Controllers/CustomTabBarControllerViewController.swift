@@ -6,47 +6,66 @@
 //
 
 import UIKit
+import SnapKit
+//import STTabbar
 
 class CustomTabBarControllerViewController: UITabBarController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTabBar()
         configureTabBar()
+        let customTabBar = STTabbar()
+        setValue(customTabBar, forKey: "tabBar")
+        customTabBar.centerButtonColor = UIColor(hex: 0x8965C3, alpha: 1)
+        customTabBar.buttonImage = UIImage(named: "createAd")
+        customTabBar.centerButtonHeight = 48
+        customTabBar.padding = 5
+        customTabBar.tabbarColor = UIColor(hex: 0xfcfcfc, alpha: 1)
+        customTabBar.unselectedItemColor = UIColor(hex: 0x8d8d8d, alpha: 1)
     }
     
     func setupTabBar() {
-        viewControllers = [setupVC(viewController: MainViewController(), title: "Доска объявлений", image: UIImage(systemName: "house.fill")), setupVC(viewController: SettingsViewController(), title: "Настройки", image: UIImage(systemName: "gearshape")), setupVC(viewController: ProfileViewController(), title: "Профиль", image: UIImage(systemName: "person.fill"))]
+        
+        let mainViewController = setupVC(viewController: MainViewController(), title: "Объявления", image: setupImage(named: "clipboard"))
+        
+        let createViewController = setupVC(viewController: UIViewController(), title: "Сервисы", image: setupImage(named: "services"))
+        let nocreateViewController = setupVC(viewController: UIViewController(), title: "", image: nil)
+        let profileViewController = setupVC(viewController: ProfileViewController(), title: "Избранное", image: setupImage(named: "heart"))
+        let createViewControllerS = setupVC(viewController: UIViewController(), title: "Профиль", image: setupImage(named: "profile"))
+        
+        // Ограничиваем количество отображаемых контроллеров в таб-баре
+        let visibleViewControllers = [mainViewController, createViewController, nocreateViewController, profileViewController, createViewControllerS]
+        viewControllers = visibleViewControllers
+    }
+
+    func setupImage(named: String) -> UIImage? {
+        if let image = UIImage(named: named) {
+            return UIImage(cgImage: (image.cgImage!), scale: 12, orientation: image.imageOrientation)
+
+        } else {
+            return nil
+        }
+
     }
     
     private func setupVC(viewController: UIViewController, title: String, image: UIImage?) -> UIViewController {
+        let font = UIFont.sfProText(ofSize: 10, weight: .regular)
+        let attributes: [NSAttributedString.Key: Any] = [.font: font]
+
         viewController.tabBarItem.title = title
+        viewController.tabBarItem.setTitleTextAttributes(attributes, for: .normal)
         viewController.tabBarItem.image = image
         return viewController
     }
     
     func configureTabBar() {
-        let positionOnX: CGFloat = 10
-        let positionOnY: CGFloat = 14
-        let width = tabBar.bounds.width - positionOnX * 2
-        let height = tabBar.bounds.height + positionOnY * 2
-        
-        let roundLayer = CAShapeLayer()
-        
-        let bezierPath = UIBezierPath(roundedRect: CGRect(x: positionOnX, y: tabBar.bounds.minY - positionOnY, width: width, height: height), cornerRadius: 10)
+        tabBar.tintColor = UIColor(hex: 0x8965C3, alpha: 1)
+        tabBar.backgroundColor = UIColor(hex: 0xfcfcfc, alpha: 1)
+    }
     
-        
-        roundLayer.path = bezierPath.cgPath
-        roundLayer.fillColor = UIColor.black.cgColor
-        roundLayer.opacity = 0.5
-        
-        tabBar.layer.insertSublayer(roundLayer, at: 0)
-        
-        tabBar.itemWidth = width / 1
-        tabBar.itemPositioning = .centered
-        
-        tabBar.tintColor = .tabBarAccent
-        tabBar.unselectedItemTintColor = .tabBarItemLight
-        tabBar.backgroundColor = .clear
+    @objc
+    func addTarget() {
+        print(1)
     }
 }

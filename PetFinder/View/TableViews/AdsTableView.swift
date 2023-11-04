@@ -30,6 +30,7 @@ class AdsTableView: UITableView {
         self.dataSource = self
         self.delegate = self
         self.separatorStyle = .none
+        self.backgroundColor = .clear
     }
 }
 
@@ -46,24 +47,20 @@ extension AdsTableView: UITableViewDataSource {
     }
     
     private func configure(cell: AdsTableViewCell, for indexPath: IndexPath) -> UITableViewCell {
-        cell.createUI(text: "Бетси")
+        cell.createUI(text: "Бетси", data: ["Дворняга", "Рыжий", "Мальчик", "1.5 года"])
         return cell
     }
+    
 }
 
 extension AdsTableView: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print(indexPath.row) // Здесь можно выполнить действие, связанное с выбором строки
+        print(indexPath.row)
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-          let tableViewHeight = tableView.bounds.height
-          let cellHeight = tableViewHeight * 0.4 // 20% от высоты tableView
-          return cellHeight
-      }
-
-    
+        return 235
+    }
 }
-
 
 
