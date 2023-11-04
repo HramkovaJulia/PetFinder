@@ -53,14 +53,20 @@ extension AdsTableView: UITableViewDataSource {
     
 }
 
+
 extension AdsTableView: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print(indexPath.row)
+        if let viewController = UIApplication.shared.keyWindow?.rootViewController {
+            let adViewController = AdViewController()
+            adViewController.modalPresentationStyle = .fullScreen
+            viewController.present(adViewController, animated: true)
+        }
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 235
     }
 }
+
 
 
