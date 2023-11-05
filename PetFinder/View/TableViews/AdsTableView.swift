@@ -47,7 +47,7 @@ extension AdsTableView: UITableViewDataSource {
     }
     
     private func configure(cell: AdsTableViewCell, for indexPath: IndexPath) -> UITableViewCell {
-        cell.createUI(text: "Бетси", data: ["Дворняга", "Рыжий", "Мальчик", "1.5 года"])
+        cell.createUI(text: "Джек", data: ["Дворняга", "Рыжий", "Мальчик", "1.5 года"])
         return cell
     }
     

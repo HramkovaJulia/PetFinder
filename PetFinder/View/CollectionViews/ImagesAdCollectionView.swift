@@ -4,17 +4,12 @@
 //
 //  Created by Алексей Шамрей on 4.11.23.
 //
-
-
-
 import UIKit
 import SnapKit
 
 class ImagesAdCollectionView: UICollectionView {
     var didSelectItem: ((Int) -> Void)?
     var didSelectItemWithPage: ((Int) -> Void)?
-
-
     
     init() {
         let layout = UICollectionViewFlowLayout()
@@ -44,7 +39,6 @@ class ImagesAdCollectionView: UICollectionView {
         layout.minimumLineSpacing = 0
         self.collectionViewLayout = layout
     }
-
 }
 
 extension ImagesAdCollectionView: UICollectionViewDataSource {
@@ -63,9 +57,6 @@ extension ImagesAdCollectionView: UICollectionViewDataSource {
     private func configure(cell: ImageAdCollectionViewCell, for indexPath: IndexPath) -> UICollectionViewCell {
         cell.setupUI()
         return cell
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
     }
 
 }

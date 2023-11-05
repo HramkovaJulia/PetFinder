@@ -75,7 +75,6 @@ class AdsTableViewCell: UITableViewCell {
         typeAd.clipsToBounds = true
         return typeAd
     }()
-
     
     private lazy var typeAdText: UILabel = {
         let typeAdText = UILabel()
@@ -157,7 +156,7 @@ class AdsTableViewCell: UITableViewCell {
         petSignsLabelStack.addArrangedSubview(createStackView(firsLabel: "Порода: ", secondLabel: data[0]))
         petSignsLabelStack.addArrangedSubview(createStackView(firsLabel: "Окрас: ", secondLabel: data[1]))
         petSignsLabelStack.addArrangedSubview(createStackView(firsLabel: "Пол: ", secondLabel: data[2]))
-        petSignsLabelStack.addArrangedSubview(createStackView(firsLabel: "Возраст: ", secondLabel: data[2]))
+        petSignsLabelStack.addArrangedSubview(createStackView(firsLabel: "Возраст: ", secondLabel: data[3]))
     }
     
     func createStackView(firsLabel: String, secondLabel: String) -> UIStackView {
