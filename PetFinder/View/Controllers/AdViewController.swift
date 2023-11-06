@@ -13,6 +13,18 @@ class AdViewController: UIViewController {
     private let imageCollectionView = ImagesAdCollectionView()
     var pageControl = UIPageControl()
     var toogleShowText = true
+    private let dataModel: LostPetCard
+    
+    
+    init(viewModel: LostPetCard) {
+        self.dataModel = viewModel
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     
     private lazy var leftButton: UIButton = {
         let leftButton = UIButton()
@@ -45,7 +57,6 @@ class AdViewController: UIViewController {
         dateCreation.font = UIFont.sfProText(ofSize: 12, weight: .light)
         dateCreation.textColor = .black
         dateCreation.numberOfLines = 0
-        dateCreation.text = "Вчера, 21:35"
         return dateCreation
     }()
     
@@ -89,7 +100,6 @@ class AdViewController: UIViewController {
     private lazy var descriptionText: UILabel = {
         let labelAd = UILabel()
         labelAd.font = UIFont.sfProText(ofSize: 16, weight: .regular)
-        labelAd.text = "Пропал пёс в районе центрального рынка. На нём был красный ошейник с косточкой, откликается на кличку Джек, понимает много команд. Очень дружелюбный, ко всем подходит, любит давать лапу. Очень прошу помочь найти любимца"
         labelAd.textColor = .black
         labelAd.lineBreakMode = .byTruncatingTail
         labelAd.numberOfLines = 5
@@ -152,10 +162,12 @@ class AdViewController: UIViewController {
     
     func setupUI() {
         setupPageControll()
-        createTypeAdStack() 
-        createPetSingsStack(data: ["Дворняга", "Рыжий", "Мальчик", "1.5 года"])
+        createTypeAdStack()
+        createPetSignsStack()
         setupView()
         setupConstaints()
+        setupDataView()
+        setupTypeAd()
     }
     
     //MARK: ButtonControll
@@ -206,11 +218,11 @@ class AdViewController: UIViewController {
         
     }
     
-    func createPetSingsStack(data: [String]) {
-        petSignsLabelStack.addArrangedSubview(createStackView(firsLabel: "Порода: ", secondLabel: data[0]))
-        petSignsLabelStack.addArrangedSubview(createStackView(firsLabel: "Окрас: ", secondLabel: data[1]))
-        petSignsLabelStack.addArrangedSubview(createStackView(firsLabel: "Пол: ", secondLabel: data[2]))
-        petSignsLabelStack.addArrangedSubview(createStackView(firsLabel: "Возраст: ", secondLabel: data[3]))
+    func createPetSignsStack() {
+        petSignsLabelStack.addArrangedSubview(createStackView(firsLabel: "Порода: ", secondLabel: dataModel.breed))
+        petSignsLabelStack.addArrangedSubview(createStackView(firsLabel: "Окрас: ", secondLabel: dataModel.color))
+        petSignsLabelStack.addArrangedSubview(createStackView(firsLabel: "Пол: ", secondLabel: dataModel.gender == .male ? "Мальчик" : "Девочка"))
+        petSignsLabelStack.addArrangedSubview(createStackView(firsLabel: "Возраст: ", secondLabel: String(dataModel.age)))
     }
     
     func createStackView(firsLabel: String, secondLabel: String) -> UIStackView {
@@ -331,6 +343,31 @@ class AdViewController: UIViewController {
             maker.right.equalToSuperview().inset(15)
             maker.bottom.equalToSuperview().inset(34)
             maker.height.equalTo(68)
+        }
+    }
+    
+    func setupDataView() {
+        labelAd.text = dataModel.petName
+        dateCreation.text = dataModel.createPost
+        descriptionText.text = dataModel.additionalInfo
+    }
+    
+    func setupTypeAd() {
+        if dataModel.adType == .lost {
+            typeAdText.text = "Потерян"
+            typeAd.tintColor = .red
+            let image = UIImage(named: "lost_image")
+            typeAd.image = image
+        } else if dataModel.adType == .found {
+            typeAdText.text = "Найден"
+            typeAd.tintColor = .green
+            let image = UIImage(named: "lost_image")
+            typeAd.image = image!.withTintColor(.green, renderingMode: .alwaysOriginal)
+        } else {
+            typeAdText.text = "Ищет дом"
+            typeAd.tintColor = .green
+            let image = UIImage(named: "lost_image")
+            typeAd.image = image!.withTintColor( UIColor(hex: 0xFF9C40, alpha: 1), renderingMode: .alwaysOriginal)
         }
     }
 }

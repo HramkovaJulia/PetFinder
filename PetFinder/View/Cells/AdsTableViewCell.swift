@@ -26,8 +26,6 @@ class AdsTableViewCell: UITableViewCell {
         favorites.imageView?.layer.shadowOpacity = 0.5
         favorites.imageView?.layer.shadowOffset = CGSize(width: 1, height: 1)
         favorites.imageView?.layer.shadowRadius = 1
-
-
         return favorites
     }()
 
@@ -69,8 +67,6 @@ class AdsTableViewCell: UITableViewCell {
     
     private lazy var typeAd: UIImageView = {
         let typeAd = UIImageView()
-        let image = UIImage(named: "lost_image")
-        typeAd.image = image
         typeAd.contentMode = .scaleAspectFill
         typeAd.clipsToBounds = true
         return typeAd
@@ -89,7 +85,6 @@ class AdsTableViewCell: UITableViewCell {
         let mainView = UIView()
         mainView.layer.cornerRadius = 12
         mainView.backgroundColor = UIColor(hex: 0xFDF5F0, alpha: 1)
-//        mainView.backgroundColor = .gray
         return mainView
     }()
     
@@ -121,14 +116,15 @@ class AdsTableViewCell: UITableViewCell {
         super.awakeFromNib()
     }
     
-    func createUI(text: String, data: [String]) {
+    func createUI(data: [LostPetCard]) {
         self.selectionStyle = .none
         self.backgroundColor = .clear
-        labelAd.text = text
+        labelAd.text = data[0].petName
         setup()
         createTypeAdStack()
-        createPetSingsStack(data: data)
+        createPetSignsStack(data: data)
         makeConstraints()
+        setupTypeAd(data: data[0].adType)
     }
     
     func createTypeAdStack() {
@@ -152,13 +148,23 @@ class AdsTableViewCell: UITableViewCell {
         mainView.addSubview(favorites)
     }
 
-    func createPetSingsStack(data: [String]) {
-        petSignsLabelStack.addArrangedSubview(createStackView(firsLabel: "Порода: ", secondLabel: data[0]))
-        petSignsLabelStack.addArrangedSubview(createStackView(firsLabel: "Окрас: ", secondLabel: data[1]))
-        petSignsLabelStack.addArrangedSubview(createStackView(firsLabel: "Пол: ", secondLabel: data[2]))
-        petSignsLabelStack.addArrangedSubview(createStackView(firsLabel: "Возраст: ", secondLabel: data[3]))
+    func createPetSignsStack(data: [LostPetCard]) {
+        
+        for arrangedSubview in petSignsLabelStack.arrangedSubviews {
+                if arrangedSubview is UIStackView {
+                    arrangedSubview.removeFromSuperview()
+                }
+            }
+
+        
+        for petCard in data {
+            petSignsLabelStack.addArrangedSubview(createStackView(firsLabel: "Порода: ", secondLabel: petCard.breed))
+            petSignsLabelStack.addArrangedSubview(createStackView(firsLabel: "Окрас: ", secondLabel: petCard.color))
+            petSignsLabelStack.addArrangedSubview(createStackView(firsLabel: "Пол: ", secondLabel: petCard.gender == .male ? "Мальчик" : "Девочка"))
+            petSignsLabelStack.addArrangedSubview(createStackView(firsLabel: "Возраст: ", secondLabel: String(petCard.age)))
+        }
     }
-    
+
     func createStackView(firsLabel: String, secondLabel: String) -> UIStackView {
         let stackView = UIStackView()
         stackView.axis = .horizontal
@@ -169,7 +175,6 @@ class AdsTableViewCell: UITableViewCell {
         
         return stackView
     }
-    
     
     func createStaticklabel(text: String, font: UIFont, color: UIColor) -> UILabel {
         let label = UILabel()
@@ -212,7 +217,6 @@ class AdsTableViewCell: UITableViewCell {
             maker.top.equalTo(labelAd.snp.bottom).inset(-4)
             maker.left.equalToSuperview().inset(16)
             maker.height.equalTo(14)
-            
         }
         
         imagePet.snp.makeConstraints { maker in
@@ -249,6 +253,24 @@ class AdsTableViewCell: UITableViewCell {
             sender.setImage(tintedImage, for: .normal)
         } else {
             sender.setImage(UIImage(named: "star"), for: .normal)
+        }
+    }
+    
+    func setupTypeAd(data: TypeAd) {
+        if data == .lost {
+            typeAdText.text = "Потерян"
+            let image = UIImage(named: "lost_image")
+            typeAd.image = image
+        } else if data == .found {
+            typeAdText.text = "Найден"
+            typeAd.tintColor = .green
+            let image = UIImage(named: "lost_image")
+            typeAd.image = image!.withTintColor(UIColor(hex: 0x24E120, alpha: 1), renderingMode: .alwaysOriginal)
+        } else {
+            typeAdText.text = "Ищет дом"
+            typeAd.tintColor = .green
+            let image = UIImage(named: "lost_image")
+            typeAd.image = image!.withTintColor( UIColor(hex: 0xFF9C40, alpha: 1), renderingMode: .alwaysOriginal)
         }
     }
 
