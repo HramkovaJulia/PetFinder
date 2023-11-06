@@ -8,7 +8,7 @@
 import UIKit
 import SnapKit
 
-class AdViewController: UIViewController {
+class AdViewController: UIViewController{
     
     private let imageCollectionView = ImagesAdCollectionView()
     var pageControl = UIPageControl()
@@ -25,6 +25,17 @@ class AdViewController: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
+    private let scrollView:UIScrollView = {
+         let sc = UIScrollView(frame: .zero)
+         sc.translatesAutoresizingMaskIntoConstraints = false
+         sc.isPagingEnabled = true
+         return sc
+     }()
+    
+    private lazy var contentView: UIView = {
+        let contenntView = UIView()
+        return contenntView
+    }()
     
     private lazy var leftButton: UIButton = {
         let leftButton = UIButton()
@@ -161,6 +172,7 @@ class AdViewController: UIViewController {
     }
     
     func setupUI() {
+        scrollView.delegate = self
         setupPageControll()
         createTypeAdStack()
         createPetSignsStack()
@@ -246,26 +258,39 @@ class AdViewController: UIViewController {
     }
     
     func setupView() {
-        self.view.addSubview(imageCollectionView)
+        self.view.addSubview(scrollView)
+        self.scrollView.addSubview(contentView)
+        self.contentView.addSubview(imageCollectionView)
         self.view.addSubview(rightButton)
         self.view.addSubview(leftButton)
-        self.view.addSubview(pageControl)
-        self.view.addSubview(labelAd)
-        self.view.addSubview(dateCreation)
-        self.view.addSubview(typeAdStack)
-        self.view.addSubview(descriptionLabel)
-        self.view.addSubview(descriptionText)
-        self.view.addSubview(showAllDescriptionText)
-        self.view.addSubview(informationsAboutPet)
-        self.view.addSubview(petSignsLabelStack)
-        self.view.addSubview(ownerInformation)
+        self.contentView.addSubview(pageControl)
+        self.contentView.addSubview(labelAd)
+        self.contentView.addSubview(dateCreation)
+        self.contentView.addSubview(typeAdStack)
+        self.contentView.addSubview(descriptionLabel)
+        self.contentView.addSubview(descriptionText)
+        self.contentView.addSubview(showAllDescriptionText)
+        self.contentView.addSubview(informationsAboutPet)
+        self.contentView.addSubview(petSignsLabelStack)
+        self.contentView.addSubview(ownerInformation)
         self.view.addSubview(respond)
     }
     
     
     func setupConstaints() {
+        
+        scrollView.snp.makeConstraints { maker in
+            maker.edges.equalTo(view.safeAreaLayoutGuide)
+        }
+
+        contentView.snp.makeConstraints { maker in
+            maker.top.left.right.equalToSuperview()
+            maker.bottom.equalTo(ownerInformation.snp.bottom).inset(-300)
+            maker.width.equalTo(scrollView)
+        }
+
         imageCollectionView.snp.makeConstraints { maker in
-            maker.top.equalTo(self.view.safeAreaLayoutGuide)
+            maker.top.equalTo(scrollView)
             maker.left.right.equalToSuperview().inset(14)
             maker.height.equalTo(293)
         }
@@ -370,6 +395,14 @@ class AdViewController: UIViewController {
             typeAd.image = image!.withTintColor( UIColor(hex: 0xFF9C40, alpha: 1), renderingMode: .alwaysOriginal)
         }
     }
+}
+
+extension AdViewController: UIScrollViewDelegate {
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+         if scrollView.contentOffset.x != 0 {
+             scrollView.contentOffset.x = 0
+         }
+     }
 }
 
 
