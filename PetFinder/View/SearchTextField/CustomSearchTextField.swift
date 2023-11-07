@@ -48,6 +48,7 @@ class CustomSearchTextField: UITextField {
         attributedPlaceholder = NSAttributedString(string: "Начните поиск", attributes: attributes)
         textColor = .white
         font = UIFont.systemFont(ofSize: 16)
+        textColor = UIColor(hex: 0x4A4A4A)
         
         // Удаление левой иконки
         leftView = nil
@@ -73,7 +74,7 @@ class CustomSearchTextField: UITextField {
     }
     
     func createDeleteRightView() {
-        let deleteImage = UIImage(systemName: "xmark.circle.fill")
+        let deleteImage = UIImage(named: "cancel")
         let deleteImageView = UIImageView(image: deleteImage)
         deleteImageView.tintColor = .systemGray
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(clearText))
@@ -93,12 +94,4 @@ class CustomSearchTextField: UITextField {
         return text!
     }
 }
-//
-//extension CustomSearchTextField: UITextFieldDelegate {
-//    func textFieldDidBeginEditing(_ textField: UITextField) {
-//        createDeleteRightView()
-//    }
-//    func textFieldDidEndEditing(_ textField: UITextField) {
-//        createRightView()
-//    }
-//}
+

@@ -173,7 +173,6 @@ class AdViewController: UIViewController{
     }
     
     func setupUI() {
-//        scrollView.delegate = self
         setupPageControll()
         createTypeAdStack()
         createPetSignsStack()
