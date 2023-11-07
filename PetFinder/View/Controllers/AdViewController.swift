@@ -26,11 +26,12 @@ class AdViewController: UIViewController{
     }
     
     private let scrollView:UIScrollView = {
-         let sc = UIScrollView(frame: .zero)
-         sc.translatesAutoresizingMaskIntoConstraints = false
-         sc.isPagingEnabled = true
-         return sc
-     }()
+             let sc = UIScrollView(frame: .zero)
+             sc.translatesAutoresizingMaskIntoConstraints = false
+             sc.isPagingEnabled = true
+             return sc
+         }()
+
     
     private lazy var contentView: UIView = {
         let contenntView = UIView()
@@ -172,7 +173,7 @@ class AdViewController: UIViewController{
     }
     
     func setupUI() {
-        scrollView.delegate = self
+//        scrollView.delegate = self
         setupPageControll()
         createTypeAdStack()
         createPetSignsStack()
@@ -260,9 +261,10 @@ class AdViewController: UIViewController{
     func setupView() {
         self.view.addSubview(scrollView)
         self.scrollView.addSubview(contentView)
+        scrollView.contentSize = contentView.bounds.size
         self.contentView.addSubview(imageCollectionView)
-        self.view.addSubview(rightButton)
-        self.view.addSubview(leftButton)
+        self.contentView.addSubview(rightButton)
+        self.contentView.addSubview(leftButton)
         self.contentView.addSubview(pageControl)
         self.contentView.addSubview(labelAd)
         self.contentView.addSubview(dateCreation)
@@ -276,18 +278,18 @@ class AdViewController: UIViewController{
         self.view.addSubview(respond)
     }
     
-    
     func setupConstaints() {
         
         scrollView.snp.makeConstraints { maker in
             maker.edges.equalTo(view.safeAreaLayoutGuide)
         }
-
+        
         contentView.snp.makeConstraints { maker in
-            maker.top.left.right.equalToSuperview()
-            maker.bottom.equalTo(ownerInformation.snp.bottom).inset(-300)
+            maker.edges.equalToSuperview()
             maker.width.equalTo(scrollView)
+            maker.height.equalTo(view)
         }
+        
 
         imageCollectionView.snp.makeConstraints { maker in
             maker.top.equalTo(scrollView)
@@ -296,12 +298,14 @@ class AdViewController: UIViewController{
         }
         
         leftButton.snp.makeConstraints { maker in
-            maker.left.top.equalTo(imageCollectionView).inset(12)
+            maker.top.equalTo(self.view.safeAreaLayoutGuide).inset(8)
+            maker.left.equalToSuperview().inset(25)
             maker.height.width.equalTo(34)
         }
         
         rightButton.snp.makeConstraints { maker in
-            maker.right.top.equalTo(imageCollectionView).inset(12)
+            maker.top.equalTo(self.view.safeAreaLayoutGuide).inset(8)
+            maker.right.equalToSuperview().inset(25)
             maker.height.width.equalTo(34)
         }
         
@@ -397,12 +401,12 @@ class AdViewController: UIViewController{
     }
 }
 
-extension AdViewController: UIScrollViewDelegate {
-    func scrollViewDidScroll(_ scrollView: UIScrollView) {
-         if scrollView.contentOffset.x != 0 {
-             scrollView.contentOffset.x = 0
-         }
-     }
-}
+//extension AdViewController: UIScrollViewDelegate {
+//    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+//         if scrollView.contentOffset.x != 0 {
+//             scrollView.contentOffset.x = 0
+//         }
+//     }
+//}
 
 
