@@ -41,3 +41,13 @@ extension UIImage {
         return UIGraphicsGetImageFromCurrentImageContext()
     }
 }
+
+extension UIView {
+    func roundCorners(corners: CACornerMask, radius: CGFloat) {
+        layer.cornerRadius = radius
+        layer.maskedCorners = corners
+        layer.masksToBounds = true
+    }
+}
+
+

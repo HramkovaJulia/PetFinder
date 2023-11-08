@@ -45,7 +45,7 @@ class CustomSearchTextField: UITextField {
         layer.cornerRadius = 16
         font = UIFont.sfProText(ofSize: 16, weight: .regular)
         let attributes = [NSAttributedString.Key.foregroundColor: UIColor(hex: 0xfcfcfc, alpha: 1)]
-        attributedPlaceholder = NSAttributedString(string: "Начните поиск", attributes: attributes)
+        attributedPlaceholder = NSAttributedString(string: "Поиск", attributes: attributes)
         textColor = .white
         font = UIFont.systemFont(ofSize: 16)
         textColor = UIColor(hex: 0x4A4A4A)

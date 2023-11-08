@@ -21,7 +21,7 @@ final class MainViewController: UIViewController, UISearchBarDelegate {
     private lazy var searchandNotificationView: UIView = {
         let searchandNotificationView = UIView()
         searchandNotificationView.backgroundColor = UIColor(hex: 0xEFBFA5, alpha: 1)
-        searchandNotificationView.layer.cornerRadius = 12
+        searchandNotificationView.roundCorners(corners: [.layerMinXMaxYCorner, .layerMaxXMaxYCorner], radius: 12)
         return searchandNotificationView
     }()
     

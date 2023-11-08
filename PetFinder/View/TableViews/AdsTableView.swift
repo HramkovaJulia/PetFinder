@@ -70,10 +70,7 @@ extension AdsTableView: UITableViewDelegate {
             viewController.present(adViewController, animated: true)
         }
     }
-    
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 235
-    }
+
 }
 
 

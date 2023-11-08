@@ -107,7 +107,5 @@ extension ListAnimalsCollectionView: UICollectionViewDelegateFlowLayout {
             return UIEdgeInsets.zero
         }
     }
-
-
 }
 
