@@ -31,8 +31,8 @@ class CustomTabBarControllerViewController: UITabBarController {
         
         let createViewController = setupVC(viewController: ServicesViewController(), title: "Сервисы", image: setupImage(named: "services"))
         let nocreateViewController = setupVC(viewController: UIViewController(), title: "", image: nil)
-        let profileViewController = setupVC(viewController: ProfileViewController(), title: "Избранное", image: setupImage(named: "heart"))
-        let createViewControllerS = setupVC(viewController: UIViewController(), title: "Профиль", image: setupImage(named: "profile"))
+        let profileViewController = setupVC(viewController: UIViewController(), title: "Избранное", image: setupImage(named: "heart"))
+        let createViewControllerS = setupVC(viewController: ProfileViewController(), title: "Профиль", image: setupImage(named: "profile"))
         
         // Ограничиваем количество отображаемых контроллеров в таб-баре
         let visibleViewControllers = [mainViewController, createViewController, nocreateViewController, profileViewController, createViewControllerS]
