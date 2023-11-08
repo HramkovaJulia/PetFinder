@@ -32,6 +32,11 @@
 		D8B3BB2A2AF63534001259A2 /* AdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B3BB292AF63534001259A2 /* AdViewController.swift */; };
 		D8B3BB2C2AF6494E001259A2 /* ImagesAdCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B3BB2B2AF6494E001259A2 /* ImagesAdCollectionView.swift */; };
 		D8B3BB2E2AF64989001259A2 /* ImageAdCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B3BB2D2AF64988001259A2 /* ImageAdCollectionViewCell.swift */; };
+		D8B3BB302AFA8950001259A2 /* ServicesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B3BB2F2AFA8950001259A2 /* ServicesViewController.swift */; };
+		D8B3BB322AFA974F001259A2 /* ServicesTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B3BB312AFA974F001259A2 /* ServicesTableView.swift */; };
+		D8B3BB342AFA97BF001259A2 /* ServicesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B3BB332AFA97BF001259A2 /* ServicesTableViewCell.swift */; };
+		D8B3BB362AFAA4DA001259A2 /* ListServicesCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B3BB352AFAA4DA001259A2 /* ListServicesCollectionView.swift */; };
+		D8B3BB382AFAA5D8001259A2 /* ListServicesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B3BB372AFAA5D8001259A2 /* ListServicesCollectionViewCell.swift */; };
 		D8F70E902AE96571006543F0 /* SF-Pro-Text-Heavy.otf in Resources */ = {isa = PBXBuildFile; fileRef = D8F70E842AE96571006543F0 /* SF-Pro-Text-Heavy.otf */; };
 		D8F70E912AE96571006543F0 /* SF-Pro-Text-SemiboldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = D8F70E852AE96571006543F0 /* SF-Pro-Text-SemiboldItalic.otf */; };
 		D8F70E922AE96571006543F0 /* SF-Pro-Text-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = D8F70E862AE96571006543F0 /* SF-Pro-Text-Regular.otf */; };
@@ -78,6 +83,11 @@
 		D8B3BB292AF63534001259A2 /* AdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdViewController.swift; sourceTree = "<group>"; };
 		D8B3BB2B2AF6494E001259A2 /* ImagesAdCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesAdCollectionView.swift; sourceTree = "<group>"; };
 		D8B3BB2D2AF64988001259A2 /* ImageAdCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageAdCollectionViewCell.swift; sourceTree = "<group>"; };
+		D8B3BB2F2AFA8950001259A2 /* ServicesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesViewController.swift; sourceTree = "<group>"; };
+		D8B3BB312AFA974F001259A2 /* ServicesTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesTableView.swift; sourceTree = "<group>"; };
+		D8B3BB332AFA97BF001259A2 /* ServicesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesTableViewCell.swift; sourceTree = "<group>"; };
+		D8B3BB352AFAA4DA001259A2 /* ListServicesCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListServicesCollectionView.swift; sourceTree = "<group>"; };
+		D8B3BB372AFAA5D8001259A2 /* ListServicesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListServicesCollectionViewCell.swift; sourceTree = "<group>"; };
 		D8F70E842AE96571006543F0 /* SF-Pro-Text-Heavy.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-Heavy.otf"; sourceTree = "<group>"; };
 		D8F70E852AE96571006543F0 /* SF-Pro-Text-SemiboldItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-SemiboldItalic.otf"; sourceTree = "<group>"; };
 		D8F70E862AE96571006543F0 /* SF-Pro-Text-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-Regular.otf"; sourceTree = "<group>"; };
@@ -162,6 +172,7 @@
 			children = (
 				D80C90B62ADF01FF00C9873C /* ListMenuTableView.swift */,
 				D86EADAE2AE3B55E00FB19B6 /* AdsTableView.swift */,
+				D8B3BB312AFA974F001259A2 /* ServicesTableView.swift */,
 			);
 			path = TableViews;
 			sourceTree = "<group>";
@@ -184,6 +195,8 @@
 				D80C90B92ADF024100C9873C /* ListMenuTableViewCell.swift */,
 				D86EADB32AE3B69000FB19B6 /* AdsTableViewCell.swift */,
 				D8B3BB2D2AF64988001259A2 /* ImageAdCollectionViewCell.swift */,
+				D8B3BB332AFA97BF001259A2 /* ServicesTableViewCell.swift */,
+				D8B3BB372AFAA5D8001259A2 /* ListServicesCollectionViewCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -193,6 +206,7 @@
 			children = (
 				D84297A12ADC31E3006D6B06 /* ListAnimalsCollectionView.swift */,
 				D8B3BB2B2AF6494E001259A2 /* ImagesAdCollectionView.swift */,
+				D8B3BB352AFAA4DA001259A2 /* ListServicesCollectionView.swift */,
 			);
 			path = CollectionViews;
 			sourceTree = "<group>";
@@ -228,6 +242,7 @@
 				D86EADA82AE0469400FB19B6 /* SettingsViewController.swift */,
 				D86EADAA2AE0475A00FB19B6 /* ProfileViewController.swift */,
 				D8B3BB292AF63534001259A2 /* AdViewController.swift */,
+				D8B3BB2F2AFA8950001259A2 /* ServicesViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -404,15 +419,20 @@
 				D8B3BB2E2AF64989001259A2 /* ImageAdCollectionViewCell.swift in Sources */,
 				D8B3BB2C2AF6494E001259A2 /* ImagesAdCollectionView.swift in Sources */,
 				D86EADAD2AE04D1700FB19B6 /* ColorExtansion.swift in Sources */,
+				D8B3BB382AFAA5D8001259A2 /* ListServicesCollectionViewCell.swift in Sources */,
 				5873E3D82ADEEA7B00F51501 /* FontExtansion.swift in Sources */,
 				D86EADAF2AE3B55E00FB19B6 /* AdsTableView.swift in Sources */,
+				D8B3BB322AFA974F001259A2 /* ServicesTableView.swift in Sources */,
 				D84297A22ADC31E3006D6B06 /* ListAnimalsCollectionView.swift in Sources */,
+				D8B3BB362AFAA4DA001259A2 /* ListServicesCollectionView.swift in Sources */,
 				D86EADA72AE043C900FB19B6 /* CustomTabBarControllerViewController.swift in Sources */,
 				D8A9E8162AEE3A9900E509EC /* CustomSearchTextField.swift in Sources */,
 				5873E3A02ADB190200F51501 /* AppDelegate.swift in Sources */,
 				D80C90BA2ADF024100C9873C /* ListMenuTableViewCell.swift in Sources */,
 				D8B3BB2A2AF63534001259A2 /* AdViewController.swift in Sources */,
+				D8B3BB302AFA8950001259A2 /* ServicesViewController.swift in Sources */,
 				D86EADA92AE0469400FB19B6 /* SettingsViewController.swift in Sources */,
+				D8B3BB342AFA97BF001259A2 /* ServicesTableViewCell.swift in Sources */,
 				D84297962ADBF79B006D6B06 /* PositionSelectionViewController.swift in Sources */,
 				D86EADB22AE3B59000FB19B6 /* LostPetCardModel.swift in Sources */,
 				D8F70E9D2AEC1E47006543F0 /* STTabbar.swift in Sources */,

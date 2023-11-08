@@ -26,12 +26,12 @@ class AdViewController: UIViewController{
     }
     
     private let scrollView:UIScrollView = {
-             let sc = UIScrollView(frame: .zero)
-             sc.translatesAutoresizingMaskIntoConstraints = false
-             sc.isPagingEnabled = true
-             return sc
-         }()
-
+        let sc = UIScrollView(frame: .zero)
+        sc.translatesAutoresizingMaskIntoConstraints = false
+        sc.isPagingEnabled = true
+        return sc
+    }()
+    
     
     private lazy var contentView: UIView = {
         let contenntView = UIView()
@@ -280,7 +280,8 @@ class AdViewController: UIViewController{
     func setupConstaints() {
         
         scrollView.snp.makeConstraints { maker in
-            maker.edges.equalTo(view.safeAreaLayoutGuide)
+            maker.top.equalTo(view.safeAreaLayoutGuide)
+            maker.left.right.bottom.equalToSuperview()
         }
         
         contentView.snp.makeConstraints { maker in
@@ -289,7 +290,7 @@ class AdViewController: UIViewController{
             maker.height.equalTo(view)
         }
         
-
+        
         imageCollectionView.snp.makeConstraints { maker in
             maker.top.equalTo(scrollView)
             maker.left.right.equalToSuperview().inset(14)

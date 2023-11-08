@@ -29,7 +29,7 @@ class CustomTabBarControllerViewController: UITabBarController {
         
         let mainViewController = setupVC(viewController: MainViewController(), title: "Объявления", image: setupImage(named: "clipboard"))
         
-        let createViewController = setupVC(viewController: UIViewController(), title: "Сервисы", image: setupImage(named: "services"))
+        let createViewController = setupVC(viewController: ServicesViewController(), title: "Сервисы", image: setupImage(named: "services"))
         let nocreateViewController = setupVC(viewController: UIViewController(), title: "", image: nil)
         let profileViewController = setupVC(viewController: ProfileViewController(), title: "Избранное", image: setupImage(named: "heart"))
         let createViewControllerS = setupVC(viewController: UIViewController(), title: "Профиль", image: setupImage(named: "profile"))
