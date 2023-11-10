@@ -76,21 +76,25 @@ extension ListAnimalsCollectionView: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        
         guard let cell = collectionView.cellForItem(at: indexPath) else {
             return
         }
         
-        for i in 0..<collectionView.numberOfItems(inSection: indexPath.section) {
-            let indexPath = IndexPath(item: i, section: indexPath.section)
-            if let cell = collectionView.cellForItem(at: indexPath) {
-                cell.backgroundColor = .clear
+        if selectedCell.contains(indexPath) {
+            selectedCell.removeAll()
+            cell.backgroundColor = .clear
+        } else {
+            for i in 0..<collectionView.numberOfItems(inSection: indexPath.section) {
+                let indexPath = IndexPath(item: i, section: indexPath.section)
+                if let cell = collectionView.cellForItem(at: indexPath) {
+                    cell.backgroundColor = .clear
+                }
             }
+            
+
+            
+            selectedCell.append(indexPath)
         }
-        
-        cell.backgroundColor = .systemBlue
-        selectedCell.removeAll()
-        selectedCell.append(indexPath)
     }
 }
 
