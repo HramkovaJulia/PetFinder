@@ -26,6 +26,7 @@ class AdsTableViewCell: UITableViewCell {
         favorites.imageView?.layer.shadowOpacity = 0.5
         favorites.imageView?.layer.shadowOffset = CGSize(width: 1, height: 1)
         favorites.imageView?.layer.shadowRadius = 1
+//
         return favorites
     }()
 
@@ -135,8 +136,8 @@ class AdsTableViewCell: UITableViewCell {
     }
     
     func setup() {
-        self.addSubview(mainView)
-        self.addSubview(insertView)
+        contentView.addSubview(mainView)
+        contentView.addSubview(insertView)
         mainView.addSubview(labelAd)
         mainView.addSubview(dateCreation)
         mainView.addSubview(imagePet)
