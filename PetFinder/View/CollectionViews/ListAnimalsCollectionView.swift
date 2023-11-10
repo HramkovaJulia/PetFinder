@@ -76,6 +76,7 @@ extension ListAnimalsCollectionView: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
         guard let cell = collectionView.cellForItem(at: indexPath) else {
             return
         }
@@ -90,9 +91,7 @@ extension ListAnimalsCollectionView: UICollectionViewDataSource {
                     cell.backgroundColor = .clear
                 }
             }
-            
-
-            
+            cell.backgroundColor = UIColor(hex: 0xffffff, alpha: 0.7)
             selectedCell.append(indexPath)
         }
     }
