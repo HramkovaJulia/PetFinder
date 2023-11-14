@@ -22,7 +22,7 @@ class ListServicesCollectionView: UICollectionView {
     override func layoutSubviews() {
         super.layoutSubviews()
         if let layout = collectionViewLayout as? UICollectionViewFlowLayout {
-            layout.itemSize = CGSize(width: 146, height: bounds.height) // Размер элемента
+            layout.itemSize = CGSize(width: 146, height: bounds.height ) // Размер элемента
         }
     }
     

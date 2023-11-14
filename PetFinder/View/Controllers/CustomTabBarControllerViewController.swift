@@ -46,7 +46,6 @@ class CustomTabBarControllerViewController: UITabBarController {
         } else {
             return nil
         }
-
     }
     
     private func setupVC(viewController: UIViewController, title: String, image: UIImage?) -> UIViewController {
