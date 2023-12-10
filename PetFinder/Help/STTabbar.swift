@@ -105,6 +105,11 @@ public final class STTabbar: UITabBar {
     // Menu Button Touch Action
      @objc func centerButtonAction(sender: UIButton) {
         self.centerButtonActionHandler()
+         if let viewController = UIApplication.shared.keyWindow?.rootViewController {
+             let AdTypeSeletionViewController = AdTypeSeletionViewController()
+             AdTypeSeletionViewController.modalPresentationStyle = .fullScreen
+             viewController.present(AdTypeSeletionViewController, animated: true)
+         }
      }
 }
 

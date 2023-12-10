@@ -49,6 +49,7 @@ final class MainViewController: UIViewController, UISearchBarDelegate {
     
     
     func createUI() {
+        self.view.backgroundColor = UIColor(hex: 0xFCF4EF)
         setup()
         createSearchandNotificationView()
         setupRightMainButton()

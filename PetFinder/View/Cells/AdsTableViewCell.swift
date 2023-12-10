@@ -84,7 +84,7 @@ class AdsTableViewCell: UITableViewCell {
     private lazy var mainView: UIView = {
         let mainView = UIView()
         mainView.layer.cornerRadius = 12
-        mainView.backgroundColor = UIColor(hex: 0xFDF5F0, alpha: 1)
+        mainView.backgroundColor = UIColor(hex: 0xFCFCFC, alpha: 1)
         return mainView
     }()
     

@@ -37,6 +37,7 @@
 		D8B3BB342AFA97BF001259A2 /* ServicesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B3BB332AFA97BF001259A2 /* ServicesTableViewCell.swift */; };
 		D8B3BB362AFAA4DA001259A2 /* ListServicesCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B3BB352AFAA4DA001259A2 /* ListServicesCollectionView.swift */; };
 		D8B3BB382AFAA5D8001259A2 /* ListServicesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B3BB372AFAA5D8001259A2 /* ListServicesCollectionViewCell.swift */; };
+		D8E8072F2B26038B00D69D67 /* AdTypeSeletionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E8072E2B26038B00D69D67 /* AdTypeSeletionViewController.swift */; };
 		D8F70E902AE96571006543F0 /* SF-Pro-Text-Heavy.otf in Resources */ = {isa = PBXBuildFile; fileRef = D8F70E842AE96571006543F0 /* SF-Pro-Text-Heavy.otf */; };
 		D8F70E912AE96571006543F0 /* SF-Pro-Text-SemiboldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = D8F70E852AE96571006543F0 /* SF-Pro-Text-SemiboldItalic.otf */; };
 		D8F70E922AE96571006543F0 /* SF-Pro-Text-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = D8F70E862AE96571006543F0 /* SF-Pro-Text-Regular.otf */; };
@@ -88,6 +89,7 @@
 		D8B3BB332AFA97BF001259A2 /* ServicesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesTableViewCell.swift; sourceTree = "<group>"; };
 		D8B3BB352AFAA4DA001259A2 /* ListServicesCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListServicesCollectionView.swift; sourceTree = "<group>"; };
 		D8B3BB372AFAA5D8001259A2 /* ListServicesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListServicesCollectionViewCell.swift; sourceTree = "<group>"; };
+		D8E8072E2B26038B00D69D67 /* AdTypeSeletionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdTypeSeletionViewController.swift; sourceTree = "<group>"; };
 		D8F70E842AE96571006543F0 /* SF-Pro-Text-Heavy.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-Heavy.otf"; sourceTree = "<group>"; };
 		D8F70E852AE96571006543F0 /* SF-Pro-Text-SemiboldItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-SemiboldItalic.otf"; sourceTree = "<group>"; };
 		D8F70E862AE96571006543F0 /* SF-Pro-Text-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-Regular.otf"; sourceTree = "<group>"; };
@@ -159,7 +161,7 @@
 				D8EE67E52ADDA52800C3673F /* Fonts */,
 				D84297972ADC1E4F006D6B06 /* Help */,
 				D86EA8852ADBD09400B8D961 /* View */,
-				D86EA8822ADBCA8E00B8D961 /* Del */,
+				D86EA8822ADBCA8E00B8D961 /* Delegate */,
 				5873E3A82ADB190600F51501 /* Assets.xcassets */,
 				5873E3AA2ADB190600F51501 /* LaunchScreen.storyboard */,
 				5873E3AD2ADB190600F51501 /* Info.plist */,
@@ -211,13 +213,13 @@
 			path = CollectionViews;
 			sourceTree = "<group>";
 		};
-		D86EA8822ADBCA8E00B8D961 /* Del */ = {
+		D86EA8822ADBCA8E00B8D961 /* Delegate */ = {
 			isa = PBXGroup;
 			children = (
 				5873E39F2ADB190200F51501 /* AppDelegate.swift */,
 				5873E3A12ADB190200F51501 /* SceneDelegate.swift */,
 			);
-			path = Del;
+			path = Delegate;
 			sourceTree = "<group>";
 		};
 		D86EA8852ADBD09400B8D961 /* View */ = {
@@ -235,6 +237,7 @@
 		D86EA8862ADBD0A100B8D961 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				D8E8072D2B26034300D69D67 /* CreateAd */,
 				D84297932ADBDEB7006D6B06 /* SideMenuViewController.swift */,
 				D86EA8872ADBD10300B8D961 /* MainViewController.swift */,
 				D84297952ADBF79B006D6B06 /* PositionSelectionViewController.swift */,
@@ -261,6 +264,14 @@
 				D8A9E8152AEE3A9900E509EC /* CustomSearchTextField.swift */,
 			);
 			path = SearchTextField;
+			sourceTree = "<group>";
+		};
+		D8E8072D2B26034300D69D67 /* CreateAd */ = {
+			isa = PBXGroup;
+			children = (
+				D8E8072E2B26038B00D69D67 /* AdTypeSeletionViewController.swift */,
+			);
+			path = CreateAd;
 			sourceTree = "<group>";
 		};
 		D8EE67E52ADDA52800C3673F /* Fonts */ = {
@@ -426,6 +437,7 @@
 				D84297A22ADC31E3006D6B06 /* ListAnimalsCollectionView.swift in Sources */,
 				D8B3BB362AFAA4DA001259A2 /* ListServicesCollectionView.swift in Sources */,
 				D86EADA72AE043C900FB19B6 /* CustomTabBarControllerViewController.swift in Sources */,
+				D8E8072F2B26038B00D69D67 /* AdTypeSeletionViewController.swift in Sources */,
 				D8A9E8162AEE3A9900E509EC /* CustomSearchTextField.swift in Sources */,
 				5873E3A02ADB190200F51501 /* AppDelegate.swift in Sources */,
 				D80C90BA2ADF024100C9873C /* ListMenuTableViewCell.swift in Sources */,
