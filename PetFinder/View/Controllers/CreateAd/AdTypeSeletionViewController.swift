@@ -129,6 +129,9 @@ class AdTypeSeletionViewController: UIViewController {
     
     @objc
     func nextVC() {
+        let adViewController = CreatePetAdvertViewController()
+        adViewController.modalPresentationStyle = .fullScreen
+        self.present(adViewController, animated: true)
         
     }
 }

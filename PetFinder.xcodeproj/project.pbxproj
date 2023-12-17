@@ -12,6 +12,7 @@
 		5873E3A92ADB190600F51501 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5873E3A82ADB190600F51501 /* Assets.xcassets */; };
 		5873E3AC2ADB190600F51501 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5873E3AA2ADB190600F51501 /* LaunchScreen.storyboard */; };
 		5873E3D82ADEEA7B00F51501 /* FontExtansion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5873E3D72ADEEA7B00F51501 /* FontExtansion.swift */; };
+		D802463E2B2D89C700B2223C /* CreatePetAdvertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D802463D2B2D89C700B2223C /* CreatePetAdvertViewController.swift */; };
 		D80C90B72ADF01FF00C9873C /* ListMenuTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D80C90B62ADF01FF00C9873C /* ListMenuTableView.swift */; };
 		D80C90BA2ADF024100C9873C /* ListMenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D80C90B92ADF024100C9873C /* ListMenuTableViewCell.swift */; };
 		D84297942ADBDEB7006D6B06 /* SideMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D84297932ADBDEB7006D6B06 /* SideMenuViewController.swift */; };
@@ -28,6 +29,8 @@
 		D86EADAF2AE3B55E00FB19B6 /* AdsTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D86EADAE2AE3B55E00FB19B6 /* AdsTableView.swift */; };
 		D86EADB22AE3B59000FB19B6 /* LostPetCardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D86EADB12AE3B59000FB19B6 /* LostPetCardModel.swift */; };
 		D86EADB42AE3B69000FB19B6 /* AdsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D86EADB32AE3B69000FB19B6 /* AdsTableViewCell.swift */; };
+		D87D0DA52B2F53B400DC5476 /* CustomSengmentControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = D87D0DA42B2F53B400DC5476 /* CustomSengmentControl.swift */; };
+		D87D0DA82B2F57BD00DC5476 /* CustomDownButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D87D0DA72B2F57BD00DC5476 /* CustomDownButton.swift */; };
 		D8A9E8162AEE3A9900E509EC /* CustomSearchTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A9E8152AEE3A9900E509EC /* CustomSearchTextField.swift */; };
 		D8B3BB2A2AF63534001259A2 /* AdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B3BB292AF63534001259A2 /* AdViewController.swift */; };
 		D8B3BB2C2AF6494E001259A2 /* ImagesAdCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B3BB2B2AF6494E001259A2 /* ImagesAdCollectionView.swift */; };
@@ -64,6 +67,7 @@
 		5873E3AD2ADB190600F51501 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5873E3D72ADEEA7B00F51501 /* FontExtansion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontExtansion.swift; sourceTree = "<group>"; };
 		BF7A263FFCB875A6E2D63AA6 /* Pods-PetFinder.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PetFinder.debug.xcconfig"; path = "Target Support Files/Pods-PetFinder/Pods-PetFinder.debug.xcconfig"; sourceTree = "<group>"; };
+		D802463D2B2D89C700B2223C /* CreatePetAdvertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePetAdvertViewController.swift; sourceTree = "<group>"; };
 		D80C90B62ADF01FF00C9873C /* ListMenuTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListMenuTableView.swift; sourceTree = "<group>"; };
 		D80C90B92ADF024100C9873C /* ListMenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListMenuTableViewCell.swift; sourceTree = "<group>"; };
 		D84297932ADBDEB7006D6B06 /* SideMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideMenuViewController.swift; sourceTree = "<group>"; };
@@ -80,6 +84,8 @@
 		D86EADAE2AE3B55E00FB19B6 /* AdsTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdsTableView.swift; sourceTree = "<group>"; };
 		D86EADB12AE3B59000FB19B6 /* LostPetCardModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LostPetCardModel.swift; sourceTree = "<group>"; };
 		D86EADB32AE3B69000FB19B6 /* AdsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdsTableViewCell.swift; sourceTree = "<group>"; };
+		D87D0DA42B2F53B400DC5476 /* CustomSengmentControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSengmentControl.swift; sourceTree = "<group>"; };
+		D87D0DA72B2F57BD00DC5476 /* CustomDownButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomDownButton.swift; sourceTree = "<group>"; };
 		D8A9E8152AEE3A9900E509EC /* CustomSearchTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSearchTextField.swift; sourceTree = "<group>"; };
 		D8B3BB292AF63534001259A2 /* AdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdViewController.swift; sourceTree = "<group>"; };
 		D8B3BB2B2AF6494E001259A2 /* ImagesAdCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesAdCollectionView.swift; sourceTree = "<group>"; };
@@ -167,6 +173,16 @@
 				5873E3AD2ADB190600F51501 /* Info.plist */,
 			);
 			path = PetFinder;
+			sourceTree = "<group>";
+		};
+		D802463C2B2D893400B2223C /* CreateLostPetAdvert */ = {
+			isa = PBXGroup;
+			children = (
+				D87D0DA62B2F57A000DC5476 /* CustomDownButton */,
+				D87D0DA32B2F539500DC5476 /* CustomSegmentControll */,
+				D802463D2B2D89C700B2223C /* CreatePetAdvertViewController.swift */,
+			);
+			path = CreateLostPetAdvert;
 			sourceTree = "<group>";
 		};
 		D80C90B52ADEFF9400C9873C /* TableViews */ = {
@@ -258,6 +274,22 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		D87D0DA32B2F539500DC5476 /* CustomSegmentControll */ = {
+			isa = PBXGroup;
+			children = (
+				D87D0DA42B2F53B400DC5476 /* CustomSengmentControl.swift */,
+			);
+			path = CustomSegmentControll;
+			sourceTree = "<group>";
+		};
+		D87D0DA62B2F57A000DC5476 /* CustomDownButton */ = {
+			isa = PBXGroup;
+			children = (
+				D87D0DA72B2F57BD00DC5476 /* CustomDownButton.swift */,
+			);
+			path = CustomDownButton;
+			sourceTree = "<group>";
+		};
 		D8A9E8142AEE3A6B00E509EC /* SearchTextField */ = {
 			isa = PBXGroup;
 			children = (
@@ -269,6 +301,7 @@
 		D8E8072D2B26034300D69D67 /* CreateAd */ = {
 			isa = PBXGroup;
 			children = (
+				D802463C2B2D893400B2223C /* CreateLostPetAdvert */,
 				D8E8072E2B26038B00D69D67 /* AdTypeSeletionViewController.swift */,
 			);
 			path = CreateAd;
@@ -420,6 +453,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D87D0DA82B2F57BD00DC5476 /* CustomDownButton.swift in Sources */,
 				D84297942ADBDEB7006D6B06 /* SideMenuViewController.swift in Sources */,
 				D84297992ADC1E65006D6B06 /* Extansions.swift in Sources */,
 				D842979F2ADC312A006D6B06 /* AnimalCollectionViewCell.swift in Sources */,
@@ -445,7 +479,9 @@
 				D8B3BB302AFA8950001259A2 /* ServicesViewController.swift in Sources */,
 				D86EADA92AE0469400FB19B6 /* SettingsViewController.swift in Sources */,
 				D8B3BB342AFA97BF001259A2 /* ServicesTableViewCell.swift in Sources */,
+				D87D0DA52B2F53B400DC5476 /* CustomSengmentControl.swift in Sources */,
 				D84297962ADBF79B006D6B06 /* PositionSelectionViewController.swift in Sources */,
+				D802463E2B2D89C700B2223C /* CreatePetAdvertViewController.swift in Sources */,
 				D86EADB22AE3B59000FB19B6 /* LostPetCardModel.swift in Sources */,
 				D8F70E9D2AEC1E47006543F0 /* STTabbar.swift in Sources */,
 				5873E3A22ADB190200F51501 /* SceneDelegate.swift in Sources */,

@@ -9,17 +9,24 @@ import UIKit
 import SnapKit
 
 class ListAnimalsCollectionView: UICollectionView {
-    
-    private let massivePet = ["Настройки", "Собаки", "Кошки", "Птицы", "Грызуны", "Другие"]
-    private let imageMassive = ["sortImage", "dog", "cat", "bird", "mouse", "others"]
-    
+    private var massivePet = [String]()
+    private var imageMassive = [String]()
+    private let defaultMassivePet = ["Настройки", "Собаки", "Кошки", "Птицы", "Грызуны", "Другие"]
+    private let defaultImageMassive = ["sortImage", "dog", "cat", "bird", "mouse", "others"]
+
     private var selectedCell = [IndexPath]()
-    
-    init() {
+
+    init(massivePet: [String]? = nil, imageMassive: [String]? = nil) {
         let layout = UICollectionViewFlowLayout()
         super.init(frame: .zero, collectionViewLayout: layout)
+        
+        self.massivePet = massivePet ?? defaultMassivePet
+        self.imageMassive = imageMassive ?? defaultImageMassive
+        
         commonInit()
     }
+
+
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
