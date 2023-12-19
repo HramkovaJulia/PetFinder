@@ -188,7 +188,7 @@ final class MainViewController: UIViewController {
             currentPosition.setTitle(cityName, for: .normal)
         } else {
             let cityName = userDefaults.object(forKey: cityKey) ?? ""
-            currentPosition.setTitle(cityName as! String, for: .normal)
+            currentPosition.setTitle((cityName as! String), for: .normal)
         }
     }
 }
