@@ -16,7 +16,7 @@ final class MainViewController: UIViewController, UISearchBarDelegate {
     private let userDefaults = UserDefaults.standard
     private let cityKey = "city"
     private let animalsCollectionView = ListAnimalsCollectionView()
-    private let adsTableView = AdsTableView()
+    private let adsCollectionView = AdsCollectionView()
     
     private lazy var searchandNotificationView: UIView = {
         let searchandNotificationView = UIView()
@@ -96,7 +96,7 @@ final class MainViewController: UIViewController, UISearchBarDelegate {
     func setup() {
         self.view.backgroundColor = UIColor(hex: 0xF9F6F3)
         self.hideKeyboardWhenTappedAround()
-        self.view.addSubview(adsTableView)
+        self.view.addSubview(adsCollectionView)
     }
 
     func createSearchBar() {
@@ -121,9 +121,12 @@ final class MainViewController: UIViewController, UISearchBarDelegate {
     }
     
     func setupAdsTableView() {
-        adsTableView.snp.makeConstraints { maker in
+        
+        adsCollectionView.snp.makeConstraints { maker in
             maker.top.equalTo(animalsCollectionView.snp.bottom).inset(-20)
-            maker.left.right.bottom.equalToSuperview()
+            maker.left.equalToSuperview().inset(16)
+            maker.right.equalToSuperview().inset(15)
+            maker.bottom.equalTo(self.view.safeAreaLayoutGuide).inset(5)
         }
     }
     
