@@ -8,8 +8,6 @@
 import UIKit
 import SnapKit
 
-
-
 class HomeViewController: UIViewController {
     
     private let connectButton = CustomButton(title: "Присоединиться", hasBackground: true)
@@ -19,7 +17,6 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Do any additional setup after loading the view.
         setupUI()
     }
     
@@ -38,7 +35,7 @@ class HomeViewController: UIViewController {
         self.view.addSubview(skipButton)
         
         self.connectButton.addTarget(self, action: #selector(didTapConnect), for: .touchUpInside)
-        self.skipButton.addTarget(self, action: #selector(didTapSkip), for: .touchUpInside)
+        self.skipButton.addTarget(self, action: #selector(didTapSkipSignIn), for: .touchUpInside)
 
         
         //MARK: - constrains
@@ -58,13 +55,13 @@ class HomeViewController: UIViewController {
     }
     //MARK: - selectors
     @objc private func didTapConnect() {
-        print("DEBUG PRINT:", "didTapSignIn")
+        print("DEBUG PRINT:", "didTapConnect")
         let vc = LoginViewController()
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
-    @objc private func didTapSkip() {
-        print("DEBUG PRINT: didTapSkip")
+    @objc private func didTapSkipSignIn() {
+        print("DEBUG PRINT: didTapSkipSignIn")
         let vc = MainViewController()
         self.navigationController?.pushViewController(vc, animated: true)
     }

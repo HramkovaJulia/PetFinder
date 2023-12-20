@@ -108,6 +108,7 @@ final class MainViewController: UIViewController {
     }
     
     func createNavigationBar() {
+        //TODO: added next line
         self.navigationController?.navigationBar.isHidden = false
         navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "line.3.horizontal"), style: .plain, target: self, action: #selector(menuTapped))
 
@@ -122,10 +123,11 @@ final class MainViewController: UIViewController {
     
     @objc func menuTapped () {
         
-        //TODO: muted side menu option 
+        //TODO: muted side menu option for testing
 //        sideMenuViewController = nil
 //        configureMenuViewController()
 //        showBulletinViewController(shouldMove: true)
+        //new lines
         print("DEBUG PRINT: menuTapped")
         let vc = HomeViewController()
         self.navigationController?.pushViewController(vc, animated: true)

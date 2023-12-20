@@ -14,16 +14,15 @@ class CustomLoginButton: UIButton {
         case appleId
     }
     
-    init(title: String, height: CGFloat = 53, button: FontType) {
+    init(title: String = "", height: CGFloat = 53, button: FontType) {
         super.init(frame: .zero)
         
         self.setTitle(title, for: .normal)
         self.layer.cornerRadius = 22
         self.layer.masksToBounds = true
         self.heightAnchor.constraint(equalToConstant: height).isActive = true
+        layoutIfNeeded()
         self.titleLabel?.font = .systemFont(ofSize: 16, weight: .semibold)
-        
-
         
         // apply shadow
         self.layer.masksToBounds = false
@@ -36,10 +35,12 @@ class CustomLoginButton: UIButton {
         
         switch button {
         case .google:
+            self.titleLabel?.text = "Google"
             self.backgroundColor = .white
             self.setTitleColor(.label, for: .normal)
            
         case .appleId:
+            self.titleLabel?.text = "Apple ID"
             self.backgroundColor = .black
             self.setTitleColor(.white, for: .normal)
             
