@@ -110,7 +110,7 @@ final class MainViewController: UIViewController {
     func createNavigationBar() {
         navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "line.3.horizontal"), style: .plain, target: self, action: #selector(menuTapped))
 
-        currentPosition.titleEdgeInsets = UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 0)
+//        currentPosition.titleEdgeInsets = UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 0)
         currentPosition.setTitleColor(.black, for: .normal)
         currentPosition.setImage(UIImage(systemName: "mappin.circle.fill"), for: .normal)
         currentPosition.addTarget(self, action: #selector(buttonTapped), for: .touchUpInside)
