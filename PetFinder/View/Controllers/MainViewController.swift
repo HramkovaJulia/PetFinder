@@ -108,6 +108,7 @@ final class MainViewController: UIViewController {
     }
     
     func createNavigationBar() {
+        self.navigationController?.navigationBar.isHidden = false
         navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "line.3.horizontal"), style: .plain, target: self, action: #selector(menuTapped))
 
 //        currentPosition.titleEdgeInsets = UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 0)
@@ -120,9 +121,14 @@ final class MainViewController: UIViewController {
     }
     
     @objc func menuTapped () {
-        sideMenuViewController = nil
-        configureMenuViewController()
-        showBulletinViewController(shouldMove: true)
+        
+        //TODO: muted side menu option 
+//        sideMenuViewController = nil
+//        configureMenuViewController()
+//        showBulletinViewController(shouldMove: true)
+        print("DEBUG PRINT: menuTapped")
+        let vc = HomeViewController()
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
     @objc func buttonTapped() {

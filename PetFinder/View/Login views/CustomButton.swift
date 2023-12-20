@@ -6,11 +6,9 @@
 //
 
 import UIKit
-import SnapKit
 
 class CustomButton: UIButton {
 
-   
     init(title: String, hasBackground: Bool = false, height: CGFloat = 53) {
         super.init(frame: .zero)
         self.setTitle(title, for: .normal)
@@ -21,6 +19,7 @@ class CustomButton: UIButton {
     
         switch hasBackground {
         case true:
+            //MARK: - Setup BackgroundColor for button
             self.backgroundColor = #colorLiteral(red: 1, green: 0.5921106339, blue: 0.3732565343, alpha: 1)
             // apply shadow
             self.layer.masksToBounds = false
