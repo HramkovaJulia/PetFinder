@@ -20,6 +20,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let homeVC = HomeViewController()
         
         let navigationController = UINavigationController(rootViewController: homeVC)
+        navigationController.setupNavBar()
+        
         self.window?.rootViewController = navigationController
         self.window?.makeKeyAndVisible()
     }

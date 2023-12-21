@@ -63,30 +63,32 @@ class LoginViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.setupNavBar()
+//        self.setupNavBar()
+        self.navigationController?.navigationBar.isHidden = false
         self.setupUI()
     }
     //MARK: - Setup Navigation Bar
     
-    private func setupNavBar() {
-        let color = #colorLiteral(red: 0.4745098054, green: 0.8392156959, blue: 0.9764705896, alpha: 1) //BCE3FF
-        guard let navBar = self.navigationController?.navigationBar else { return }
-        
-        navBar.isHidden = false
-        navBar.topItem?.backButtonTitle = ""
-        navBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.black]
-        self.navigationItem.title = "Добро пожаловать"
-        //TODO: need to setup font
-        navBar.titleTextAttributes = [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 24, weight: .semibold)]
-        
-        navBar.backIndicatorImage = UIImage(systemName: "chevron.backward.circle.fill", variableValue: 1, configuration: UIImage.SymbolConfiguration(weight: .regular))?.withTintColor(color, renderingMode: .alwaysOriginal)
-        navBar.backIndicatorTransitionMaskImage = UIImage(systemName: "chevron.backward.circle.fill", variableValue: 1, configuration: UIImage.SymbolConfiguration(weight: .regular))?.withTintColor(color, renderingMode: .alwaysOriginal)
-    }
+//    private func setupNavBar() {
+//        let color = #colorLiteral(red: 0.4745098054, green: 0.8392156959, blue: 0.9764705896, alpha: 1) //BCE3FF
+//        guard let navBar = self.navigationController?.navigationBar else { return }
+//        
+//        navBar.isHidden = false
+//        navBar.topItem?.backButtonTitle = ""
+//        navBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.black]
+//        
+//        //TODO: need to setup font
+//        navBar.titleTextAttributes = [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 24, weight: .semibold)]
+//        
+//        navBar.backIndicatorImage = UIImage(systemName: "chevron.backward.circle.fill", variableValue: 1, configuration: UIImage.SymbolConfiguration(weight: .regular))?.withTintColor(color, renderingMode: .alwaysOriginal)
+//        
+//        navBar.backIndicatorTransitionMaskImage = UIImage(systemName: "chevron.backward.circle.fill", variableValue: 1, configuration: UIImage.SymbolConfiguration(weight: .regular))?.withTintColor(color, renderingMode: .alwaysOriginal)
+//    }
     
     //MARK: - Setup UI
     
     private func setupUI() {
-    
+        self.navigationItem.title = "Добро пожаловать"
         self.view.backgroundColor = #colorLiteral(red: 0.9647513032, green: 0.87118572, blue: 0.7860397696, alpha: 1)
         self.view.addSubview(emailLabel)
         self.view.addSubview(emailOrPhoneFieild)
