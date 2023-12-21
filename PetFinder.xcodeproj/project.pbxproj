@@ -14,7 +14,7 @@
 		021E41032B32BB7100663AC8 /* ForgotPasswrdSecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021E41022B32BB7100663AC8 /* ForgotPasswrdSecondViewController.swift */; };
 		021E41052B32BC3100663AC8 /* WebViewerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021E41042B32BC3100663AC8 /* WebViewerViewController.swift */; };
 		021E410A2B32C17B00663AC8 /* HeaderTextLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021E41092B32C17B00663AC8 /* HeaderTextLabel.swift */; };
-		021E410C2B32C1AB00663AC8 /* SecondaryText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021E410B2B32C1AB00663AC8 /* SecondaryText.swift */; };
+		021E410C2B32C1AB00663AC8 /* CustomRecoverButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021E410B2B32C1AB00663AC8 /* CustomRecoverButton.swift */; };
 		021E410E2B32C20900663AC8 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021E410D2B32C20900663AC8 /* CustomButton.swift */; };
 		021E41102B32DB2700663AC8 /* CustomLoginButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021E410F2B32DB2700663AC8 /* CustomLoginButton.swift */; };
 		021E41122B32E9E900663AC8 /* CustomTextFiled.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021E41112B32E9E900663AC8 /* CustomTextFiled.swift */; };
@@ -40,7 +40,7 @@
 		021E41022B32BB7100663AC8 /* ForgotPasswrdSecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswrdSecondViewController.swift; sourceTree = "<group>"; };
 		021E41042B32BC3100663AC8 /* WebViewerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewerViewController.swift; sourceTree = "<group>"; };
 		021E41092B32C17B00663AC8 /* HeaderTextLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderTextLabel.swift; sourceTree = "<group>"; };
-		021E410B2B32C1AB00663AC8 /* SecondaryText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondaryText.swift; sourceTree = "<group>"; };
+		021E410B2B32C1AB00663AC8 /* CustomRecoverButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomRecoverButton.swift; sourceTree = "<group>"; };
 		021E410D2B32C20900663AC8 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		021E410F2B32DB2700663AC8 /* CustomLoginButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomLoginButton.swift; sourceTree = "<group>"; };
 		021E41112B32E9E900663AC8 /* CustomTextFiled.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextFiled.swift; sourceTree = "<group>"; };
@@ -91,12 +91,22 @@
 			isa = PBXGroup;
 			children = (
 				021E41092B32C17B00663AC8 /* HeaderTextLabel.swift */,
-				021E410B2B32C1AB00663AC8 /* SecondaryText.swift */,
 				021E410D2B32C20900663AC8 /* CustomButton.swift */,
+				021E410B2B32C1AB00663AC8 /* CustomRecoverButton.swift */,
 				021E410F2B32DB2700663AC8 /* CustomLoginButton.swift */,
 				021E41112B32E9E900663AC8 /* CustomTextFiled.swift */,
 			);
 			path = "Login views";
+			sourceTree = "<group>";
+		};
+		021E41132B33F3C200663AC8 /* main */ = {
+			isa = PBXGroup;
+			children = (
+				D84297932ADBDEB7006D6B06 /* SideMenuViewController.swift */,
+				D86EA8872ADBD10300B8D961 /* MainViewController.swift */,
+				D84297952ADBF79B006D6B06 /* PositionSelectionViewController.swift */,
+			);
+			path = main;
 			sourceTree = "<group>";
 		};
 		0DC8EADCD5D8121BCC52759C /* Pods */ = {
@@ -196,9 +206,7 @@
 			isa = PBXGroup;
 			children = (
 				021E40F92B32BA5900663AC8 /* login */,
-				D84297932ADBDEB7006D6B06 /* SideMenuViewController.swift */,
-				D86EA8872ADBD10300B8D961 /* MainViewController.swift */,
-				D84297952ADBF79B006D6B06 /* PositionSelectionViewController.swift */,
+				021E41132B33F3C200663AC8 /* main */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -329,7 +337,7 @@
 				021E410A2B32C17B00663AC8 /* HeaderTextLabel.swift in Sources */,
 				5873E3A02ADB190200F51501 /* AppDelegate.swift in Sources */,
 				021E41032B32BB7100663AC8 /* ForgotPasswrdSecondViewController.swift in Sources */,
-				021E410C2B32C1AB00663AC8 /* SecondaryText.swift in Sources */,
+				021E410C2B32C1AB00663AC8 /* CustomRecoverButton.swift in Sources */,
 				021E41102B32DB2700663AC8 /* CustomLoginButton.swift in Sources */,
 				021E41122B32E9E900663AC8 /* CustomTextFiled.swift in Sources */,
 				021E41012B32BB2700663AC8 /* HomeViewController.swift in Sources */,

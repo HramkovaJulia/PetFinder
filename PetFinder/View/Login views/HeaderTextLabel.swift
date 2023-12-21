@@ -18,8 +18,8 @@ class HeaderTextLabel: UIView {
        label.textAlignment = .left
        label.numberOfLines = 1
        label.font = .systemFont(ofSize: 16, weight: .medium)
-       //TODO: 
-       label.backgroundColor = .gray
+       //TODO: checking constrains via background color
+//       label.backgroundColor = .gray
        
        //TODO: setup Font
 //       UIFont(name: "HelveticaNeue-Bold", size: 16.0)
