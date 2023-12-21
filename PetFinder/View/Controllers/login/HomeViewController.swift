@@ -44,6 +44,7 @@ class HomeViewController: UIViewController {
             make.left.equalToSuperview().inset(16)
             make.right.equalToSuperview().inset(15)
             make.bottom.equalTo(skipButton.snp.top).offset(-10)
+            make.height.equalTo(53)
             
         }
         skipButton.snp.makeConstraints { make in

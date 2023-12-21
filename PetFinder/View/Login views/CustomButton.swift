@@ -9,12 +9,11 @@ import UIKit
 
 class CustomButton: UIButton {
 
-    init(title: String, hasBackground: Bool = false, height: CGFloat = 53) {
+    init(title: String, hasBackground: Bool = false) {
         super.init(frame: .zero)
         self.setTitle(title, for: .normal)
         self.layer.cornerRadius = 22
         self.layer.masksToBounds = true
-        self.heightAnchor.constraint(equalToConstant: height).isActive = true
         self.titleLabel?.font = .systemFont(ofSize: 16, weight: .semibold)
     
         switch hasBackground {

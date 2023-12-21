@@ -18,7 +18,7 @@ class LoginViewController: UIViewController {
     private let passwordLabel = HeaderTextLabel(title: "Пароль*")
     private let passwordField = CustomTextField(fieldType: .password)
     
-    private let forgotPassword = CustomButton(title: "Забыли пароль?", hasBackground: false, height: 20)
+    private let forgotPassword = CustomButton(title: "Забыли пароль?", hasBackground: false)
     
     private let googleLoginButton = CustomLoginButton(button: .google)
     private let appleLoginButton = CustomLoginButton(button: .appleId)
@@ -38,6 +38,7 @@ class LoginViewController: UIViewController {
 
     private func setupUI() {
         self.navigationController?.navigationBar.isHidden = false
+        self.navigationController?.navigationBar.backgroundColor = .orange
         self.view.backgroundColor = #colorLiteral(red: 0.9647513032, green: 0.87118572, blue: 0.7860397696, alpha: 1)
         
         self.view.addSubview(emailLabel)
@@ -50,16 +51,18 @@ class LoginViewController: UIViewController {
         
         //MARK: - constrains
         emailLabel.snp.makeConstraints { make in
-            make.left.equalToSuperview().inset(10)
-            make.right.equalToSuperview().inset(15)
-            make.top.equalToSuperview().offset(5)
+            make.left.equalTo(view.safeAreaLayoutGuide).inset(24)
+            make.right.equalTo(view.safeAreaLayoutGuide).inset(15)
+            make.top.equalTo(view.safeAreaLayoutGuide).offset(0)
+           
         }
         
         emailOrPhoneFieild.snp.makeConstraints { make in
             make.left.equalToSuperview().inset(16)
             make.right.equalToSuperview().inset(15)
+            make.height.equalTo(53)
             //исправить offset 24
-            make.top.equalTo(emailLabel.snp.bottom).offset(34)
+            make.top.equalTo(emailLabel.snp.bottom).offset(24)
             
         }
         

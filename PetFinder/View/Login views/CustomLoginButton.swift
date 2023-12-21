@@ -14,14 +14,14 @@ class CustomLoginButton: UIButton {
         case appleId
     }
     
-    init(title: String = "", height: CGFloat = 53, button: FontType) {
+    init(title: String = "", button: FontType) {
         super.init(frame: .zero)
         
         self.setTitle(title, for: .normal)
         self.layer.cornerRadius = 22
         self.layer.masksToBounds = true
-        self.heightAnchor.constraint(equalToConstant: height).isActive = true
-        layoutIfNeeded()
+        
+//        self.heightAnchor.constraint(equalToConstant: height).isActive = true
         self.titleLabel?.font = .systemFont(ofSize: 16, weight: .semibold)
         
         // apply shadow

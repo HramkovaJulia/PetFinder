@@ -39,8 +39,6 @@ class CustomTextField: UITextField {
         self.layer.cornerRadius = 22
         //TODO: Font set
         self.font = .systemFont(ofSize: 14, weight: .light)
-        self.setupRightImageView()
-
         
         //to apply Shadow
         self.layer.shadowOpacity = 0.4
@@ -78,6 +76,7 @@ class CustomTextField: UITextField {
             self.isSecureTextEntry = true
             self.textContentType = .oneTimeCode
             self.textContentType = .password
+            self.setupRightImageView()
         }
     }
     
@@ -87,20 +86,17 @@ class CustomTextField: UITextField {
     
     //MARK: - setup ui hide/show button
     private func setupRightImageView(){
-        // выставить кнопку width
         let rightView = UIView(frame: CGRect(x: 0, y: 0, width: 40, height: 50))
-        rightView.backgroundColor = .blue
-    
-        // выставить кнопку width
-        rightEyeButton.frame = CGRect(x: -4, y: 12, width: 25, height: 25)
+        
+        //TODO: background for setup constrains
+//        rightView.backgroundColor = .lightGray
+        
+        //show eye position setup
+        rightEyeButton.frame = CGRect(x: 5, y: 12, width: 25, height: 25)
         rightView.addSubview(rightEyeButton)
     
         rightEyeButton.addTarget(self, action: #selector(showOrHidePassword), for: .touchUpInside)
         
-        //to apply padding
-        let paddingView : UIView = UIView(frame: CGRect(x: 0, y: 0, width: 12, height: self.frame.height))
-        self.leftView = paddingView
-        self.leftViewMode = .always
         self.rightViewMode = .always
         self.rightView = rightView
         
@@ -109,9 +105,13 @@ class CustomTextField: UITextField {
     @objc func showOrHidePassword(){
             print("DEBUG: show/hide password button pressed")
         if isSecureTextEntry {
-            rightEyeButton.setImage(UIImage(systemName: "eye", variableValue: 0, configuration: UIImage.SymbolConfiguration(weight: .light))?.withTintColor(.secondaryLabel, renderingMode: .alwaysOriginal), for: .normal)
+            rightEyeButton.setImage(UIImage(systemName: "eye", variableValue: 0,
+                                            configuration: UIImage.SymbolConfiguration(weight: .light))?.withTintColor(.secondaryLabel,
+                                                renderingMode: .alwaysOriginal), for: .normal)
         } else {
-            rightEyeButton.setImage(UIImage(systemName: "eye.slash", variableValue: 0, configuration: UIImage.SymbolConfiguration(weight: .light))?.withTintColor(.secondaryLabel, renderingMode: .alwaysOriginal), for: .normal)
+            rightEyeButton.setImage(UIImage(systemName: "eye.slash", variableValue: 0,
+                                            configuration: UIImage.SymbolConfiguration(weight: .light))?.withTintColor(.secondaryLabel,
+                                            renderingMode: .alwaysOriginal), for: .normal)
         }
             isSecureTextEntry = !isSecureTextEntry
         }
