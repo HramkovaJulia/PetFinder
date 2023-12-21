@@ -58,38 +58,24 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-       
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-//        self.setupNavBar()
         self.navigationController?.navigationBar.isHidden = false
+        self.title = "Добро пожаловать"
         self.setupUI()
     }
-    //MARK: - Setup Navigation Bar
     
-//    private func setupNavBar() {
-//        let color = #colorLiteral(red: 0.4745098054, green: 0.8392156959, blue: 0.9764705896, alpha: 1) //BCE3FF
-//        guard let navBar = self.navigationController?.navigationBar else { return }
-//        
-//        navBar.isHidden = false
-//        navBar.topItem?.backButtonTitle = ""
+
+    //MARK: - Setup Navigation Bar
+
 //        navBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.black]
 //        
 //        //TODO: need to setup font
 //        navBar.titleTextAttributes = [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 24, weight: .semibold)]
-//        
-//        navBar.backIndicatorImage = UIImage(systemName: "chevron.backward.circle.fill", variableValue: 1, configuration: UIImage.SymbolConfiguration(weight: .regular))?.withTintColor(color, renderingMode: .alwaysOriginal)
-//        
-//        navBar.backIndicatorTransitionMaskImage = UIImage(systemName: "chevron.backward.circle.fill", variableValue: 1, configuration: UIImage.SymbolConfiguration(weight: .regular))?.withTintColor(color, renderingMode: .alwaysOriginal)
-//    }
+
     
     //MARK: - Setup UI
     
     private func setupUI() {
-        self.navigationItem.title = "Добро пожаловать"
-        self.view.backgroundColor = #colorLiteral(red: 0.9647513032, green: 0.87118572, blue: 0.7860397696, alpha: 1)
+        self.view.backgroundColor = #colorLiteral(red: 0.9895065427, green: 0.9597766995, blue: 0.9387372732, alpha: 1)
         self.view.addSubview(emailLabel)
         self.view.addSubview(emailOrPhoneFieild)
         self.view.addSubview(passwordLabel)

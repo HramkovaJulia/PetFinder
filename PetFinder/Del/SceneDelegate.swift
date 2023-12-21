@@ -20,6 +20,12 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let homeVC = HomeViewController()
         
         let navigationController = UINavigationController(rootViewController: homeVC)
+        navigationController.navigationBar.topItem?.backBarButtonItem = UIBarButtonItem(title: "",
+                                                                style: .plain,
+                                                                target: nil,
+                                                                action: nil)
+//        
+//        
         navigationController.setupNavBar()
         
         self.window?.rootViewController = navigationController

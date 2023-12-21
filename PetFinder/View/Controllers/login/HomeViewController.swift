@@ -57,13 +57,13 @@ class HomeViewController: UIViewController {
     }
     //MARK: - selectors
     @objc private func didTapConnect() {
-        print("DEBUG PRINT:", "didTapConnect")
+        print("DEBUG :", "Войти")
         let vc = LoginViewController()
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
     @objc private func didTapSkipSignIn() {
-        print("DEBUG PRINT: didTapSkipSignIn")
+        print("DEBUG : Пропустить")
         let vc = MainViewController()
         self.navigationController?.pushViewController(vc, animated: true)
     }
