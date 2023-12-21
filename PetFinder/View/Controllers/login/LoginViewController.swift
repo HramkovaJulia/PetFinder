@@ -110,7 +110,7 @@ class LoginViewController: UIViewController {
         
         forgotPassword.snp.makeConstraints { make in
             make.left.equalTo(view.safeAreaLayoutGuide).inset(24)
-            make.right.equalTo(view.safeAreaLayoutGuide).inset(15)
+            make.right.equalTo(forgotPassword.titleLabel!.snp.right).offset(10)
             make.top.equalTo(passwordField.snp.bottom).offset(10)
         }
         deviderStackView.snp.makeConstraints { make in

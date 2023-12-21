@@ -50,7 +50,7 @@ class RecoveryPassViewController: UIViewController {
         }
         dontHaveAccess.snp.makeConstraints { make in
             make.left.equalTo(view.safeAreaLayoutGuide).inset(24)
-            make.right.equalTo(view.safeAreaLayoutGuide).inset(15)
+            make.right.equalTo(dontHaveAccess.titleLabel!.snp.right).offset(10)
             make.top.equalTo(emailOrPhoneFieild.snp.bottom).offset(10)
         }
         sendPin.snp.makeConstraints { make in
