@@ -20,13 +20,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let homeVC = HomeViewController()
         
         let navigationController = UINavigationController(rootViewController: homeVC)
-        navigationController.navigationBar.topItem?.backBarButtonItem = UIBarButtonItem(title: "",
-                                                                style: .plain,
-                                                                target: nil,
-                                                                action: nil)
-//        
-//        
-        navigationController.setupNavBar()
+        //delete title from backButton
+        navigationController.navigationBar.topItem?.backButtonTitle = ""
         
         self.window?.rootViewController = navigationController
         self.window?.makeKeyAndVisible()

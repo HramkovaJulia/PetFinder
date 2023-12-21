@@ -63,15 +63,6 @@ class LoginViewController: UIViewController {
         self.setupUI()
     }
     
-
-    //MARK: - Setup Navigation Bar
-
-//        navBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.black]
-//        
-//        //TODO: need to setup font
-//        navBar.titleTextAttributes = [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 24, weight: .semibold)]
-
-    
     //MARK: - Setup UI
     
     private func setupUI() {
