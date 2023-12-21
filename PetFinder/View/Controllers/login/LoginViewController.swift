@@ -58,15 +58,18 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.navigationController?.navigationBar.isHidden = false
-        self.title = "Добро пожаловать"
+        self.forgotPassword.addTarget(self, action: #selector(didTapForgotPassword), for: .touchUpInside)
         self.setupUI()
     }
     
     //MARK: - Setup UI
     
     private func setupUI() {
+        
         self.view.backgroundColor = #colorLiteral(red: 0.9895065427, green: 0.9597766995, blue: 0.9387372732, alpha: 1)
+        self.navigationController?.navigationBar.isHidden = false
+        self.title = "Добро пожаловать"
+        
         self.view.addSubview(emailLabel)
         self.view.addSubview(emailOrPhoneFieild)
         self.view.addSubview(passwordLabel)
@@ -141,4 +144,13 @@ class LoginViewController: UIViewController {
             make.bottom.equalToSuperview().offset(0)
         }
     }
+    
+    //MARK: - selectors
+
+        @objc private func didTapForgotPassword() {
+            print("DEBUG :", "didTapForgotPassword")
+            let vc = RecoveryPassViewController()
+            self.navigationController?.pushViewController(vc, animated: true)
+            navigationController?.navigationBar.topItem?.backButtonTitle = ""
+        }
 }

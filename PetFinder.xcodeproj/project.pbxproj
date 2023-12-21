@@ -18,6 +18,7 @@
 		021E410E2B32C20900663AC8 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021E410D2B32C20900663AC8 /* CustomButton.swift */; };
 		021E41102B32DB2700663AC8 /* CustomLoginButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021E410F2B32DB2700663AC8 /* CustomLoginButton.swift */; };
 		021E41122B32E9E900663AC8 /* CustomTextFiled.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021E41112B32E9E900663AC8 /* CustomTextFiled.swift */; };
+		021E41172B347A2300663AC8 /* RecoveryPassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021E41162B347A2300663AC8 /* RecoveryPassViewController.swift */; };
 		5873E3A02ADB190200F51501 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5873E39F2ADB190200F51501 /* AppDelegate.swift */; };
 		5873E3A22ADB190200F51501 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5873E3A12ADB190200F51501 /* SceneDelegate.swift */; };
 		5873E3A92ADB190600F51501 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5873E3A82ADB190600F51501 /* Assets.xcassets */; };
@@ -44,6 +45,7 @@
 		021E410D2B32C20900663AC8 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		021E410F2B32DB2700663AC8 /* CustomLoginButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomLoginButton.swift; sourceTree = "<group>"; };
 		021E41112B32E9E900663AC8 /* CustomTextFiled.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextFiled.swift; sourceTree = "<group>"; };
+		021E41162B347A2300663AC8 /* RecoveryPassViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecoveryPassViewController.swift; sourceTree = "<group>"; };
 		315C23E2AA7CC7CA463BE81C /* Pods-PetFinder.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PetFinder.release.xcconfig"; path = "Target Support Files/Pods-PetFinder/Pods-PetFinder.release.xcconfig"; sourceTree = "<group>"; };
 		5873E39C2ADB190200F51501 /* PetFinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PetFinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5873E39F2ADB190200F51501 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -83,6 +85,7 @@
 				021E41022B32BB7100663AC8 /* ForgotPasswrdSecondViewController.swift */,
 				021E40FE2B32BB0500663AC8 /* RegisterViewController.swift */,
 				021E41042B32BC3100663AC8 /* WebViewerViewController.swift */,
+				021E41162B347A2300663AC8 /* RecoveryPassViewController.swift */,
 			);
 			path = login;
 			sourceTree = "<group>";
@@ -330,6 +333,7 @@
 				D84297992ADC1E65006D6B06 /* Extansions.swift in Sources */,
 				021E41052B32BC3100663AC8 /* WebViewerViewController.swift in Sources */,
 				021E40FF2B32BB0500663AC8 /* RegisterViewController.swift in Sources */,
+				021E41172B347A2300663AC8 /* RecoveryPassViewController.swift in Sources */,
 				D842979F2ADC312A006D6B06 /* AnimalCollectionViewCell.swift in Sources */,
 				D86EA8882ADBD10300B8D961 /* MainViewController.swift in Sources */,
 				021E40FB2B32BABF00663AC8 /* ForgotPasswordViewController.swift in Sources */,
