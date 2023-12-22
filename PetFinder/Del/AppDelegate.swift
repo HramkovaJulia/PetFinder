@@ -23,7 +23,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         appearance.topItem?.backBarButtonItem = UIBarButtonItem(title: "", style: .plain,
                                                               target: nil,
                                                               action: nil)
-        
+//        let navBarAppearance = UINavigationBarAppearance()
+//        navBarAppearance.configureWithTransparentBackground()
 
         return true
     }

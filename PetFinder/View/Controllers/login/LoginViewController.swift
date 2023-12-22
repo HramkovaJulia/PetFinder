@@ -59,6 +59,8 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
         
         self.forgotPassword.addTarget(self, action: #selector(didTapForgotPassword), for: .touchUpInside)
+        self.signin.addTarget(self, action: #selector(didTapSignin), for: .touchUpInside)
+        
         self.setupUI()
     }
     
@@ -146,11 +148,19 @@ class LoginViewController: UIViewController {
     }
     
     //MARK: - selectors
-
-        @objc private func didTapForgotPassword() {
-            print("DEBUG :", "didTapForgotPassword")
-            let vc = RecoveryPassViewController()
-            self.navigationController?.pushViewController(vc, animated: true)
-            navigationController?.navigationBar.topItem?.backButtonTitle = ""
-        }
+    
+    @objc private func didTapForgotPassword() {
+        print("DEBUG :", "didTapForgotPassword")
+        let vc = RecoveryPassViewController()
+        self.navigationController?.pushViewController(vc, animated: true)
+        navigationController?.navigationBar.topItem?.backButtonTitle = ""
+    }
+    
+    @objc private func didTapSignin() {
+        print("DEBUG :", "didTapSignin")
+        let vc = RegisterViewController()
+        self.navigationController?.pushViewController(vc, animated: true)
+        navigationController?.navigationBar.topItem?.backButtonTitle = ""
+    }
+    
 }
