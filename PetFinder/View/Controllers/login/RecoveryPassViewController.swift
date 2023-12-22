@@ -48,7 +48,7 @@ class RecoveryPassViewController: UIViewController {
             make.left.equalToSuperview().inset(16)
             make.right.equalToSuperview().inset(15)
             make.height.equalTo(53)
-            make.top.equalTo(emailLabel.snp.bottom).offset(24)
+            make.top.equalTo(emailLabel.snp.bottom).offset(29)
         }
         dontHaveAccess.snp.makeConstraints { make in
             make.left.equalTo(view.safeAreaLayoutGuide).inset(24)
@@ -59,7 +59,7 @@ class RecoveryPassViewController: UIViewController {
             make.height.equalTo(53)
             make.left.equalToSuperview().inset(16)
             make.right.equalToSuperview().inset(15)
-            make.bottom.equalToSuperview().offset(-24)
+            make.bottom.equalToSuperview().offset(-29)
         }
     }
     @objc private func didTapSendPinCode() {

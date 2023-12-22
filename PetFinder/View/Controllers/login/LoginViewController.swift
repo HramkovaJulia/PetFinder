@@ -94,7 +94,7 @@ class LoginViewController: UIViewController {
             make.left.equalToSuperview().inset(16)
             make.right.equalToSuperview().inset(15)
             make.height.equalTo(53)
-            make.top.equalTo(emailLabel.snp.bottom).offset(24)
+            make.top.equalTo(emailLabel.snp.bottom).offset(29)
         }
         
         passwordLabel.snp.makeConstraints { make in
@@ -107,7 +107,7 @@ class LoginViewController: UIViewController {
             make.left.equalToSuperview().inset(16)
             make.right.equalToSuperview().inset(15)
             make.height.equalTo(53)
-            make.top.equalTo(passwordLabel.snp.bottom).offset(24)
+            make.top.equalTo(passwordLabel.snp.bottom).offset(29)
         }
         
         forgotPassword.snp.makeConstraints { make in
@@ -118,14 +118,14 @@ class LoginViewController: UIViewController {
         deviderStackView.snp.makeConstraints { make in
             make.left.equalTo(view.safeAreaLayoutGuide).inset(24)
             make.right.equalTo(view.safeAreaLayoutGuide).inset(15)
-            make.top.equalTo(forgotPassword.snp.bottom).offset(32)
+            make.top.equalTo(forgotPassword.snp.bottom).offset(29)
         }
         
         googleLoginButton.snp.makeConstraints { make in
             make.left.equalToSuperview().inset(16)
             make.right.equalToSuperview().inset(15)
             make.height.equalTo(passwordField.snp.height)
-            make.top.equalTo(deviderStackView.snp.bottom).offset(32)
+            make.top.equalTo(deviderStackView.snp.bottom).offset(29)
         }
         appleLoginButton.snp.makeConstraints { make in
             make.left.equalToSuperview().inset(16)

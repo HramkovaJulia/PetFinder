@@ -60,51 +60,52 @@ class RegisterViewController: UIViewController {
             make.left.equalToSuperview().inset(16)
             make.right.equalToSuperview().inset(15)
             make.height.equalTo(53)
-            make.top.equalTo(userNameLabel.snp.bottom).offset(24)
+            //touching background offset is 19
+            make.top.equalTo(userNameLabel.snp.bottom).offset(29)
         }
         emailLabel.snp.makeConstraints { make in
             make.left.equalTo(view.safeAreaLayoutGuide).inset(24)
             make.right.equalTo(view.safeAreaLayoutGuide).inset(15)
-            make.top.equalTo(userNameField.snp.bottom).offset(24)
+            make.top.equalTo(userNameField.snp.bottom).offset(18)
         }
         
         emailField.snp.makeConstraints { make in
             make.left.equalToSuperview().inset(16)
             make.right.equalToSuperview().inset(15)
             make.height.equalTo(53)
-            make.top.equalTo(emailLabel.snp.bottom).offset(24)
+            make.top.equalTo(emailLabel.snp.bottom).offset(29)
         }
         
         createPasswordLabel.snp.makeConstraints { make in
             make.left.equalTo(view.safeAreaLayoutGuide).inset(24)
             make.right.equalTo(view.safeAreaLayoutGuide).inset(15)
-            make.top.equalTo(emailField.snp.bottom).offset(24)
+            make.top.equalTo(emailField.snp.bottom).offset(18)
         }
         
         createPasswordField.snp.makeConstraints { make in
             make.left.equalToSuperview().inset(16)
             make.right.equalToSuperview().inset(15)
             make.height.equalTo(53)
-            make.top.equalTo(createPasswordLabel.snp.bottom).offset(24)
+            make.top.equalTo(createPasswordLabel.snp.bottom).offset(29)
         }
         
         repeatPasswordLabel.snp.makeConstraints { make in
             make.left.equalTo(view.safeAreaLayoutGuide).inset(24)
             make.right.equalTo(view.safeAreaLayoutGuide).inset(15)
-            make.top.equalTo(createPasswordField.snp.bottom).offset(24)
+            make.top.equalTo(createPasswordField.snp.bottom).offset(18)
         }
         
         repeatPasswordField.snp.makeConstraints { make in
             make.left.equalToSuperview().inset(16)
             make.right.equalToSuperview().inset(15)
             make.height.equalTo(53)
-            make.top.equalTo(repeatPasswordLabel.snp.bottom).offset(24)
+            make.top.equalTo(repeatPasswordLabel.snp.bottom).offset(29)
         }
         signin.snp.makeConstraints { make in
             make.height.equalTo(53)
             make.left.equalToSuperview().inset(16)
             make.right.equalToSuperview().inset(15)
-            make.bottom.equalToSuperview().offset(-24)
+            make.bottom.equalToSuperview().offset(-29)
         }
         
     }

@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SnapKit
 
 class RecoveryMessageCodeViewController: UIViewController {
     
@@ -21,6 +22,8 @@ class RecoveryMessageCodeViewController: UIViewController {
         
         self.navigationController?.navigationBar.isHidden = false
         self.title = "Восстановление пароля"
+        
+        self.continiue.addTarget(self, action: #selector(didTapContinue), for: .touchUpInside)
         setupUI()
 
     }
@@ -48,16 +51,22 @@ class RecoveryMessageCodeViewController: UIViewController {
         }
         sendCodeAgain.snp.makeConstraints { make in
             make.centerX.equalToSuperview()
-            make.top.equalTo(recievedCodeField.snp.bottom).offset(10)
+            //TODO: setup constraint after adding timer
+            make.top.equalTo(recievedCodeField.snp.bottom).offset(52)
         }
         continiue.snp.makeConstraints { make in
             make.height.equalTo(53)
             make.left.equalToSuperview().inset(16)
             make.right.equalToSuperview().inset(15)
-            make.bottom.equalToSuperview().offset(-24)
+            make.bottom.equalToSuperview().offset(-29)
         }
     }
   
 
-
+    @objc private func didTapContinue() {
+        print("DEBUG :", "didTapContinue")
+        let vc = RecoveryNewPasswordViewController()
+        self.navigationController?.pushViewController(vc, animated: true)
+        navigationController?.navigationBar.topItem?.backButtonTitle = ""
+    }
 }
