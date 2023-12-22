@@ -52,7 +52,7 @@ class HomeViewController: UIViewController {
             
             make.left.equalToSuperview().inset(16)
             make.right.equalToSuperview().inset(15)
-            make.bottom.equalToSuperview().offset(0)
+            make.bottom.equalToSuperview().offset(-10)
         }
     }
     //MARK: - selectors

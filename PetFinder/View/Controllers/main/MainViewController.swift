@@ -122,8 +122,8 @@ final class MainViewController: UIViewController {
     }
     
     @objc func menuTapped () {
+        //MARK: - muted side menu option for testing
         
-        //TODO: muted side menu option for testing
 //        sideMenuViewController = nil
 //        configureMenuViewController()
 //        showBulletinViewController(shouldMove: true)
@@ -131,6 +131,7 @@ final class MainViewController: UIViewController {
         print("DEBUG PRINT: menuTapped")
         let vc = HomeViewController()
         self.navigationController?.pushViewController(vc, animated: true)
+        navigationController?.navigationBar.topItem?.backButtonTitle = ""
     }
     
     @objc func buttonTapped() {
