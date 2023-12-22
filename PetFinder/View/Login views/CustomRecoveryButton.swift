@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 import SnapKit
 
-class CustomRecoverButton: UIButton {
+class CustomRecoveryButton: UIButton {
     
     enum buttonType {
         case forgotPassword
@@ -25,15 +25,28 @@ class CustomRecoverButton: UIButton {
         self.layer.masksToBounds = true
         self.setTitleColor(.systemBlue, for: .normal)
         
+        let myAttributes: [NSAttributedString.Key: Any] = [
+              .font: UIFont.systemFont(ofSize: 17),
+              .foregroundColor: UIColor.systemBlue,
+              .underlineStyle: NSUnderlineStyle.single.rawValue
+          ]
+        
+//             myButton.setAttributedTitle(attributeString, for: .normal)
+        
+        
         switch style {
         case .forgotPassword:
             self.setTitle("Забыли пароль?", for: .normal)
             self.contentHorizontalAlignment = .left
         case .dontHaveAccess:
-            self.setTitle("Нет доступа?", for: .normal)
+            let attributeString = NSMutableAttributedString(string: "Нет доступа?",
+                                                            attributes: myAttributes)
+            self.setAttributedTitle(attributeString, for: .normal)
             self.contentHorizontalAlignment = .left
         case .sendCodeAgain:
-            self.setTitle("Отправить код повторно", for: .normal)
+            let attributeString = NSMutableAttributedString(string: "Отправить код повторно",
+                                                            attributes: myAttributes)
+            self.setAttributedTitle(attributeString, for: .normal)
             self.contentHorizontalAlignment = .center
        
         }

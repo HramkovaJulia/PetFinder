@@ -13,16 +13,18 @@ class RecoveryPassViewController: UIViewController {
     //MARK: - UI Components
     
     private let emailLabel = HeaderTextLabel(title: "Телефон или почта*")
-    private let emailOrPhoneFieild = CustomTextField(fieldType: .email)
+    private let emailOrPhoneField = CustomTextField(fieldType: .email)
     
-    private let dontHaveAccess = CustomRecoverButton(style: .dontHaveAccess)
-    private let sendPin = CustomButton(title: "Отправить код", hasBackground: true)
+    private let dontHaveAccess = CustomRecoveryButton(style: .dontHaveAccess)
+    private let sendRecoveryCode = CustomButton(title: "Отправить код", hasBackground: true)
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.navigationController?.navigationBar.isHidden = false
         self.title = "Восстановление пароля"
+        
+        self.sendRecoveryCode.addTarget(self, action: #selector(didTapSendPinCode), for: .touchUpInside)
         setupUI()
 
     }
@@ -31,9 +33,9 @@ class RecoveryPassViewController: UIViewController {
     private func setupUI() {
         self.view.backgroundColor = #colorLiteral(red: 0.9895065427, green: 0.9597766995, blue: 0.9387372732, alpha: 1)
         self.view.addSubview(emailLabel)
-        self.view.addSubview(emailOrPhoneFieild)
+        self.view.addSubview(emailOrPhoneField)
         self.view.addSubview(dontHaveAccess)
-        self.view.addSubview(sendPin)
+        self.view.addSubview(sendRecoveryCode)
         
         //MARK: - constrains
         emailLabel.snp.makeConstraints { make in
@@ -42,7 +44,7 @@ class RecoveryPassViewController: UIViewController {
             make.top.equalTo(view.safeAreaLayoutGuide).offset(24)
         }
         
-        emailOrPhoneFieild.snp.makeConstraints { make in
+        emailOrPhoneField.snp.makeConstraints { make in
             make.left.equalToSuperview().inset(16)
             make.right.equalToSuperview().inset(15)
             make.height.equalTo(53)
@@ -51,18 +53,20 @@ class RecoveryPassViewController: UIViewController {
         dontHaveAccess.snp.makeConstraints { make in
             make.left.equalTo(view.safeAreaLayoutGuide).inset(24)
             make.right.equalTo(dontHaveAccess.titleLabel!.snp.right).offset(10)
-            make.top.equalTo(emailOrPhoneFieild.snp.bottom).offset(10)
+            make.top.equalTo(emailOrPhoneField.snp.bottom).offset(10)
         }
-        sendPin.snp.makeConstraints { make in
+        sendRecoveryCode.snp.makeConstraints { make in
             make.height.equalTo(53)
             make.left.equalToSuperview().inset(16)
             make.right.equalToSuperview().inset(15)
-            make.bottom.equalToSuperview().offset(-34)
+            make.bottom.equalToSuperview().offset(-24)
         }
     }
-
-    // MARK: - Navigation
-
-  
+    @objc private func didTapSendPinCode() {
+        print("DEBUG :", "didTapSendPinCode")
+        let vc = RecoveryMessageCodeViewController()
+        self.navigationController?.pushViewController(vc, animated: true)
+        navigationController?.navigationBar.topItem?.backButtonTitle = ""
+    }
 
 }

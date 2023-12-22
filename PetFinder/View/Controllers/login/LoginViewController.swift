@@ -13,12 +13,12 @@ class LoginViewController: UIViewController {
     //MARK: - UI Components
     
     private let emailLabel = HeaderTextLabel(title: "Телефон или почта*")
-    private let emailOrPhoneFieild = CustomTextField(fieldType: .email)
+    private let emailOrPhoneField = CustomTextField(fieldType: .email)
     
     private let passwordLabel = HeaderTextLabel(title: "Пароль*")
     private let passwordField = CustomTextField(fieldType: .password)
     
-    private let forgotPassword = CustomRecoverButton(style: .forgotPassword)
+    private let forgotPassword = CustomRecoveryButton(style: .forgotPassword)
     
     private let googleLoginButton = CustomLoginButton(button: .google)
     private let appleLoginButton = CustomLoginButton(button: .appleId)
@@ -73,7 +73,7 @@ class LoginViewController: UIViewController {
         self.title = "Добро пожаловать"
         
         self.view.addSubview(emailLabel)
-        self.view.addSubview(emailOrPhoneFieild)
+        self.view.addSubview(emailOrPhoneField)
         self.view.addSubview(passwordLabel)
         self.view.addSubview(passwordField)
         self.view.addSubview(forgotPassword)
@@ -90,7 +90,7 @@ class LoginViewController: UIViewController {
             make.top.equalTo(view.safeAreaLayoutGuide).offset(24)
         }
         
-        emailOrPhoneFieild.snp.makeConstraints { make in
+        emailOrPhoneField.snp.makeConstraints { make in
             make.left.equalToSuperview().inset(16)
             make.right.equalToSuperview().inset(15)
             make.height.equalTo(53)
@@ -100,7 +100,7 @@ class LoginViewController: UIViewController {
         passwordLabel.snp.makeConstraints { make in
             make.left.equalTo(view.safeAreaLayoutGuide).inset(24)
             make.right.equalTo(view.safeAreaLayoutGuide).inset(15)
-            make.top.equalTo(emailOrPhoneFieild.snp.bottom).offset(24)
+            make.top.equalTo(emailOrPhoneField.snp.bottom).offset(24)
         }
         
         passwordField.snp.makeConstraints { make in
