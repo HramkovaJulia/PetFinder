@@ -124,8 +124,8 @@ final class MainViewController: UIViewController, UISearchBarDelegate {
         
         adsCollectionView.snp.makeConstraints { maker in
             maker.top.equalTo(animalsCollectionView.snp.bottom).inset(-20)
-            maker.left.equalToSuperview().inset(16)
-            maker.right.equalToSuperview().inset(15)
+            maker.left.equalToSuperview()
+            maker.right.equalToSuperview()
             maker.bottom.equalTo(self.view.safeAreaLayoutGuide).inset(5)
         }
     }

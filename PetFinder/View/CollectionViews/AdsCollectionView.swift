@@ -19,6 +19,7 @@ class AdsCollectionView: UICollectionView {
     
     init() {
         let layout = UICollectionViewFlowLayout()
+        layout.minimumLineSpacing = 16
         super.init(frame: .zero, collectionViewLayout: layout)
         commonInit()
     }
@@ -77,8 +78,22 @@ extension AdsCollectionView: UICollectionViewDelegate, UICollectionViewDelegateF
 
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 164.0, height: 242.0)
+        let collectionViewWidth = collectionView.bounds.width
+        let itemWidth = collectionViewWidth * 0.44
+        let itemHeight = itemWidth * 1.5
+        return CGSize(width: itemWidth, height: itemHeight)
     }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+            if section == 0 {
+                return UIEdgeInsets(top: 0, left: 16, bottom: 0, right: 16)
+            } else {
+                return UIEdgeInsets.zero
+            }
+        }
+
+
+
 
 }
 
