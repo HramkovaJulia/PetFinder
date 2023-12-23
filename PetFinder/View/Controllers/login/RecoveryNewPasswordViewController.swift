@@ -24,6 +24,7 @@ class RecoveryNewPasswordViewController: UIViewController {
         
         self.navigationController?.navigationBar.isHidden = false
         self.title = "Восстановление пароля"
+        self.changePassword.addTarget(self, action: #selector(didTapContinue), for: .touchUpInside)
         setupUI()
 
     }
@@ -71,6 +72,11 @@ class RecoveryNewPasswordViewController: UIViewController {
         }
     }
   
-
+    @objc private func didTapContinue() {
+        print("DEBUG :", "didTapContinue")
+        let vc = HomeViewController()
+        self.navigationController?.pushViewController(vc, animated: true)
+        navigationController?.navigationBar.topItem?.backButtonTitle = ""
+    }
 
 }

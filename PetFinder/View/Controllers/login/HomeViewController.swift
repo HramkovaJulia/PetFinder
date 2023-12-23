@@ -52,7 +52,7 @@ class HomeViewController: UIViewController {
             
             make.left.equalToSuperview().inset(16)
             make.right.equalToSuperview().inset(15)
-            make.bottom.equalToSuperview().offset(-10)
+            make.bottom.equalToSuperview().offset(-24)
         }
     }
     //MARK: - selectors
@@ -60,11 +60,13 @@ class HomeViewController: UIViewController {
         print("DEBUG :", "Войти")
         let vc = LoginViewController()
         self.navigationController?.pushViewController(vc, animated: true)
+        navigationController?.navigationBar.topItem?.backButtonTitle = ""
     }
     
     @objc private func didTapSkipSignIn() {
         print("DEBUG : Пропустить")
         let vc = MainViewController()
         self.navigationController?.pushViewController(vc, animated: true)
+        navigationController?.navigationBar.topItem?.backButtonTitle = ""
     }
 }

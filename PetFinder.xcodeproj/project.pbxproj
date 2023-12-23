@@ -7,11 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		021E40FB2B32BABF00663AC8 /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021E40FA2B32BABF00663AC8 /* ForgotPasswordViewController.swift */; };
 		021E40FD2B32BAEB00663AC8 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021E40FC2B32BAEB00663AC8 /* LoginViewController.swift */; };
 		021E40FF2B32BB0500663AC8 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021E40FE2B32BB0500663AC8 /* RegisterViewController.swift */; };
 		021E41012B32BB2700663AC8 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021E41002B32BB2700663AC8 /* HomeViewController.swift */; };
-		021E41032B32BB7100663AC8 /* ForgotPasswrdSecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021E41022B32BB7100663AC8 /* ForgotPasswrdSecondViewController.swift */; };
 		021E41052B32BC3100663AC8 /* WebViewerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021E41042B32BC3100663AC8 /* WebViewerViewController.swift */; };
 		021E410A2B32C17B00663AC8 /* HeaderTextLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021E41092B32C17B00663AC8 /* HeaderTextLabel.swift */; };
 		021E410C2B32C1AB00663AC8 /* CustomRecoveryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021E410B2B32C1AB00663AC8 /* CustomRecoveryButton.swift */; };
@@ -36,11 +34,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		021E40FA2B32BABF00663AC8 /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
 		021E40FC2B32BAEB00663AC8 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		021E40FE2B32BB0500663AC8 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		021E41002B32BB2700663AC8 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		021E41022B32BB7100663AC8 /* ForgotPasswrdSecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswrdSecondViewController.swift; sourceTree = "<group>"; };
 		021E41042B32BC3100663AC8 /* WebViewerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewerViewController.swift; sourceTree = "<group>"; };
 		021E41092B32C17B00663AC8 /* HeaderTextLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderTextLabel.swift; sourceTree = "<group>"; };
 		021E410B2B32C1AB00663AC8 /* CustomRecoveryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomRecoveryButton.swift; sourceTree = "<group>"; };
@@ -85,8 +81,6 @@
 			children = (
 				021E41002B32BB2700663AC8 /* HomeViewController.swift */,
 				021E40FC2B32BAEB00663AC8 /* LoginViewController.swift */,
-				021E40FA2B32BABF00663AC8 /* ForgotPasswordViewController.swift */,
-				021E41022B32BB7100663AC8 /* ForgotPasswrdSecondViewController.swift */,
 				021E40FE2B32BB0500663AC8 /* RegisterViewController.swift */,
 				021E41042B32BC3100663AC8 /* WebViewerViewController.swift */,
 				021E41162B347A2300663AC8 /* RecoveryPassViewController.swift */,
@@ -344,11 +338,9 @@
 				021E41172B347A2300663AC8 /* RecoveryPassViewController.swift in Sources */,
 				D842979F2ADC312A006D6B06 /* AnimalCollectionViewCell.swift in Sources */,
 				D86EA8882ADBD10300B8D961 /* MainViewController.swift in Sources */,
-				021E40FB2B32BABF00663AC8 /* ForgotPasswordViewController.swift in Sources */,
 				D84297A22ADC31E3006D6B06 /* ListAnimansCollectionView.swift in Sources */,
 				021E410A2B32C17B00663AC8 /* HeaderTextLabel.swift in Sources */,
 				5873E3A02ADB190200F51501 /* AppDelegate.swift in Sources */,
-				021E41032B32BB7100663AC8 /* ForgotPasswrdSecondViewController.swift in Sources */,
 				021E410C2B32C1AB00663AC8 /* CustomRecoveryButton.swift in Sources */,
 				021E41102B32DB2700663AC8 /* CustomLoginButton.swift in Sources */,
 				021E41122B32E9E900663AC8 /* CustomTextFiled.swift in Sources */,

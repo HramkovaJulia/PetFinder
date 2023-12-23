@@ -143,7 +143,7 @@ class LoginViewController: UIViewController {
         signin.snp.makeConstraints { make in
             make.left.equalToSuperview().inset(16)
             make.right.equalToSuperview().inset(15)
-            make.bottom.equalToSuperview().offset(-10)
+            make.bottom.equalToSuperview().offset(-24)
         }
     }
     

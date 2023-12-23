@@ -27,6 +27,7 @@ class RegisterViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.signin.addTarget(self, action: #selector(didTapSignin), for: .touchUpInside)
         setupUI()
         
     }
@@ -108,6 +109,12 @@ class RegisterViewController: UIViewController {
             make.bottom.equalToSuperview().offset(-29)
         }
         
+    }
+    @objc private func didTapSignin() {
+        print("DEBUG :", "didTapSignin")
+        let vc = HomeViewController()
+        self.navigationController?.pushViewController(vc, animated: true)
+        navigationController?.navigationBar.topItem?.backButtonTitle = ""
     }
 
 }
