@@ -10,7 +10,22 @@ import UIKit
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        //MARK: - global navBar setup, for all VC
+        let backBarItemColor = #colorLiteral(red: 0.4745098054, green: 0.8392156959, blue: 0.9764705896, alpha: 1) //BCE3FF
+        let backImage = UIImage(systemName: "chevron.backward.circle.fill",
+                                variableValue: 1, configuration: UIImage.SymbolConfiguration(weight: .regular))?.withTintColor(backBarItemColor,
+                                    renderingMode: .alwaysOriginal)
+        
+        let appearance = UINavigationBar.appearance()
+        appearance.backIndicatorImage = backImage
+        appearance.backIndicatorTransitionMaskImage = backImage
+        appearance.topItem?.backBarButtonItem = UIBarButtonItem(title: "", style: .plain,
+                                                              target: nil,
+                                                              action: nil)
+        let navBarAppearance = UINavigationBarAppearance()
+        navBarAppearance.configureWithTransparentBackground()
+
         return true
     }
 

@@ -108,9 +108,11 @@ final class MainViewController: UIViewController {
     }
     
     func createNavigationBar() {
+        //TODO: added next line
+        self.navigationController?.navigationBar.isHidden = false
         navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "line.3.horizontal"), style: .plain, target: self, action: #selector(menuTapped))
 
-        currentPosition.titleEdgeInsets = UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 0)
+//        currentPosition.titleEdgeInsets = UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 0)
         currentPosition.setTitleColor(.black, for: .normal)
         currentPosition.setImage(UIImage(systemName: "mappin.circle.fill"), for: .normal)
         currentPosition.addTarget(self, action: #selector(buttonTapped), for: .touchUpInside)
@@ -120,9 +122,16 @@ final class MainViewController: UIViewController {
     }
     
     @objc func menuTapped () {
-        sideMenuViewController = nil
-        configureMenuViewController()
-        showBulletinViewController(shouldMove: true)
+        //MARK: - muted side menu option for testing
+        
+//        sideMenuViewController = nil
+//        configureMenuViewController()
+//        showBulletinViewController(shouldMove: true)
+        //new lines
+        print("DEBUG PRINT: menuTapped")
+        let vc = HomeViewController()
+        self.navigationController?.pushViewController(vc, animated: true)
+        navigationController?.navigationBar.topItem?.backButtonTitle = ""
     }
     
     @objc func buttonTapped() {
@@ -188,7 +197,7 @@ final class MainViewController: UIViewController {
             currentPosition.setTitle(cityName, for: .normal)
         } else {
             let cityName = userDefaults.object(forKey: cityKey) ?? ""
-            currentPosition.setTitle(cityName as! String, for: .normal)
+            currentPosition.setTitle((cityName as! String), for: .normal)
         }
     }
 }
