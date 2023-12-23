@@ -40,6 +40,7 @@
 		D8B3BB342AFA97BF001259A2 /* ServicesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B3BB332AFA97BF001259A2 /* ServicesTableViewCell.swift */; };
 		D8B3BB362AFAA4DA001259A2 /* ListServicesCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B3BB352AFAA4DA001259A2 /* ListServicesCollectionView.swift */; };
 		D8B3BB382AFAA5D8001259A2 /* ListServicesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B3BB372AFAA5D8001259A2 /* ListServicesCollectionViewCell.swift */; };
+		D8DE97F72B35F9FE00D82318 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8DE97F62B35F9FE00D82318 /* MapView.swift */; };
 		D8E8072F2B26038B00D69D67 /* AdTypeSeletionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E8072E2B26038B00D69D67 /* AdTypeSeletionViewController.swift */; };
 		D8F70E902AE96571006543F0 /* SF-Pro-Text-Heavy.otf in Resources */ = {isa = PBXBuildFile; fileRef = D8F70E842AE96571006543F0 /* SF-Pro-Text-Heavy.otf */; };
 		D8F70E912AE96571006543F0 /* SF-Pro-Text-SemiboldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = D8F70E852AE96571006543F0 /* SF-Pro-Text-SemiboldItalic.otf */; };
@@ -95,6 +96,7 @@
 		D8B3BB332AFA97BF001259A2 /* ServicesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesTableViewCell.swift; sourceTree = "<group>"; };
 		D8B3BB352AFAA4DA001259A2 /* ListServicesCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListServicesCollectionView.swift; sourceTree = "<group>"; };
 		D8B3BB372AFAA5D8001259A2 /* ListServicesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListServicesCollectionViewCell.swift; sourceTree = "<group>"; };
+		D8DE97F62B35F9FE00D82318 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		D8E8072E2B26038B00D69D67 /* AdTypeSeletionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdTypeSeletionViewController.swift; sourceTree = "<group>"; };
 		D8F70E842AE96571006543F0 /* SF-Pro-Text-Heavy.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-Heavy.otf"; sourceTree = "<group>"; };
 		D8F70E852AE96571006543F0 /* SF-Pro-Text-SemiboldItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-SemiboldItalic.otf"; sourceTree = "<group>"; };
@@ -241,6 +243,7 @@
 		D86EA8852ADBD09400B8D961 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				D8DE97F52B35F9E800D82318 /* MapView */,
 				D8A9E8142AEE3A6B00E509EC /* SearchTextField */,
 				D80C90B52ADEFF9400C9873C /* TableViews */,
 				D84297A02ADC31B9006D6B06 /* CollectionViews */,
@@ -296,6 +299,14 @@
 				D8A9E8152AEE3A9900E509EC /* CustomSearchTextField.swift */,
 			);
 			path = SearchTextField;
+			sourceTree = "<group>";
+		};
+		D8DE97F52B35F9E800D82318 /* MapView */ = {
+			isa = PBXGroup;
+			children = (
+				D8DE97F62B35F9FE00D82318 /* MapView.swift */,
+			);
+			path = MapView;
 			sourceTree = "<group>";
 		};
 		D8E8072D2B26034300D69D67 /* CreateAd */ = {
@@ -478,6 +489,7 @@
 				D8B3BB2A2AF63534001259A2 /* AdViewController.swift in Sources */,
 				D8B3BB302AFA8950001259A2 /* ServicesViewController.swift in Sources */,
 				D86EADA92AE0469400FB19B6 /* SettingsViewController.swift in Sources */,
+				D8DE97F72B35F9FE00D82318 /* MapView.swift in Sources */,
 				D8B3BB342AFA97BF001259A2 /* ServicesTableViewCell.swift in Sources */,
 				D87D0DA52B2F53B400DC5476 /* CustomSengmentControl.swift in Sources */,
 				D84297962ADBF79B006D6B06 /* PositionSelectionViewController.swift in Sources */,

@@ -7,17 +7,20 @@
 
 import UIKit
 import SnapKit
+import MapKit
 
-class AdViewController: UIViewController{
+class AdViewController: UIViewController {
     
     private let imageCollectionView = ImagesAdCollectionView()
     var pageControl = UIPageControl()
     var toogleShowText = true
     private let dataModel: LostPetCard
-    
+    let currenPositionView: UIView
     
     init(viewModel: LostPetCard) {
         self.dataModel = viewModel
+        self.currenPositionView = MapView(frame: CGRect.zero, defaultLatitude: dataModel.lastSeenLocation.0, defaultLongitude: dataModel.lastSeenLocation.1)
+
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -128,6 +131,16 @@ class AdViewController: UIViewController{
         return showAllDescriptionText
     }()
     
+    private lazy var currentPositionPetLabel: UILabel = {
+        let descriptionLabel = UILabel()
+        descriptionLabel.font = UIFont.sfProText(ofSize: 18, weight: .medium)
+        descriptionLabel.text = "Адрес пропажи"
+        descriptionLabel.textColor = .black
+        descriptionLabel.lineBreakMode = .byTruncatingTail
+        descriptionLabel.numberOfLines = 0
+        return descriptionLabel
+    }()
+    
     private lazy var informationsAboutPet: UILabel = {
         let informationsAboutPet = UILabel()
         informationsAboutPet.font = UIFont.sfProText(ofSize: 18, weight: .medium)
@@ -206,9 +219,7 @@ class AdViewController: UIViewController{
             sender.setTitle("Показать польностью", for: .normal)
             toogleShowText = true
         }
-        
     }
-    
     
     private func setupPageControll() {
         imageCollectionView.didSelectItem = { number in
@@ -227,7 +238,6 @@ class AdViewController: UIViewController{
     func createTypeAdStack() {
         typeAdStack.addArrangedSubview(typeAd)
         typeAdStack.addArrangedSubview(typeAdText)
-        
     }
     
     func createPetSignsStack() {
@@ -271,6 +281,8 @@ class AdViewController: UIViewController{
         self.contentView.addSubview(descriptionLabel)
         self.contentView.addSubview(descriptionText)
         self.contentView.addSubview(showAllDescriptionText)
+        self.contentView.addSubview(currentPositionPetLabel)
+        self.contentView.addSubview(currenPositionView)
         self.contentView.addSubview(informationsAboutPet)
         self.contentView.addSubview(petSignsLabelStack)
         self.contentView.addSubview(ownerInformation)
@@ -287,7 +299,7 @@ class AdViewController: UIViewController{
         contentView.snp.makeConstraints { maker in
             maker.edges.equalToSuperview()
             maker.width.equalTo(scrollView)
-            maker.height.equalTo(view)
+//            maker.height.equalTo(self.view)
         }
         
         
@@ -351,8 +363,20 @@ class AdViewController: UIViewController{
             maker.left.equalToSuperview().inset(16)
         }
         
+        currentPositionPetLabel.snp.makeConstraints { maker in
+            maker.top.equalTo(showAllDescriptionText.snp.bottom).inset(-36)
+            maker.left.equalToSuperview().inset(16)
+        }
+
+        currenPositionView.snp.makeConstraints { maker in
+            maker.top.equalTo(currentPositionPetLabel.snp.bottom).inset(-44)
+            maker.left.equalToSuperview().inset(16)
+            maker.right.equalToSuperview().inset(15)
+            maker.height.equalTo(115)
+        }
+        
         informationsAboutPet.snp.makeConstraints { maker in
-            maker.top.equalTo(showAllDescriptionText.snp.bottom).inset(-14)
+            maker.top.equalTo(currenPositionView.snp.bottom).inset(-36)
             maker.left.equalToSuperview().inset(16)
         }
         
@@ -365,6 +389,7 @@ class AdViewController: UIViewController{
         ownerInformation.snp.makeConstraints { maker in
             maker.top.equalTo(petSignsLabelStack.snp.bottom).inset(-10)
             maker.left.equalToSuperview().inset(16)
+            maker.bottom.equalToSuperview().inset(100)
         }
         
         respond.snp.makeConstraints { maker in

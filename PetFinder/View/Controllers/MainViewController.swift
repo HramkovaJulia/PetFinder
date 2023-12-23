@@ -121,7 +121,6 @@ final class MainViewController: UIViewController, UISearchBarDelegate {
     }
     
     func setupAdsTableView() {
-        
         adsCollectionView.snp.makeConstraints { maker in
             maker.top.equalTo(animalsCollectionView.snp.bottom).inset(-20)
             maker.left.equalToSuperview()
