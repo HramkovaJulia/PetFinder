@@ -23,7 +23,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         //delete title from backButton
         navigationController.navigationBar.topItem?.backButtonTitle = ""
         
-        
         self.window?.rootViewController = navigationController
         self.window?.makeKeyAndVisible()
     }

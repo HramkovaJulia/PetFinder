@@ -8,7 +8,7 @@
 import UIKit
 import SnapKit
 
-class WebViewerViewController: UIViewController {
+final class WebViewerViewController: UIViewController {
 
     //MARK: - Lifecycle
     override func viewDidLoad() {

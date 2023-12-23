@@ -8,7 +8,7 @@
 import UIKit
 import SnapKit
 
-class RegisterViewController: UIViewController {
+final class RegisterViewController: UIViewController {
     
     //MARK: - UI Components
         private let userNameLabel = HeaderTextLabel(title: "ФИО*")

@@ -8,7 +8,7 @@
 import UIKit
 import SnapKit
 
-class RecoveryPassViewController: UIViewController {
+final class RecoveryPassViewController: UIViewController {
     
     //MARK: - UI Components
     private let emailLabel = HeaderTextLabel(title: "Телефон или почта*")

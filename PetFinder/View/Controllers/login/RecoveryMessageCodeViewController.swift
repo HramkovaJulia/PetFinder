@@ -8,7 +8,7 @@
 import UIKit
 import SnapKit
 
-class RecoveryMessageCodeViewController: UIViewController {
+final class RecoveryMessageCodeViewController: UIViewController {
     
     //MARK: - UI Components
     private let recievedCodeLabel = HeaderTextLabel(title: "Полученный код")

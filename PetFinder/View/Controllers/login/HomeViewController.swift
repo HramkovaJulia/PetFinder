@@ -8,7 +8,7 @@
 import UIKit
 import SnapKit
 
-class HomeViewController: UIViewController {
+final class HomeViewController: UIViewController {
     
     private let connectButton = CustomButton(title: "Присоединиться", hasBackground: true)
     private let skipButton = CustomButton(title: "Пропустить")

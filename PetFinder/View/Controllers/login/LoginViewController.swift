@@ -8,7 +8,7 @@
 import UIKit
 import SnapKit
 
-class LoginViewController: UIViewController {
+final class LoginViewController: UIViewController {
     
     //MARK: - UI Components
     private let emailLabel = HeaderTextLabel(title: "Телефон или почта*")

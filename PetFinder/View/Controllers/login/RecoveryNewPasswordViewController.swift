@@ -8,7 +8,7 @@
 import UIKit
 import SnapKit
 
-class RecoveryNewPasswordViewController: UIViewController {
+final class RecoveryNewPasswordViewController: UIViewController {
 
     //MARK: - UI Components
     private let newPasswordLabel = HeaderTextLabel(title: "Новый пароль*")
