@@ -23,12 +23,12 @@ class CustomTabBarControllerViewController: UITabBarController {
         customTabBar.padding = 5
         customTabBar.tabbarColor = UIColor(hex: 0xfcfcfc, alpha: 1)
         customTabBar.unselectedItemColor = UIColor(hex: 0x8d8d8d, alpha: 1)
+        customTabBar.centerButtonAction(sender: UIButton())
     }
     
     func setupTabBar() {
         
         let mainViewController = setupVC(viewController: MainViewController(), title: "Объявления", image: setupImage(named: "clipboard"))
-        
         let createViewController = setupVC(viewController: ServicesViewController(), title: "Сервисы", image: setupImage(named: "services"))
         let nocreateViewController = setupVC(viewController: UIViewController(), title: "", image: nil)
         let profileViewController = setupVC(viewController: UIViewController(), title: "Избранное", image: setupImage(named: "heart"))
