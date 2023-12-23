@@ -35,12 +35,12 @@ class CustomLoginButton: UIButton {
         
         switch button {
         case .google:
-            self.setTitle("Google", for: .normal)
+            self.setTitle("Login with Google", for: .normal)
             self.backgroundColor = .white
             self.setTitleColor(.label, for: .normal)
            
         case .appleId:
-            self.setTitle("Apple ID", for: .normal) 
+            self.setTitle("Login with Apple", for: .normal) 
             self.backgroundColor = .black
             self.setTitleColor(.white, for: .normal)
             
