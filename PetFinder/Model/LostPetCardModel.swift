@@ -39,5 +39,7 @@ struct LostPetCard {
     let lastSeenLocation: (Double, Double)
     let contactNumber: String
     let additionalInfo: String
+    let vaccinated: Bool
+    let sterilised: Bool
 }
 

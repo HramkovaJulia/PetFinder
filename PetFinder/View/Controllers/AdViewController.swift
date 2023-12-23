@@ -30,8 +30,6 @@ class AdViewController: UIViewController {
     
     private let scrollView:UIScrollView = {
         let sc = UIScrollView(frame: .zero)
-        sc.translatesAutoresizingMaskIntoConstraints = false
-        sc.isPagingEnabled = true
         return sc
     }()
     
@@ -141,6 +139,35 @@ class AdViewController: UIViewController {
         return descriptionLabel
     }()
     
+    private lazy var markerImage: UIImageView = {
+        let markerImage = UIImageView()
+        markerImage.image = UIImage(named: "mapPoint")
+        return markerImage
+    }()
+    
+    private lazy var streetLabel: UILabel = {
+        let streetLabel = UILabel()
+        streetLabel.font = UIFont.sfProText(ofSize: 14, weight: .regular)
+        streetLabel.attributedText = NSAttributedString(string: "Малинина, 30", attributes:
+                                                            [.underlineStyle: NSUnderlineStyle.single.rawValue])
+        return streetLabel
+    }()
+    
+    private lazy var distanceLabel: UILabel = {
+        let distanceLabel = UILabel()
+        distanceLabel.text = "1.4 км от вас"
+        distanceLabel.font = UIFont.sfProText(ofSize: 12, weight: .regular)
+        distanceLabel.textColor = UIColor(hex: 0xFF975F, alpha: 1)
+        return distanceLabel
+    }()
+    
+    private lazy var allScreenButton: UIButton = {
+        let allScreenButton = UIButton()
+        allScreenButton.setImage(UIImage(named: "allScreen"), for: .normal)
+        allScreenButton.addTarget(self, action: #selector(allScreenButtonTapped), for: .touchUpInside)
+        return allScreenButton
+    }()
+    
     private lazy var informationsAboutPet: UILabel = {
         let informationsAboutPet = UILabel()
         informationsAboutPet.font = UIFont.sfProText(ofSize: 18, weight: .medium)
@@ -159,14 +186,24 @@ class AdViewController: UIViewController {
         return petSignsLabelStack
     }()
     
-    private lazy var ownerInformation: UILabel = {
+    private lazy var specialNotes: UILabel = {
         let ownerInformation = UILabel()
         ownerInformation.font = UIFont.sfProText(ofSize: 18, weight: .medium)
-        ownerInformation.text = "Информация о владельце"
+        ownerInformation.text = "Особые приметы"
         ownerInformation.textColor = .black
         ownerInformation.lineBreakMode = .byTruncatingTail
         ownerInformation.numberOfLines = 0
         return ownerInformation
+    }()
+    
+    private lazy var specialNotesText: UILabel = {
+        let specialNotes = UILabel()
+        specialNotes.font = UIFont.sfProText(ofSize: 16, weight: .regular)
+        specialNotes.text = "Красный ошейник с золотой косточкой. На косточке написана кличка. Есть белое пятно на спине"
+        specialNotes.textColor = .black
+        specialNotes.lineBreakMode = .byTruncatingTail
+        specialNotes.numberOfLines = 0
+        return specialNotes
     }()
     
     private lazy var respond: UIButton = {
@@ -181,6 +218,7 @@ class AdViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        automaticallyAdjustsScrollViewInsets = false
         self.view.backgroundColor = UIColor(hex: 0xF9F6F3, alpha: 1)
         setupUI()
     }
@@ -245,6 +283,8 @@ class AdViewController: UIViewController {
         petSignsLabelStack.addArrangedSubview(createStackView(firsLabel: "Окрас: ", secondLabel: dataModel.color))
         petSignsLabelStack.addArrangedSubview(createStackView(firsLabel: "Пол: ", secondLabel: dataModel.gender == .male ? "Мальчик" : "Девочка"))
         petSignsLabelStack.addArrangedSubview(createStackView(firsLabel: "Возраст: ", secondLabel: String(dataModel.age)))
+        petSignsLabelStack.addArrangedSubview(createStackView(firsLabel: "Привит", secondLabel: dataModel.sterilised ? "Да" : "Нет"))
+        petSignsLabelStack.addArrangedSubview(createStackView(firsLabel: "Стерилизован:", secondLabel: dataModel.sterilised ? "Да" : "Нет"))
     }
     
     func createStackView(firsLabel: String, secondLabel: String) -> UIStackView {
@@ -282,10 +322,15 @@ class AdViewController: UIViewController {
         self.contentView.addSubview(descriptionText)
         self.contentView.addSubview(showAllDescriptionText)
         self.contentView.addSubview(currentPositionPetLabel)
+        self.contentView.addSubview(markerImage)
+        self.contentView.addSubview(streetLabel)
+        self.contentView.addSubview(distanceLabel)
         self.contentView.addSubview(currenPositionView)
+        self.contentView.addSubview(allScreenButton)
         self.contentView.addSubview(informationsAboutPet)
         self.contentView.addSubview(petSignsLabelStack)
-        self.contentView.addSubview(ownerInformation)
+        self.contentView.addSubview(specialNotes)
+        self.contentView.addSubview(specialNotesText)
         self.view.addSubview(respond)
     }
     
@@ -300,6 +345,7 @@ class AdViewController: UIViewController {
             maker.edges.equalToSuperview()
             maker.width.equalTo(scrollView)
 //            maker.height.equalTo(self.view)
+//            maker.height.equalTo(1400)
         }
         
         
@@ -367,12 +413,34 @@ class AdViewController: UIViewController {
             maker.top.equalTo(showAllDescriptionText.snp.bottom).inset(-36)
             maker.left.equalToSuperview().inset(16)
         }
+        
+        markerImage.snp.makeConstraints { maker in
+            maker.top.equalTo(currentPositionPetLabel.snp.bottom).inset(-14)
+            maker.left.equalToSuperview().inset(16)
+        }
+        
+        streetLabel.snp.makeConstraints { maker in
+            maker.top.equalTo(currentPositionPetLabel.snp.bottom).inset(-15)
+            maker.left.equalTo(markerImage.snp.right).inset(-6)
+        }
+        
+        distanceLabel.snp.makeConstraints { maker in
+            maker.top.equalTo(currentPositionPetLabel.snp.bottom).inset(-18)
+            maker.right.equalToSuperview().inset(15)
+        }
 
         currenPositionView.snp.makeConstraints { maker in
             maker.top.equalTo(currentPositionPetLabel.snp.bottom).inset(-44)
             maker.left.equalToSuperview().inset(16)
             maker.right.equalToSuperview().inset(15)
             maker.height.equalTo(115)
+        }
+        currenPositionView.layer.cornerRadius = 12
+        currenPositionView.clipsToBounds = true
+        
+        
+        allScreenButton.snp.makeConstraints { maker in
+            maker.top.right.equalTo(currenPositionView).inset(8)
         }
         
         informationsAboutPet.snp.makeConstraints { maker in
@@ -386,9 +454,15 @@ class AdViewController: UIViewController {
             maker.right.equalToSuperview().inset(15)
         }
         
-        ownerInformation.snp.makeConstraints { maker in
-            maker.top.equalTo(petSignsLabelStack.snp.bottom).inset(-10)
+        specialNotes.snp.makeConstraints { maker in
+            maker.top.equalTo(petSignsLabelStack.snp.bottom).inset(-36)
             maker.left.equalToSuperview().inset(16)
+        }
+        
+        specialNotesText.snp.makeConstraints { maker in
+            maker.top.equalTo(specialNotes.snp.bottom).inset(-10)
+            maker.left.equalToSuperview().inset(16)
+            maker.right.equalToSuperview().inset(15)
             maker.bottom.equalToSuperview().inset(100)
         }
         
@@ -423,6 +497,14 @@ class AdViewController: UIViewController {
             let image = UIImage(named: "lost_image")
             typeAd.image = image!.withTintColor( UIColor(hex: 0xFF9C40, alpha: 1), renderingMode: .alwaysOriginal)
         }
+    }
+    
+    @objc
+    func allScreenButtonTapped() {
+            let geoVC = GeolocationViewController()
+            geoVC.settingsUI(coord: (dataModel.lastSeenLocation.0, dataModel.lastSeenLocation.1))
+            geoVC.modalPresentationStyle = .fullScreen
+            self.present(geoVC, animated: true)
     }
 }
 
