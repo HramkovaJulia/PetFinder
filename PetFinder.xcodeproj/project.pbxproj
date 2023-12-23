@@ -41,6 +41,7 @@
 		D8B3BB362AFAA4DA001259A2 /* ListServicesCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B3BB352AFAA4DA001259A2 /* ListServicesCollectionView.swift */; };
 		D8B3BB382AFAA5D8001259A2 /* ListServicesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B3BB372AFAA5D8001259A2 /* ListServicesCollectionViewCell.swift */; };
 		D8DE97F72B35F9FE00D82318 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8DE97F62B35F9FE00D82318 /* MapView.swift */; };
+		D8DE97F92B37794600D82318 /* GeolocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8DE97F82B37794600D82318 /* GeolocationViewController.swift */; };
 		D8E8072F2B26038B00D69D67 /* AdTypeSeletionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E8072E2B26038B00D69D67 /* AdTypeSeletionViewController.swift */; };
 		D8F70E902AE96571006543F0 /* SF-Pro-Text-Heavy.otf in Resources */ = {isa = PBXBuildFile; fileRef = D8F70E842AE96571006543F0 /* SF-Pro-Text-Heavy.otf */; };
 		D8F70E912AE96571006543F0 /* SF-Pro-Text-SemiboldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = D8F70E852AE96571006543F0 /* SF-Pro-Text-SemiboldItalic.otf */; };
@@ -97,6 +98,7 @@
 		D8B3BB352AFAA4DA001259A2 /* ListServicesCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListServicesCollectionView.swift; sourceTree = "<group>"; };
 		D8B3BB372AFAA5D8001259A2 /* ListServicesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListServicesCollectionViewCell.swift; sourceTree = "<group>"; };
 		D8DE97F62B35F9FE00D82318 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		D8DE97F82B37794600D82318 /* GeolocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeolocationViewController.swift; sourceTree = "<group>"; };
 		D8E8072E2B26038B00D69D67 /* AdTypeSeletionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdTypeSeletionViewController.swift; sourceTree = "<group>"; };
 		D8F70E842AE96571006543F0 /* SF-Pro-Text-Heavy.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-Heavy.otf"; sourceTree = "<group>"; };
 		D8F70E852AE96571006543F0 /* SF-Pro-Text-SemiboldItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-SemiboldItalic.otf"; sourceTree = "<group>"; };
@@ -265,6 +267,7 @@
 				D86EADAA2AE0475A00FB19B6 /* ProfileViewController.swift */,
 				D8B3BB292AF63534001259A2 /* AdViewController.swift */,
 				D8B3BB2F2AFA8950001259A2 /* ServicesViewController.swift */,
+				D8DE97F82B37794600D82318 /* GeolocationViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -467,6 +470,7 @@
 				D87D0DA82B2F57BD00DC5476 /* CustomDownButton.swift in Sources */,
 				D84297942ADBDEB7006D6B06 /* SideMenuViewController.swift in Sources */,
 				D84297992ADC1E65006D6B06 /* Extansions.swift in Sources */,
+				D8DE97F92B37794600D82318 /* GeolocationViewController.swift in Sources */,
 				D842979F2ADC312A006D6B06 /* AnimalCollectionViewCell.swift in Sources */,
 				D86EA8882ADBD10300B8D961 /* MainViewController.swift in Sources */,
 				D86EADB42AE3B69000FB19B6 /* AdsCollectionViewCell.swift in Sources */,
