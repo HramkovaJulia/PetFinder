@@ -18,14 +18,13 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
         
         setupUI()
-        
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         self.navigationController?.navigationBar.isHidden = true
         
-        //alerts
+        //TODO: Alerts
         //        AlertManager.showInvalidEmailAlert(on: self)
     }
     
@@ -38,7 +37,6 @@ class HomeViewController: UIViewController {
         self.connectButton.addTarget(self, action: #selector(didTapConnect), for: .touchUpInside)
         self.skipButton.addTarget(self, action: #selector(didTapSkipSignIn), for: .touchUpInside)
 
-        
         //MARK: - constrains
         connectButton.snp.makeConstraints { make in
             
@@ -55,7 +53,7 @@ class HomeViewController: UIViewController {
             make.bottom.equalToSuperview().offset(-24)
         }
     }
-    //MARK: - selectors
+    //MARK: - Selectors
     @objc private func didTapConnect() {
         print("DEBUG :", "Войти")
         let vc = LoginViewController()

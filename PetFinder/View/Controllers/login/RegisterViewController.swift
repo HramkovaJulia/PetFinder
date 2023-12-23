@@ -11,8 +11,7 @@ import SnapKit
 class RegisterViewController: UIViewController {
     
     //MARK: - UI Components
-    
-    private let userNameLabel = HeaderTextLabel(title: "ФИО*")
+        private let userNameLabel = HeaderTextLabel(title: "ФИО*")
     private let userNameField = CustomTextField(fieldType: .username)
     private let emailLabel = HeaderTextLabel(title: "Почта")
     private let emailField = CustomTextField(fieldType: .email)
@@ -22,8 +21,7 @@ class RegisterViewController: UIViewController {
     private let repeatPasswordField = CustomTextField(fieldType: .password)
     private let signin = CustomButton(title: "Зарегистрироваться", hasBackground: true)
     
-    
-    //MARK: - Lifecycle
+        //MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -31,8 +29,7 @@ class RegisterViewController: UIViewController {
         setupUI()
         
     }
-    
-    
+        
     //MARK: - Setup UI
     private func setupUI() {
         
@@ -110,11 +107,11 @@ class RegisterViewController: UIViewController {
         }
         
     }
+    //MARK: - Selectors
     @objc private func didTapSignin() {
         print("DEBUG :", "didTapSignin")
         let vc = HomeViewController()
         self.navigationController?.pushViewController(vc, animated: true)
         navigationController?.navigationBar.topItem?.backButtonTitle = ""
     }
-
 }

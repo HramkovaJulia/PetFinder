@@ -11,7 +11,6 @@ import SnapKit
 class LoginViewController: UIViewController {
     
     //MARK: - UI Components
-    
     private let emailLabel = HeaderTextLabel(title: "Телефон или почта*")
     private let emailOrPhoneField = CustomTextField(fieldType: .email)
     
@@ -53,8 +52,7 @@ class LoginViewController: UIViewController {
         private let login = CustomButton(title: "Войти", hasBackground: true)
         private let signin = CustomButton(title: "Зарегистрироваться", hasBackground: false)
     
-    
-    
+    //MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -65,7 +63,6 @@ class LoginViewController: UIViewController {
     }
     
     //MARK: - Setup UI
-    
     private func setupUI() {
         
         self.view.backgroundColor = #colorLiteral(red: 0.9895065427, green: 0.9597766995, blue: 0.9387372732, alpha: 1)
@@ -147,9 +144,8 @@ class LoginViewController: UIViewController {
         }
     }
     
-    //MARK: - selectors
-    
-    @objc private func didTapForgotPassword() {
+    //MARK: - Selectors
+        @objc private func didTapForgotPassword() {
         print("DEBUG :", "didTapForgotPassword")
         let vc = RecoveryPassViewController()
         self.navigationController?.pushViewController(vc, animated: true)
@@ -162,5 +158,4 @@ class LoginViewController: UIViewController {
         self.navigationController?.pushViewController(vc, animated: true)
         navigationController?.navigationBar.topItem?.backButtonTitle = ""
     }
-    
 }

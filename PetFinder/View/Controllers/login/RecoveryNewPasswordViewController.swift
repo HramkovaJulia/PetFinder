@@ -18,7 +18,8 @@ class RecoveryNewPasswordViewController: UIViewController {
     private let repeatNewPasswordField = CustomTextField(fieldType: .password)
     
     private let changePassword = CustomButton(title: "Изменить пароль", hasBackground: true)
-
+    
+    //MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -29,8 +30,7 @@ class RecoveryNewPasswordViewController: UIViewController {
 
     }
     //MARK: - Setup UI
-    
-    private func setupUI() {
+        private func setupUI() {
         self.view.backgroundColor = #colorLiteral(red: 0.9895065427, green: 0.9597766995, blue: 0.9387372732, alpha: 1)
         self.view.addSubview(newPasswordLabel)
         self.view.addSubview(newPasswordField)
@@ -71,12 +71,11 @@ class RecoveryNewPasswordViewController: UIViewController {
             make.bottom.equalToSuperview().offset(-29)
         }
     }
-  
+    //MARK: - Selectors
     @objc private func didTapContinue() {
         print("DEBUG :", "didTapContinue")
         let vc = HomeViewController()
         self.navigationController?.pushViewController(vc, animated: true)
         navigationController?.navigationBar.topItem?.backButtonTitle = ""
     }
-
 }

@@ -16,7 +16,8 @@ class RecoveryMessageCodeViewController: UIViewController {
     
     private let sendCodeAgain = CustomRecoveryButton(style: .sendCodeAgain)
     private let continiue = CustomButton(title: "Далее", hasBackground: true)
-
+    
+    //MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -28,8 +29,7 @@ class RecoveryMessageCodeViewController: UIViewController {
 
     }
     //MARK: - Setup UI
-    
-    private func setupUI() {
+        private func setupUI() {
         self.view.backgroundColor = #colorLiteral(red: 0.9895065427, green: 0.9597766995, blue: 0.9387372732, alpha: 1)
         self.view.addSubview(recievedCodeLabel)
         self.view.addSubview(recievedCodeField)
@@ -62,7 +62,7 @@ class RecoveryMessageCodeViewController: UIViewController {
         }
     }
   
-
+    //MARK: - selectors
     @objc private func didTapContinue() {
         print("DEBUG :", "didTapContinue")
         let vc = RecoveryNewPasswordViewController()
