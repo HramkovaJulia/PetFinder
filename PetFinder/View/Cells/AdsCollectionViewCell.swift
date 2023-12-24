@@ -34,25 +34,9 @@ class AdsCollectionViewCell: UICollectionViewCell {
     private lazy var distanceLabel: UILabel = {
         let distanceLabel = UILabel()
         distanceLabel.font = UIFont.sfProText(ofSize: 14, weight: .regular)
-        distanceLabel.attributedText = NSAttributedString(string: "1,4 км от вас", attributes:
-                                                            [.underlineStyle: NSUnderlineStyle.single.rawValue])
+        distanceLabel.attributedText = NSAttributedString(string: "1,4 км от вас", attributes: [.underlineStyle: NSUnderlineStyle.single.rawValue])
         return distanceLabel
     }()
-
-//    private lazy var currentPossitionAd: UIButton = {
-//        let currentPossitionAd = UIButton()
-//        currentPossitionAd.setTitle(" 1.5км от Вас", for: .normal)
-//        currentPossitionAd.titleLabel?.font = UIFont.sfProText(ofSize: 12, weight: .regular)
-//        currentPossitionAd.setTitleColor(.black, for: .normal)
-//        currentPossitionAd.titleLabel?.numberOfLines = 1
-//        
-//        let image = UIImage(named: "mapPoint")
-//        let resizedImage = image?.resized(toSize: CGSize(width: 18, height: 20))
-//        
-//        currentPossitionAd.setImage(resizedImage, for: .normal)
-//        
-//        return currentPossitionAd
-//    }()
     
     private lazy var imagePet: UIImageView = {
         let imagePet = UIImageView()
@@ -136,28 +120,10 @@ class AdsCollectionViewCell: UICollectionViewCell {
         mainView.addSubview(typeAdsView)
         typeAdsView.addSubview(typeAd)
         typeAdsView.addSubview(typeAdText)
-//        mainView.addSubview(petSignsLabelStack)
         mainView.addSubview(markerImage)
         mainView.addSubview(distanceLabel)
         mainView.addSubview(favorites)
     }
-
-//    func createPetSignsStack(data: [LostPetCard]) {
-//        
-//        for arrangedSubview in petSignsLabelStack.arrangedSubviews {
-//                if arrangedSubview is UIStackView {
-//                    arrangedSubview.removeFromSuperview()
-//                }
-//            }
-//
-//        
-//        for petCard in data {
-//            petSignsLabelStack.addArrangedSubview(createStackView(firsLabel: "Порода: ", secondLabel: petCard.breed))
-//            petSignsLabelStack.addArrangedSubview(createStackView(firsLabel: "Окрас: ", secondLabel: petCard.color))
-//            petSignsLabelStack.addArrangedSubview(createStackView(firsLabel: "Пол: ", secondLabel: petCard.gender == .male ? "Мальчик" : "Девочка"))
-//            petSignsLabelStack.addArrangedSubview(createStackView(firsLabel: "Возраст: ", secondLabel: String(petCard.age)))
-//        }
-//    }
 
     func createStackView(firsLabel: String, secondLabel: String) -> UIStackView {
         let stackView = UIStackView()
@@ -239,30 +205,6 @@ class AdsCollectionViewCell: UICollectionViewCell {
             maker.bottom.equalToSuperview().inset(14)
             maker.height.width.equalTo(20)
         }
-        
-        //        currentPossitionAd.snp.makeConstraints { maker in
-        //            maker.top.equalTo(petSignsLabelStack.snp.bottom).inset(-10)
-        //            maker.left.equalTo(imagePet.snp.right).inset(-16)
-        //            maker.bottom.equalToSuperview().inset(16)
-        //        }
-        
-        
-//        petSignsLabelStack.snp.makeConstraints { maker in
-//
-//        }
-        
-  
-
-
-        
-
-//        
-//        favorites.snp.makeConstraints { maker in
-//            maker.top.equalTo(petSignsLabelStack.snp.bottom).inset(-10)
-//            maker.right.equalToSuperview().inset(15)
-//            maker.bottom.equalToSuperview().inset(17)
-//            maker.height.width.equalTo(24)
-//        }
     }
     
     @objc private func favoritesButtonTapped(sender: UIButton) {
