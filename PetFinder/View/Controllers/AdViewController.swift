@@ -35,8 +35,8 @@ class AdViewController: UIViewController {
     
     
     private lazy var contentView: UIView = {
-        let contenntView = UIView()
-        return contenntView
+        let contentView = UIView()
+        return contentView
     }()
     
     private lazy var leftButton: UIButton = {

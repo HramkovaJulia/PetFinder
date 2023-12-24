@@ -25,21 +25,34 @@ class AdsCollectionViewCell: UICollectionViewCell {
         favorites.addTarget(self, action: #selector(favoritesButtonTapped), for: .touchUpInside)
         return favorites
     }()
-
-    private lazy var currentPossitionAd: UIButton = {
-        let currentPossitionAd = UIButton()
-        currentPossitionAd.setTitle(" 1.5км от Вас", for: .normal)
-        currentPossitionAd.titleLabel?.font = UIFont.sfProText(ofSize: 12, weight: .regular)
-        currentPossitionAd.setTitleColor(.black, for: .normal)
-        currentPossitionAd.titleLabel?.numberOfLines = 1
-        
-        let image = UIImage(named: "mapPoint")
-        let resizedImage = image?.resized(toSize: CGSize(width: 18, height: 20))
-        
-        currentPossitionAd.setImage(resizedImage, for: .normal)
-        
-        return currentPossitionAd
+    
+    private lazy var markerImage: UIImageView = {
+        let markerImage = UIImageView(image: UIImage(named: "mapPoint"))
+        return markerImage
     }()
+    
+    private lazy var distanceLabel: UILabel = {
+        let distanceLabel = UILabel()
+        distanceLabel.font = UIFont.sfProText(ofSize: 14, weight: .regular)
+        distanceLabel.attributedText = NSAttributedString(string: "1,4 км от вас", attributes:
+                                                            [.underlineStyle: NSUnderlineStyle.single.rawValue])
+        return distanceLabel
+    }()
+
+//    private lazy var currentPossitionAd: UIButton = {
+//        let currentPossitionAd = UIButton()
+//        currentPossitionAd.setTitle(" 1.5км от Вас", for: .normal)
+//        currentPossitionAd.titleLabel?.font = UIFont.sfProText(ofSize: 12, weight: .regular)
+//        currentPossitionAd.setTitleColor(.black, for: .normal)
+//        currentPossitionAd.titleLabel?.numberOfLines = 1
+//        
+//        let image = UIImage(named: "mapPoint")
+//        let resizedImage = image?.resized(toSize: CGSize(width: 18, height: 20))
+//        
+//        currentPossitionAd.setImage(resizedImage, for: .normal)
+//        
+//        return currentPossitionAd
+//    }()
     
     private lazy var imagePet: UIImageView = {
         let imagePet = UIImageView()
@@ -124,7 +137,8 @@ class AdsCollectionViewCell: UICollectionViewCell {
         typeAdsView.addSubview(typeAd)
         typeAdsView.addSubview(typeAdText)
 //        mainView.addSubview(petSignsLabelStack)
-        mainView.addSubview(currentPossitionAd)
+        mainView.addSubview(markerImage)
+        mainView.addSubview(distanceLabel)
         mainView.addSubview(favorites)
     }
 
@@ -207,9 +221,15 @@ class AdsCollectionViewCell: UICollectionViewCell {
             maker.height.equalTo(17)
         }
         
-        currentPossitionAd.snp.makeConstraints { maker in
+        markerImage.snp.makeConstraints { maker in
             maker.top.equalTo(dateCreation.snp.bottom).inset(-12)
             maker.left.equalToSuperview().inset(12)
+            maker.bottom.equalToSuperview().inset(14)
+        }
+        
+        distanceLabel.snp.makeConstraints { maker in
+            maker.top.equalTo(dateCreation.snp.bottom).inset(-12)
+            maker.left.equalTo(markerImage.snp.right).inset(-6)
             maker.bottom.equalToSuperview().inset(14)
         }
         
