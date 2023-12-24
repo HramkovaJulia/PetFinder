@@ -184,7 +184,6 @@ class AdsCollectionViewCell: UICollectionViewCell {
         dateCreation.snp.makeConstraints { maker in
             maker.top.equalTo(labelAd.snp.bottom).inset(-2)
             maker.left.right.equalToSuperview().inset(12)
-            maker.height.equalTo(17)
         }
         
         markerImage.snp.makeConstraints { maker in
