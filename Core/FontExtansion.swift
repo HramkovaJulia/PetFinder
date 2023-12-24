@@ -14,7 +14,6 @@ extension UIFont {
         case semiBold = "SFProText-Semibold"
         case medium = "SFProText-Medium"
         case light = "SFProText-Light"
-        // Добавьте другие стили шрифта SF Pro Text, если необходимо
     }
     
     class func sfProText(ofSize fontSize: CGFloat, weight: SFProText) -> UIFont {

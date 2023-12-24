@@ -1,0 +1,28 @@
+PODS:
+  - Alamofire (5.8.0)
+  - SnapKit (5.6.0)
+  - SwiftGen (6.6.2)
+  - SwiftLint (0.53.0)
+
+DEPENDENCIES:
+  - Alamofire
+  - SnapKit
+  - SwiftGen
+  - SwiftLint
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - SnapKit
+    - SwiftGen
+    - SwiftLint
+
+SPEC CHECKSUMS:
+  Alamofire: 0e92e751b3e9e66d7982db43919d01f313b8eb91
+  SnapKit: e01d52ebb8ddbc333eefe2132acf85c8227d9c25
+  SwiftGen: 1366a7f71aeef49954ca5a63ba4bef6b0f24138c
+  SwiftLint: 5ce4d6a8ff83f1b5fd5ad5dbf30965d35af65e44
+
+PODFILE CHECKSUM: 86f47c5b26ff76f349485ac6f567f486a952ed16
+
+COCOAPODS: 1.12.1
