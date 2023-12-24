@@ -12,6 +12,8 @@
 		5873E3A92ADB190600F51501 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5873E3A82ADB190600F51501 /* Assets.xcassets */; };
 		5873E3AC2ADB190600F51501 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5873E3AA2ADB190600F51501 /* LaunchScreen.storyboard */; };
 		5873E3D82ADEEA7B00F51501 /* FontExtansion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5873E3D72ADEEA7B00F51501 /* FontExtansion.swift */; };
+		58EDA3462B387A9A00F1D716 /* swiftgen.yml in Resources */ = {isa = PBXBuildFile; fileRef = 58EDA3452B387A9A00F1D716 /* swiftgen.yml */; };
+		58EDA3482B387B0C00F1D716 /* UIKit in Resources */ = {isa = PBXBuildFile; fileRef = 58EDA3472B387B0C00F1D716 /* UIKit */; };
 		D802463E2B2D89C700B2223C /* CreatePetAdvertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D802463D2B2D89C700B2223C /* CreatePetAdvertViewController.swift */; };
 		D80C90B72ADF01FF00C9873C /* ListMenuTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D80C90B62ADF01FF00C9873C /* ListMenuTableView.swift */; };
 		D80C90BA2ADF024100C9873C /* ListMenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D80C90B92ADF024100C9873C /* ListMenuTableViewCell.swift */; };
@@ -60,6 +62,8 @@
 		5873E3AB2ADB190600F51501 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5873E3AD2ADB190600F51501 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5873E3D72ADEEA7B00F51501 /* FontExtansion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontExtansion.swift; sourceTree = "<group>"; };
+		58EDA3452B387A9A00F1D716 /* swiftgen.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = swiftgen.yml; sourceTree = "<group>"; };
+		58EDA3472B387B0C00F1D716 /* UIKit */ = {isa = PBXFileReference; lastKnownFileType = folder; path = UIKit; sourceTree = "<group>"; };
 		BF7A263FFCB875A6E2D63AA6 /* Pods-PetFinder.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PetFinder.debug.xcconfig"; path = "Target Support Files/Pods-PetFinder/Pods-PetFinder.debug.xcconfig"; sourceTree = "<group>"; };
 		D802463D2B2D89C700B2223C /* CreatePetAdvertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePetAdvertViewController.swift; sourceTree = "<group>"; };
 		D80C90B62ADF01FF00C9873C /* ListMenuTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListMenuTableView.swift; sourceTree = "<group>"; };
@@ -132,6 +136,7 @@
 		5873E3932ADB190200F51501 = {
 			isa = PBXGroup;
 			children = (
+				58EDA3442B387A8300F1D716 /* Core */,
 				D86EA8832ADBCAE900B8D961 /* Podfile */,
 				5873E39E2ADB190200F51501 /* PetFinder */,
 				5873E39D2ADB190200F51501 /* Products */,
@@ -161,6 +166,15 @@
 				5873E3AD2ADB190600F51501 /* Info.plist */,
 			);
 			path = PetFinder;
+			sourceTree = "<group>";
+		};
+		58EDA3442B387A8300F1D716 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				58EDA3452B387A9A00F1D716 /* swiftgen.yml */,
+				58EDA3472B387B0C00F1D716 /* UIKit */,
+			);
+			path = Core;
 			sourceTree = "<group>";
 		};
 		D802463C2B2D893400B2223C /* CreateLostPetAdvert */ = {
@@ -381,6 +395,8 @@
 				D86EA8842ADBCAE900B8D961 /* Podfile in Resources */,
 				5873E3AC2ADB190600F51501 /* LaunchScreen.storyboard in Resources */,
 				5873E3A92ADB190600F51501 /* Assets.xcassets in Resources */,
+				58EDA3482B387B0C00F1D716 /* UIKit in Resources */,
+				58EDA3462B387A9A00F1D716 /* swiftgen.yml in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
