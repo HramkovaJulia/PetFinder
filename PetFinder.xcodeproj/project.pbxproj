@@ -7,6 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		025CB28F2B3837A200AEDAC0 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025CB2882B3837A200AEDAC0 /* RegisterViewController.swift */; };
+		025CB2902B3837A200AEDAC0 /* WebViewerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025CB2892B3837A200AEDAC0 /* WebViewerViewController.swift */; };
+		025CB2912B3837A200AEDAC0 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025CB28A2B3837A200AEDAC0 /* HomeViewController.swift */; };
+		025CB2922B3837A200AEDAC0 /* RecoveryMessageCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025CB28B2B3837A200AEDAC0 /* RecoveryMessageCodeViewController.swift */; };
+		025CB2932B3837A200AEDAC0 /* RecoveryNewPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025CB28C2B3837A200AEDAC0 /* RecoveryNewPasswordViewController.swift */; };
+		025CB2942B3837A200AEDAC0 /* RecoveryPassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025CB28D2B3837A200AEDAC0 /* RecoveryPassViewController.swift */; };
+		025CB2952B3837A200AEDAC0 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025CB28E2B3837A200AEDAC0 /* LoginViewController.swift */; };
+		025CB29C2B38380700AEDAC0 /* CustomLoginButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025CB2972B38380700AEDAC0 /* CustomLoginButton.swift */; };
+		025CB29D2B38380700AEDAC0 /* CustomRecoveryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025CB2982B38380700AEDAC0 /* CustomRecoveryButton.swift */; };
+		025CB29E2B38380700AEDAC0 /* CustomTextFiled.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025CB2992B38380700AEDAC0 /* CustomTextFiled.swift */; };
+		025CB29F2B38380700AEDAC0 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025CB29A2B38380700AEDAC0 /* CustomButton.swift */; };
+		025CB2A02B38380700AEDAC0 /* HeaderTextLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025CB29B2B38380700AEDAC0 /* HeaderTextLabel.swift */; };
 		5873E3A02ADB190200F51501 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5873E39F2ADB190200F51501 /* AppDelegate.swift */; };
 		5873E3A22ADB190200F51501 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5873E3A12ADB190200F51501 /* SceneDelegate.swift */; };
 		5873E3A92ADB190600F51501 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5873E3A82ADB190600F51501 /* Assets.xcassets */; };
@@ -52,6 +64,18 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		025CB2882B3837A200AEDAC0 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		025CB2892B3837A200AEDAC0 /* WebViewerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewerViewController.swift; sourceTree = "<group>"; };
+		025CB28A2B3837A200AEDAC0 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		025CB28B2B3837A200AEDAC0 /* RecoveryMessageCodeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecoveryMessageCodeViewController.swift; sourceTree = "<group>"; };
+		025CB28C2B3837A200AEDAC0 /* RecoveryNewPasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecoveryNewPasswordViewController.swift; sourceTree = "<group>"; };
+		025CB28D2B3837A200AEDAC0 /* RecoveryPassViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecoveryPassViewController.swift; sourceTree = "<group>"; };
+		025CB28E2B3837A200AEDAC0 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		025CB2972B38380700AEDAC0 /* CustomLoginButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomLoginButton.swift; sourceTree = "<group>"; };
+		025CB2982B38380700AEDAC0 /* CustomRecoveryButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomRecoveryButton.swift; sourceTree = "<group>"; };
+		025CB2992B38380700AEDAC0 /* CustomTextFiled.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTextFiled.swift; sourceTree = "<group>"; };
+		025CB29A2B38380700AEDAC0 /* CustomButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
+		025CB29B2B38380700AEDAC0 /* HeaderTextLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeaderTextLabel.swift; sourceTree = "<group>"; };
 		315C23E2AA7CC7CA463BE81C /* Pods-PetFinder.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PetFinder.release.xcconfig"; path = "Target Support Files/Pods-PetFinder/Pods-PetFinder.release.xcconfig"; sourceTree = "<group>"; };
 		5873E39C2ADB190200F51501 /* PetFinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PetFinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5873E39F2ADB190200F51501 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -112,6 +136,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		025CB2872B38375600AEDAC0 /* Login  */ = {
+			isa = PBXGroup;
+			children = (
+				025CB28A2B3837A200AEDAC0 /* HomeViewController.swift */,
+				025CB28E2B3837A200AEDAC0 /* LoginViewController.swift */,
+				025CB28B2B3837A200AEDAC0 /* RecoveryMessageCodeViewController.swift */,
+				025CB28C2B3837A200AEDAC0 /* RecoveryNewPasswordViewController.swift */,
+				025CB28D2B3837A200AEDAC0 /* RecoveryPassViewController.swift */,
+				025CB2882B3837A200AEDAC0 /* RegisterViewController.swift */,
+				025CB2892B3837A200AEDAC0 /* WebViewerViewController.swift */,
+			);
+			path = "Login ";
+			sourceTree = "<group>";
+		};
+		025CB2962B3837CB00AEDAC0 /* Login views */ = {
+			isa = PBXGroup;
+			children = (
+				025CB29A2B38380700AEDAC0 /* CustomButton.swift */,
+				025CB2972B38380700AEDAC0 /* CustomLoginButton.swift */,
+				025CB2982B38380700AEDAC0 /* CustomRecoveryButton.swift */,
+				025CB2992B38380700AEDAC0 /* CustomTextFiled.swift */,
+				025CB29B2B38380700AEDAC0 /* HeaderTextLabel.swift */,
+			);
+			path = "Login views";
+			sourceTree = "<group>";
+		};
 		0DC8EADCD5D8121BCC52759C /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -229,6 +279,7 @@
 		D86EA8852ADBD09400B8D961 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				025CB2962B3837CB00AEDAC0 /* Login views */,
 				D8DE97F52B35F9E800D82318 /* MapView */,
 				D8A9E8142AEE3A6B00E509EC /* SearchTextField */,
 				D80C90B52ADEFF9400C9873C /* TableViews */,
@@ -242,6 +293,7 @@
 		D86EA8862ADBD0A100B8D961 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				025CB2872B38375600AEDAC0 /* Login  */,
 				D8E8072D2B26034300D69D67 /* CreateAd */,
 				D84297932ADBDEB7006D6B06 /* SideMenuViewController.swift */,
 				D86EA8872ADBD10300B8D961 /* MainViewController.swift */,
@@ -435,20 +487,26 @@
 			files = (
 				D87D0DA82B2F57BD00DC5476 /* CustomDownButton.swift in Sources */,
 				D84297942ADBDEB7006D6B06 /* SideMenuViewController.swift in Sources */,
+				025CB2942B3837A200AEDAC0 /* RecoveryPassViewController.swift in Sources */,
 				D84297992ADC1E65006D6B06 /* Extansions.swift in Sources */,
 				D8DE97F92B37794600D82318 /* GeolocationViewController.swift in Sources */,
 				D842979F2ADC312A006D6B06 /* AnimalCollectionViewCell.swift in Sources */,
+				025CB2902B3837A200AEDAC0 /* WebViewerViewController.swift in Sources */,
+				025CB2932B3837A200AEDAC0 /* RecoveryNewPasswordViewController.swift in Sources */,
 				D86EA8882ADBD10300B8D961 /* MainViewController.swift in Sources */,
 				D86EADB42AE3B69000FB19B6 /* AdsCollectionViewCell.swift in Sources */,
+				025CB29E2B38380700AEDAC0 /* CustomTextFiled.swift in Sources */,
 				D86EADAB2AE0475A00FB19B6 /* ProfileViewController.swift in Sources */,
 				D80C90B72ADF01FF00C9873C /* ListMenuTableView.swift in Sources */,
 				D8B3BB2E2AF64989001259A2 /* ImageAdCollectionViewCell.swift in Sources */,
+				025CB2912B3837A200AEDAC0 /* HomeViewController.swift in Sources */,
 				D8B3BB2C2AF6494E001259A2 /* ImagesAdCollectionView.swift in Sources */,
 				D86EADAD2AE04D1700FB19B6 /* ColorExtansion.swift in Sources */,
 				D8B3BB382AFAA5D8001259A2 /* ListServicesCollectionViewCell.swift in Sources */,
 				5873E3D82ADEEA7B00F51501 /* FontExtansion.swift in Sources */,
 				D86EADAF2AE3B55E00FB19B6 /* AdsCollectionView.swift in Sources */,
 				D8B3BB322AFA974F001259A2 /* ServicesTableView.swift in Sources */,
+				025CB28F2B3837A200AEDAC0 /* RegisterViewController.swift in Sources */,
 				D84297A22ADC31E3006D6B06 /* ListAnimalsCollectionView.swift in Sources */,
 				D8B3BB362AFAA4DA001259A2 /* ListServicesCollectionView.swift in Sources */,
 				D8DE97FD2B3821DF00D82318 /* StatusRespondViewController.swift in Sources */,
@@ -462,12 +520,18 @@
 				D86EADA92AE0469400FB19B6 /* SettingsViewController.swift in Sources */,
 				D8DE97F72B35F9FE00D82318 /* MapView.swift in Sources */,
 				D8B3BB342AFA97BF001259A2 /* ServicesTableViewCell.swift in Sources */,
+				025CB2952B3837A200AEDAC0 /* LoginViewController.swift in Sources */,
+				025CB2922B3837A200AEDAC0 /* RecoveryMessageCodeViewController.swift in Sources */,
 				D87D0DA52B2F53B400DC5476 /* CustomSengmentControl.swift in Sources */,
 				D84297962ADBF79B006D6B06 /* PositionSelectionViewController.swift in Sources */,
 				D802463E2B2D89C700B2223C /* CreatePetAdvertViewController.swift in Sources */,
+				025CB29D2B38380700AEDAC0 /* CustomRecoveryButton.swift in Sources */,
 				D86EADB22AE3B59000FB19B6 /* LostPetCardModel.swift in Sources */,
 				D8F70E9D2AEC1E47006543F0 /* STTabbar.swift in Sources */,
+				025CB29F2B38380700AEDAC0 /* CustomButton.swift in Sources */,
 				5873E3A22ADB190200F51501 /* SceneDelegate.swift in Sources */,
+				025CB29C2B38380700AEDAC0 /* CustomLoginButton.swift in Sources */,
+				025CB2A02B38380700AEDAC0 /* HeaderTextLabel.swift in Sources */,
 				D8DE97FB2B38131400D82318 /* ResponseViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
