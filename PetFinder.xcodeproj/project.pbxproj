@@ -43,19 +43,10 @@
 		D8DE97F72B35F9FE00D82318 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8DE97F62B35F9FE00D82318 /* MapView.swift */; };
 		D8DE97F92B37794600D82318 /* GeolocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8DE97F82B37794600D82318 /* GeolocationViewController.swift */; };
 		D8DE97FB2B38131400D82318 /* ResponseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8DE97FA2B38131400D82318 /* ResponseViewController.swift */; };
+		D8DE97FD2B3821DF00D82318 /* StatusRespondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8DE97FC2B3821DE00D82318 /* StatusRespondViewController.swift */; };
+		D8DE98002B382BFC00D82318 /* Login views in Resources */ = {isa = PBXBuildFile; fileRef = D8DE97FE2B382BFC00D82318 /* Login views */; };
+		D8DE98012B382BFC00D82318 /* login in Resources */ = {isa = PBXBuildFile; fileRef = D8DE97FF2B382BFC00D82318 /* login */; };
 		D8E8072F2B26038B00D69D67 /* AdTypeSeletionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E8072E2B26038B00D69D67 /* AdTypeSeletionViewController.swift */; };
-		D8F70E902AE96571006543F0 /* SF-Pro-Text-Heavy.otf in Resources */ = {isa = PBXBuildFile; fileRef = D8F70E842AE96571006543F0 /* SF-Pro-Text-Heavy.otf */; };
-		D8F70E912AE96571006543F0 /* SF-Pro-Text-SemiboldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = D8F70E852AE96571006543F0 /* SF-Pro-Text-SemiboldItalic.otf */; };
-		D8F70E922AE96571006543F0 /* SF-Pro-Text-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = D8F70E862AE96571006543F0 /* SF-Pro-Text-Regular.otf */; };
-		D8F70E932AE96571006543F0 /* SF-Pro-Text-RegularItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = D8F70E872AE96571006543F0 /* SF-Pro-Text-RegularItalic.otf */; };
-		D8F70E942AE96571006543F0 /* SF-Pro-Text-MediumItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = D8F70E882AE96571006543F0 /* SF-Pro-Text-MediumItalic.otf */; };
-		D8F70E952AE96571006543F0 /* SF-Pro-Text-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = D8F70E892AE96571006543F0 /* SF-Pro-Text-Bold.otf */; };
-		D8F70E962AE96571006543F0 /* SF-Pro-Text-Semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = D8F70E8A2AE96571006543F0 /* SF-Pro-Text-Semibold.otf */; };
-		D8F70E972AE96571006543F0 /* SF-Pro-Text-BoldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = D8F70E8B2AE96571006543F0 /* SF-Pro-Text-BoldItalic.otf */; };
-		D8F70E982AE96571006543F0 /* SF-Pro-Text-HeavyItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = D8F70E8C2AE96571006543F0 /* SF-Pro-Text-HeavyItalic.otf */; };
-		D8F70E992AE96571006543F0 /* SF-Pro-Text-LightItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = D8F70E8D2AE96571006543F0 /* SF-Pro-Text-LightItalic.otf */; };
-		D8F70E9A2AE96571006543F0 /* SF-Pro-Text-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = D8F70E8E2AE96571006543F0 /* SF-Pro-Text-Light.otf */; };
-		D8F70E9B2AE96571006543F0 /* SF-Pro-Text-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = D8F70E8F2AE96571006543F0 /* SF-Pro-Text-Medium.otf */; };
 		D8F70E9D2AEC1E47006543F0 /* STTabbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8F70E9C2AEC1E47006543F0 /* STTabbar.swift */; };
 		E6F0B5A79917F100D937E0D1 /* Pods_PetFinder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE2ACC640625F2B1CC0E5B2C /* Pods_PetFinder.framework */; };
 /* End PBXBuildFile section */
@@ -101,19 +92,10 @@
 		D8DE97F62B35F9FE00D82318 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		D8DE97F82B37794600D82318 /* GeolocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeolocationViewController.swift; sourceTree = "<group>"; };
 		D8DE97FA2B38131400D82318 /* ResponseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseViewController.swift; sourceTree = "<group>"; };
+		D8DE97FC2B3821DE00D82318 /* StatusRespondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusRespondViewController.swift; sourceTree = "<group>"; };
+		D8DE97FE2B382BFC00D82318 /* Login views */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "Login views"; sourceTree = "<group>"; };
+		D8DE97FF2B382BFC00D82318 /* login */ = {isa = PBXFileReference; lastKnownFileType = folder; path = login; sourceTree = "<group>"; };
 		D8E8072E2B26038B00D69D67 /* AdTypeSeletionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdTypeSeletionViewController.swift; sourceTree = "<group>"; };
-		D8F70E842AE96571006543F0 /* SF-Pro-Text-Heavy.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-Heavy.otf"; sourceTree = "<group>"; };
-		D8F70E852AE96571006543F0 /* SF-Pro-Text-SemiboldItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-SemiboldItalic.otf"; sourceTree = "<group>"; };
-		D8F70E862AE96571006543F0 /* SF-Pro-Text-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-Regular.otf"; sourceTree = "<group>"; };
-		D8F70E872AE96571006543F0 /* SF-Pro-Text-RegularItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-RegularItalic.otf"; sourceTree = "<group>"; };
-		D8F70E882AE96571006543F0 /* SF-Pro-Text-MediumItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-MediumItalic.otf"; sourceTree = "<group>"; };
-		D8F70E892AE96571006543F0 /* SF-Pro-Text-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-Bold.otf"; sourceTree = "<group>"; };
-		D8F70E8A2AE96571006543F0 /* SF-Pro-Text-Semibold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-Semibold.otf"; sourceTree = "<group>"; };
-		D8F70E8B2AE96571006543F0 /* SF-Pro-Text-BoldItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-BoldItalic.otf"; sourceTree = "<group>"; };
-		D8F70E8C2AE96571006543F0 /* SF-Pro-Text-HeavyItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-HeavyItalic.otf"; sourceTree = "<group>"; };
-		D8F70E8D2AE96571006543F0 /* SF-Pro-Text-LightItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-LightItalic.otf"; sourceTree = "<group>"; };
-		D8F70E8E2AE96571006543F0 /* SF-Pro-Text-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-Light.otf"; sourceTree = "<group>"; };
-		D8F70E8F2AE96571006543F0 /* SF-Pro-Text-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-Medium.otf"; sourceTree = "<group>"; };
 		D8F70E9C2AEC1E47006543F0 /* STTabbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = STTabbar.swift; sourceTree = "<group>"; };
 		EE2ACC640625F2B1CC0E5B2C /* Pods_PetFinder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PetFinder.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -271,6 +253,7 @@
 				D8B3BB2F2AFA8950001259A2 /* ServicesViewController.swift */,
 				D8DE97F82B37794600D82318 /* GeolocationViewController.swift */,
 				D8DE97FA2B38131400D82318 /* ResponseViewController.swift */,
+				D8DE97FC2B3821DE00D82318 /* StatusRespondViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -327,18 +310,8 @@
 		D8EE67E52ADDA52800C3673F /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
-				D8F70E892AE96571006543F0 /* SF-Pro-Text-Bold.otf */,
-				D8F70E8B2AE96571006543F0 /* SF-Pro-Text-BoldItalic.otf */,
-				D8F70E842AE96571006543F0 /* SF-Pro-Text-Heavy.otf */,
-				D8F70E8C2AE96571006543F0 /* SF-Pro-Text-HeavyItalic.otf */,
-				D8F70E8E2AE96571006543F0 /* SF-Pro-Text-Light.otf */,
-				D8F70E8D2AE96571006543F0 /* SF-Pro-Text-LightItalic.otf */,
-				D8F70E8F2AE96571006543F0 /* SF-Pro-Text-Medium.otf */,
-				D8F70E882AE96571006543F0 /* SF-Pro-Text-MediumItalic.otf */,
-				D8F70E862AE96571006543F0 /* SF-Pro-Text-Regular.otf */,
-				D8F70E872AE96571006543F0 /* SF-Pro-Text-RegularItalic.otf */,
-				D8F70E8A2AE96571006543F0 /* SF-Pro-Text-Semibold.otf */,
-				D8F70E852AE96571006543F0 /* SF-Pro-Text-SemiboldItalic.otf */,
+				D8DE97FF2B382BFC00D82318 /* login */,
+				D8DE97FE2B382BFC00D82318 /* Login views */,
 			);
 			path = Fonts;
 			sourceTree = "<group>";
@@ -403,21 +376,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D8F70E942AE96571006543F0 /* SF-Pro-Text-MediumItalic.otf in Resources */,
-				D8F70E922AE96571006543F0 /* SF-Pro-Text-Regular.otf in Resources */,
-				D8F70E962AE96571006543F0 /* SF-Pro-Text-Semibold.otf in Resources */,
+				D8DE98002B382BFC00D82318 /* Login views in Resources */,
+				D8DE98012B382BFC00D82318 /* login in Resources */,
 				D86EA8842ADBCAE900B8D961 /* Podfile in Resources */,
 				5873E3AC2ADB190600F51501 /* LaunchScreen.storyboard in Resources */,
-				D8F70E972AE96571006543F0 /* SF-Pro-Text-BoldItalic.otf in Resources */,
 				5873E3A92ADB190600F51501 /* Assets.xcassets in Resources */,
-				D8F70E932AE96571006543F0 /* SF-Pro-Text-RegularItalic.otf in Resources */,
-				D8F70E9B2AE96571006543F0 /* SF-Pro-Text-Medium.otf in Resources */,
-				D8F70E902AE96571006543F0 /* SF-Pro-Text-Heavy.otf in Resources */,
-				D8F70E992AE96571006543F0 /* SF-Pro-Text-LightItalic.otf in Resources */,
-				D8F70E912AE96571006543F0 /* SF-Pro-Text-SemiboldItalic.otf in Resources */,
-				D8F70E952AE96571006543F0 /* SF-Pro-Text-Bold.otf in Resources */,
-				D8F70E9A2AE96571006543F0 /* SF-Pro-Text-Light.otf in Resources */,
-				D8F70E982AE96571006543F0 /* SF-Pro-Text-HeavyItalic.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -488,6 +451,7 @@
 				D8B3BB322AFA974F001259A2 /* ServicesTableView.swift in Sources */,
 				D84297A22ADC31E3006D6B06 /* ListAnimalsCollectionView.swift in Sources */,
 				D8B3BB362AFAA4DA001259A2 /* ListServicesCollectionView.swift in Sources */,
+				D8DE97FD2B3821DF00D82318 /* StatusRespondViewController.swift in Sources */,
 				D86EADA72AE043C900FB19B6 /* CustomTabBarControllerViewController.swift in Sources */,
 				D8E8072F2B26038B00D69D67 /* AdTypeSeletionViewController.swift in Sources */,
 				D8A9E8162AEE3A9900E509EC /* CustomSearchTextField.swift in Sources */,

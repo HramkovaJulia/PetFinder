@@ -150,7 +150,7 @@ class ResponseViewController: UIViewController {
         respond.layer.cornerRadius = 35
         respond.backgroundColor = UIColor(hex: 0xFF975F, alpha: 1)
         respond.setTitleColor(UIColor(hex: 0xfcfcfc, alpha: 1), for: .normal)
-//        respond.addTarget(self, action: #selector(respondTapped), for: .touchUpInside)
+        respond.addTarget(self, action: #selector(respondTapped), for: .touchUpInside)
         return respond
     }()
     
@@ -289,6 +289,14 @@ class ResponseViewController: UIViewController {
     @objc
     func closedVC() {
         self.dismiss(animated: true)
+    }
+    
+    @objc
+    func respondTapped() {
+        let view = StatusRespondViewController()
+        view.modalPresentationStyle = .overFullScreen
+        self.present(view, animated: true)
+       
     }
 
 }
