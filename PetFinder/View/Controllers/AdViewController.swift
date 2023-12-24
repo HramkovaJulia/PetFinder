@@ -213,6 +213,7 @@ class AdViewController: UIViewController {
         respond.layer.cornerRadius = 35
         respond.backgroundColor = UIColor(hex: 0x11C7DB, alpha: 1)
         respond.setTitleColor(UIColor(hex: 0xfcfcfc, alpha: 1), for: .normal)
+        respond.addTarget(self, action: #selector(respondTapped), for: .touchUpInside)
         return respond
     }()
     
@@ -505,6 +506,13 @@ class AdViewController: UIViewController {
             geoVC.settingsUI(coord: (dataModel.lastSeenLocation.0, dataModel.lastSeenLocation.1))
             geoVC.modalPresentationStyle = .fullScreen
             self.present(geoVC, animated: true)
+    }
+    
+    @objc
+    func respondTapped() {
+        let view = ResponseViewController()
+        view.modalPresentationStyle = .fullScreen
+        self.present(view, animated: true)
     }
 }
 
