@@ -41,12 +41,22 @@ class StatusRespondViewController: UIViewController {
     }
     
 
+
     func setup() {
-        
-        self.view.backgroundColor = UIColor(hex: 0x4A4A4A, alpha: 0.8)
+        let blurEffect = UIBlurEffect(style: .dark)
+        let blurView = UIVisualEffectView(effect: blurEffect)
+        view.addSubview(blurView)
         view.addSubview(rightButton)
-        view.addSubview(statusView)
-        self.view.addSubview(respond)
+        
+        // Устанавливаем ограничения для размытого представления с использованием SnapKit
+        blurView.snp.makeConstraints { make in
+            make.edges.equalToSuperview()
+            
+            
+            view.addSubview(rightButton)
+            view.addSubview(statusView)
+            self.view.addSubview(respond)
+        }
     }
 
 
