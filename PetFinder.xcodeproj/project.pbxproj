@@ -651,7 +651,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = BF7A263FFCB875A6E2D63AA6 /* Pods-PetFinder.debug.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -682,7 +681,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 315C23E2AA7CC7CA463BE81C /* Pods-PetFinder.release.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
