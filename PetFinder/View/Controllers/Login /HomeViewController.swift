@@ -8,8 +8,9 @@
 import UIKit
 import SnapKit
 
-@available(iOS 16.0, *)
 final class HomeViewController: UIViewController {
+    
+    //MARK: - UI Components
     
     private let connectButton = CustomButton(title: "Присоединиться", hasBackground: true)
     private let skipButton = CustomButton(title: "Пропустить")
@@ -23,24 +24,22 @@ final class HomeViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
-        self.navigationController?.navigationBar.isHidden = true
         
         //TODO: Alerts
         //        AlertManager.showInvalidEmailAlert(on: self)
     }
     
-    //MARK: - adding views
+    //MARK: - Adding views
     private func setupUI() {
         self.view.backgroundColor = #colorLiteral(red: 0.9895065427, green: 0.9597766995, blue: 0.9387372732, alpha: 1)
         self.view.addSubview(connectButton)
         self.view.addSubview(skipButton)
-        
+                
         self.connectButton.addTarget(self, action: #selector(didTapConnect), for: .touchUpInside)
         self.skipButton.addTarget(self, action: #selector(didTapSkipSignIn), for: .touchUpInside)
-
-        //MARK: - constrains
+        
+        //MARK: - Constrains
         connectButton.snp.makeConstraints { make in
-            
             make.left.equalToSuperview().inset(16)
             make.right.equalToSuperview().inset(15)
             make.bottom.equalTo(skipButton.snp.top).offset(-10)
@@ -48,24 +47,33 @@ final class HomeViewController: UIViewController {
             
         }
         skipButton.snp.makeConstraints { make in
-            
             make.left.equalToSuperview().inset(16)
             make.right.equalToSuperview().inset(15)
             make.bottom.equalToSuperview().offset(-24)
         }
     }
+    
     //MARK: - Selectors
     @objc private func didTapConnect() {
+        guard navigationController != nil else {
+                print("DEBUG: navigationController is nil")
+                return
+            }
         print("DEBUG :", "Войти")
         let vc = LoginViewController()
+//        vc.modalPresentationStyle = .fullScreen
+//        self.present(vc, animated: true)
         self.navigationController?.pushViewController(vc, animated: true)
-        navigationController?.navigationBar.topItem?.backButtonTitle = ""
     }
     
     @objc private func didTapSkipSignIn() {
+        guard navigationController != nil else {
+                print("DEBUG: navigationController is nil")
+                return
+            }
         print("DEBUG : Пропустить")
-        let vc = MainViewController()
+        let vc = CustomTabBarControllerViewController()
         self.navigationController?.pushViewController(vc, animated: true)
-        navigationController?.navigationBar.topItem?.backButtonTitle = ""
     }
 }
+

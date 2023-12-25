@@ -7,7 +7,6 @@
 
 import UIKit
 
-@available(iOS 16.0, *)
 class CustomTextField: UITextField {
 
     enum CustomTextFieldType {
@@ -20,13 +19,7 @@ class CustomTextField: UITextField {
     private let rightEyeButton: UIButton = {
         
         let rightEyeButton = UIButton()
-        rightEyeButton.setImage(UIImage(systemName: "eye.slash",
-                                            variableValue: 0,
-                                            configuration: UIImage.SymbolConfiguration(
-                                            weight: .light))?
-                                            .withTintColor(.secondaryLabel,
-                                            renderingMode: .alwaysOriginal), for: .normal)
-         
+        rightEyeButton.setImage(UIImage(named: "eyeslash"), for: .normal)
         return rightEyeButton
     }()
     
@@ -39,7 +32,8 @@ class CustomTextField: UITextField {
         self.backgroundColor = .secondarySystemBackground
         self.layer.cornerRadius = 22
         //TODO: Font set
-        self.font = .systemFont(ofSize: 14, weight: .light)
+        self.font = .sfProText(ofSize: 14, weight: .light)
+           
         
         //to apply Shadow
         self.layer.shadowOpacity = 0.4
@@ -94,6 +88,7 @@ class CustomTextField: UITextField {
         
         //show eye position setup
         rightEyeButton.frame = CGRect(x: 5, y: 12, width: 25, height: 25)
+        
         rightView.addSubview(rightEyeButton)
     
         rightEyeButton.addTarget(self, action: #selector(showOrHidePassword), for: .touchUpInside)
@@ -106,13 +101,9 @@ class CustomTextField: UITextField {
     @objc func showOrHidePassword(){
             print("DEBUG: show/hide password button pressed")
         if isSecureTextEntry {
-            rightEyeButton.setImage(UIImage(systemName: "eye", variableValue: 0,
-                                            configuration: UIImage.SymbolConfiguration(weight: .light))?.withTintColor(.secondaryLabel,
-                                                renderingMode: .alwaysOriginal), for: .normal)
+            rightEyeButton.setImage(UIImage(named: "eye"), for: .normal)
         } else {
-            rightEyeButton.setImage(UIImage(systemName: "eye.slash", variableValue: 0,
-                                            configuration: UIImage.SymbolConfiguration(weight: .light))?.withTintColor(.secondaryLabel,
-                                            renderingMode: .alwaysOriginal), for: .normal)
+            rightEyeButton.setImage(UIImage(named: "eyeslash"), for: .normal)
         }
             isSecureTextEntry = !isSecureTextEntry
         }

@@ -17,12 +17,9 @@ class HeaderTextLabel: UIView {
        label.textColor = .label
        label.textAlignment = .left
        label.numberOfLines = 1
-       label.font = .systemFont(ofSize: 16, weight: .medium)
+       label.font = .sfProText(ofSize: 16, weight: .medium)
        //TODO: checking constrains via background color
 //       label.backgroundColor = .gray
-       
-       //TODO: setup Font
-//       UIFont(name: "HelveticaNeue-Bold", size: 16.0)
        label.text = "error"
        return label
     }()
