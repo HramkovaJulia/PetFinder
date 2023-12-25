@@ -16,9 +16,13 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         self.window = UIWindow(frame: windowScene.coordinateSpace.bounds)
         self.window?.windowScene = windowScene
-        let homeVC = CustomTabBarControllerViewController()
-//        let navigationController = UINavigationController(rootViewController: MainViewController())
-        self.window?.rootViewController = homeVC
+        
+//        let homeVC = CustomTabBarControllerViewController()
+        let homeVC = HomeViewController()
+        
+        let navController = UINavigationController(rootViewController: homeVC)
+        navController.navigationBar.isHidden = true
+        self.window?.rootViewController = navController
         self.window?.makeKeyAndVisible()
     }
 }
