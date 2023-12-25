@@ -13,8 +13,13 @@ class CustomTabBarControllerViewController: UITabBarController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupCustomTabBar()
         setupTabBar()
         configureTabBar()
+        
+    }
+
+    func setupCustomTabBar() {
         let customTabBar = STTabbar()
         setValue(customTabBar, forKey: "tabBar")
         customTabBar.centerButtonColor = UIColor(hex: 0x8965C3, alpha: 1)
@@ -23,8 +28,9 @@ class CustomTabBarControllerViewController: UITabBarController {
         customTabBar.padding = 5
         customTabBar.tabbarColor = UIColor(hex: 0xfcfcfc, alpha: 1)
         customTabBar.unselectedItemColor = UIColor(hex: 0x8d8d8d, alpha: 1)
-        customTabBar.centerButtonAction(sender: UIButton())
+//        customTabBar.centerButtonAction(sender: UIButton())
     }
+
     
     func setupTabBar() {
         
@@ -65,6 +71,5 @@ class CustomTabBarControllerViewController: UITabBarController {
     
     @objc
     func addTarget() {
-        print(1)
     }
 }
