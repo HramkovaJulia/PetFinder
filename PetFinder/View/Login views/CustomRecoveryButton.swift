@@ -21,20 +21,19 @@ class CustomRecoveryButton: UIButton {
         super.init(frame: .zero)
         
         self.setTitle(title, for: .normal)
-        self.titleLabel?.font = .systemFont(ofSize: 17, weight: .regular)
+        self.titleLabel?.font = UIFont.sfProText(ofSize: 14, weight: .regular)
         self.layer.masksToBounds = true
         self.setTitleColor(.systemBlue, for: .normal)
         
         let myAttributes: [NSAttributedString.Key: Any] = [
-              .font: UIFont.systemFont(ofSize: 17),
+            .font: UIFont.sfProText(ofSize: 14, weight: .regular),
               .foregroundColor: UIColor.systemBlue,
               .underlineStyle: NSUnderlineStyle.single.rawValue
           ]
         
 //             myButton.setAttributedTitle(attributeString, for: .normal)
         
-        
-        switch style {
+                switch style {
         case .forgotPassword:
             self.setTitle("Забыли пароль?", for: .normal)
             self.contentHorizontalAlignment = .left

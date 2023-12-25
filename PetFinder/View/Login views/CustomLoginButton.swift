@@ -22,7 +22,7 @@ class CustomLoginButton: UIButton {
         self.layer.masksToBounds = true
         
 //        self.heightAnchor.constraint(equalToConstant: height).isActive = true
-        self.titleLabel?.font = .systemFont(ofSize: 16, weight: .semibold)
+        self.titleLabel?.font = UIFont.sfProText(ofSize: 16, weight: .semiBold)
         
         // apply shadow
         self.layer.masksToBounds = false

@@ -7,6 +7,7 @@
 
 import UIKit
 
+@available(iOS 16.0, *)
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     
     var window: UIWindow?
@@ -16,9 +17,13 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         self.window = UIWindow(frame: windowScene.coordinateSpace.bounds)
         self.window?.windowScene = windowScene
-        let homeVC = CustomTabBarControllerViewController()
-//        let navigationController = UINavigationController(rootViewController: MainViewController())
-        self.window?.rootViewController = homeVC
+//        let homeVC = CustomTabBarControllerViewController()
+        let homeVC = HomeViewController()
+        
+        let navigationController = UINavigationController(rootViewController: homeVC)
+        navigationController.navigationBar.topItem?.backButtonTitle = ""
+        
+        self.window?.rootViewController = navigationController
         self.window?.makeKeyAndVisible()
     }
 }
