@@ -31,6 +31,7 @@ final class MainViewController: UIViewController, UISearchBarDelegate {
         rightMainButton.tintColor = .black
         rightMainButton.layer.cornerRadius = 0
         rightMainButton.setImage(UIImage(named: "bell"), for: .normal)
+        rightMainButton.addTarget(self, action: #selector(showNotificationVC), for: .touchUpInside)
         return rightMainButton
     }()
 
@@ -139,6 +140,13 @@ final class MainViewController: UIViewController, UISearchBarDelegate {
         UIView.animate(withDuration: 0.2) {
             menuView.frame.origin.x = -menuView.frame.size.width
         }
+    }
+    
+    @objc
+    func showNotificationVC() {
+        let notification = NotificationsViewController()
+        notification.modalPresentationStyle = .fullScreen
+        self.present(notification, animated: true)
     }
 }
 

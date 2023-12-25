@@ -219,7 +219,6 @@ class AdViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        automaticallyAdjustsScrollViewInsets = false
         self.view.backgroundColor = UIColor(hex: 0xF9F6F3, alpha: 1)
         setupUI()
     }
