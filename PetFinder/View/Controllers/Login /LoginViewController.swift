@@ -9,7 +9,7 @@ import UIKit
 import SnapKit
 
 final class LoginViewController: UIViewController {
-        
+    
     //MARK: - UI Components
     lazy var leftBackButton: UIButton = {
         let leftBackButton = UIButton()
@@ -37,39 +37,38 @@ final class LoginViewController: UIViewController {
     private let appleLoginButton = CustomLoginButton(button: .appleId)
     
     //MARK: - Divider line
-    private let deviderStackView: UIStackView = {
-        
+    private let middleDivider: UITextField = {
         let middleDivider = UITextField()
         middleDivider.text = "Или"
-        middleDivider.font = UIFont.systemFont(ofSize: 12)
-        middleDivider.textColor = .secondaryLabel
+        middleDivider.font = .sfProText(ofSize: 12, weight: .light)
+        middleDivider.textColor = #colorLiteral(red: 0.5450980663, green: 0.5450980663, blue: 0.5450980663, alpha: 1)
         middleDivider.textAlignment = .center
-        
-        let leftDivider = UILabel()
-        leftDivider.text = "–"
-        leftDivider.textColor = .secondaryLabel
-        leftDivider.textAlignment = .right
-        
-        let rightDivider = UILabel()
-        rightDivider.text = "–"
-        rightDivider.textColor = .secondaryLabel
-        rightDivider.textAlignment = .left
-        
-        let deviderStackView = UIStackView(arrangedSubviews: [leftDivider, middleDivider, rightDivider])
-        deviderStackView.axis = .horizontal
-        deviderStackView.alignment = .fill
-        deviderStackView.distribution = .fillEqually
-        deviderStackView.spacing = 5
-        
-        return deviderStackView
+        return middleDivider
     }()
-        private let login = CustomButton(title: "Войти", hasBackground: true)
-        private let signin = CustomButton(title: "Зарегистрироваться", hasBackground: false)
-        
+    
+    private let leftDivider: UIView = {
+        let leftDivider = UIView()
+        leftDivider.backgroundColor = .white
+        leftDivider.layer.borderWidth = 1
+        leftDivider.layer.borderColor = UIColor.white.cgColor
+        return leftDivider
+    }()
+    
+    private let rightDivider: UIView = {
+        let rightDivider = UIView()
+        rightDivider.backgroundColor = .white
+        rightDivider.layer.borderWidth = 1
+        rightDivider.layer.borderColor = UIColor.white.cgColor
+        return rightDivider
+    }()
+    
+    private let login = CustomButton(title: "Войти", hasBackground: true)
+    private let signin = CustomButton(title: "Зарегистрироваться", hasBackground: false)
+    
     //MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-                
+        
         self.forgotPassword.addTarget(self, action: #selector(didTapForgotPassword), for: .touchUpInside)
         self.signin.addTarget(self, action: #selector(didTapSignin), for: .touchUpInside)
         self.leftBackButton.addTarget(self, action: #selector(didTapGoBack), for: .touchUpInside)
@@ -89,14 +88,17 @@ final class LoginViewController: UIViewController {
         self.view.addSubview(passwordLabel)
         self.view.addSubview(passwordField)
         self.view.addSubview(forgotPassword)
-        self.view.addSubview(deviderStackView)
+        self.view.addSubview(leftDivider)
+        self.view.addSubview(middleDivider)
+        self.view.addSubview(rightDivider)
+        
         self.view.addSubview(googleLoginButton)
         self.view.addSubview(appleLoginButton)
         self.view.addSubview(login)
         self.view.addSubview(signin)
         
         //MARK: - constrains
-
+        
         leftBackButton.snp.makeConstraints { make in
             make.left.equalToSuperview().inset(10)
             make.top.equalToSuperview().inset(63)
@@ -138,17 +140,28 @@ final class LoginViewController: UIViewController {
             make.right.equalTo(forgotPassword.titleLabel!.snp.right).offset(10)
             make.top.equalTo(passwordField.snp.bottom).offset(10)
         }
-        deviderStackView.snp.makeConstraints { make in
-            make.left.equalTo(view.safeAreaLayoutGuide).inset(24)
-            make.right.equalTo(view.safeAreaLayoutGuide).inset(15)
+        middleDivider.snp.makeConstraints { make in
+            make.centerX.equalToSuperview()
             make.top.equalTo(forgotPassword.snp.bottom).offset(29)
+        }
+        leftDivider.snp.makeConstraints { make in
+            make.left.equalToSuperview().inset(16)
+            make.right.equalTo(middleDivider.snp.left).inset(-6)
+            make.top.equalTo(forgotPassword.snp.bottom).offset(29+8)
+            make.height.equalTo(1)
+        }
+        rightDivider.snp.makeConstraints { make in
+            make.right.equalToSuperview().inset(15)
+            make.left.equalTo(middleDivider.snp.right).inset(-6)
+            make.top.equalTo(forgotPassword.snp.bottom).offset(29+8)
+            make.height.equalTo(1)
         }
         
         googleLoginButton.snp.makeConstraints { make in
             make.left.equalToSuperview().inset(16)
             make.right.equalToSuperview().inset(15)
             make.height.equalTo(passwordField.snp.height)
-            make.top.equalTo(deviderStackView.snp.bottom).offset(29)
+            make.top.equalTo(middleDivider.snp.bottom).offset(29)
         }
         appleLoginButton.snp.makeConstraints { make in
             make.left.equalToSuperview().inset(16)
@@ -177,7 +190,7 @@ final class LoginViewController: UIViewController {
         self.navigationController?.popViewController(animated: true)
     }
     
-        @objc private func didTapForgotPassword() {
+    @objc private func didTapForgotPassword() {
         print("DEBUG :", "didTapForgotPassword")
         let vc = RecoveryPassViewController()
         self.navigationController?.pushViewController(vc, animated: true)
@@ -189,5 +202,4 @@ final class LoginViewController: UIViewController {
         self.navigationController?.pushViewController(vc, animated: true)
     }
 }
-
 
