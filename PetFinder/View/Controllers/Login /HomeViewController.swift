@@ -61,8 +61,6 @@ final class HomeViewController: UIViewController {
             }
         print("DEBUG :", "Войти")
         let vc = LoginViewController()
-//        vc.modalPresentationStyle = .fullScreen
-//        self.present(vc, animated: true)
         self.navigationController?.pushViewController(vc, animated: true)
     }
     

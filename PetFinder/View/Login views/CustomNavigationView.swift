@@ -9,10 +9,6 @@ import UIKit
 import SnapKit
 
 
-protocol CustomNavigationViewDelegate: AnyObject {
-    func customBackButtonTapped()
-}
-
 class CustomNavigationView: UIView {
     
     //MARK: - UI Components
@@ -35,9 +31,7 @@ class CustomNavigationView: UIView {
         mainLabel.textColor = .label
         return mainLabel
     }()
-    
-    weak var delegate: CustomNavigationViewDelegate?
-    
+        
     init(title: String) {
         super.init(frame: .zero)
         mainLabel.text = title
@@ -48,8 +42,7 @@ class CustomNavigationView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    
-    //MARK: - constrains
+        //MARK: - constrains
     private func setupUI() {
         
         self.addSubview(topView)
@@ -73,7 +66,7 @@ class CustomNavigationView: UIView {
         }
     }
     @objc private func goingBack() {
-        delegate?.customBackButtonTapped()
+//        delegate?.customBackButtonTapped()
        
     }
 }

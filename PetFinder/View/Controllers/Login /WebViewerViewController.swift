@@ -8,7 +8,6 @@
 import UIKit
 import SnapKit
 
-@available(iOS 16.0, *)
 final class WebViewerViewController: UIViewController {
 
     //MARK: - Lifecycle
