@@ -63,8 +63,6 @@
 		D8DE97F92B37794600D82318 /* GeolocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8DE97F82B37794600D82318 /* GeolocationViewController.swift */; };
 		D8DE97FB2B38131400D82318 /* ResponseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8DE97FA2B38131400D82318 /* ResponseViewController.swift */; };
 		D8DE97FD2B3821DF00D82318 /* StatusRespondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8DE97FC2B3821DE00D82318 /* StatusRespondViewController.swift */; };
-		D8DE98002B382BFC00D82318 /* Login views in Resources */ = {isa = PBXBuildFile; fileRef = D8DE97FE2B382BFC00D82318 /* Login views */; };
-		D8DE98012B382BFC00D82318 /* login in Resources */ = {isa = PBXBuildFile; fileRef = D8DE97FF2B382BFC00D82318 /* login */; };
 		D8E8072F2B26038B00D69D67 /* AdTypeSeletionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E8072E2B26038B00D69D67 /* AdTypeSeletionViewController.swift */; };
 		D8F70E9D2AEC1E47006543F0 /* STTabbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8F70E9C2AEC1E47006543F0 /* STTabbar.swift */; };
 		E6F0B5A79917F100D937E0D1 /* Pods_PetFinder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE2ACC640625F2B1CC0E5B2C /* Pods_PetFinder.framework */; };
@@ -131,8 +129,6 @@
 		D8DE97F82B37794600D82318 /* GeolocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeolocationViewController.swift; sourceTree = "<group>"; };
 		D8DE97FA2B38131400D82318 /* ResponseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseViewController.swift; sourceTree = "<group>"; };
 		D8DE97FC2B3821DE00D82318 /* StatusRespondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusRespondViewController.swift; sourceTree = "<group>"; };
-		D8DE97FE2B382BFC00D82318 /* Login views */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "Login views"; sourceTree = "<group>"; };
-		D8DE97FF2B382BFC00D82318 /* login */ = {isa = PBXFileReference; lastKnownFileType = folder; path = login; sourceTree = "<group>"; };
 		D8E8072E2B26038B00D69D67 /* AdTypeSeletionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdTypeSeletionViewController.swift; sourceTree = "<group>"; };
 		D8F70E9C2AEC1E47006543F0 /* STTabbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = STTabbar.swift; sourceTree = "<group>"; };
 		EE2ACC640625F2B1CC0E5B2C /* Pods_PetFinder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PetFinder.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -391,8 +387,6 @@
 		D8EE67E52ADDA52800C3673F /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
-				D8DE97FF2B382BFC00D82318 /* login */,
-				D8DE97FE2B382BFC00D82318 /* Login views */,
 			);
 			path = Fonts;
 			sourceTree = "<group>";
@@ -457,8 +451,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D8DE98002B382BFC00D82318 /* Login views in Resources */,
-				D8DE98012B382BFC00D82318 /* login in Resources */,
 				D86EA8842ADBCAE900B8D961 /* Podfile in Resources */,
 				5873E3AC2ADB190600F51501 /* LaunchScreen.storyboard in Resources */,
 				5873E3A92ADB190600F51501 /* Assets.xcassets in Resources */,

@@ -21,7 +21,6 @@ class CustomLoginButton: UIButton {
         self.layer.cornerRadius = 22
         self.layer.masksToBounds = true
         
-//        self.heightAnchor.constraint(equalToConstant: height).isActive = true
         self.titleLabel?.font = UIFont.sfProText(ofSize: 16, weight: .semiBold)
         
         // apply shadow
@@ -43,7 +42,6 @@ class CustomLoginButton: UIButton {
             self.setTitle("Login with Apple", for: .normal) 
             self.backgroundColor = .black
             self.setTitleColor(.white, for: .normal)
-            
         }
     }
 
