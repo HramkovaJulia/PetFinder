@@ -35,6 +35,7 @@ final class RecoveryMessageCodeViewController: UIViewController {
     //add timer
     private var timer: Timer?
     private var remainingTime: Int = 9
+    private var isTimerRunning = false
     
     private lazy var timerLabel: UILabel = {
         let timerLabel = UILabel()
@@ -47,6 +48,8 @@ final class RecoveryMessageCodeViewController: UIViewController {
     //MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        continiue.isEnabled = false
                 
         self.continiue.addTarget(self, action: #selector(didTapContinue), for: .touchUpInside)
         self.leftBackButton.addTarget(self, action: #selector(didTapGoBack), for: .touchUpInside)
@@ -66,6 +69,7 @@ final class RecoveryMessageCodeViewController: UIViewController {
             make.centerX.equalToSuperview()
         }
         timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(updateTimer), userInfo: nil, repeats: true)
+        isTimerRunning = true
     }
         private func setupUI() {
         self.view.backgroundColor = #colorLiteral(red: 0.9895065427, green: 0.9597766995, blue: 0.9387372732, alpha: 1)
@@ -130,6 +134,8 @@ final class RecoveryMessageCodeViewController: UIViewController {
         } else {
             timer?.invalidate()
             timerLabel.removeFromSuperview()
+            isTimerRunning = false
+            continiue.isEnabled = true
         }
     }
 }

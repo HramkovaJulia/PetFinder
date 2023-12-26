@@ -39,5 +39,19 @@ class CustomButton: UIButton {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    private func updateBackgroundColor() {
+           if self.isEnabled {
+               self.backgroundColor = #colorLiteral(red: 1, green: 0.5921106339, blue: 0.3732565343, alpha: 1)
+           } else {
+               self.backgroundColor = #colorLiteral(red: 0.9642440677, green: 0.8488435149, blue: 0.6952683926, alpha: 1)
+           }
+       }
+       
+       // Переопределение свойства isEnabled для автоматического обновления цвета фона
+       override var isEnabled: Bool {
+           didSet {
+               updateBackgroundColor()
+           }
+       }
 }
 

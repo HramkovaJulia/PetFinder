@@ -151,10 +151,10 @@
 			children = (
 				025CB28A2B3837A200AEDAC0 /* HomeViewController.swift */,
 				025CB28E2B3837A200AEDAC0 /* LoginViewController.swift */,
-				025CB28B2B3837A200AEDAC0 /* RecoveryMessageCodeViewController.swift */,
-				025CB28C2B3837A200AEDAC0 /* RecoveryNewPasswordViewController.swift */,
-				025CB28D2B3837A200AEDAC0 /* RecoveryPassViewController.swift */,
 				025CB2882B3837A200AEDAC0 /* RegisterViewController.swift */,
+				025CB28D2B3837A200AEDAC0 /* RecoveryPassViewController.swift */,
+				025CB28C2B3837A200AEDAC0 /* RecoveryNewPasswordViewController.swift */,
+				025CB28B2B3837A200AEDAC0 /* RecoveryMessageCodeViewController.swift */,
 				025CB2892B3837A200AEDAC0 /* WebViewerViewController.swift */,
 			);
 			path = "Login ";
