@@ -32,6 +32,18 @@ final class RecoveryMessageCodeViewController: UIViewController {
     private let sendCodeAgain = CustomRecoveryButton(style: .sendCodeAgain)
     private let continiue = CustomButton(title: "Далее", hasBackground: true)
     
+    //add timer
+    private var timer: Timer?
+    private var remainingTime: Int = 9
+    
+    private lazy var timerLabel: UILabel = {
+        let timerLabel = UILabel()
+        timerLabel.font = .sfProText(ofSize: 18, weight: .regular)
+        timerLabel.textColor = .label
+        timerLabel.textAlignment = .center
+        return timerLabel
+    }()
+    
     //MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,9 +52,21 @@ final class RecoveryMessageCodeViewController: UIViewController {
         self.leftBackButton.addTarget(self, action: #selector(didTapGoBack), for: .touchUpInside)
 
         setupUI()
+        setupTimer()
 
     }
     //MARK: - Setup UI
+    
+    private func setupTimer() {
+        timerLabel.text = "0:\(remainingTime)"
+        view.addSubview(timerLabel)
+        
+        timerLabel.snp.makeConstraints { make in
+            make.top.equalTo(recievedCodeField.snp.bottom).offset(32)
+            make.centerX.equalToSuperview()
+        }
+        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(updateTimer), userInfo: nil, repeats: true)
+    }
         private func setupUI() {
         self.view.backgroundColor = #colorLiteral(red: 0.9895065427, green: 0.9597766995, blue: 0.9387372732, alpha: 1)
             
@@ -78,8 +102,7 @@ final class RecoveryMessageCodeViewController: UIViewController {
         }
         sendCodeAgain.snp.makeConstraints { make in
             make.centerX.equalToSuperview()
-            //TODO: setup constraint after adding timer
-            make.top.equalTo(recievedCodeField.snp.bottom).offset(52)
+            make.top.equalTo(recievedCodeField.snp.bottom).offset(77)
         }
         continiue.snp.makeConstraints { make in
             make.height.equalTo(53)
@@ -98,5 +121,15 @@ final class RecoveryMessageCodeViewController: UIViewController {
     @objc private func didTapGoBack() {
         print("DEBUG :", "back button pressed")
         self.navigationController?.popViewController(animated: true)
+    }
+    @objc private func updateTimer() {
+    
+        if remainingTime > 0 {
+            remainingTime -= 1
+            timerLabel.text = "0:\(remainingTime)"
+        } else {
+            timer?.invalidate()
+            timerLabel.removeFromSuperview()
+        }
     }
 }
