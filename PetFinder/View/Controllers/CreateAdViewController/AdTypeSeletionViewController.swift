@@ -25,7 +25,7 @@ class AdTypeSeletionViewController: UIViewController {
         return mainLabel
     }()
     
-    private lazy var rightButton: UIButton = {
+    private lazy var leftButton: UIButton = {
         let rightButton = UIButton()
         rightButton.setImage(UIImage(named: "secondBackButton"), for: .normal)
         rightButton.tintColor = UIColor(hex: 0xFCFCFC, alpha: 1)
@@ -76,7 +76,7 @@ class AdTypeSeletionViewController: UIViewController {
     func setupUI() {
         self.view.addSubview(topView)
         topView.addSubview(mainLabel)
-        topView.addSubview(rightButton)
+        topView.addSubview(leftButton)
         self.view.addSubview(lostPetButton)
         self.view.addSubview(foundPetButton)
         self.view.addSubview(fosterPetButton)
@@ -94,7 +94,7 @@ class AdTypeSeletionViewController: UIViewController {
             maker.bottom.equalToSuperview().inset(20)
         }
         
-        rightButton.snp.makeConstraints { maker in
+        leftButton.snp.makeConstraints { maker in
             maker.top.equalToSuperview().inset(61)
             maker.right.equalToSuperview().inset(15)
             maker.bottom.equalToSuperview().inset(20)

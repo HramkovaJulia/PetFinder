@@ -161,7 +161,7 @@ class CreatePetAdvertViewController: UIViewController {
         nextButton.setTitle("Далее", for: .normal)
         nextButton.layer.cornerRadius = 25
         nextButton.backgroundColor = UIColor(hex: 0xFF975F, alpha: 1)
-        
+        nextButton.addTarget(self, action: #selector(nextVC), for: .touchUpInside)
         return nextButton
     }()
     
@@ -180,7 +180,6 @@ class CreatePetAdvertViewController: UIViewController {
     func setupUI() {
         self.view.backgroundColor = UIColor(hex: 0xFCF4EF, alpha: 1)
         self.view.addSubview(topView)
-        self.view.addSubview(nextButton)
         self.topView.addSubview(leftButton)
         self.topView.addSubview(mainLabel)
         self.view.addSubview(scrollView)
@@ -196,6 +195,7 @@ class CreatePetAdvertViewController: UIViewController {
         self.contentView.addSubview(segmentControll)
         self.contentView.addSubview(viewPetLabel)
         self.contentView.addSubview(dropdownButton)
+        self.view.addSubview(nextButton)
     }
 
     func makeConstaints() {
@@ -301,6 +301,12 @@ class CreatePetAdvertViewController: UIViewController {
         
     }
 
+    @objc
+    func nextVC() {
+        let viewController = SecondCreateViewController()
+        viewController.modalPresentationStyle = .fullScreen
+        self.present(viewController, animated: true)
+    }
     
     @objc func closeViewController() {
         self.dismiss(animated: true)
