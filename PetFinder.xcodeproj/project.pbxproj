@@ -47,6 +47,7 @@
 		D85BE3E62B51F1A200F8D1E8 /* MedecineStatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D85BE3E52B51F1A200F8D1E8 /* MedecineStatusView.swift */; };
 		D85BE3EA2B52DBAD00F8D1E8 /* LocationPetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D85BE3E92B52DBAD00F8D1E8 /* LocationPetViewController.swift */; };
 		D85BE3EE2B52E28E00F8D1E8 /* CustomLocationTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = D85BE3ED2B52E28E00F8D1E8 /* CustomLocationTextField.swift */; };
+		D86DF0D62B6EDD0600A65826 /* ChoiceTypeAd.swift in Sources */ = {isa = PBXBuildFile; fileRef = D86DF0D52B6EDD0600A65826 /* ChoiceTypeAd.swift */; };
 		D86EA8842ADBCAE900B8D961 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = D86EA8832ADBCAE900B8D961 /* Podfile */; };
 		D86EA8882ADBD10300B8D961 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D86EA8872ADBD10300B8D961 /* MainViewController.swift */; };
 		D86EADA72AE043C900FB19B6 /* CustomTabBarControllerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D86EADA62AE043C900FB19B6 /* CustomTabBarControllerViewController.swift */; };
@@ -71,7 +72,6 @@
 		D8DE97F92B37794600D82318 /* GeolocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8DE97F82B37794600D82318 /* GeolocationViewController.swift */; };
 		D8DE97FB2B38131400D82318 /* ResponseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8DE97FA2B38131400D82318 /* ResponseViewController.swift */; };
 		D8DE97FD2B3821DF00D82318 /* StatusRespondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8DE97FC2B3821DE00D82318 /* StatusRespondViewController.swift */; };
-		D8DE98002B382BFC00D82318 /* Login views in Resources */ = {isa = PBXBuildFile; fileRef = D8DE97FE2B382BFC00D82318 /* Login views */; };
 		D8DE98012B382BFC00D82318 /* login in Resources */ = {isa = PBXBuildFile; fileRef = D8DE97FF2B382BFC00D82318 /* login */; };
 		D8E8072F2B26038B00D69D67 /* AdTypeSeletionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E8072E2B26038B00D69D67 /* AdTypeSeletionViewController.swift */; };
 		D8F70E9D2AEC1E47006543F0 /* STTabbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8F70E9C2AEC1E47006543F0 /* STTabbar.swift */; };
@@ -123,6 +123,7 @@
 		D85BE3E52B51F1A200F8D1E8 /* MedecineStatusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedecineStatusView.swift; sourceTree = "<group>"; };
 		D85BE3E92B52DBAD00F8D1E8 /* LocationPetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationPetViewController.swift; sourceTree = "<group>"; };
 		D85BE3ED2B52E28E00F8D1E8 /* CustomLocationTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomLocationTextField.swift; sourceTree = "<group>"; };
+		D86DF0D52B6EDD0600A65826 /* ChoiceTypeAd.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChoiceTypeAd.swift; sourceTree = "<group>"; };
 		D86EA8832ADBCAE900B8D961 /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		D86EA8872ADBD10300B8D961 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		D86EADA62AE043C900FB19B6 /* CustomTabBarControllerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarControllerViewController.swift; sourceTree = "<group>"; };
@@ -147,7 +148,6 @@
 		D8DE97F82B37794600D82318 /* GeolocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeolocationViewController.swift; sourceTree = "<group>"; };
 		D8DE97FA2B38131400D82318 /* ResponseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseViewController.swift; sourceTree = "<group>"; };
 		D8DE97FC2B3821DE00D82318 /* StatusRespondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusRespondViewController.swift; sourceTree = "<group>"; };
-		D8DE97FE2B382BFC00D82318 /* Login views */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "Login views"; sourceTree = "<group>"; };
 		D8DE97FF2B382BFC00D82318 /* login */ = {isa = PBXFileReference; lastKnownFileType = folder; path = login; sourceTree = "<group>"; };
 		D8E8072E2B26038B00D69D67 /* AdTypeSeletionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdTypeSeletionViewController.swift; sourceTree = "<group>"; };
 		D8F70E9C2AEC1E47006543F0 /* STTabbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = STTabbar.swift; sourceTree = "<group>"; };
@@ -380,6 +380,14 @@
 			path = CustomLocationTextField;
 			sourceTree = "<group>";
 		};
+		D86DF0D42B6EDC9100A65826 /* CreateNewAdView */ = {
+			isa = PBXGroup;
+			children = (
+				D86DF0D52B6EDD0600A65826 /* ChoiceTypeAd.swift */,
+			);
+			path = CreateNewAdView;
+			sourceTree = "<group>";
+		};
 		D86EA8822ADBCA8E00B8D961 /* Delegate */ = {
 			isa = PBXGroup;
 			children = (
@@ -406,6 +414,7 @@
 		D86EA8862ADBD0A100B8D961 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				D86DF0D42B6EDC9100A65826 /* CreateNewAdView */,
 				025CB2872B38375600AEDAC0 /* Login  */,
 				D8E8072D2B26034300D69D67 /* CreateAdViewController */,
 				D84297932ADBDEB7006D6B06 /* SideMenuViewController.swift */,
@@ -480,7 +489,6 @@
 			isa = PBXGroup;
 			children = (
 				D8DE97FF2B382BFC00D82318 /* login */,
-				D8DE97FE2B382BFC00D82318 /* Login views */,
 			);
 			path = Fonts;
 			sourceTree = "<group>";
@@ -545,7 +553,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D8DE98002B382BFC00D82318 /* Login views in Resources */,
 				D8DE98012B382BFC00D82318 /* login in Resources */,
 				D86EA8842ADBCAE900B8D961 /* Podfile in Resources */,
 				5873E3AC2ADB190600F51501 /* LaunchScreen.storyboard in Resources */,
@@ -613,6 +620,7 @@
 				D842979F2ADC312A006D6B06 /* AnimalCollectionViewCell.swift in Sources */,
 				025CB2902B3837A200AEDAC0 /* WebViewerViewController.swift in Sources */,
 				D85BE3EE2B52E28E00F8D1E8 /* CustomLocationTextField.swift in Sources */,
+				D86DF0D62B6EDD0600A65826 /* ChoiceTypeAd.swift in Sources */,
 				025CB2932B3837A200AEDAC0 /* RecoveryNewPasswordViewController.swift in Sources */,
 				D86EA8882ADBD10300B8D961 /* MainViewController.swift in Sources */,
 				D86EADB42AE3B69000FB19B6 /* AdsCollectionViewCell.swift in Sources */,

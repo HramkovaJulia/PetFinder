@@ -7,6 +7,7 @@
 
 import Foundation
 import UIKit
+import SwiftUI
 
 @IBDesignable
 public final class STTabbar: UITabBar {
@@ -106,9 +107,10 @@ public final class STTabbar: UITabBar {
      @objc func centerButtonAction(sender: UIButton) {
         self.centerButtonActionHandler()
          if let viewController = UIApplication.shared.keyWindow?.rootViewController {
-             let AdTypeSeletionViewController = AdTypeSeletionViewController()
-             AdTypeSeletionViewController.modalPresentationStyle = .fullScreen
-             viewController.present(AdTypeSeletionViewController, animated: true)
+             let hostingVC = UIHostingController(rootView: ChoiceTypeAd())
+             hostingVC.view.backgroundColor = .clear
+             hostingVC.modalPresentationStyle = .overFullScreen
+             viewController.present(hostingVC, animated: true)
          }
      }
 }
