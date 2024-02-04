@@ -104,14 +104,14 @@ public final class STTabbar: UITabBar {
     }
     
     // Menu Button Touch Action
-     @objc func centerButtonAction(sender: UIButton) {
+    @objc func centerButtonAction(sender: UIButton) {
         self.centerButtonActionHandler()
-         if let viewController = UIApplication.shared.keyWindow?.rootViewController {
-             let hostingVC = UIHostingController(rootView: ChoiceTypeAd())
-             hostingVC.view.backgroundColor = .clear
-             hostingVC.modalPresentationStyle = .overFullScreen
-             viewController.present(hostingVC, animated: true)
-         }
-     }
+        guard let viewController = UIApplication.shared.keyWindow?.rootViewController else { return }
+        let hostingVC = UIHostingController(rootView: ChoiceTypeAd(dismissAction: { viewController.dismiss(animated: true) }))
+        hostingVC.view.backgroundColor = .clear
+        hostingVC.modalPresentationStyle = .overFullScreen
+        viewController.present(hostingVC, animated: true)
+    }
+
 }
 
