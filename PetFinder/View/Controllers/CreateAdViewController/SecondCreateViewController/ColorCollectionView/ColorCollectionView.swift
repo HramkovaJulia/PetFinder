@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SwiftUI
 
 class ColorCollectionView: UICollectionView {
     
@@ -61,10 +62,16 @@ extension ColorCollectionView: UICollectionViewDataSource {
         if let cell = collectionView.cellForItem(at: indexPath) as? ColorCollectionViewCell {
             cell.backgroundColor =  UIColor(hex: 0x83CBFF)
             cell.selectedCell()
+            let hostingVC = UIHostingController(rootView: SetupNewColorView())
+            hostingVC.view.backgroundColor = .clear
+            hostingVC.modalPresentationStyle = .overFullScreen
+            
+            // Получаем ссылку на ParentViewController
+            if let parentVC = collectionView.viewController() as? SecondCreateViewController {
+                parentVC.present(hostingVC, animated: true)
+            }
         }
-
     }
-    
 }
 
 extension ColorCollectionView: UICollectionViewDelegate {

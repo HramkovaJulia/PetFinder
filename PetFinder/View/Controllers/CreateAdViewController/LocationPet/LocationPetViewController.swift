@@ -86,7 +86,7 @@ class LocationPetViewController: UIViewController {
     
     private lazy var descriptionLabel: UILabel = {
         let descriptionLabel = UILabel()
-        descriptionLabel.text = "Особые приметы"
+        descriptionLabel.text = "Текст объявления"
         descriptionLabel.font = UIFont.sfProText(ofSize: 20, weight: .medium)
         descriptionLabel.textColor = UIColor(hex: 0x250404, alpha: 1)
         return descriptionLabel

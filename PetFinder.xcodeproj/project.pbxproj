@@ -59,6 +59,8 @@
 		D86EADB42AE3B69000FB19B6 /* AdsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D86EADB32AE3B69000FB19B6 /* AdsCollectionViewCell.swift */; };
 		D87D0DA52B2F53B400DC5476 /* CustomSengmentControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = D87D0DA42B2F53B400DC5476 /* CustomSengmentControl.swift */; };
 		D87D0DA82B2F57BD00DC5476 /* CustomDownButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D87D0DA72B2F57BD00DC5476 /* CustomDownButton.swift */; };
+		D898EFAE2B6FFC1300D10EA0 /* SetupNewColorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D898EFAD2B6FFC1300D10EA0 /* SetupNewColorView.swift */; };
+		D898EFB02B725E9300D10EA0 /* Onboarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = D898EFAF2B725E9300D10EA0 /* Onboarding.swift */; };
 		D8A9E8162AEE3A9900E509EC /* CustomSearchTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A9E8152AEE3A9900E509EC /* CustomSearchTextField.swift */; };
 		D8B3BB2A2AF63534001259A2 /* AdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B3BB292AF63534001259A2 /* AdViewController.swift */; };
 		D8B3BB2C2AF6494E001259A2 /* ImagesAdCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B3BB2B2AF6494E001259A2 /* ImagesAdCollectionView.swift */; };
@@ -135,6 +137,8 @@
 		D86EADB32AE3B69000FB19B6 /* AdsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdsCollectionViewCell.swift; sourceTree = "<group>"; };
 		D87D0DA42B2F53B400DC5476 /* CustomSengmentControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSengmentControl.swift; sourceTree = "<group>"; };
 		D87D0DA72B2F57BD00DC5476 /* CustomDownButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomDownButton.swift; sourceTree = "<group>"; };
+		D898EFAD2B6FFC1300D10EA0 /* SetupNewColorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetupNewColorView.swift; sourceTree = "<group>"; };
+		D898EFAF2B725E9300D10EA0 /* Onboarding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding.swift; sourceTree = "<group>"; };
 		D8A9E8152AEE3A9900E509EC /* CustomSearchTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSearchTextField.swift; sourceTree = "<group>"; };
 		D8B3BB292AF63534001259A2 /* AdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdViewController.swift; sourceTree = "<group>"; };
 		D8B3BB2B2AF6494E001259A2 /* ImagesAdCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesAdCollectionView.swift; sourceTree = "<group>"; };
@@ -400,6 +404,7 @@
 		D86EA8852ADBD09400B8D961 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				D898EFAC2B6FFBF200D10EA0 /* SetupColorView */,
 				025CB2962B3837CB00AEDAC0 /* Login views */,
 				D8DE97F52B35F9E800D82318 /* MapView */,
 				D8A9E8142AEE3A6B00E509EC /* SearchTextField */,
@@ -429,6 +434,7 @@
 				D8DE97FA2B38131400D82318 /* ResponseViewController.swift */,
 				D8DE97FC2B3821DE00D82318 /* StatusRespondViewController.swift */,
 				D81A44C52B3987A600DC0C49 /* NotificationsViewController.swift */,
+				D898EFAF2B725E9300D10EA0 /* Onboarding.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -456,6 +462,14 @@
 				D87D0DA72B2F57BD00DC5476 /* CustomDownButton.swift */,
 			);
 			path = CustomDownButton;
+			sourceTree = "<group>";
+		};
+		D898EFAC2B6FFBF200D10EA0 /* SetupColorView */ = {
+			isa = PBXGroup;
+			children = (
+				D898EFAD2B6FFC1300D10EA0 /* SetupNewColorView.swift */,
+			);
+			path = SetupColorView;
 			sourceTree = "<group>";
 		};
 		D8A9E8142AEE3A6B00E509EC /* SearchTextField */ = {
@@ -633,6 +647,7 @@
 				02D459422B394A3400295CE1 /* CustomNavigationView.swift in Sources */,
 				D86EADAD2AE04D1700FB19B6 /* ColorExtansion.swift in Sources */,
 				D85BE3E12B51D20000F8D1E8 /* ColorCollectionView.swift in Sources */,
+				D898EFAE2B6FFC1300D10EA0 /* SetupNewColorView.swift in Sources */,
 				D8B3BB382AFAA5D8001259A2 /* ListServicesCollectionViewCell.swift in Sources */,
 				5873E3D82ADEEA7B00F51501 /* FontExtansion.swift in Sources */,
 				D86EADAF2AE3B55E00FB19B6 /* AdsCollectionView.swift in Sources */,
@@ -656,6 +671,7 @@
 				D85BE3D62B51A9D400F8D1E8 /* SecondCreateViewController.swift in Sources */,
 				D81A44C62B3987A600DC0C49 /* NotificationsViewController.swift in Sources */,
 				D8DE97F72B35F9FE00D82318 /* MapView.swift in Sources */,
+				D898EFB02B725E9300D10EA0 /* Onboarding.swift in Sources */,
 				D85BE3EA2B52DBAD00F8D1E8 /* LocationPetViewController.swift in Sources */,
 				D8B3BB342AFA97BF001259A2 /* ServicesTableViewCell.swift in Sources */,
 				025CB2952B3837A200AEDAC0 /* LoginViewController.swift in Sources */,
