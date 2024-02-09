@@ -124,7 +124,7 @@ struct ButtonView: View {
                 .multilineTextAlignment(.leading)
                 .padding([.leading, .top, .bottom], 14)
             Spacer()
-            Image(uiImage: UIImage(named: "plusButton")!)
+            Image(uiImage: PFAssets.plusButton.image)
                 .padding([.trailing, .top, .bottom], 16)
         }
     }

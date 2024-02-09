@@ -27,7 +27,6 @@
 		5863AC002B6FF2BF00DABA20 /* SF-Pro-Text-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5863ABF42B6FF2BF00DABA20 /* SF-Pro-Text-Light.otf */; };
 		5873E3A02ADB190200F51501 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5873E39F2ADB190200F51501 /* AppDelegate.swift */; };
 		5873E3A22ADB190200F51501 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5873E3A12ADB190200F51501 /* SceneDelegate.swift */; };
-		5873E3A92ADB190600F51501 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5873E3A82ADB190600F51501 /* Assets.xcassets */; };
 		5873E3AC2ADB190600F51501 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5873E3AA2ADB190600F51501 /* LaunchScreen.storyboard */; };
 		5873E3D82ADEEA7B00F51501 /* FontExtansion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5873E3D72ADEEA7B00F51501 /* FontExtansion.swift */; };
 		587DA34F2B7383FF0001DE45 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 587DA34E2B7383FF0001DE45 /* OnboardingViewController.swift */; };
@@ -113,7 +112,6 @@
 		5873E39C2ADB190200F51501 /* PetFinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PetFinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5873E39F2ADB190200F51501 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5873E3A12ADB190200F51501 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		5873E3A82ADB190600F51501 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5873E3AB2ADB190600F51501 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5873E3AD2ADB190600F51501 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5873E3D72ADEEA7B00F51501 /* FontExtansion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontExtansion.swift; sourceTree = "<group>"; };
@@ -292,7 +290,6 @@
 				D84297972ADC1E4F006D6B06 /* Help */,
 				D86EA8852ADBD09400B8D961 /* View */,
 				D86EA8822ADBCA8E00B8D961 /* Delegate */,
-				5873E3A82ADB190600F51501 /* Assets.xcassets */,
 				5873E3AA2ADB190600F51501 /* LaunchScreen.storyboard */,
 				5873E3AD2ADB190600F51501 /* Info.plist */,
 			);
@@ -536,7 +533,6 @@
 			isa = PBXGroup;
 			children = (
 				D898EFAC2B6FFBF200D10EA0 /* SetupColorView */,
-				025CB2962B3837CB00AEDAC0 /* Login views */,
 				D8DE97F52B35F9E800D82318 /* MapView */,
 				D8A9E8142AEE3A6B00E509EC /* SearchTextField */,
 				D80C90B52ADEFF9400C9873C /* TableViews */,
@@ -693,7 +689,6 @@
 				D86EA8842ADBCAE900B8D961 /* Podfile in Resources */,
 				5873E3AC2ADB190600F51501 /* LaunchScreen.storyboard in Resources */,
 				5863ABFA2B6FF2BF00DABA20 /* SF-Pro-Text-Regular.otf in Resources */,
-				5873E3A92ADB190600F51501 /* Assets.xcassets in Resources */,
 				5863ABF52B6FF2BF00DABA20 /* SF-Pro-Text-HeavyItalic.otf in Resources */,
 				5863AC002B6FF2BF00DABA20 /* SF-Pro-Text-Light.otf in Resources */,
 				5863ABFC2B6FF2BF00DABA20 /* SF-Pro-Text-Heavy.otf in Resources */,

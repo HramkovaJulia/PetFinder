@@ -9,25 +9,16 @@ import UIKit
 import SnapKit
 
 class AdsCollectionViewCell: UICollectionViewCell {
-        
-//    private lazy var petSignsLabelStack: UIStackView = {
-//        let petSignsLabelStack = UIStackView()
-//        petSignsLabelStack.distribution = .equalSpacing
-//        petSignsLabelStack.spacing = 4
-//        petSignsLabelStack.axis = .horizontal
-//        petSignsLabelStack.layer.cornerRadius = 25
-//        return petSignsLabelStack
-//    }()
     
     private lazy var favorites: UIButton = {
         let favorites = UIButton()
-        favorites.setImage(UIImage(named: "adsStar"), for: .normal)
+        favorites.setImage(PFAssets.adsStar.image, for: .normal)
         favorites.addTarget(self, action: #selector(favoritesButtonTapped), for: .touchUpInside)
         return favorites
     }()
     
     private lazy var markerImage: UIImageView = {
-        let markerImage = UIImageView(image: UIImage(named: "mapPoint"))
+        let markerImage = UIImageView(image:PFAssets.mapPoint.image)
         return markerImage
     }()
     
@@ -42,7 +33,7 @@ class AdsCollectionViewCell: UICollectionViewCell {
         let imagePet = UIImageView()
         imagePet.clipsToBounds = true
 
-        let image = UIImage(named: "dog_back")
+        let image = PFAssets.dogBack.image
         imagePet.image = image
         imagePet.contentMode = .scaleToFill
         imagePet.backgroundColor = .clear

@@ -27,7 +27,7 @@ class ProfileViewController: UIViewController {
         let userImageView = UIImageView()
         userImageView.clipsToBounds = true
 
-        let image = UIImage(named: "placeholderPhoto")
+        let image = PFAssets.userImage.image
         userImageView.image = image
         userImageView.contentMode = .scaleToFill
         userImageView.backgroundColor = .clear
@@ -119,7 +119,7 @@ class ProfileViewController: UIViewController {
         let notification = UIButton()
         notification.setTitle("Уведомления", for: .normal)
         notification.setTitleColor(.label, for: .normal)
-        notification.setImage(UIImage(named: "bellProfile"), for: .normal)
+        notification.setImage(PFAssets.bellProfile.image, for: .normal)
         notification.titleEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: -20)
         return notification
     }()
@@ -128,7 +128,7 @@ class ProfileViewController: UIViewController {
         let settingsButton = UIButton()
         settingsButton.setTitle("Настройки", for: .normal)
         settingsButton.setTitleColor(.label, for: .normal)
-        settingsButton.setImage(UIImage(named: "settingsProfile"), for: .normal)
+        settingsButton.setImage(PFAssets.settingProfile.image, for: .normal)
         settingsButton.titleEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: -20)
         return settingsButton
     }()
@@ -137,7 +137,7 @@ class ProfileViewController: UIViewController {
         let exitButton = UIButton()
         exitButton.setTitle("Выход", for: .normal)
         exitButton.setTitleColor(.label, for: .normal)
-        exitButton.setImage(UIImage(named: "exitProfile"), for: .normal)
+        exitButton.setImage(PFAssets.exitProfile.image, for: .normal)
         exitButton.titleEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: -20)
         return exitButton
     }()
