@@ -16,9 +16,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         self.window = UIWindow(frame: windowScene.coordinateSpace.bounds)
         self.window?.windowScene = windowScene
-        
-//        let homeVC = CustomTabBarControllerViewController()
-        let homeVC = HomeViewController()
+
+        let homeVC = OnboardingViewController()
         
         let navController = UINavigationController(rootViewController: homeVC)
         navController.navigationBar.isHidden = true

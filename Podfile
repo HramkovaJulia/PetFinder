@@ -7,4 +7,5 @@ target 'PetFinder' do
   pod 'SwiftLint'
   pod 'Alamofire'
   pod 'SwiftGen'
+  pod 'DropDown'
 end
