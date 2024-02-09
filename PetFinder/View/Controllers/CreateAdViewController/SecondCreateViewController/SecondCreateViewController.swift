@@ -32,7 +32,7 @@ class SecondCreateViewController: UIViewController {
     
     private lazy var leftButton: UIButton = {
         let leftButton = UIButton()
-        leftButton.setImage(UIImage(named: "backspaceButton"), for: .normal)
+        leftButton.setImage(PFAssets.backspaceButton.image, for: .normal)
         leftButton.tintColor = UIColor(hex: 0xFCFCFC, alpha: 1)
         leftButton.addTarget(self, action: #selector(closeViewController), for: .touchUpInside)
         return leftButton

@@ -30,7 +30,7 @@ final class MainViewController: UIViewController, UISearchBarDelegate {
         rightMainButton.backgroundColor = .clear
         rightMainButton.tintColor = .black
         rightMainButton.layer.cornerRadius = 0
-        rightMainButton.setImage(UIImage(named: "bell"), for: .normal)
+        rightMainButton.setImage(PFAssets.bell.image, for: .normal)
         rightMainButton.addTarget(self, action: #selector(showNotificationVC), for: .touchUpInside)
         return rightMainButton
     }()

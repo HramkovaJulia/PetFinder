@@ -24,7 +24,7 @@ class ServicesViewController: UIViewController, UITextFieldDelegate {
         rightMainButton.backgroundColor = .clear
         rightMainButton.tintColor = .black
         rightMainButton.layer.cornerRadius = 0
-        rightMainButton.setImage(UIImage(named: "bell"), for: .normal)
+        rightMainButton.setImage(PFAssets.bell.image, for: .normal)
         return rightMainButton
     }()
     

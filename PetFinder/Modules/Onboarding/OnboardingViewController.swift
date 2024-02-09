@@ -62,7 +62,7 @@ class OnboardingViewController: UIViewController {
     }
 
     @objc private func didTapSkipSignIn() {
-        let vc = MainViewController()
+        let vc = CustomTabBarControllerViewController()
         self.navigationController?.pushViewController(vc, animated: true)
     }
 }

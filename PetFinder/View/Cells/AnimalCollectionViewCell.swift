@@ -28,7 +28,20 @@ final class AnimalCollectionViewCell: UICollectionViewCell {
         setup()
         makeConstaints()
         labelText.text = text
-        imageCell.image = UIImage(named: imageName)
+        switch imageName {
+        case "dog":
+            imageCell.image = PFAssets.dog.image
+        case "cat":
+            imageCell.image = PFAssets.cat.image
+        case "bird":
+            imageCell.image = PFAssets.bird.image
+        case "mouse":
+            imageCell.image = PFAssets.mouse.image
+        case "others":
+            imageCell.image = PFAssets.others.image
+        default:
+            imageCell.image = PFAssets.sortImage.image
+        }
     }
     
     func setup() {

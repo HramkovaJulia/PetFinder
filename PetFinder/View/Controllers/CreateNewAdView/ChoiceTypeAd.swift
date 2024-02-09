@@ -65,7 +65,7 @@ struct TopView: View {
             Button(action: {
                 self.dismissAction()
             }) {
-                Image("closeButton")
+                Image(uiImage: PFAssets.closeButton.image)
             }
             .padding(.top, 61.5)
             .padding(.trailing, 15)
@@ -86,8 +86,20 @@ struct CellView: View {
         let buttonColor = isFourImage ? Color(UIColor(hex: 0xFF975F)) : Color(UIColor(hex: 0x6DC2FF))
         
         return HStack(spacing: 35) {
-            Image(uiImage: UIImage(named: imageName)!)
-                .padding(.leading, 15)
+            switch imageName {
+            case "firstImage":
+                Image(uiImage: PFAssets.firstImage.image)
+                    .padding(.leading, 15)
+            case "secondImage":
+                Image(uiImage: PFAssets.secondImage.image)
+                    .padding(.leading, 15)
+            case "thirdImage":
+                Image(uiImage: PFAssets.thirdImage.image)
+                    .padding(.leading, 15)
+            default :
+                Image(uiImage: PFAssets.fourImage.image)
+                    .padding(.leading, 15)
+            }
             ButtonView(buttonLabel: buttonLabel)
                 .frame(width: 180, height: 70)
                 .background(buttonColor)
