@@ -2,7 +2,7 @@ fonts:
   inputs: UIKit/Resources/Fonts
   outputs:
     templateName: swift5
-    output: UIKit/Generated/Fonts.swift
+    output: UIKit/Generated/Fonts.generated.swift
     params:
       enumName: PFFontFamily
       publicAccess: 1
@@ -11,7 +11,7 @@ xcassets:
   inputs: UIKit/Resources/Assets.xcassets
   outputs:
     templateName: swift5
-    output: UIKit/Generated/AssetConstants.swift
+    output: UIKit/Generated/AssetConstants.generated.swift
     params:
       enumName: PFAssets
       publicAccess: 1
