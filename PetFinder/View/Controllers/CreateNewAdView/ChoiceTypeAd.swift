@@ -5,30 +5,54 @@
 //  Created by Алексей Шамрей on 3.02.24.
 //
 import SwiftUI
+import UIKit
 
-struct ChoiceTypeAd: View {
-    @State private var dataMassive = [["firstImage", "Пропал питомец"], ["secondImage", "Найден питомец"], ["thirdImage", "Пристроить питомца"], ["fourImage", "Завести питомца"]]
-    
-    var body: some View {
-        TopView()
-            .frame(maxWidth: .infinity)
-            .background(Color(UIColor(hex: 0xEFBFA5)))
-            .ignoresSafeArea()
-        List(dataMassive, id: \.self) { data in
-                CellView(imageName: data[0], buttonLabel: data[1])
-                    .background(Color.clear)
-                    .listRowBackground(Color.clear)
-                    .frame(maxWidth: UIScreen.main.bounds.width)
-            }
-        .background(Color.clear)
-        .padding(.top, -35)
-        .padding(.horizontal, -19)
-        .ignoresSafeArea()
-        }
+struct AdvertVC: UIViewControllerRepresentable {
+    func makeUIViewController(context: Context) -> CreatePetAdvertViewController {
+        return CreatePetAdvertViewController()
     }
 
+    func updateUIViewController(_ uiViewController: CreatePetAdvertViewController, context: Context) {
+    }
+}
+
+struct ChoiceTypeAd: View {
+    var dismissAction: () -> Void
+    @State private var isPresented = false
+    @State private var dataMassive = [["firstImage", "Пропал питомец"], ["secondImage", "Найден питомец"], ["thirdImage", "Пристроить питомца"], ["fourImage", "Завести питомца"]]
+
+    
+    var body: some View {
+        VStack {
+            TopView(dismissAction: dismissAction)
+                .frame(maxWidth: .infinity)
+                .background(Color(UIColor(hex: 0xEFBFA5)))
+                .ignoresSafeArea()
+            VStack {
+                ForEach(dataMassive, id: \.self) { data in
+                    CellView(imageName: data[0], buttonLabel: data[1])
+                        .frame(maxWidth: UIScreen.main.bounds.width)
+                        .padding(.top, 16)
+                        .onTapGesture {
+                            print(data[0])
+                            isPresented = true
+                        }.fullScreenCover(isPresented: $isPresented){
+                            AdvertVC()
+                                .ignoresSafeArea()
+                        }
+                        
+                }
+            }
+            .background(Color(UIColor(hex: 0xFCF4EF)))
+            .padding(.top, -24)
+            Spacer()
+        }
+        .background(Color(UIColor(hex: 0xFCF4EF)))
+    }
+}
 
 struct TopView: View {
+    var dismissAction: () -> Void
     var body: some View {
         HStack {
             Text("Новое объявление")
@@ -39,7 +63,7 @@ struct TopView: View {
                 .font(.init(UIFont.sfProText(ofSize: 24, weight: .semiBold)))
             Spacer()
             Button(action: {
-                print("123")
+                self.dismissAction()
             }) {
                 Image("closeButton")
             }
@@ -55,12 +79,12 @@ struct TopView: View {
 struct CellView: View {
     @State var imageName: String
     @State var buttonLabel: String
-
+    
     var body: some View {
         let isFourImage = imageName == "fourImage"
         let backgroundColor = isFourImage ? Color(UIColor(hex: 0xF8E0CA)) : Color(UIColor(hex: 0xBCE3FF))
         let buttonColor = isFourImage ? Color(UIColor(hex: 0xFF975F)) : Color(UIColor(hex: 0x6DC2FF))
-
+        
         return HStack(spacing: 35) {
             Image(uiImage: UIImage(named: imageName)!)
                 .padding(.leading, 15)
@@ -69,7 +93,7 @@ struct CellView: View {
                 .background(buttonColor)
                 .cornerRadius(16)
                 .padding(.trailing, 16)
-                
+            
         }
         .frame(width: UIScreen.main.bounds.width)
         .padding(.vertical, -10)
@@ -95,6 +119,6 @@ struct ButtonView: View {
 }
 
 
-#Preview {
-    ChoiceTypeAd()
-}
+//#Preview {
+//    ChoiceTypeAd()
+//}
