@@ -8,9 +8,6 @@
 import UIKit
 
 final class MainViewController: UIViewController, UISearchBarDelegate {
-    
-    private var sideMenuViewController: SideMenuViewController!
-    private var positionSelectionViewController: PositionSelectionViewController!
     private var customSearchTextField: CustomSearchTextField!
     private var swipeGestureRecognizer: UISwipeGestureRecognizer?
     private let userDefaults = UserDefaults.standard
@@ -127,18 +124,6 @@ final class MainViewController: UIViewController, UISearchBarDelegate {
             maker.left.equalToSuperview()
             maker.right.equalToSuperview()
             maker.bottom.equalTo(self.view.safeAreaLayoutGuide).inset(5)
-        }
-    }
-    
-    @objc func menuTapped () {
-        sideMenuViewController = nil
-    }
-    
-    
-    @objc func handleSwipeGesture(_ gesture: UISwipeGestureRecognizer) {
-        guard let menuView = sideMenuViewController?.view else { return }
-        UIView.animate(withDuration: 0.2) {
-            menuView.frame.origin.x = -menuView.frame.size.width
         }
     }
     
