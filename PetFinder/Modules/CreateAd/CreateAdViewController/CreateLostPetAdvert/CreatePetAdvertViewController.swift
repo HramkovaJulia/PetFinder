@@ -14,7 +14,7 @@ class CreatePetAdvertViewController: UIViewController {
     private let animalsCollectionView = UIHostingController(rootView: ContentView(showSortView: {
         
     }, massiveCell: [["dog","Собаки"], ["cat","Кошки"], ["bird","Птицы"], ["mouse","Грызуны"], ["others","Прочее"]]))
-    private let segmentControll = CustomizableSegmentControl(items: ["Мальчик", "Девочка"])
+    private let segmentControll = UIHostingController(rootView: SexSegmentView())
     
     private lazy var topView: UIView = {
         let topView = UIView()
@@ -197,7 +197,8 @@ class CreatePetAdvertViewController: UIViewController {
         self.contentView.addSubview(oldPetLabel)
         self.contentView.addSubview(oldPetTextField)
         self.contentView.addSubview(sexPetLabel)
-        self.contentView.addSubview(segmentControll)
+        self.contentView.addSubview(segmentControll.view)
+        segmentControll.view.backgroundColor = .clear
         self.contentView.addSubview(viewPetLabel)
         self.contentView.addSubview(dropdownButton)
         self.view.addSubview(nextButton)
@@ -278,7 +279,7 @@ class CreatePetAdvertViewController: UIViewController {
             maker.left.equalToSuperview().inset(24)
         }
         
-        segmentControll.snp.makeConstraints { maker in
+        segmentControll.view.snp.makeConstraints { maker in
             maker.top.equalTo(sexPetLabel.snp.bottom).inset(-10)
             maker.left.equalToSuperview().inset(16)
             maker.right.equalToSuperview().inset(15)
@@ -286,7 +287,7 @@ class CreatePetAdvertViewController: UIViewController {
         }
         
         viewPetLabel.snp.makeConstraints { maker in
-            maker.top.equalTo(segmentControll.snp.bottom).inset(-14)
+            maker.top.equalTo(segmentControll.view.snp.bottom).inset(-14)
             maker.left.equalToSuperview().inset(24)
         }
         

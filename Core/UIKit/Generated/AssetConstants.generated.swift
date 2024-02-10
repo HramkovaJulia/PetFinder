@@ -67,7 +67,9 @@ public enum PFAssets {
   public static let lostPetButton = ImageAsset(name: "lostPetButton")
   public static let lostImage = ImageAsset(name: "lost_image")
   public static let mapPoint = ImageAsset(name: "mapPoint")
+  public static let menSex = ImageAsset(name: "menSex")
   public static let mouse = ImageAsset(name: "mouse")
+  public static let otherSex = ImageAsset(name: "otherSex")
   public static let others = ImageAsset(name: "others")
   public static let plusButton = ImageAsset(name: "plusButton")
   public static let profile = ImageAsset(name: "profile")
@@ -82,6 +84,7 @@ public enum PFAssets {
   public static let star = ImageAsset(name: "star")
   public static let thirdImage = ImageAsset(name: "thirdImage")
   public static let userImage = ImageAsset(name: "userImage")
+  public static let womenSex = ImageAsset(name: "womenSex")
 }
 // swiftlint:enable identifier_name line_length nesting type_body_length type_name
 
