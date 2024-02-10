@@ -8,13 +8,14 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State var selectedType: String = ""
-    @State private var massiveCell: [[String]] = [["sortImage", "Сортировка"], ["dog","Собаки"], ["cat","Кошки"], ["bird","Птицы"], ["mouse","Грызуны"], ["others","Прочее"]]
+    var showSortView: (() -> Void)
+    @State private var selectedType: String = ""
+    @State var massiveCell: [[String]]
     var body: some View {
         ScrollView(.horizontal, showsIndicators: false) {
             HStack(spacing: 17) {
                 ForEach(massiveCell, id: \.self) { data in
-                    AnimalCell(selectedType: $selectedType, imageName: data[0], labelText: data[1])
+                    AnimalCell(selectedType: $selectedType, imageName: data[0], labelText: data[1], showSortView: showSortView)
                         .cornerRadius(16)
                 }
             }
@@ -27,6 +28,7 @@ struct AnimalCell: View {
     @Binding var selectedType: String
     @State var imageName: String
     @State var labelText: String
+    var showSortView: (() -> Void)
 
     private var backgroundColor: Color {
         selectedType == imageName ? Color(PFAssets.blue.color): Color.clear
@@ -59,16 +61,12 @@ struct AnimalCell: View {
                 selectedType = imageName
             } else {
                 selectedType = ""
+                showSortView()
             }
         }
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
-    }
-}
 
 
 

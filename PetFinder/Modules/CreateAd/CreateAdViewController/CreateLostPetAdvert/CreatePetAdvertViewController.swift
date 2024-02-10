@@ -7,10 +7,13 @@
 
 import UIKit
 import SnapKit
+import SwiftUI
 
 class CreatePetAdvertViewController: UIViewController {
     
-    private let animalsCollectionView = ListAnimalsCollectionView(massivePet: ["Собаки", "Кошки", "Птицы", "Грызуны", "Другие"], imageMassive: ["dog", "cat", "bird", "mouse", "others"])
+    private let animalsCollectionView = UIHostingController(rootView: ContentView(showSortView: {
+        
+    }, massiveCell: [["dog","Собаки"], ["cat","Кошки"], ["bird","Птицы"], ["mouse","Грызуны"], ["others","Прочее"]]))
     private let segmentControll = CustomizableSegmentControl(items: ["Мальчик", "Девочка"])
     
     private lazy var topView: UIView = {
@@ -185,7 +188,9 @@ class CreatePetAdvertViewController: UIViewController {
         self.view.addSubview(scrollView)
         self.scrollView.addSubview(contentView)
         self.contentView.addSubview(typePetLabel)
-        self.contentView.addSubview(animalsCollectionView)
+        self.contentView.addSubview(animalsCollectionView.view)
+        animalsCollectionView.view.backgroundColor = .clear
+        
         self.contentView.addSubview(descriptionLabel)
         self.contentView.addSubview(namePetLabel)
         self.contentView.addSubview(namePetTextField)
@@ -231,14 +236,14 @@ class CreatePetAdvertViewController: UIViewController {
             maker.left.equalToSuperview().inset(16)
         }
         
-        animalsCollectionView.snp.makeConstraints { maker in
+        animalsCollectionView.view.snp.makeConstraints { maker in
             maker.top.equalTo(typePetLabel.snp.bottom).inset(-16)
             maker.left.right.equalToSuperview()
             maker.height.equalTo(94)
         }
         
         descriptionLabel.snp.makeConstraints { maker in
-            maker.top.equalTo(animalsCollectionView.snp.bottom).inset(-40)
+            maker.top.equalTo(animalsCollectionView.view.snp.bottom).inset(-40)
             maker.left.equalTo(16)
             
         }

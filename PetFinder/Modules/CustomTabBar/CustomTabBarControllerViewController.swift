@@ -41,7 +41,7 @@ class CustomTabBarControllerViewController: UITabBarController {
         let createViewControllerS = setupVC(viewController: ProfileViewController(), title: "Профиль", image: setupImage(named: PFAssets.profile.image))
         
         // Ограничиваем количество отображаемых контроллеров в таб-баре
-        let visibleViewControllers = [mainViewController, createViewController, nocreateViewController, profileViewController, createViewControllerS]
+        let visibleViewControllers = [mainViewController, createViewControllerS]
         viewControllers = visibleViewControllers
     }
     
