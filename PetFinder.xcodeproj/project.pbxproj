@@ -66,6 +66,7 @@
 		D87D0DA52B2F53B400DC5476 /* CustomSengmentControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = D87D0DA42B2F53B400DC5476 /* CustomSengmentControl.swift */; };
 		D87D0DA82B2F57BD00DC5476 /* CustomDownButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D87D0DA72B2F57BD00DC5476 /* CustomDownButton.swift */; };
 		D898EFAE2B6FFC1300D10EA0 /* SetupNewColorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D898EFAD2B6FFC1300D10EA0 /* SetupNewColorView.swift */; };
+		D898EFCD2B77B48000D10EA0 /* AnimalCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D898EFCC2B77B48000D10EA0 /* AnimalCollectionView.swift */; };
 		D8A9E8162AEE3A9900E509EC /* CustomSearchTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A9E8152AEE3A9900E509EC /* CustomSearchTextField.swift */; };
 		D8B3BB2A2AF63534001259A2 /* AdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B3BB292AF63534001259A2 /* AdViewController.swift */; };
 		D8B3BB2C2AF6494E001259A2 /* ImagesAdCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B3BB2B2AF6494E001259A2 /* ImagesAdCollectionView.swift */; };
@@ -148,6 +149,7 @@
 		D87D0DA42B2F53B400DC5476 /* CustomSengmentControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSengmentControl.swift; sourceTree = "<group>"; };
 		D87D0DA72B2F57BD00DC5476 /* CustomDownButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomDownButton.swift; sourceTree = "<group>"; };
 		D898EFAD2B6FFC1300D10EA0 /* SetupNewColorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetupNewColorView.swift; sourceTree = "<group>"; };
+		D898EFCC2B77B48000D10EA0 /* AnimalCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalCollectionView.swift; sourceTree = "<group>"; };
 		D8A9E8152AEE3A9900E509EC /* CustomSearchTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSearchTextField.swift; sourceTree = "<group>"; };
 		D8B3BB292AF63534001259A2 /* AdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdViewController.swift; sourceTree = "<group>"; };
 		D8B3BB2B2AF6494E001259A2 /* ImagesAdCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesAdCollectionView.swift; sourceTree = "<group>"; };
@@ -493,6 +495,7 @@
 		D86EA8852ADBD09400B8D961 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				D898EFCB2B77B46300D10EA0 /* AnimalCollectionView */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -708,6 +711,14 @@
 			path = Geolocation;
 			sourceTree = "<group>";
 		};
+		D898EFCB2B77B46300D10EA0 /* AnimalCollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				D898EFCC2B77B48000D10EA0 /* AnimalCollectionView.swift */,
+			);
+			path = AnimalCollectionView;
+			sourceTree = "<group>";
+		};
 		D8DE97F52B35F9E800D82318 /* MapView */ = {
 			isa = PBXGroup;
 			children = (
@@ -859,6 +870,7 @@
 				D84297992ADC1E65006D6B06 /* Extansions.swift in Sources */,
 				D8DE97F92B37794600D82318 /* GeolocationViewController.swift in Sources */,
 				587DA34F2B7383FF0001DE45 /* OnboardingViewController.swift in Sources */,
+				D898EFCD2B77B48000D10EA0 /* AnimalCollectionView.swift in Sources */,
 				D81A44CA2B398B1400DC0C49 /* NotificationMode.swift in Sources */,
 				D842979F2ADC312A006D6B06 /* AnimalCollectionViewCell.swift in Sources */,
 				D85BE3EE2B52E28E00F8D1E8 /* CustomLocationTextField.swift in Sources */,

@@ -6,13 +6,14 @@
 //
 
 import UIKit
+import SwiftUI
 
 final class MainViewController: UIViewController, UISearchBarDelegate {
     private var customSearchTextField: CustomSearchTextField!
     private var swipeGestureRecognizer: UISwipeGestureRecognizer?
     private let userDefaults = UserDefaults.standard
     private let cityKey = "city"
-    private let animalsCollectionView = ListAnimalsCollectionView()
+    private let animalsCollectionView = UIHostingController(rootView: ContentView())
     private let adsCollectionView = AdsCollectionView()
     
     private lazy var searchandNotificationView: UIView = {
@@ -109,9 +110,10 @@ final class MainViewController: UIViewController, UISearchBarDelegate {
     }
     
     func createAnimalsCollectionView() {
-        self.view.addSubview(animalsCollectionView)
+        self.view.addSubview(animalsCollectionView.view)
+        animalsCollectionView.view.backgroundColor = .clear
         
-        animalsCollectionView.snp.makeConstraints {maker in
+        animalsCollectionView.view.snp.makeConstraints {maker in
             maker.top.equalTo(searchandNotificationView.snp.bottom).inset(-24)
             maker.left.right.equalToSuperview()
             maker.height.equalTo(78)
@@ -120,7 +122,7 @@ final class MainViewController: UIViewController, UISearchBarDelegate {
     
     func setupAdsTableView() {
         adsCollectionView.snp.makeConstraints { maker in
-            maker.top.equalTo(animalsCollectionView.snp.bottom).inset(-20)
+            maker.top.equalTo(animalsCollectionView.view.snp.bottom).inset(-20)
             maker.left.equalToSuperview()
             maker.right.equalToSuperview()
             maker.bottom.equalTo(self.view.safeAreaLayoutGuide).inset(5)

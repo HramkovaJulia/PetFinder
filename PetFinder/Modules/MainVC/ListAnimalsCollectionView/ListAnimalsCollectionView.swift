@@ -107,7 +107,7 @@ extension ListAnimalsCollectionView: UICollectionViewDataSource {
 
 extension ListAnimalsCollectionView: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 67, height: 78)
+        return CGSize(width: 72, height: 94)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
