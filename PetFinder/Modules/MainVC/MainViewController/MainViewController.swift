@@ -6,13 +6,19 @@
 //
 
 import UIKit
+import SwiftUI
 
 final class MainViewController: UIViewController, UISearchBarDelegate {
     private var customSearchTextField: CustomSearchTextField!
     private var swipeGestureRecognizer: UISwipeGestureRecognizer?
     private let userDefaults = UserDefaults.standard
     private let cityKey = "city"
-    private let animalsCollectionView = ListAnimalsCollectionView()
+    lazy var animalsCollectionView: UIHostingController<ContentView> = {
+        let contentView = ContentView(showSortView: {
+            self.showSortView()
+        }, massiveCell: [["sortImage", "Сортировка"], ["dog","Собаки"], ["cat","Кошки"], ["bird","Птицы"], ["mouse","Грызуны"], ["others","Прочее"]])
+        return UIHostingController(rootView: contentView)
+    }()
     private let adsCollectionView = AdsCollectionView()
     
     private lazy var searchandNotificationView: UIView = {
@@ -31,7 +37,7 @@ final class MainViewController: UIViewController, UISearchBarDelegate {
         rightMainButton.addTarget(self, action: #selector(showNotificationVC), for: .touchUpInside)
         return rightMainButton
     }()
-
+    
     private lazy var mainLabel: UILabel = {
         let mainLabel = UILabel()
         mainLabel.text = "Доска объявлений"
@@ -39,7 +45,7 @@ final class MainViewController: UIViewController, UISearchBarDelegate {
         mainLabel.textColor = .white
         return mainLabel
     }()
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         createUI()
@@ -96,22 +102,23 @@ final class MainViewController: UIViewController, UISearchBarDelegate {
         self.hideKeyboardWhenTappedAround()
         self.view.addSubview(adsCollectionView)
     }
-
+    
     func createSearchBar() {
         customSearchTextField = CustomSearchTextField()
         customSearchTextField.delegate = self
         self.view.addSubview(customSearchTextField)
         customSearchTextField.snp.makeConstraints { maker in
-                 maker.top.equalTo(mainLabel.snp.bottom).inset(-15)
-                 maker.left.right.equalToSuperview().inset(10)
-                 maker.height.equalTo(48)
-             }
+            maker.top.equalTo(mainLabel.snp.bottom).inset(-15)
+            maker.left.right.equalToSuperview().inset(10)
+            maker.height.equalTo(48)
+        }
     }
     
     func createAnimalsCollectionView() {
-        self.view.addSubview(animalsCollectionView)
+        self.view.addSubview(animalsCollectionView.view)
+        animalsCollectionView.view.backgroundColor = .clear
         
-        animalsCollectionView.snp.makeConstraints {maker in
+        animalsCollectionView.view.snp.makeConstraints {maker in
             maker.top.equalTo(searchandNotificationView.snp.bottom).inset(-24)
             maker.left.right.equalToSuperview()
             maker.height.equalTo(78)
@@ -120,7 +127,7 @@ final class MainViewController: UIViewController, UISearchBarDelegate {
     
     func setupAdsTableView() {
         adsCollectionView.snp.makeConstraints { maker in
-            maker.top.equalTo(animalsCollectionView.snp.bottom).inset(-20)
+            maker.top.equalTo(animalsCollectionView.view.snp.bottom).inset(-20)
             maker.left.equalToSuperview()
             maker.right.equalToSuperview()
             maker.bottom.equalTo(self.view.safeAreaLayoutGuide).inset(5)
@@ -133,6 +140,19 @@ final class MainViewController: UIViewController, UISearchBarDelegate {
         notification.modalPresentationStyle = .fullScreen
         self.present(notification, animated: true)
     }
+    
+    func showSortView() {
+        let hostingVC = UIHostingController(rootView: SortView(dismiss: {
+            self.dismiss(animated: true)
+        }))
+        hostingVC.view.backgroundColor = .clear
+        hostingVC.modalPresentationStyle = .formSheet
+        if let presentationController = hostingVC.presentationController as? UISheetPresentationController {
+            presentationController.detents = [.medium()]
+        }
+        self.present(hostingVC, animated: true)
+    }
+
 }
 
 extension MainViewController: UITextFieldDelegate {
@@ -145,6 +165,5 @@ extension MainViewController: UITextFieldDelegate {
     
     func textFieldDidEndEditing(_ textField: UITextField) {
         customSearchTextField.createRightView()
-        
     }
 }

@@ -227,7 +227,7 @@ class SecondCreateViewController: UIViewController {
             maker.top.equalTo(specialFeatures.snp.bottom).inset(-18)
             maker.left.equalToSuperview().inset(16)
             maker.right.equalToSuperview().inset(15)
-            maker.bottom.equalToSuperview().inset(100)
+//            maker.bottom.equalToSuperview().inset(100)
         }
         
         nextButton.snp.makeConstraints { maker in

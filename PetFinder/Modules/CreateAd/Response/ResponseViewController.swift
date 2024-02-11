@@ -8,7 +8,10 @@
 import UIKit
 import SnapKit
 
-class ResponseViewController: UIViewController {
+class ResponseViewController: UIViewController, UITextFieldDelegate {
+    
+    var heightConstraint: NSLayoutConstraint!
+    
     
     private lazy var topView: UIView = {
         let searchandNotificationView = UIView()
@@ -31,59 +34,23 @@ class ResponseViewController: UIViewController {
         return rightButton
     }()
     
-    private lazy var ownerInfo: UILabel = {
-        let ownerInfo = UILabel()
-        ownerInfo.text = "Контакты владельца объявления"
-        ownerInfo.font = UIFont.sfProText(ofSize: 20, weight: .medium)
-        return ownerInfo
+    private let scrollView: UIScrollView = {
+        let scrollView = UIScrollView(frame: .zero)
+        scrollView.translatesAutoresizingMaskIntoConstraints = false
+        scrollView.isPagingEnabled = true
+        return scrollView
     }()
     
-    private lazy var usernameLabel: UILabel = {
-       let usernameLabel = UILabel()
-        usernameLabel.text = "ФИО:"
-        usernameLabel.font = UIFont.sfProText(ofSize: 14, weight: .light)
-        return usernameLabel
+    private lazy var contentView: UIView = {
+        let contenntView = UIView()
+        return contenntView
     }()
-    
-    private lazy var userPhoneLabel: UILabel = {
-       let userPhoneLabel = UILabel()
-        userPhoneLabel.text = "Телефон:"
-        userPhoneLabel.font = UIFont.sfProText(ofSize: 14, weight: .light)
-        return userPhoneLabel
-    }()
-    
-    private lazy var userEmailLabel: UILabel = {
-       let userEmailLabel = UILabel()
-        userEmailLabel.text = "Почта:"
-        userEmailLabel.font = UIFont.sfProText(ofSize: 14, weight: .light)
-        return userEmailLabel
-    }()
-    
-    private lazy var username: UILabel = {
-       let usernameLabel = UILabel()
-        usernameLabel.text = "Иванов Иван Иванович"
-        usernameLabel.font = UIFont.sfProText(ofSize: 16, weight: .regular)
-        return usernameLabel
-    }()
-    
-    private lazy var userPhone: UILabel = {
-       let userPhoneLabel = UILabel()
-        userPhoneLabel.text = "+7 (000) 000-00-00"
-        userPhoneLabel.font = UIFont.sfProText(ofSize: 16, weight: .regular)
-        return userPhoneLabel
-    }()
-    
-    private lazy var userEmail: UILabel = {
-       let userEmailLabel = UILabel()
-        userEmailLabel.text = "Example@mail.com"
-        userEmailLabel.font = UIFont.sfProText(ofSize: 16, weight: .regular)
-        return userEmailLabel
-    }()
+
     
     private lazy var responderInfo: UILabel = {
         let ownerInfo = UILabel()
         ownerInfo.text = "Ваши данные для связи"
-        ownerInfo.font = UIFont.sfProText(ofSize: 20, weight: .medium)
+        ownerInfo.font = PFFontFamily.SFProText.medium.font(size: 20)
         return ownerInfo
     }()
     
@@ -99,9 +66,9 @@ class ResponseViewController: UIViewController {
         respondernameTextField.placeholder = "Иванов Иван Иванович"
         respondernameTextField.leftViewMode = .always
         respondernameTextField.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 16, height: 30))
+        respondernameTextField.backgroundColor = UIColor(dynamicProvider: PFAssets.white.color)
         respondernameTextField.layer.cornerRadius = 25
-        respondernameTextField.layer.borderColor = UIColor(hex: 0x83CBFF, alpha: 1).cgColor
-        respondernameTextField.layer.borderWidth = 1
+
         return respondernameTextField
     }()
     
@@ -118,8 +85,8 @@ class ResponseViewController: UIViewController {
         respondernameTextField.leftViewMode = .always
         respondernameTextField.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 16, height: 30))
         respondernameTextField.layer.cornerRadius = 25
-        respondernameTextField.layer.borderColor = UIColor(hex: 0x83CBFF, alpha: 1).cgColor
-        respondernameTextField.layer.borderWidth = 1
+        respondernameTextField.backgroundColor = UIColor(dynamicProvider: PFAssets.white.color)
+
         return respondernameTextField
     }()
     
@@ -132,14 +99,29 @@ class ResponseViewController: UIViewController {
     }()
     
     private lazy var responderPhoneTextField: UITextField = {
-        let respondernameTextField = UITextField()
-        respondernameTextField.placeholder = "+7 (000) 000-00-00"
-        respondernameTextField.leftViewMode = .always
-        respondernameTextField.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 16, height: 30))
-        respondernameTextField.layer.cornerRadius = 25
-        respondernameTextField.layer.borderColor = UIColor(hex: 0x83CBFF, alpha: 1).cgColor
-        respondernameTextField.layer.borderWidth = 1
-        return respondernameTextField
+        let responderPhoneTextField = UITextField()
+        responderPhoneTextField.placeholder = "+7 (000) 000-00-00"
+        responderPhoneTextField.leftViewMode = .always
+        responderPhoneTextField.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 16, height: 30))
+        responderPhoneTextField.layer.cornerRadius = 25
+        responderPhoneTextField.backgroundColor = UIColor(dynamicProvider: PFAssets.white.color)
+        return responderPhoneTextField
+    }()
+    
+    
+    private lazy var messageRespondLabel: UILabel = {
+        let messageRespondLabel = UILabel()
+        messageRespondLabel.text = "Ваши данные для связи"
+        messageRespondLabel.font = PFFontFamily.SFProText.medium.font(size: 20)
+        return messageRespondLabel
+    }()
+    
+    
+    private lazy var specialFeaturesField: UITextView = {
+        let specialFeaturesField = UITextView()
+        specialFeaturesField.isEditable = true
+        specialFeaturesField.layer.cornerRadius = 20
+        return specialFeaturesField
     }()
     
     
@@ -154,33 +136,36 @@ class ResponseViewController: UIViewController {
         return respond
     }()
     
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         setup()
         makeConstraints()
+        respondernameTextField.delegate = self
+        responderEmailTextField.delegate = self
+        responderPhoneTextField.delegate = self
+        specialFeaturesField.delegate = self
     }
     
     func setup() {
-        self.view.backgroundColor = UIColor(hex: 0xfcfcfc)
+        heightConstraint = specialFeaturesField.heightAnchor.constraint(equalToConstant: 200)
+        heightConstraint.priority = UILayoutPriority(rawValue: 999)
+        heightConstraint.isActive = true
+        
+        self.view.backgroundColor = UIColor(dynamicProvider: PFAssets.background.color)
         self.view.addSubview(topView)
         self.topView.addSubview(mainLabel)
         self.topView.addSubview(rightButton)
-        self.view.addSubview(ownerInfo)
-        self.view.addSubview(usernameLabel)
-        self.view.addSubview(userPhoneLabel)
-        self.view.addSubview(userEmailLabel)
-        self.view.addSubview(username)
-        self.view.addSubview(userPhone)
-        self.view.addSubview(userEmail)
-        self.view.addSubview(responderInfo)
-        self.view.addSubview(respondernameLabel)
-        self.view.addSubview(respondernameTextField)
-        self.view.addSubview(responderEmailLabel)
-        self.view.addSubview(responderEmailTextField)
-        self.view.addSubview(responderPhoneLabel)
-        self.view.addSubview(responderPhoneTextField)
+        self.view.addSubview(scrollView)
+        self.scrollView.addSubview(contentView)
+        self.contentView.addSubview(responderInfo)
+        self.contentView.addSubview(respondernameLabel)
+        self.contentView.addSubview(respondernameTextField)
+        self.contentView.addSubview(responderEmailLabel)
+        self.contentView.addSubview(responderEmailTextField)
+        self.contentView.addSubview(responderPhoneLabel)
+        self.contentView.addSubview(responderPhoneTextField)
+        self.contentView.addSubview(messageRespondLabel)
+        self.contentView.addSubview(specialFeaturesField)
         self.view.addSubview(respond)
     }
 
@@ -201,44 +186,19 @@ class ResponseViewController: UIViewController {
             maker.bottom.equalToSuperview().inset(20)
         }
         
-        ownerInfo.snp.makeConstraints { maker in
-            maker.top.equalTo(topView.snp.bottom).inset(-24)
-            maker.left.equalToSuperview().inset(16)
-            maker.right.equalToSuperview().inset(17)
+        scrollView.snp.makeConstraints { maker in
+            maker.top.equalTo(topView.snp.bottom).inset(-5)
+            maker.left.right.bottom.equalToSuperview()
         }
         
-        usernameLabel.snp.makeConstraints { maker in
-            maker.top.equalTo(ownerInfo.snp.bottom).inset(-16)
-            maker.left.equalToSuperview().inset(16)
+        contentView.snp.makeConstraints { maker in
+            maker.edges.equalToSuperview()
+            maker.width.equalTo(scrollView)
+            maker.height.equalTo(self.view)
         }
-        
-        userPhoneLabel.snp.makeConstraints { maker in
-            maker.top.equalTo(usernameLabel.snp.bottom).inset(-10)
-            maker.left.equalToSuperview().inset(16)
-        }
-        
-        userEmailLabel.snp.makeConstraints { maker in
-            maker.top.equalTo(userPhoneLabel.snp.bottom).inset(-10)
-            maker.left.equalToSuperview().inset(16)
-        }
-        
-        username.snp.makeConstraints { maker in
-            maker.top.equalTo(ownerInfo.snp.bottom).inset(-16)
-            maker.right.equalToSuperview().inset(16)
-        }
-        
-        userPhone.snp.makeConstraints { maker in
-            maker.top.equalTo(username.snp.bottom).inset(-10)
-            maker.right.equalToSuperview().inset(16)
-        }
-        
-        userEmail.snp.makeConstraints { maker in
-            maker.top.equalTo(userPhone.snp.bottom).inset(-10)
-            maker.right.equalToSuperview().inset(16)
-        }
-        
+
         responderInfo.snp.makeConstraints { maker in
-            maker.top.equalTo(userEmail.snp.bottom).inset(-36)
+            maker.top.equalToSuperview().inset(19)
             maker.left.equalToSuperview().inset(16)
         }
         
@@ -278,6 +238,17 @@ class ResponseViewController: UIViewController {
             maker.height.equalTo(53)
         }
         
+        messageRespondLabel.snp.makeConstraints { maker in
+            maker.top.equalTo(responderPhoneTextField.snp.bottom).inset(-36)
+            maker.left.equalToSuperview().inset(16)
+        }
+        
+        specialFeaturesField.snp.makeConstraints { maker in
+            maker.top.equalTo(messageRespondLabel.snp.bottom).inset(-16)
+            maker.left.equalToSuperview().inset(16)
+            maker.right.equalToSuperview().inset(15)
+        }
+        
         respond.snp.makeConstraints { maker in
             maker.left.equalToSuperview().inset(16)
             maker.right.equalToSuperview().inset(15)
@@ -299,4 +270,26 @@ class ResponseViewController: UIViewController {
        
     }
 
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        if !textField.text!.isEmpty {
+            textField.layer.borderColor = UIColor(dynamicProvider: PFAssets.blue.color).cgColor
+            textField.layer.borderWidth = 1
+        } else {
+            textField.layer.borderColor = UIColor.clear.cgColor
+            textField.layer.borderWidth = 0
+        }
+    }
 }
+
+extension ResponseViewController: UITextViewDelegate {
+    func textViewDidChange(_ textView: UITextView) {
+        let size = CGSize(width: textView.frame.width, height: .infinity)
+        let estimatedSize = textView.sizeThatFits(size)
+        
+        // Установка минимальной высоты
+        let minHeight: CGFloat = 100
+        let calculatedHeight = max(minHeight, estimatedSize.height)
+        heightConstraint.constant = calculatedHeight
+    }
+}
+

@@ -27,8 +27,6 @@ class DropdownTextField: UITextField {
     
     private func commonInit() {
         self.backgroundColor = .white
-        self.layer.borderColor = UIColor(hex: 0x83CBFF).cgColor
-        self.layer.borderWidth = 1
         self.layer.cornerRadius = 20
         self.placeholder = "Адрес местонахождения или пропажи"
         self.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 16, height: frame.size.height))

@@ -119,7 +119,7 @@ class ProfileViewController: UIViewController {
         let notification = UIButton()
         notification.setTitle("Уведомления", for: .normal)
         notification.setTitleColor(.label, for: .normal)
-        notification.setImage(PFAssets.bellProfile.image, for: .normal)
+        notification.setImage(PFAssets.notificationProfile.image, for: .normal)
         notification.titleEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: -20)
         return notification
     }()
@@ -128,7 +128,7 @@ class ProfileViewController: UIViewController {
         let settingsButton = UIButton()
         settingsButton.setTitle("Настройки", for: .normal)
         settingsButton.setTitleColor(.label, for: .normal)
-        settingsButton.setImage(PFAssets.settingProfile.image, for: .normal)
+        settingsButton.setImage(PFAssets.settingsProfile.image, for: .normal)
         settingsButton.titleEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: -20)
         return settingsButton
     }()

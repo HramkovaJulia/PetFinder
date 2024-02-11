@@ -7,6 +7,7 @@
 
 import UIKit
 import SnapKit
+import SwiftUI
 //import STTabbar
 
 class CustomTabBarControllerViewController: UITabBarController {
@@ -33,15 +34,17 @@ class CustomTabBarControllerViewController: UITabBarController {
 
     
     func setupTabBar() {
+        let profileView = ProfileSwiftUIView()
+        let hostingController = UIHostingController(rootView: profileView)
         
         let mainViewController = setupVC(viewController: MainViewController(), title: "Объявления", image:  setupImage(named: PFAssets.clipboard.image))
         let createViewController = setupVC(viewController: ServicesViewController(), title: "Сервисы", image: setupImage(named: PFAssets.services.image))
         let nocreateViewController = setupVC(viewController: UIViewController(), title: "", image: nil)
         let profileViewController = setupVC(viewController: UIViewController(), title: "Избранное", image: setupImage(named: PFAssets.heart.image))
-        let createViewControllerS = setupVC(viewController: ProfileViewController(), title: "Профиль", image: setupImage(named: PFAssets.profile.image))
+        let createViewControllerS = setupVC(viewController: hostingController, title: "Профиль", image: setupImage(named: PFAssets.profile.image))
         
         // Ограничиваем количество отображаемых контроллеров в таб-баре
-        let visibleViewControllers = [mainViewController, createViewController, nocreateViewController, profileViewController, createViewControllerS]
+        let visibleViewControllers = [mainViewController, createViewControllerS]
         viewControllers = visibleViewControllers
     }
     

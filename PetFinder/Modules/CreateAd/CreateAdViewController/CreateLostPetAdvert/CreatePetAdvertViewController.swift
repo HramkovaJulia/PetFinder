@@ -7,11 +7,14 @@
 
 import UIKit
 import SnapKit
+import SwiftUI
 
-class CreatePetAdvertViewController: UIViewController {
+class CreatePetAdvertViewController: UIViewController, UITextFieldDelegate {
     
-    private let animalsCollectionView = ListAnimalsCollectionView(massivePet: ["Собаки", "Кошки", "Птицы", "Грызуны", "Другие"], imageMassive: ["dog", "cat", "bird", "mouse", "others"])
-    private let segmentControll = CustomizableSegmentControl(items: ["Мальчик", "Девочка"])
+    private let animalsCollectionView = UIHostingController(rootView: ContentView(showSortView: {
+        
+    }, massiveCell: [["dog","Собаки"], ["cat","Кошки"], ["bird","Птицы"], ["mouse","Грызуны"], ["others","Прочее"]]))
+    private let segmentControll = UIHostingController(rootView: SexSegmentView())
     
     private lazy var topView: UIView = {
         let topView = UIView()
@@ -168,6 +171,8 @@ class CreatePetAdvertViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        oldPetTextField.delegate = self
+        namePetTextField.delegate = self
         setup()
     }
 
@@ -185,14 +190,17 @@ class CreatePetAdvertViewController: UIViewController {
         self.view.addSubview(scrollView)
         self.scrollView.addSubview(contentView)
         self.contentView.addSubview(typePetLabel)
-        self.contentView.addSubview(animalsCollectionView)
+        self.contentView.addSubview(animalsCollectionView.view)
+        animalsCollectionView.view.backgroundColor = .clear
+        
         self.contentView.addSubview(descriptionLabel)
         self.contentView.addSubview(namePetLabel)
         self.contentView.addSubview(namePetTextField)
         self.contentView.addSubview(oldPetLabel)
         self.contentView.addSubview(oldPetTextField)
         self.contentView.addSubview(sexPetLabel)
-        self.contentView.addSubview(segmentControll)
+        self.contentView.addSubview(segmentControll.view)
+        segmentControll.view.backgroundColor = .clear
         self.contentView.addSubview(viewPetLabel)
         self.contentView.addSubview(dropdownButton)
         self.view.addSubview(nextButton)
@@ -231,14 +239,14 @@ class CreatePetAdvertViewController: UIViewController {
             maker.left.equalToSuperview().inset(16)
         }
         
-        animalsCollectionView.snp.makeConstraints { maker in
+        animalsCollectionView.view.snp.makeConstraints { maker in
             maker.top.equalTo(typePetLabel.snp.bottom).inset(-16)
             maker.left.right.equalToSuperview()
             maker.height.equalTo(94)
         }
         
         descriptionLabel.snp.makeConstraints { maker in
-            maker.top.equalTo(animalsCollectionView.snp.bottom).inset(-40)
+            maker.top.equalTo(animalsCollectionView.view.snp.bottom).inset(-40)
             maker.left.equalTo(16)
             
         }
@@ -273,7 +281,7 @@ class CreatePetAdvertViewController: UIViewController {
             maker.left.equalToSuperview().inset(24)
         }
         
-        segmentControll.snp.makeConstraints { maker in
+        segmentControll.view.snp.makeConstraints { maker in
             maker.top.equalTo(sexPetLabel.snp.bottom).inset(-10)
             maker.left.equalToSuperview().inset(16)
             maker.right.equalToSuperview().inset(15)
@@ -281,7 +289,7 @@ class CreatePetAdvertViewController: UIViewController {
         }
         
         viewPetLabel.snp.makeConstraints { maker in
-            maker.top.equalTo(segmentControll.snp.bottom).inset(-14)
+            maker.top.equalTo(segmentControll.view.snp.bottom).inset(-14)
             maker.left.equalToSuperview().inset(24)
         }
         
@@ -298,7 +306,6 @@ class CreatePetAdvertViewController: UIViewController {
             maker.bottom.equalToSuperview().inset(34)
             maker.height.equalTo(53)
         }
-        
     }
 
     @objc
@@ -310,5 +317,23 @@ class CreatePetAdvertViewController: UIViewController {
     
     @objc func closeViewController() {
         self.dismiss(animated: true)
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        if !oldPetTextField.text!.isEmpty {
+            oldPetTextField.layer.borderWidth = 1
+            oldPetTextField.layer.borderColor = UIColor(dynamicProvider: PFAssets.blue.color).cgColor
+        } else {
+            oldPetTextField.layer.borderWidth = 0
+            oldPetTextField.layer.borderColor = UIColor.clear.cgColor
+        }
+        
+        if !namePetTextField.text!.isEmpty {
+            namePetTextField.layer.borderWidth = 1
+            namePetTextField.layer.borderColor = UIColor(dynamicProvider: PFAssets.blue.color).cgColor
+        } else {
+            namePetTextField.layer.borderWidth = 0
+            namePetTextField.layer.borderColor = UIColor.clear.cgColor
+        }
     }
 }
