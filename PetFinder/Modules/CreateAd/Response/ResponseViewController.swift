@@ -8,7 +8,7 @@
 import UIKit
 import SnapKit
 
-class ResponseViewController: UIViewController {
+class ResponseViewController: UIViewController, UITextFieldDelegate {
     
     private lazy var topView: UIView = {
         let searchandNotificationView = UIView()
@@ -99,9 +99,9 @@ class ResponseViewController: UIViewController {
         respondernameTextField.placeholder = "Иванов Иван Иванович"
         respondernameTextField.leftViewMode = .always
         respondernameTextField.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 16, height: 30))
+        respondernameTextField.backgroundColor = UIColor(dynamicProvider: PFAssets.white.color)
         respondernameTextField.layer.cornerRadius = 25
-        respondernameTextField.layer.borderColor = UIColor(hex: 0x83CBFF, alpha: 1).cgColor
-        respondernameTextField.layer.borderWidth = 1
+
         return respondernameTextField
     }()
     
@@ -118,8 +118,8 @@ class ResponseViewController: UIViewController {
         respondernameTextField.leftViewMode = .always
         respondernameTextField.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 16, height: 30))
         respondernameTextField.layer.cornerRadius = 25
-        respondernameTextField.layer.borderColor = UIColor(hex: 0x83CBFF, alpha: 1).cgColor
-        respondernameTextField.layer.borderWidth = 1
+        respondernameTextField.backgroundColor = UIColor(dynamicProvider: PFAssets.white.color)
+
         return respondernameTextField
     }()
     
@@ -132,14 +132,13 @@ class ResponseViewController: UIViewController {
     }()
     
     private lazy var responderPhoneTextField: UITextField = {
-        let respondernameTextField = UITextField()
-        respondernameTextField.placeholder = "+7 (000) 000-00-00"
-        respondernameTextField.leftViewMode = .always
-        respondernameTextField.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 16, height: 30))
-        respondernameTextField.layer.cornerRadius = 25
-        respondernameTextField.layer.borderColor = UIColor(hex: 0x83CBFF, alpha: 1).cgColor
-        respondernameTextField.layer.borderWidth = 1
-        return respondernameTextField
+        let responderPhoneTextField = UITextField()
+        responderPhoneTextField.placeholder = "+7 (000) 000-00-00"
+        responderPhoneTextField.leftViewMode = .always
+        responderPhoneTextField.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 16, height: 30))
+        responderPhoneTextField.layer.cornerRadius = 25
+        responderPhoneTextField.backgroundColor = UIColor(dynamicProvider: PFAssets.white.color)
+        return responderPhoneTextField
     }()
     
     
@@ -160,10 +159,13 @@ class ResponseViewController: UIViewController {
         super.viewDidLoad()
         setup()
         makeConstraints()
+        respondernameTextField.delegate = self
+        responderEmailTextField.delegate = self
+        responderPhoneTextField.delegate = self
     }
     
     func setup() {
-        self.view.backgroundColor = UIColor(hex: 0xfcfcfc)
+        self.view.backgroundColor = UIColor(dynamicProvider: PFAssets.background.color)
         self.view.addSubview(topView)
         self.topView.addSubview(mainLabel)
         self.topView.addSubview(rightButton)
@@ -299,4 +301,13 @@ class ResponseViewController: UIViewController {
        
     }
 
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        if !textField.text!.isEmpty {
+            textField.layer.borderColor = UIColor(dynamicProvider: PFAssets.blue.color).cgColor
+            textField.layer.borderWidth = 1
+        } else {
+            textField.layer.borderColor = UIColor.clear.cgColor
+            textField.layer.borderWidth = 0
+        }
+    }
 }
