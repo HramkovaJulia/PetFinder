@@ -8,7 +8,7 @@
 import UIKit
 import SnapKit
 
-class LocationPetViewController: UIViewController {
+class LocationPetViewController: UIViewController, UITextFieldDelegate {
     
     let dropDownTextField = DropdownTextField()
     var heightConstraint: NSLayoutConstraint!
@@ -111,6 +111,7 @@ class LocationPetViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setup()
+        dropDownTextField.delegate = self
     }
 
     func setup() {
@@ -233,6 +234,16 @@ class LocationPetViewController: UIViewController {
         self.present(viewcontroller, animated: true)
     }
     
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        if !dropDownTextField.text!.isEmpty {
+            dropDownTextField.layer.borderWidth = 1
+            dropDownTextField.layer.borderColor = UIColor(dynamicProvider: PFAssets.blue.color).cgColor
+        } else {
+            dropDownTextField.layer.borderWidth = 0
+            
+        }
+    }
+    
 }
 
 extension LocationPetViewController: UITextViewDelegate {
@@ -244,5 +255,14 @@ extension LocationPetViewController: UITextViewDelegate {
         let minHeight: CGFloat = 53
         let calculatedHeight = max(minHeight, estimatedSize.height)
         heightConstraint.constant = calculatedHeight
+        
+        if !descriptionTextView.text!.isEmpty {
+            descriptionTextView.layer.borderColor = UIColor(dynamicProvider: PFAssets.blue.color).cgColor
+            descriptionTextView.layer.borderWidth = 1
+        } else {
+            descriptionTextView.layer.borderColor = UIColor.clear.cgColor
+            descriptionTextView.layer.borderWidth = 0
+        }
     }
+    
 }

@@ -9,7 +9,7 @@ import UIKit
 import SnapKit
 import SwiftUI
 
-class CreatePetAdvertViewController: UIViewController {
+class CreatePetAdvertViewController: UIViewController, UITextFieldDelegate {
     
     private let animalsCollectionView = UIHostingController(rootView: ContentView(showSortView: {
         
@@ -171,6 +171,8 @@ class CreatePetAdvertViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        oldPetTextField.delegate = self
+        namePetTextField.delegate = self
         setup()
     }
 
@@ -304,7 +306,6 @@ class CreatePetAdvertViewController: UIViewController {
             maker.bottom.equalToSuperview().inset(34)
             maker.height.equalTo(53)
         }
-        
     }
 
     @objc
@@ -316,5 +317,23 @@ class CreatePetAdvertViewController: UIViewController {
     
     @objc func closeViewController() {
         self.dismiss(animated: true)
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        if !oldPetTextField.text!.isEmpty {
+            oldPetTextField.layer.borderWidth = 1
+            oldPetTextField.layer.borderColor = UIColor(dynamicProvider: PFAssets.blue.color).cgColor
+        } else {
+            oldPetTextField.layer.borderWidth = 0
+            oldPetTextField.layer.borderColor = UIColor.clear.cgColor
+        }
+        
+        if !namePetTextField.text!.isEmpty {
+            namePetTextField.layer.borderWidth = 1
+            namePetTextField.layer.borderColor = UIColor(dynamicProvider: PFAssets.blue.color).cgColor
+        } else {
+            namePetTextField.layer.borderWidth = 0
+            namePetTextField.layer.borderColor = UIColor.clear.cgColor
+        }
     }
 }
