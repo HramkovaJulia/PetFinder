@@ -15,6 +15,7 @@ class SecondCreateViewController: UIViewController {
     var heightConstraint: NSLayoutConstraint!
     
     
+    
     private lazy var topView: UIView = {
         let topView = UIView()
         topView.backgroundColor = UIColor(hex: 0xEFBFA5, alpha: 1)

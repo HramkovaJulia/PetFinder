@@ -11,6 +11,7 @@ struct SexContentView: View {
     var body: some View {
         SexSegmentView()
             .shadow( color: Color(UIColor(hex: 0x5a5a5a, alpha: 0.06)), radius: 4, x: 2, y: 4)
+            .shadow( color: Color(UIColor(hex: 0x5a5a5a, alpha: 0.06)), radius: 4, x: 2, y: 4)
         
     }
 }
