@@ -8,4 +8,6 @@ target 'PetFinder' do
   pod 'Alamofire'
   pod 'SwiftGen'
   pod 'DropDown'
+  pod 'WrappingHStack'
+  
 end

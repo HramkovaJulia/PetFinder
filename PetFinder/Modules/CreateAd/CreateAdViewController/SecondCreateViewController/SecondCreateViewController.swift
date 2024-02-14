@@ -7,10 +7,11 @@
 
 import UIKit
 import SnapKit
+import SwiftUI
 
 class SecondCreateViewController: UIViewController {
     private let photoCollectionView = PhotoCollectionView()
-    private let colorCollectionView = ColorCollectionView()
+    private let colorCollectionView = UIHostingController(rootView: ColorCollection())
     private let medecineStatus = MedecineStatusView()
     var heightConstraint: NSLayoutConstraint!
     
@@ -142,7 +143,8 @@ class SecondCreateViewController: UIViewController {
         self.contentView.addSubview(photoLabel)
         self.contentView.addSubview(photoCollectionView)
         self.contentView.addSubview(colorPetLabel)
-        self.contentView.addSubview(colorCollectionView)
+        self.contentView.addSubview(colorCollectionView.view)
+        colorCollectionView.view.backgroundColor = .clear
         self.contentView.addSubview(medecinDataLabel)
         self.contentView.addSubview(switchData)
         self.contentView.addSubview(medecineStatus)
@@ -196,7 +198,7 @@ class SecondCreateViewController: UIViewController {
             maker.left.equalToSuperview().inset(16)
         }
         
-        colorCollectionView.snp.makeConstraints { maker in
+        colorCollectionView.view.snp.makeConstraints { maker in
             maker.top.equalTo(colorPetLabel.snp.bottom).inset(-18)
             maker.left.equalToSuperview().inset(16)
             maker.right.equalToSuperview().inset(15)
@@ -204,12 +206,12 @@ class SecondCreateViewController: UIViewController {
         }
         
         medecinDataLabel.snp.makeConstraints { maker in
-            maker.top.equalTo(colorCollectionView.snp.bottom).inset(-40)
+            maker.top.equalTo(colorCollectionView.view.snp.bottom).inset(-40)
             maker.left.equalToSuperview().inset(16)
         }
         
         switchData.snp.makeConstraints { maker in
-            maker.top.equalTo(colorCollectionView.snp.bottom).inset(-40)
+            maker.top.equalTo(colorCollectionView.view.snp.bottom).inset(-40)
             maker.right.equalToSuperview().inset(15)
         }
         

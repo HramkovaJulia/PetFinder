@@ -47,6 +47,7 @@ public enum PFAssets {
   public static let bird = ImageAsset(name: "bird")
   public static let cancel = ImageAsset(name: "cancel")
   public static let cat = ImageAsset(name: "cat")
+  public static let clearPlus = ImageAsset(name: "clearPlus")
   public static let clipboard = ImageAsset(name: "clipboard")
   public static let closeButton = ImageAsset(name: "closeButton")
   public static let closedButton = ImageAsset(name: "closedButton")
