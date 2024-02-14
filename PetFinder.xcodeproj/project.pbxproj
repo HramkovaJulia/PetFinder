@@ -81,7 +81,6 @@
 		D8DE97F92B37794600D82318 /* GeolocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8DE97F82B37794600D82318 /* GeolocationViewController.swift */; };
 		D8DE97FB2B38131400D82318 /* ResponseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8DE97FA2B38131400D82318 /* ResponseViewController.swift */; };
 		D8DE97FD2B3821DF00D82318 /* StatusRespondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8DE97FC2B3821DE00D82318 /* StatusRespondViewController.swift */; };
-		D8E8072F2B26038B00D69D67 /* AdTypeSeletionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E8072E2B26038B00D69D67 /* AdTypeSeletionViewController.swift */; };
 		D8F70E9D2AEC1E47006543F0 /* STTabbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8F70E9C2AEC1E47006543F0 /* STTabbar.swift */; };
 		E6F0B5A79917F100D937E0D1 /* Pods_PetFinder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE2ACC640625F2B1CC0E5B2C /* Pods_PetFinder.framework */; };
 /* End PBXBuildFile section */
@@ -165,7 +164,6 @@
 		D8DE97F82B37794600D82318 /* GeolocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeolocationViewController.swift; sourceTree = "<group>"; };
 		D8DE97FA2B38131400D82318 /* ResponseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseViewController.swift; sourceTree = "<group>"; };
 		D8DE97FC2B3821DE00D82318 /* StatusRespondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusRespondViewController.swift; sourceTree = "<group>"; };
-		D8E8072E2B26038B00D69D67 /* AdTypeSeletionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdTypeSeletionViewController.swift; sourceTree = "<group>"; };
 		D8F70E9C2AEC1E47006543F0 /* STTabbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = STTabbar.swift; sourceTree = "<group>"; };
 		EE2ACC640625F2B1CC0E5B2C /* Pods_PetFinder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PetFinder.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -394,6 +392,13 @@
 			path = CreateLostPetAdvert;
 			sourceTree = "<group>";
 		};
+		D822CE5C2B7CAEF600C73C05 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "New Group";
+			sourceTree = "<group>";
+		};
 		D84297972ADC1E4F006D6B06 /* Help */ = {
 			isa = PBXGroup;
 			children = (
@@ -497,6 +502,7 @@
 		D86EA8852ADBD09400B8D961 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				D822CE5C2B7CAEF600C73C05 /* New Group */,
 				D898EFD42B7825A400D10EA0 /* SegmentSexView */,
 				D898EFD12B780E1D00D10EA0 /* SortView */,
 				D898EFCE2B78028100D10EA0 /* ColorCollectioView */,
@@ -744,7 +750,6 @@
 				D85BE3E72B52DB7700F8D1E8 /* LocationPet */,
 				D85BE3D42B51A9AB00F8D1E8 /* SecondCreateViewController */,
 				D802463C2B2D893400B2223C /* CreateLostPetAdvert */,
-				D8E8072E2B26038B00D69D67 /* AdTypeSeletionViewController.swift */,
 			);
 			path = CreateAdViewController;
 			sourceTree = "<group>";
@@ -910,7 +915,6 @@
 				D81A44C82B398AC700DC0C49 /* NotificationTableView.swift in Sources */,
 				D8DE97FD2B3821DF00D82318 /* StatusRespondViewController.swift in Sources */,
 				D86EADA72AE043C900FB19B6 /* CustomTabBarControllerViewController.swift in Sources */,
-				D8E8072F2B26038B00D69D67 /* AdTypeSeletionViewController.swift in Sources */,
 				58D4EBF02B721C0D00F79810 /* ForgotPasswordViewController.swift in Sources */,
 				D8A9E8162AEE3A9900E509EC /* CustomSearchTextField.swift in Sources */,
 				D85BE3DA2B51B2C000F8D1E8 /* PhotoCollectionView.swift in Sources */,

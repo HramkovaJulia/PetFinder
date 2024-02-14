@@ -147,7 +147,7 @@ class ResponseViewController: UIViewController, UITextFieldDelegate {
     }
     
     func setup() {
-        heightConstraint = specialFeaturesField.heightAnchor.constraint(equalToConstant: 200)
+        heightConstraint = specialFeaturesField.heightAnchor.constraint(equalToConstant: 53)
         heightConstraint.priority = UILayoutPriority(rawValue: 999)
         heightConstraint.isActive = true
         
@@ -287,7 +287,7 @@ extension ResponseViewController: UITextViewDelegate {
         let estimatedSize = textView.sizeThatFits(size)
         
         // Установка минимальной высоты
-        let minHeight: CGFloat = 100
+        let minHeight: CGFloat = 53
         let calculatedHeight = max(minHeight, estimatedSize.height)
         heightConstraint.constant = calculatedHeight
     }

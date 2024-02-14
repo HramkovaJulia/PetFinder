@@ -8,9 +8,10 @@
 import SwiftUI
 
 struct SexContentView: View {
-    
     var body: some View {
         SexSegmentView()
+            .shadow( color: Color(UIColor(hex: 0x5a5a5a, alpha: 0.06)), radius: 4, x: 2, y: 4)
+        
     }
 }
 
@@ -27,22 +28,26 @@ struct SexSegmentView: View {
             Color(uiColor: PFAssets.beige.color)
         }
     }
+    
     var body: some View {
-        HStack {
+        HStack(spacing: 10) {
             ForEach(0..<3, id: \.self) { index in
                 SegmentSexElement(selectedTag: $selectedSegment, isSelected: index == selectedSegment, tag: index)
-                    .padding(8)
                     .background(self.selectedSegment == index ? backgroundColor : Color(PFAssets.white.color) )
                     .foregroundColor(self.selectedSegment == index ? Color.white : Color.black)
                     .cornerRadius(25)
                     .onTapGesture {
                         self.selectedSegment = index
                     }
+                    .padding(.vertical, 8)
+                    .padding(.leading, index == 0 ? 8 : 0)
+                    .padding(.trailing, index == 2 ? 8 : 0)
             }
         }
-        .padding(8)
-        .background(Color(uiColor: PFAssets.white.color))
+//        .frame(width: UIScreen.main.bounds.width * 0.905)
+        .background(Color(PFAssets.white.color))
         .cornerRadius(25)
+       
     }
 }
 
@@ -67,7 +72,7 @@ struct SegmentSexElement: View {
             .renderingMode(selectedTag == tag ? .original : .template)
             .foregroundColor(selectedTag == tag ? .primary : Color(uiColor: UIColor(hex: 0xa6a6a6)))
             .padding(.vertical, 8)
-            .padding(.horizontal, 41.3)
+            .padding(.horizontal, 42)
     }
 }
 

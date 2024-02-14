@@ -26,7 +26,8 @@ class CreatePetAdvertViewController: UIViewController, UITextFieldDelegate {
     private lazy var mainLabel: UILabel = {
         let mainLabel = UILabel()
         mainLabel.text = "Данные о питомце"
-        mainLabel.font = UIFont.sfProText(ofSize: 24, weight: .semiBold)
+        
+        mainLabel.font = PFFontFamily.SFProText.semibold.font(size: 24)
         mainLabel.textColor = UIColor(hex: 0xFCFCFC, alpha: 1)
         return mainLabel
     }()
@@ -41,8 +42,8 @@ class CreatePetAdvertViewController: UIViewController, UITextFieldDelegate {
     
     private let scrollView: UIScrollView = {
         let scrollView = UIScrollView(frame: .zero)
-        scrollView.translatesAutoresizingMaskIntoConstraints = false
-        scrollView.isPagingEnabled = true
+//        scrollView.translatesAutoresizingMaskIntoConstraints = false
+//        scrollView.isPagingEnabled = true
         return scrollView
     }()
     
@@ -191,6 +192,10 @@ class CreatePetAdvertViewController: UIViewController, UITextFieldDelegate {
         self.scrollView.addSubview(contentView)
         self.contentView.addSubview(typePetLabel)
         self.contentView.addSubview(animalsCollectionView.view)
+        animalsCollectionView.view.layer.shadowColor = UIColor(hex: 0x5a5a5a, alpha: 0.06).cgColor
+        animalsCollectionView.view.layer.shadowOpacity = 1
+        animalsCollectionView.view.layer.shadowOffset = CGSize(width: 0, height: 2)
+        animalsCollectionView.view.layer.shadowRadius = 4
         animalsCollectionView.view.backgroundColor = .clear
         
         self.contentView.addSubview(descriptionLabel)
@@ -231,7 +236,7 @@ class CreatePetAdvertViewController: UIViewController, UITextFieldDelegate {
         contentView.snp.makeConstraints { maker in
             maker.edges.equalToSuperview()
             maker.width.equalTo(scrollView)
-            maker.height.equalTo(view)
+            maker.height.equalTo(view).multipliedBy(1.2)
         }
         
         typePetLabel.snp.makeConstraints { maker in
@@ -273,6 +278,7 @@ class CreatePetAdvertViewController: UIViewController, UITextFieldDelegate {
             maker.top.equalTo(oldPetLabel.snp.bottom).inset(-10)
             maker.left.equalToSuperview().inset(16)
             maker.right.equalToSuperview().inset(15)
+            
             maker.height.equalTo(53)
         }
         
@@ -283,8 +289,9 @@ class CreatePetAdvertViewController: UIViewController, UITextFieldDelegate {
         
         segmentControll.view.snp.makeConstraints { maker in
             maker.top.equalTo(sexPetLabel.snp.bottom).inset(-10)
-            maker.left.equalToSuperview().inset(16)
-            maker.right.equalToSuperview().inset(15)
+//            maker.left.equalToSuperview().inset(16)
+//            maker.right.equalToSuperview().inset(15)
+            maker.centerX.equalToSuperview()
             maker.height.equalTo(53)
         }
         

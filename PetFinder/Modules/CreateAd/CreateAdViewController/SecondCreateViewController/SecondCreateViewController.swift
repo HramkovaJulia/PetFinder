@@ -40,8 +40,8 @@ class SecondCreateViewController: UIViewController {
     
     private let scrollView: UIScrollView = {
         let scrollView = UIScrollView(frame: .zero)
-        scrollView.translatesAutoresizingMaskIntoConstraints = false
-        scrollView.isPagingEnabled = true
+//        scrollView.translatesAutoresizingMaskIntoConstraints = false
+//        scrollView.isPagingEnabled = true
         return scrollView
     }()
     
@@ -99,7 +99,8 @@ class SecondCreateViewController: UIViewController {
     private lazy var specialFeaturesField: UITextView = {
         let specialFeaturesField = UITextView()
         specialFeaturesField.isEditable = true
-        specialFeaturesField.layer.cornerRadius = 20
+        specialFeaturesField.layer.cornerRadius = 25
+
         return specialFeaturesField
     }()
     
@@ -121,7 +122,7 @@ class SecondCreateViewController: UIViewController {
     func setup() {
         medecineStatus.alpha = 0.4
         medecineStatus.isUserInteractionEnabled = false
-        heightConstraint = specialFeaturesField.heightAnchor.constraint(equalToConstant: 200)
+        heightConstraint = specialFeaturesField.heightAnchor.constraint(equalToConstant: 53)
         heightConstraint.priority = UILayoutPriority(rawValue: 999)
         heightConstraint.isActive = true
         
@@ -174,7 +175,7 @@ class SecondCreateViewController: UIViewController {
         contentView.snp.makeConstraints { maker in
             maker.edges.equalToSuperview()
             maker.width.equalTo(scrollView)
-//            maker.height.equalTo(self.view)
+            maker.height.equalTo(view).multipliedBy(1.2)
         }
         
         photoLabel.snp.makeConstraints { maker in
@@ -227,7 +228,6 @@ class SecondCreateViewController: UIViewController {
             maker.top.equalTo(specialFeatures.snp.bottom).inset(-18)
             maker.left.equalToSuperview().inset(16)
             maker.right.equalToSuperview().inset(15)
-//            maker.bottom.equalToSuperview().inset(100)
         }
         
         nextButton.snp.makeConstraints { maker in
@@ -267,7 +267,7 @@ extension SecondCreateViewController: UITextViewDelegate {
         let estimatedSize = textView.sizeThatFits(size)
         
         // Установка минимальной высоты
-        let minHeight: CGFloat = 100
+        let minHeight: CGFloat = 53
         let calculatedHeight = max(minHeight, estimatedSize.height)
         heightConstraint.constant = calculatedHeight
     }
