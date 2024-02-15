@@ -20,6 +20,7 @@ struct ColorCollection: View {
                     .padding(.bottom, 12)
             }
         }
+        .frame(height: 201)
     }
 }
 
