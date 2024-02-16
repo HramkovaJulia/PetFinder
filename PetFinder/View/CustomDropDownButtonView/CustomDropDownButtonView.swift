@@ -43,8 +43,8 @@ struct CustomDropDownButtonView: View {
                         .stroke(selectedText == placeholderText ?  .clear : Color(PFAssets.blue.color))
                 )
                 .cornerRadius(25)
-                .padding(.leading, 15)
-                .padding(.trailing, 16)
+//                .padding(.leading, 15)
+//                .padding(.trailing, 16)
             }
         }
 }

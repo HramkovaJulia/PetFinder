@@ -15,8 +15,7 @@ struct CustomTextFieldView: View {
             .padding(.vertical, 18)
             .padding(.leading, 24)
             .background(Color(PFAssets.white.color))
-            .cornerRadius(25)
-            .padding(.horizontal, 16)
+            .cornerRadius(30)
             .overlay(
                 RoundedRectangle(cornerRadius: 25)
                     .stroke(text.isEmpty ? .clear : Color(PFAssets.blue.color))

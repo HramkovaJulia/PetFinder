@@ -11,6 +11,8 @@ import SwiftUI
 
 class CreatePetAdvertViewController: UIViewController, UITextFieldDelegate {
     
+    private let breedDropDownButton = UIHostingController(rootView: CustomDropDownButtonView(selectedText: "Нет данных", placeholderText: "Нет данных"))
+    
     private let animalsCollectionView = UIHostingController(rootView: ContentView(showSortView: {
         
     }, massiveCell: [["dog","Собаки"], ["cat","Кошки"], ["bird","Птицы"], ["mouse","Грызуны"], ["others","Прочее"]]))
@@ -76,22 +78,10 @@ class CreatePetAdvertViewController: UIViewController, UITextFieldDelegate {
         return namePetLabel
     }()
     
-    private lazy var namePetTextField: UITextField = {
-        let namePetTextField = UITextField()
-        namePetTextField.layer.cornerRadius = 25
-        namePetTextField.layer.cornerCurve = .continuous
-        namePetTextField.backgroundColor = UIColor(hex: 0xfcfcfc, alpha: 1)
-        namePetTextField.placeholder = "Барсик"
-        namePetTextField.layer.shadowColor = UIColor(hex: 0x5a5a5a, alpha: 0.06).cgColor
-        namePetTextField.layer.shadowOpacity = 1
-        namePetTextField.layer.shadowOffset = CGSize(width: 0, height: 2)
-        namePetTextField.layer.shadowRadius = 4
-
-        let paddingView = UIView(frame: CGRect(x: 0, y: 0, width: 24, height: namePetTextField.frame.size.height))
-        namePetTextField.leftView = paddingView
-        namePetTextField.leftViewMode = .always
-        
-        return namePetTextField
+    private lazy var namePetTextField: UIView = {
+        let namePetTextField = UIHostingController(rootView: CustomTextFieldView(placeholder: "Барсик")).view
+        namePetTextField?.backgroundColor = .clear
+        return namePetTextField!
     }()
     
     private lazy var oldPetLabel: UILabel = {
@@ -102,22 +92,11 @@ class CreatePetAdvertViewController: UIViewController, UITextFieldDelegate {
         return oldPetLabel
     }()
     
-    private lazy var oldPetTextField: UITextField = {
-        let oldPetTextField = UITextField()
-        oldPetTextField.layer.cornerRadius = 25
-        oldPetTextField.layer.cornerCurve = .continuous
-        oldPetTextField.backgroundColor = UIColor(hex: 0xfcfcfc, alpha: 1)
-        oldPetTextField.placeholder = "1,5 года"
-        oldPetTextField.layer.shadowColor = UIColor(hex: 0x5a5a5a, alpha: 0.06).cgColor
-        oldPetTextField.layer.shadowOpacity = 1
-        oldPetTextField.layer.shadowOffset = CGSize(width: 0, height: 2)
-        oldPetTextField.layer.shadowRadius = 4
-
-        let paddingView = UIView(frame: CGRect(x: 0, y: 0, width: 24, height: namePetTextField.frame.size.height))
-        oldPetTextField.leftView = paddingView
-        oldPetTextField.leftViewMode = .always
+    private lazy var oldPetTextField: UIView = {
+        let oldPetTextField = UIHostingController(rootView: CustomTextFieldView(placeholder: "1,5 года")).view
+        oldPetTextField?.backgroundColor = .clear
         
-        return oldPetTextField
+        return oldPetTextField!
     }()
     
     private lazy var sexPetLabel: UILabel = {
@@ -172,8 +151,8 @@ class CreatePetAdvertViewController: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        oldPetTextField.delegate = self
-        namePetTextField.delegate = self
+//        oldPetTextField.delegate = self
+//        namePetTextField.delegate = self
         setup()
     }
 
@@ -207,7 +186,8 @@ class CreatePetAdvertViewController: UIViewController, UITextFieldDelegate {
         self.contentView.addSubview(segmentControll.view)
         segmentControll.view.backgroundColor = .clear
         self.contentView.addSubview(viewPetLabel)
-        self.contentView.addSubview(dropdownButton)
+        self.contentView.addSubview(breedDropDownButton.view)
+        breedDropDownButton.view.backgroundColor = .clear
         self.view.addSubview(nextButton)
     }
 
@@ -300,7 +280,7 @@ class CreatePetAdvertViewController: UIViewController, UITextFieldDelegate {
             maker.left.equalToSuperview().inset(24)
         }
         
-        dropdownButton.snp.makeConstraints { maker in
+        breedDropDownButton.view.snp.makeConstraints { maker in
             maker.top.equalTo(viewPetLabel.snp.bottom).inset(-10)
             maker.left.equalToSuperview().inset(16)
             maker.right.equalToSuperview().inset(15)
@@ -326,21 +306,21 @@ class CreatePetAdvertViewController: UIViewController, UITextFieldDelegate {
         self.dismiss(animated: true)
     }
     
-    func textFieldDidEndEditing(_ textField: UITextField) {
-        if !oldPetTextField.text!.isEmpty {
-            oldPetTextField.layer.borderWidth = 1
-            oldPetTextField.layer.borderColor = UIColor(dynamicProvider: PFAssets.blue.color).cgColor
-        } else {
-            oldPetTextField.layer.borderWidth = 0
-            oldPetTextField.layer.borderColor = UIColor.clear.cgColor
-        }
-        
-        if !namePetTextField.text!.isEmpty {
-            namePetTextField.layer.borderWidth = 1
-            namePetTextField.layer.borderColor = UIColor(dynamicProvider: PFAssets.blue.color).cgColor
-        } else {
-            namePetTextField.layer.borderWidth = 0
-            namePetTextField.layer.borderColor = UIColor.clear.cgColor
-        }
-    }
+//    func textFieldDidEndEditing(_ textField: UITextField) {
+//        if !oldPetTextField.text!.isEmpty {
+//            oldPetTextField.layer.borderWidth = 1
+//            oldPetTextField.layer.borderColor = UIColor(dynamicProvider: PFAssets.blue.color).cgColor
+//        } else {
+//            oldPetTextField.layer.borderWidth = 0
+//            oldPetTextField.layer.borderColor = UIColor.clear.cgColor
+//        }
+//        
+//        if !namePetTextField.text!.isEmpty {
+//            namePetTextField.layer.borderWidth = 1
+//            namePetTextField.layer.borderColor = UIColor(dynamicProvider: PFAssets.blue.color).cgColor
+//        } else {
+//            namePetTextField.layer.borderWidth = 0
+//            namePetTextField.layer.borderColor = UIColor.clear.cgColor
+//        }
+//    }
 }
