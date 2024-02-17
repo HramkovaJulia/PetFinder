@@ -13,8 +13,8 @@ struct ColorCollection: View {
 
     var body: some View {
         ScrollView(showsIndicators: false) {
-            WrappingHStack(arrayColor, id: \.self) { color in
-                ColorItemView(text: color)
+            WrappingHStack(0..<arrayColor.count, id: \.self) { color in
+                ColorItemView(text: arrayColor[color])
                     .background(Color(PFAssets.white.color))
                     .cornerRadius(25)
                     .padding(.bottom, 12)

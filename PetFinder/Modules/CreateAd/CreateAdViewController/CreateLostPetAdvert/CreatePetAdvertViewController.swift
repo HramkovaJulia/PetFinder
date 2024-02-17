@@ -13,7 +13,7 @@ class CreatePetAdvertViewController: UIViewController, UITextFieldDelegate {
     
     private let breedDropDownButton = UIHostingController(rootView: CustomDropDownButtonView(selectedText: "Нет данных", placeholderText: "Нет данных"))
     
-    private let animalsCollectionView = UIHostingController(rootView: ContentView(showSortView: {
+    private let animalsCollectionView = UIHostingController(rootView: AnimalCollectinView(showSortView: {
         
     }, massiveCell: [["dog","Собаки"], ["cat","Кошки"], ["bird","Птицы"], ["mouse","Грызуны"], ["others","Прочее"]]))
     private let segmentControll = UIHostingController(rootView: SexSegmentView())
@@ -79,7 +79,7 @@ class CreatePetAdvertViewController: UIViewController, UITextFieldDelegate {
     }()
     
     private lazy var namePetTextField: UIView = {
-        let namePetTextField = UIHostingController(rootView: CustomTextFieldView(placeholder: "Барсик")).view
+        let namePetTextField = UIHostingController(rootView: CustomTextFieldView(placeholder: "Барсик", errorMessage: "Введите кличку питомца")).view
         namePetTextField?.backgroundColor = .clear
         return namePetTextField!
     }()
@@ -93,7 +93,7 @@ class CreatePetAdvertViewController: UIViewController, UITextFieldDelegate {
     }()
     
     private lazy var oldPetTextField: UIView = {
-        let oldPetTextField = UIHostingController(rootView: CustomTextFieldView(placeholder: "1,5 года")).view
+        let oldPetTextField = UIHostingController(rootView: CustomTextFieldView(placeholder: "1,5 года", errorMessage: "Укажите возраст питомца")).view
         oldPetTextField?.backgroundColor = .clear
         
         return oldPetTextField!
@@ -182,6 +182,7 @@ class CreatePetAdvertViewController: UIViewController, UITextFieldDelegate {
         self.contentView.addSubview(namePetTextField)
         self.contentView.addSubview(oldPetLabel)
         self.contentView.addSubview(oldPetTextField)
+        
         self.contentView.addSubview(sexPetLabel)
         self.contentView.addSubview(segmentControll.view)
         segmentControll.view.backgroundColor = .clear
@@ -242,7 +243,7 @@ class CreatePetAdvertViewController: UIViewController, UITextFieldDelegate {
         }
         
         namePetTextField.snp.makeConstraints { maker in
-            maker.top.equalTo(namePetLabel.snp.bottom).inset(-10)
+            maker.top.equalTo(namePetLabel.snp.bottom).inset(-20)
             maker.left.equalToSuperview().inset(16)
             maker.right.equalToSuperview().inset(15)
             maker.height.equalTo(53)
@@ -255,7 +256,7 @@ class CreatePetAdvertViewController: UIViewController, UITextFieldDelegate {
         }
         
         oldPetTextField.snp.makeConstraints { maker in
-            maker.top.equalTo(oldPetLabel.snp.bottom).inset(-10)
+            maker.top.equalTo(oldPetLabel.snp.bottom).inset(-20)
             maker.left.equalToSuperview().inset(16)
             maker.right.equalToSuperview().inset(15)
             

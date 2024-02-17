@@ -48,7 +48,7 @@ struct FiltersSectionOldPet: View {
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .padding(.leading, 24)
                 .padding(.bottom, 10)
-            CustomTextFieldView(placeholder: "1.5 года")
+            CustomTextFieldView(placeholder: "1.5 года", errorMessage: "Укажите возраст питомца")
         }
     }
 }

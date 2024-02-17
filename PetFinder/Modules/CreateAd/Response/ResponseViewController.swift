@@ -63,7 +63,7 @@ class ResponseViewController: UIViewController, UITextFieldDelegate {
     }()
     
     private lazy var respondernameTextField: UIView = {
-        let respondernameTextField = UIHostingController(rootView: CustomTextFieldView(text: "", placeholder: "Иванов Иван Иванович")).view
+        let respondernameTextField = UIHostingController(rootView: CustomTextFieldView(text: "", placeholder: "Иванов Иван Иванович", errorMessage: "Введите Ваше ФИО")).view
         respondernameTextField?.backgroundColor = .clear
         return respondernameTextField!
     }()
@@ -76,7 +76,7 @@ class ResponseViewController: UIViewController, UITextFieldDelegate {
     }()
     
     private lazy var responderEmailTextField: UIView = {
-        let respondernameTextField = UIHostingController(rootView: CustomTextFieldView(text: "", placeholder: "Example@mail.com")).view
+        let respondernameTextField = UIHostingController(rootView: CustomTextFieldView(text: "", placeholder: "Example@mail.com", errorMessage: "Введите Ваш E-mail")).view
         respondernameTextField?.backgroundColor = .clear
         return respondernameTextField!
     }()
@@ -90,7 +90,7 @@ class ResponseViewController: UIViewController, UITextFieldDelegate {
     }()
     
     private lazy var responderPhoneTextField: UIView = {
-        let responderPhoneTextField = UIHostingController(rootView: CustomTextFieldView(text: "", placeholder: "+7 (000) 000-00-00")).view
+        let responderPhoneTextField = UIHostingController(rootView: CustomTextFieldView(text: "", placeholder: "+7 (000) 000-00-00", errorMessage: "Укажите номер для связи")).view
         responderPhoneTextField?.backgroundColor = .clear
         return responderPhoneTextField!
     }()
@@ -190,7 +190,7 @@ class ResponseViewController: UIViewController, UITextFieldDelegate {
         }
         
         respondernameTextField.snp.makeConstraints { maker in
-            maker.top.equalTo(respondernameLabel.snp.bottom).inset(-10)
+            maker.top.equalTo(respondernameLabel.snp.bottom).inset(-20)
             maker.left.equalToSuperview().inset(16)
             maker.right.equalToSuperview().inset(15)
             maker.height.equalTo(53)
@@ -202,7 +202,7 @@ class ResponseViewController: UIViewController, UITextFieldDelegate {
         }
         
         responderEmailTextField.snp.makeConstraints { maker in
-            maker.top.equalTo(responderEmailLabel.snp.bottom).inset(-10)
+            maker.top.equalTo(responderEmailLabel.snp.bottom).inset(-20)
             maker.left.equalToSuperview().inset(16)
             maker.right.equalToSuperview().inset(15)
             maker.height.equalTo(53)
@@ -214,7 +214,7 @@ class ResponseViewController: UIViewController, UITextFieldDelegate {
         }
         
         responderPhoneTextField.snp.makeConstraints { maker in
-            maker.top.equalTo(responderPhoneLabel.snp.bottom).inset(-10)
+            maker.top.equalTo(responderPhoneLabel.snp.bottom).inset(-20)
             maker.left.equalToSuperview().inset(16)
             maker.right.equalToSuperview().inset(15)
             maker.height.equalTo(53)

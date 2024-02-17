@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct AnimalCollectinView: View {
     var showSortView: (() -> Void)
     @State private var selectedType: String = ""
     @State var massiveCell: [[String]]
@@ -19,7 +19,6 @@ struct ContentView: View {
                         .cornerRadius(16)
                 }
             }
-            .padding(.horizontal, 17)
         }
     }
 }
