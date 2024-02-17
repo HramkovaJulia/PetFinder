@@ -7,6 +7,7 @@
 
 import UIKit
 import SnapKit
+import SwiftUI
 
 class ResponseViewController: UIViewController, UITextFieldDelegate {
     
@@ -61,15 +62,10 @@ class ResponseViewController: UIViewController, UITextFieldDelegate {
         return respondernameLabel
     }()
     
-    private lazy var respondernameTextField: UITextField = {
-        let respondernameTextField = UITextField()
-        respondernameTextField.placeholder = "Иванов Иван Иванович"
-        respondernameTextField.leftViewMode = .always
-        respondernameTextField.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 16, height: 30))
-        respondernameTextField.backgroundColor = UIColor(dynamicProvider: PFAssets.white.color)
-        respondernameTextField.layer.cornerRadius = 25
-
-        return respondernameTextField
+    private lazy var respondernameTextField: UIView = {
+        let respondernameTextField = UIHostingController(rootView: CustomTextFieldView(text: "", placeholder: "Иванов Иван Иванович", errorMessage: "Введите Ваше ФИО")).view
+        respondernameTextField?.backgroundColor = .clear
+        return respondernameTextField!
     }()
     
     private lazy var responderEmailLabel: UILabel = {
@@ -79,15 +75,10 @@ class ResponseViewController: UIViewController, UITextFieldDelegate {
         return responderEmailLabel
     }()
     
-    private lazy var responderEmailTextField: UITextField = {
-        let respondernameTextField = UITextField()
-        respondernameTextField.placeholder = "Example@mail.com"
-        respondernameTextField.leftViewMode = .always
-        respondernameTextField.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 16, height: 30))
-        respondernameTextField.layer.cornerRadius = 25
-        respondernameTextField.backgroundColor = UIColor(dynamicProvider: PFAssets.white.color)
-
-        return respondernameTextField
+    private lazy var responderEmailTextField: UIView = {
+        let respondernameTextField = UIHostingController(rootView: CustomTextFieldView(text: "", placeholder: "Example@mail.com", errorMessage: "Введите Ваш E-mail")).view
+        respondernameTextField?.backgroundColor = .clear
+        return respondernameTextField!
     }()
     
     
@@ -98,24 +89,19 @@ class ResponseViewController: UIViewController, UITextFieldDelegate {
         return responderPhoneLabel
     }()
     
-    private lazy var responderPhoneTextField: UITextField = {
-        let responderPhoneTextField = UITextField()
-        responderPhoneTextField.placeholder = "+7 (000) 000-00-00"
-        responderPhoneTextField.leftViewMode = .always
-        responderPhoneTextField.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 16, height: 30))
-        responderPhoneTextField.layer.cornerRadius = 25
-        responderPhoneTextField.backgroundColor = UIColor(dynamicProvider: PFAssets.white.color)
-        return responderPhoneTextField
+    private lazy var responderPhoneTextField: UIView = {
+        let responderPhoneTextField = UIHostingController(rootView: CustomTextFieldView(text: "", placeholder: "+7 (000) 000-00-00", errorMessage: "Укажите номер для связи")).view
+        responderPhoneTextField?.backgroundColor = .clear
+        return responderPhoneTextField!
     }()
     
     
     private lazy var messageRespondLabel: UILabel = {
         let messageRespondLabel = UILabel()
-        messageRespondLabel.text = "Ваши данные для связи"
+        messageRespondLabel.text = "Сообщение владельцу"
         messageRespondLabel.font = PFFontFamily.SFProText.medium.font(size: 20)
         return messageRespondLabel
     }()
-    
     
     private lazy var specialFeaturesField: UITextView = {
         let specialFeaturesField = UITextView()
@@ -140,10 +126,6 @@ class ResponseViewController: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
         setup()
         makeConstraints()
-        respondernameTextField.delegate = self
-        responderEmailTextField.delegate = self
-        responderPhoneTextField.delegate = self
-        specialFeaturesField.delegate = self
     }
     
     func setup() {
@@ -208,7 +190,7 @@ class ResponseViewController: UIViewController, UITextFieldDelegate {
         }
         
         respondernameTextField.snp.makeConstraints { maker in
-            maker.top.equalTo(respondernameLabel.snp.bottom).inset(-10)
+            maker.top.equalTo(respondernameLabel.snp.bottom).inset(-20)
             maker.left.equalToSuperview().inset(16)
             maker.right.equalToSuperview().inset(15)
             maker.height.equalTo(53)
@@ -220,7 +202,7 @@ class ResponseViewController: UIViewController, UITextFieldDelegate {
         }
         
         responderEmailTextField.snp.makeConstraints { maker in
-            maker.top.equalTo(responderEmailLabel.snp.bottom).inset(-10)
+            maker.top.equalTo(responderEmailLabel.snp.bottom).inset(-20)
             maker.left.equalToSuperview().inset(16)
             maker.right.equalToSuperview().inset(15)
             maker.height.equalTo(53)
@@ -232,7 +214,7 @@ class ResponseViewController: UIViewController, UITextFieldDelegate {
         }
         
         responderPhoneTextField.snp.makeConstraints { maker in
-            maker.top.equalTo(responderPhoneLabel.snp.bottom).inset(-10)
+            maker.top.equalTo(responderPhoneLabel.snp.bottom).inset(-20)
             maker.left.equalToSuperview().inset(16)
             maker.right.equalToSuperview().inset(15)
             maker.height.equalTo(53)

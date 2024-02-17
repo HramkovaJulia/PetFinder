@@ -13,8 +13,8 @@ final class MainViewController: UIViewController, UISearchBarDelegate {
     private var swipeGestureRecognizer: UISwipeGestureRecognizer?
     private let userDefaults = UserDefaults.standard
     private let cityKey = "city"
-    lazy var animalsCollectionView: UIHostingController<ContentView> = {
-        let contentView = ContentView(showSortView: {
+    lazy var animalsCollectionView: UIHostingController<AnimalCollectinView> = {
+        let contentView = AnimalCollectinView(showSortView: {
             self.showSortView()
         }, massiveCell: [["sortImage", "Сортировка"], ["dog","Собаки"], ["cat","Кошки"], ["bird","Птицы"], ["mouse","Грызуны"], ["others","Прочее"]])
         return UIHostingController(rootView: contentView)

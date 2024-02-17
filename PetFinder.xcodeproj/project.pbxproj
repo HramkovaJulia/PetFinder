@@ -39,10 +39,29 @@
 		58E02B922B6FF4E700058D21 /* AssetConstants.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58E02B902B6FF4E700058D21 /* AssetConstants.generated.swift */; };
 		58E02B932B6FF4E700058D21 /* Fonts.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58E02B912B6FF4E700058D21 /* Fonts.generated.swift */; };
 		D802463E2B2D89C700B2223C /* CreatePetAdvertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D802463D2B2D89C700B2223C /* CreatePetAdvertViewController.swift */; };
+		D8071A9B2B80A33700BAECFE /* FirstStepCreateAdView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8071A9A2B80A33700BAECFE /* FirstStepCreateAdView.swift */; };
+		D8071A9E2B80A79300BAECFE /* SelectTypePetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8071A9D2B80A79300BAECFE /* SelectTypePetView.swift */; };
+		D8071AA02B80A97500BAECFE /* DescriptionsFirstStepCreateAdView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8071A9F2B80A97500BAECFE /* DescriptionsFirstStepCreateAdView.swift */; };
+		D8071AA22B80AAC700BAECFE /* TopViewFirstStepCreateAdView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8071AA12B80AAC700BAECFE /* TopViewFirstStepCreateAdView.swift */; };
+		D8071AA42B80AD7F00BAECFE /* ChoiceColorFirstStepCreateAdView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8071AA32B80AD7F00BAECFE /* ChoiceColorFirstStepCreateAdView.swift */; };
+		D8071AA72B80E51F00BAECFE /* PhotoScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8071AA62B80E51F00BAECFE /* PhotoScrollView.swift */; };
 		D81A44C62B3987A600DC0C49 /* NotificationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D81A44C52B3987A600DC0C49 /* NotificationsViewController.swift */; };
 		D81A44C82B398AC700DC0C49 /* NotificationTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D81A44C72B398AC700DC0C49 /* NotificationTableView.swift */; };
 		D81A44CA2B398B1400DC0C49 /* NotificationMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = D81A44C92B398B1400DC0C49 /* NotificationMode.swift */; };
 		D81A44CD2B398C9100DC0C49 /* NotificationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D81A44CC2B398C9100DC0C49 /* NotificationTableViewCell.swift */; };
+		D822CE5F2B7CB0B500C73C05 /* ChangeCountryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D822CE5E2B7CB0B500C73C05 /* ChangeCountryView.swift */; };
+		D822CE622B7CBCC300C73C05 /* CountryManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D822CE612B7CBCC300C73C05 /* CountryManager.swift */; };
+		D822CE672B7D441500C73C05 /* ChoiceFilterTypeAd.swift in Sources */ = {isa = PBXBuildFile; fileRef = D822CE662B7D441400C73C05 /* ChoiceFilterTypeAd.swift */; };
+		D822CE692B7D59AE00C73C05 /* ColorCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = D822CE682B7D59AE00C73C05 /* ColorCollection.swift */; };
+		D822CE6C2B7DF78000C73C05 /* FiltersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D822CE6B2B7DF78000C73C05 /* FiltersView.swift */; };
+		D822CE6E2B7DFBC800C73C05 /* FiltersTopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D822CE6D2B7DFBC800C73C05 /* FiltersTopView.swift */; };
+		D822CE712B7DFCDF00C73C05 /* FilterTypeAd.swift in Sources */ = {isa = PBXBuildFile; fileRef = D822CE702B7DFCDF00C73C05 /* FilterTypeAd.swift */; };
+		D822CE732B7DFE1300C73C05 /* FilterSectionPlaceFinding.swift in Sources */ = {isa = PBXBuildFile; fileRef = D822CE722B7DFE1200C73C05 /* FilterSectionPlaceFinding.swift */; };
+		D822CE752B7E00FC00C73C05 /* FiltersSectionAboutPet.swift in Sources */ = {isa = PBXBuildFile; fileRef = D822CE742B7E00FC00C73C05 /* FiltersSectionAboutPet.swift */; };
+		D822CE782B7E040400C73C05 /* CustomTextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D822CE772B7E040400C73C05 /* CustomTextFieldView.swift */; };
+		D822CE7B2B7E05DA00C73C05 /* CustomDropDownButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D822CE7A2B7E05DA00C73C05 /* CustomDropDownButtonView.swift */; };
+		D822CE7D2B7E087D00C73C05 /* FiltersAdditionallySectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D822CE7C2B7E087D00C73C05 /* FiltersAdditionallySectionView.swift */; };
+		D822CE7F2B7E0C8700C73C05 /* CustomOrangeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D822CE7E2B7E0C8700C73C05 /* CustomOrangeButton.swift */; };
 		D84297992ADC1E65006D6B06 /* Extansions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D84297982ADC1E65006D6B06 /* Extansions.swift */; };
 		D85BE3D62B51A9D400F8D1E8 /* SecondCreateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D85BE3D52B51A9D400F8D1E8 /* SecondCreateViewController.swift */; };
 		D85BE3DA2B51B2C000F8D1E8 /* PhotoCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D85BE3D92B51B2C000F8D1E8 /* PhotoCollectionView.swift */; };
@@ -122,10 +141,29 @@
 		58EDA3452B387A9A00F1D716 /* swiftgen.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = swiftgen.yml; sourceTree = "<group>"; };
 		BF7A263FFCB875A6E2D63AA6 /* Pods-PetFinder.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PetFinder.debug.xcconfig"; path = "Target Support Files/Pods-PetFinder/Pods-PetFinder.debug.xcconfig"; sourceTree = "<group>"; };
 		D802463D2B2D89C700B2223C /* CreatePetAdvertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePetAdvertViewController.swift; sourceTree = "<group>"; };
+		D8071A9A2B80A33700BAECFE /* FirstStepCreateAdView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstStepCreateAdView.swift; sourceTree = "<group>"; };
+		D8071A9D2B80A79300BAECFE /* SelectTypePetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectTypePetView.swift; sourceTree = "<group>"; };
+		D8071A9F2B80A97500BAECFE /* DescriptionsFirstStepCreateAdView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionsFirstStepCreateAdView.swift; sourceTree = "<group>"; };
+		D8071AA12B80AAC700BAECFE /* TopViewFirstStepCreateAdView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopViewFirstStepCreateAdView.swift; sourceTree = "<group>"; };
+		D8071AA32B80AD7F00BAECFE /* ChoiceColorFirstStepCreateAdView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoiceColorFirstStepCreateAdView.swift; sourceTree = "<group>"; };
+		D8071AA62B80E51F00BAECFE /* PhotoScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoScrollView.swift; sourceTree = "<group>"; };
 		D81A44C52B3987A600DC0C49 /* NotificationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsViewController.swift; sourceTree = "<group>"; };
 		D81A44C72B398AC700DC0C49 /* NotificationTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationTableView.swift; sourceTree = "<group>"; };
 		D81A44C92B398B1400DC0C49 /* NotificationMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationMode.swift; sourceTree = "<group>"; };
 		D81A44CC2B398C9100DC0C49 /* NotificationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationTableViewCell.swift; sourceTree = "<group>"; };
+		D822CE5E2B7CB0B500C73C05 /* ChangeCountryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeCountryView.swift; sourceTree = "<group>"; };
+		D822CE612B7CBCC300C73C05 /* CountryManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryManager.swift; sourceTree = "<group>"; };
+		D822CE662B7D441400C73C05 /* ChoiceFilterTypeAd.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoiceFilterTypeAd.swift; sourceTree = "<group>"; };
+		D822CE682B7D59AE00C73C05 /* ColorCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorCollection.swift; sourceTree = "<group>"; };
+		D822CE6B2B7DF78000C73C05 /* FiltersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiltersView.swift; sourceTree = "<group>"; };
+		D822CE6D2B7DFBC800C73C05 /* FiltersTopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiltersTopView.swift; sourceTree = "<group>"; };
+		D822CE702B7DFCDF00C73C05 /* FilterTypeAd.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterTypeAd.swift; sourceTree = "<group>"; };
+		D822CE722B7DFE1200C73C05 /* FilterSectionPlaceFinding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterSectionPlaceFinding.swift; sourceTree = "<group>"; };
+		D822CE742B7E00FC00C73C05 /* FiltersSectionAboutPet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiltersSectionAboutPet.swift; sourceTree = "<group>"; };
+		D822CE772B7E040400C73C05 /* CustomTextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextFieldView.swift; sourceTree = "<group>"; };
+		D822CE7A2B7E05DA00C73C05 /* CustomDropDownButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomDropDownButtonView.swift; sourceTree = "<group>"; };
+		D822CE7C2B7E087D00C73C05 /* FiltersAdditionallySectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiltersAdditionallySectionView.swift; sourceTree = "<group>"; };
+		D822CE7E2B7E0C8700C73C05 /* CustomOrangeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomOrangeButton.swift; sourceTree = "<group>"; };
 		D84297982ADC1E65006D6B06 /* Extansions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extansions.swift; sourceTree = "<group>"; };
 		D85BE3D52B51A9D400F8D1E8 /* SecondCreateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondCreateViewController.swift; sourceTree = "<group>"; };
 		D85BE3D92B51B2C000F8D1E8 /* PhotoCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCollectionView.swift; sourceTree = "<group>"; };
@@ -284,6 +322,7 @@
 		5873E39E2ADB190200F51501 /* PetFinder */ = {
 			isa = PBXGroup;
 			children = (
+				D822CE602B7CBCA900C73C05 /* Manager */,
 				5801E20D2B7380DA00DF23FB /* Modules */,
 				D86EADB02AE3B57B00FB19B6 /* Model */,
 				D84297972ADC1E4F006D6B06 /* Help */,
@@ -392,11 +431,77 @@
 			path = CreateLostPetAdvert;
 			sourceTree = "<group>";
 		};
-		D822CE5C2B7CAEF600C73C05 /* New Group */ = {
+		D8071A9C2B80A77000BAECFE /* FirstStepCreateAdView */ = {
 			isa = PBXGroup;
 			children = (
+				D8071A9A2B80A33700BAECFE /* FirstStepCreateAdView.swift */,
+				D8071A9D2B80A79300BAECFE /* SelectTypePetView.swift */,
+				D8071A9F2B80A97500BAECFE /* DescriptionsFirstStepCreateAdView.swift */,
+				D8071AA12B80AAC700BAECFE /* TopViewFirstStepCreateAdView.swift */,
+				D8071AA32B80AD7F00BAECFE /* ChoiceColorFirstStepCreateAdView.swift */,
 			);
-			path = "New Group";
+			path = FirstStepCreateAdView;
+			sourceTree = "<group>";
+		};
+		D8071AA52B80E4ED00BAECFE /* PhotoScrollView */ = {
+			isa = PBXGroup;
+			children = (
+				D8071AA62B80E51F00BAECFE /* PhotoScrollView.swift */,
+			);
+			path = PhotoScrollView;
+			sourceTree = "<group>";
+		};
+		D822CE5C2B7CAEF600C73C05 /* changeCountryView */ = {
+			isa = PBXGroup;
+			children = (
+				D822CE5E2B7CB0B500C73C05 /* ChangeCountryView.swift */,
+			);
+			path = changeCountryView;
+			sourceTree = "<group>";
+		};
+		D822CE602B7CBCA900C73C05 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				D822CE612B7CBCC300C73C05 /* CountryManager.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		D822CE632B7D42AE00C73C05 /* ChoiceTypeAd */ = {
+			isa = PBXGroup;
+			children = (
+				D822CE662B7D441400C73C05 /* ChoiceFilterTypeAd.swift */,
+			);
+			path = ChoiceTypeAd;
+			sourceTree = "<group>";
+		};
+		D822CE6A2B7DF76C00C73C05 /* FiltersView */ = {
+			isa = PBXGroup;
+			children = (
+				D822CE6B2B7DF78000C73C05 /* FiltersView.swift */,
+				D822CE6D2B7DFBC800C73C05 /* FiltersTopView.swift */,
+				D822CE702B7DFCDF00C73C05 /* FilterTypeAd.swift */,
+				D822CE722B7DFE1200C73C05 /* FilterSectionPlaceFinding.swift */,
+				D822CE742B7E00FC00C73C05 /* FiltersSectionAboutPet.swift */,
+				D822CE7C2B7E087D00C73C05 /* FiltersAdditionallySectionView.swift */,
+			);
+			path = FiltersView;
+			sourceTree = "<group>";
+		};
+		D822CE762B7E03DD00C73C05 /* CustomTextField */ = {
+			isa = PBXGroup;
+			children = (
+				D822CE772B7E040400C73C05 /* CustomTextFieldView.swift */,
+			);
+			path = CustomTextField;
+			sourceTree = "<group>";
+		};
+		D822CE792B7E05C100C73C05 /* CustomDropDownButtonView */ = {
+			isa = PBXGroup;
+			children = (
+				D822CE7A2B7E05DA00C73C05 /* CustomDropDownButtonView.swift */,
+			);
+			path = CustomDropDownButtonView;
 			sourceTree = "<group>";
 		};
 		D84297972ADC1E4F006D6B06 /* Help */ = {
@@ -502,12 +607,18 @@
 		D86EA8852ADBD09400B8D961 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				D822CE5C2B7CAEF600C73C05 /* New Group */,
+				D8071AA52B80E4ED00BAECFE /* PhotoScrollView */,
+				D822CE792B7E05C100C73C05 /* CustomDropDownButtonView */,
+				D822CE762B7E03DD00C73C05 /* CustomTextField */,
+				D822CE6A2B7DF76C00C73C05 /* FiltersView */,
+				D822CE632B7D42AE00C73C05 /* ChoiceTypeAd */,
+				D822CE5C2B7CAEF600C73C05 /* changeCountryView */,
 				D898EFD42B7825A400D10EA0 /* SegmentSexView */,
 				D898EFD12B780E1D00D10EA0 /* SortView */,
 				D898EFCE2B78028100D10EA0 /* ColorCollectioView */,
 				D898EFCB2B77B46300D10EA0 /* AnimalCollectionView */,
 				D898EFDA2B78B84C00D10EA0 /* ProfileSwiftUIView.swift */,
+				D822CE7E2B7E0C8700C73C05 /* CustomOrangeButton.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -654,6 +765,7 @@
 		D898EFC22B76BFDB00D10EA0 /* CreateAd */ = {
 			isa = PBXGroup;
 			children = (
+				D8071A9C2B80A77000BAECFE /* FirstStepCreateAdView */,
 				D898EFAC2B6FFBF200D10EA0 /* SetupColorView */,
 				D898EFC32B76C03100D10EA0 /* Response */,
 				D8E8072D2B26034300D69D67 /* CreateAdViewController */,
@@ -716,6 +828,7 @@
 		D898EFCE2B78028100D10EA0 /* ColorCollectioView */ = {
 			isa = PBXGroup;
 			children = (
+				D822CE682B7D59AE00C73C05 /* ColorCollection.swift */,
 			);
 			path = ColorCollectioView;
 			sourceTree = "<group>";
@@ -885,13 +998,17 @@
 				D87D0DA82B2F57BD00DC5476 /* CustomDownButton.swift in Sources */,
 				D84297992ADC1E65006D6B06 /* Extansions.swift in Sources */,
 				D8DE97F92B37794600D82318 /* GeolocationViewController.swift in Sources */,
+				D8071AA42B80AD7F00BAECFE /* ChoiceColorFirstStepCreateAdView.swift in Sources */,
 				587DA34F2B7383FF0001DE45 /* OnboardingViewController.swift in Sources */,
+				D822CE6E2B7DFBC800C73C05 /* FiltersTopView.swift in Sources */,
 				D898EFCD2B77B48000D10EA0 /* AnimalCollectionView.swift in Sources */,
 				D81A44CA2B398B1400DC0C49 /* NotificationMode.swift in Sources */,
 				D85BE3EE2B52E28E00F8D1E8 /* CustomLocationTextField.swift in Sources */,
 				D86DF0D62B6EDD0600A65826 /* ChoiceTypeAd.swift in Sources */,
 				D86EA8882ADBD10300B8D961 /* MainViewController.swift in Sources */,
+				D822CE672B7D441500C73C05 /* ChoiceFilterTypeAd.swift in Sources */,
 				D86EADB42AE3B69000FB19B6 /* AdsCollectionViewCell.swift in Sources */,
+				D822CE732B7DFE1300C73C05 /* FilterSectionPlaceFinding.swift in Sources */,
 				58D4EBF82B7256AF00F79810 /* RegisterTableViewCell.swift in Sources */,
 				D86EADAB2AE0475A00FB19B6 /* ProfileViewController.swift in Sources */,
 				5801E20A2B736A2700DF23FB /* ButtonExtension.swift in Sources */,
@@ -906,19 +1023,31 @@
 				D898EFD62B7825B700D10EA0 /* SexSegmentView.swift in Sources */,
 				58E02B932B6FF4E700058D21 /* Fonts.generated.swift in Sources */,
 				5873E3D82ADEEA7B00F51501 /* FontExtansion.swift in Sources */,
+				D822CE7D2B7E087D00C73C05 /* FiltersAdditionallySectionView.swift in Sources */,
 				D86EADAF2AE3B55E00FB19B6 /* AdsCollectionView.swift in Sources */,
+				D8071AA72B80E51F00BAECFE /* PhotoScrollView.swift in Sources */,
 				D8B3BB322AFA974F001259A2 /* ServicesTableView.swift in Sources */,
 				025CB28F2B3837A200AEDAC0 /* RegisterViewController.swift in Sources */,
 				D85BE3DC2B51B30B00F8D1E8 /* PhotoCollectionViewCell.swift in Sources */,
+				D8071A9B2B80A33700BAECFE /* FirstStepCreateAdView.swift in Sources */,
+				D822CE712B7DFCDF00C73C05 /* FilterTypeAd.swift in Sources */,
 				D8B3BB362AFAA4DA001259A2 /* ListServicesCollectionView.swift in Sources */,
+				D8071AA22B80AAC700BAECFE /* TopViewFirstStepCreateAdView.swift in Sources */,
 				D85BE3E32B51D23D00F8D1E8 /* ColorCollectionViewCell.swift in Sources */,
 				D81A44C82B398AC700DC0C49 /* NotificationTableView.swift in Sources */,
+				D822CE752B7E00FC00C73C05 /* FiltersSectionAboutPet.swift in Sources */,
+				D822CE6C2B7DF78000C73C05 /* FiltersView.swift in Sources */,
+				D822CE5F2B7CB0B500C73C05 /* ChangeCountryView.swift in Sources */,
+				D822CE7B2B7E05DA00C73C05 /* CustomDropDownButtonView.swift in Sources */,
 				D8DE97FD2B3821DF00D82318 /* StatusRespondViewController.swift in Sources */,
+				D8071A9E2B80A79300BAECFE /* SelectTypePetView.swift in Sources */,
+				D8071AA02B80A97500BAECFE /* DescriptionsFirstStepCreateAdView.swift in Sources */,
 				D86EADA72AE043C900FB19B6 /* CustomTabBarControllerViewController.swift in Sources */,
 				58D4EBF02B721C0D00F79810 /* ForgotPasswordViewController.swift in Sources */,
 				D8A9E8162AEE3A9900E509EC /* CustomSearchTextField.swift in Sources */,
 				D85BE3DA2B51B2C000F8D1E8 /* PhotoCollectionView.swift in Sources */,
 				58D4EBFB2B72604500F79810 /* CountryTableViewCell.swift in Sources */,
+				D822CE7F2B7E0C8700C73C05 /* CustomOrangeButton.swift in Sources */,
 				5873E3A02ADB190200F51501 /* AppDelegate.swift in Sources */,
 				D8B3BB2A2AF63534001259A2 /* AdViewController.swift in Sources */,
 				D8B3BB302AFA8950001259A2 /* ServicesViewController.swift in Sources */,
@@ -931,11 +1060,14 @@
 				D8B3BB342AFA97BF001259A2 /* ServicesTableViewCell.swift in Sources */,
 				025CB2952B3837A200AEDAC0 /* AuthViewController.swift in Sources */,
 				D87D0DA52B2F53B400DC5476 /* CustomSengmentControl.swift in Sources */,
+				D822CE782B7E040400C73C05 /* CustomTextFieldView.swift in Sources */,
 				D85BE3E62B51F1A200F8D1E8 /* MedecineStatusView.swift in Sources */,
+				D822CE692B7D59AE00C73C05 /* ColorCollection.swift in Sources */,
 				D802463E2B2D89C700B2223C /* CreatePetAdvertViewController.swift in Sources */,
 				D898EFD32B780E2D00D10EA0 /* SortView.swift in Sources */,
 				D86EADB22AE3B59000FB19B6 /* LostPetCardModel.swift in Sources */,
 				D81A44CD2B398C9100DC0C49 /* NotificationTableViewCell.swift in Sources */,
+				D822CE622B7CBCC300C73C05 /* CountryManager.swift in Sources */,
 				58D4EBF62B72380200F79810 /* TextFieldExtension.swift in Sources */,
 				D8F70E9D2AEC1E47006543F0 /* STTabbar.swift in Sources */,
 				5873E3A22ADB190200F51501 /* SceneDelegate.swift in Sources */,

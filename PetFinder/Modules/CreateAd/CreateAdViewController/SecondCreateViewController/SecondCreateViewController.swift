@@ -7,12 +7,14 @@
 
 import UIKit
 import SnapKit
+import SwiftUI
 
 class SecondCreateViewController: UIViewController {
-    private let photoCollectionView = PhotoCollectionView()
-    private let colorCollectionView = ColorCollectionView()
+    private let photoCollectionView = UIHostingController(rootView: PhotoScrollView()).view!
+    private let colorCollectionView = UIHostingController(rootView: ColorCollection())
     private let medecineStatus = MedecineStatusView()
     var heightConstraint: NSLayoutConstraint!
+    
     
     
     private lazy var topView: UIView = {
@@ -120,6 +122,7 @@ class SecondCreateViewController: UIViewController {
     }
     
     func setup() {
+        photoCollectionView.backgroundColor = .clear
         medecineStatus.alpha = 0.4
         medecineStatus.isUserInteractionEnabled = false
         heightConstraint = specialFeaturesField.heightAnchor.constraint(equalToConstant: 53)
@@ -141,7 +144,8 @@ class SecondCreateViewController: UIViewController {
         self.contentView.addSubview(photoLabel)
         self.contentView.addSubview(photoCollectionView)
         self.contentView.addSubview(colorPetLabel)
-        self.contentView.addSubview(colorCollectionView)
+        self.contentView.addSubview(colorCollectionView.view)
+        colorCollectionView.view.backgroundColor = .clear
         self.contentView.addSubview(medecinDataLabel)
         self.contentView.addSubview(switchData)
         self.contentView.addSubview(medecineStatus)
@@ -195,20 +199,20 @@ class SecondCreateViewController: UIViewController {
             maker.left.equalToSuperview().inset(16)
         }
         
-        colorCollectionView.snp.makeConstraints { maker in
-            maker.top.equalTo(colorPetLabel.snp.bottom).inset(-18)
+        colorCollectionView.view.snp.makeConstraints { maker in
+            maker.top.equalTo(colorPetLabel.snp.bottom).inset(-32)
             maker.left.equalToSuperview().inset(16)
             maker.right.equalToSuperview().inset(15)
             maker.height.equalTo(168)
         }
         
         medecinDataLabel.snp.makeConstraints { maker in
-            maker.top.equalTo(colorCollectionView.snp.bottom).inset(-40)
+            maker.top.equalTo(colorCollectionView.view.snp.bottom).inset(-40)
             maker.left.equalToSuperview().inset(16)
         }
         
         switchData.snp.makeConstraints { maker in
-            maker.top.equalTo(colorCollectionView.snp.bottom).inset(-40)
+            maker.top.equalTo(colorCollectionView.view.snp.bottom).inset(-40)
             maker.right.equalToSuperview().inset(15)
         }
         

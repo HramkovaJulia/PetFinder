@@ -21,7 +21,6 @@ struct ChoiceTypeAd: View {
     @State private var isPresented = false
     @State private var dataMassive = [["firstImage", "Пропал питомец"], ["secondImage", "Найден питомец"], ["thirdImage", "Пристроить питомца"], ["fourImage", "Завести питомца"]]
 
-    
     var body: some View {
         VStack {
             TopView(dismissAction: dismissAction)
@@ -36,11 +35,7 @@ struct ChoiceTypeAd: View {
                         .onTapGesture {
                             print(data[0])
                             isPresented = true
-                        }.fullScreenCover(isPresented: $isPresented){
-                            AdvertVC()
-                                .ignoresSafeArea()
                         }
-                        
                 }
             }
             .background(Color(UIColor(hex: 0xFCF4EF)))
@@ -48,8 +43,13 @@ struct ChoiceTypeAd: View {
             Spacer()
         }
         .background(Color(UIColor(hex: 0xFCF4EF)))
+        .fullScreenCover(isPresented: $isPresented) {
+            FirstStepCreateAdView()
+        }
     }
 }
+
+
 
 struct TopView: View {
     var dismissAction: () -> Void
