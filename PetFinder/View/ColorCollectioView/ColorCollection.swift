@@ -10,14 +10,24 @@ import WrappingHStack
 
 struct ColorCollection: View {
     @State var arrayColor: [String] = ["Белый", "Черный", "Рыжий", "Серый", "Коричневый", "Дымчатый", "Двухцветный", "Черепаховый", "Трехцветный", "В полоску", "В пятно", "+"]
+    @State var massiveSelectedTag: [Int] = []
+    @State var isSelected: [Bool] = Array(repeating: false, count: 12)
 
     var body: some View {
         ScrollView(showsIndicators: false) {
             WrappingHStack(0..<arrayColor.count, id: \.self) { color in
                 ColorItemView(text: arrayColor[color])
-                    .background(Color(PFAssets.white.color))
+                    .background(isSelected[color] ?   Color(PFAssets.blue.color) : Color(PFAssets.white.color))
                     .cornerRadius(25)
                     .padding(.bottom, 12)
+                    .onTapGesture {
+                        isSelected[color].toggle()
+                        if isSelected[color] && !massiveSelectedTag.contains(color) {
+                            massiveSelectedTag.append(color)
+                        } else if !isSelected[color], let index = massiveSelectedTag.firstIndex(of: color) {
+                            massiveSelectedTag.remove(at: index)
+                        }
+                    }
             }
         }
         .frame(height: 201)

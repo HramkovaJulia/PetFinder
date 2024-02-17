@@ -200,7 +200,7 @@ class SecondCreateViewController: UIViewController {
         }
         
         colorCollectionView.view.snp.makeConstraints { maker in
-            maker.top.equalTo(colorPetLabel.snp.bottom).inset(-18)
+            maker.top.equalTo(colorPetLabel.snp.bottom).inset(-32)
             maker.left.equalToSuperview().inset(16)
             maker.right.equalToSuperview().inset(15)
             maker.height.equalTo(168)
