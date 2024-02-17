@@ -10,7 +10,7 @@ import SnapKit
 import SwiftUI
 
 class SecondCreateViewController: UIViewController {
-    private let photoCollectionView = PhotoCollectionView()
+    private let photoCollectionView = UIHostingController(rootView: PhotoScrollView()).view!
     private let colorCollectionView = UIHostingController(rootView: ColorCollection())
     private let medecineStatus = MedecineStatusView()
     var heightConstraint: NSLayoutConstraint!
@@ -122,6 +122,7 @@ class SecondCreateViewController: UIViewController {
     }
     
     func setup() {
+        photoCollectionView.backgroundColor = .clear
         medecineStatus.alpha = 0.4
         medecineStatus.isUserInteractionEnabled = false
         heightConstraint = specialFeaturesField.heightAnchor.constraint(equalToConstant: 53)

@@ -44,6 +44,7 @@
 		D8071AA02B80A97500BAECFE /* DescriptionsFirstStepCreateAdView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8071A9F2B80A97500BAECFE /* DescriptionsFirstStepCreateAdView.swift */; };
 		D8071AA22B80AAC700BAECFE /* TopViewFirstStepCreateAdView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8071AA12B80AAC700BAECFE /* TopViewFirstStepCreateAdView.swift */; };
 		D8071AA42B80AD7F00BAECFE /* ChoiceColorFirstStepCreateAdView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8071AA32B80AD7F00BAECFE /* ChoiceColorFirstStepCreateAdView.swift */; };
+		D8071AA72B80E51F00BAECFE /* PhotoScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8071AA62B80E51F00BAECFE /* PhotoScrollView.swift */; };
 		D81A44C62B3987A600DC0C49 /* NotificationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D81A44C52B3987A600DC0C49 /* NotificationsViewController.swift */; };
 		D81A44C82B398AC700DC0C49 /* NotificationTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D81A44C72B398AC700DC0C49 /* NotificationTableView.swift */; };
 		D81A44CA2B398B1400DC0C49 /* NotificationMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = D81A44C92B398B1400DC0C49 /* NotificationMode.swift */; };
@@ -145,6 +146,7 @@
 		D8071A9F2B80A97500BAECFE /* DescriptionsFirstStepCreateAdView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionsFirstStepCreateAdView.swift; sourceTree = "<group>"; };
 		D8071AA12B80AAC700BAECFE /* TopViewFirstStepCreateAdView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopViewFirstStepCreateAdView.swift; sourceTree = "<group>"; };
 		D8071AA32B80AD7F00BAECFE /* ChoiceColorFirstStepCreateAdView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoiceColorFirstStepCreateAdView.swift; sourceTree = "<group>"; };
+		D8071AA62B80E51F00BAECFE /* PhotoScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoScrollView.swift; sourceTree = "<group>"; };
 		D81A44C52B3987A600DC0C49 /* NotificationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsViewController.swift; sourceTree = "<group>"; };
 		D81A44C72B398AC700DC0C49 /* NotificationTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationTableView.swift; sourceTree = "<group>"; };
 		D81A44C92B398B1400DC0C49 /* NotificationMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationMode.swift; sourceTree = "<group>"; };
@@ -441,6 +443,14 @@
 			path = FirstStepCreateAdView;
 			sourceTree = "<group>";
 		};
+		D8071AA52B80E4ED00BAECFE /* PhotoScrollView */ = {
+			isa = PBXGroup;
+			children = (
+				D8071AA62B80E51F00BAECFE /* PhotoScrollView.swift */,
+			);
+			path = PhotoScrollView;
+			sourceTree = "<group>";
+		};
 		D822CE5C2B7CAEF600C73C05 /* changeCountryView */ = {
 			isa = PBXGroup;
 			children = (
@@ -597,6 +607,7 @@
 		D86EA8852ADBD09400B8D961 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				D8071AA52B80E4ED00BAECFE /* PhotoScrollView */,
 				D822CE792B7E05C100C73C05 /* CustomDropDownButtonView */,
 				D822CE762B7E03DD00C73C05 /* CustomTextField */,
 				D822CE6A2B7DF76C00C73C05 /* FiltersView */,
@@ -1014,6 +1025,7 @@
 				5873E3D82ADEEA7B00F51501 /* FontExtansion.swift in Sources */,
 				D822CE7D2B7E087D00C73C05 /* FiltersAdditionallySectionView.swift in Sources */,
 				D86EADAF2AE3B55E00FB19B6 /* AdsCollectionView.swift in Sources */,
+				D8071AA72B80E51F00BAECFE /* PhotoScrollView.swift in Sources */,
 				D8B3BB322AFA974F001259A2 /* ServicesTableView.swift in Sources */,
 				025CB28F2B3837A200AEDAC0 /* RegisterViewController.swift in Sources */,
 				D85BE3DC2B51B30B00F8D1E8 /* PhotoCollectionViewCell.swift in Sources */,

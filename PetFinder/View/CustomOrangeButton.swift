@@ -8,10 +8,11 @@
 import SwiftUI
 
 struct CustomOrangeButton: View {
+    var action: () -> Void
     var body: some View {
         VStack {
             Button(action: {
-                
+                action()
             }) {
                 Text("Применить")
                     .foregroundColor(Color(PFAssets.white.color))
@@ -27,6 +28,6 @@ struct CustomOrangeButton: View {
     }
 }
 
-#Preview {
-    CustomOrangeButton()
-}
+//#Preview {
+//    CustomOrangeButton()
+//}

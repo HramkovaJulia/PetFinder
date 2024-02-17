@@ -26,7 +26,9 @@ struct FiltersView: View {
                 }
                 .background(.clear)
                 
-                CustomOrangeButton()
+                CustomOrangeButton(action: {
+                    
+                })
                     .background(.clear)
                     .padding(.leading, 16)
                     .padding(.trailing, 15)
