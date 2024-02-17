@@ -12,7 +12,7 @@ import SwiftUI
 class SecondCreateViewController: UIViewController {
     private let photoCollectionView = UIHostingController(rootView: PhotoScrollView()).view!
     private let colorCollectionView = UIHostingController(rootView: ColorCollection())
-    private let medecineStatus = MedecineStatusView()
+    private let medecineStatus = UIHostingController(rootView: MedecineStatusSecondCreateAdView()).view!
     var heightConstraint: NSLayoutConstraint!
     
     
@@ -68,28 +68,6 @@ class SecondCreateViewController: UIViewController {
         return colorPet
     }()
     
-    private lazy var medecinDataLabel: UILabel = {
-        let MedecinDataLabel = UILabel()
-        MedecinDataLabel.text = "Медицинские данные"
-        MedecinDataLabel.font = UIFont.sfProText(ofSize: 20, weight: .medium)
-        MedecinDataLabel.textColor = UIColor(hex: 0x250404, alpha: 1)
-        return MedecinDataLabel
-    }()
-    
-    private lazy var switchData: UISwitch = {
-        let switchData = UISwitch()
-        switchData.isOn = false
-        switchData.addTarget(self, action: #selector(isEnebledView), for: .allEvents)
-        return switchData
-    }()
-    
-    private lazy var medecinView: UIView = {
-        let medecinView = UIView()
-        medecinView.backgroundColor = UIColor(hex: 0xffffff, alpha: 1)
-        medecinView.layer.cornerRadius = 12
-        return medecinView
-    }()
-    
     private lazy var specialFeatures: UILabel = {
         let specialFeatures = UILabel()
         specialFeatures.text = "Особые приметы"
@@ -123,8 +101,7 @@ class SecondCreateViewController: UIViewController {
     
     func setup() {
         photoCollectionView.backgroundColor = .clear
-        medecineStatus.alpha = 0.4
-        medecineStatus.isUserInteractionEnabled = false
+        medecineStatus.backgroundColor = .clear
         heightConstraint = specialFeaturesField.heightAnchor.constraint(equalToConstant: 53)
         heightConstraint.priority = UILayoutPriority(rawValue: 999)
         heightConstraint.isActive = true
@@ -146,8 +123,6 @@ class SecondCreateViewController: UIViewController {
         self.contentView.addSubview(colorPetLabel)
         self.contentView.addSubview(colorCollectionView.view)
         colorCollectionView.view.backgroundColor = .clear
-        self.contentView.addSubview(medecinDataLabel)
-        self.contentView.addSubview(switchData)
         self.contentView.addSubview(medecineStatus)
         self.contentView.addSubview(specialFeatures)
         self.contentView.addSubview(specialFeaturesField)
@@ -206,18 +181,8 @@ class SecondCreateViewController: UIViewController {
             maker.height.equalTo(168)
         }
         
-        medecinDataLabel.snp.makeConstraints { maker in
-            maker.top.equalTo(colorCollectionView.view.snp.bottom).inset(-40)
-            maker.left.equalToSuperview().inset(16)
-        }
-        
-        switchData.snp.makeConstraints { maker in
-            maker.top.equalTo(colorCollectionView.view.snp.bottom).inset(-40)
-            maker.right.equalToSuperview().inset(15)
-        }
-        
         medecineStatus.snp.makeConstraints { maker in
-            maker.top.equalTo(medecinDataLabel.snp.bottom).inset(-18)
+            maker.top.equalTo(colorCollectionView.view.snp.bottom).inset(-18)
             maker.left.equalToSuperview().inset(16)
             maker.right.equalToSuperview().inset(15)
             maker.height.equalTo(141)
@@ -247,16 +212,6 @@ class SecondCreateViewController: UIViewController {
         self.dismiss(animated: true)
     }
     
-    @objc func isEnebledView(sender: UISwitch) {
-        if sender.isOn {
-            medecineStatus.alpha = 1
-            medecineStatus.isUserInteractionEnabled = true
-        } else {
-            medecineStatus.alpha = 0.4
-            medecineStatus.isUserInteractionEnabled = false
-            medecineStatus.clearAllRadioButton()
-        }
-    }
     
     @objc func nextVC() {
         let viewcontroller = LocationPetViewController()

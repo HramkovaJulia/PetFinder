@@ -77,6 +77,8 @@ public enum PFAssets {
   public static let others = ImageAsset(name: "others")
   public static let plusButton = ImageAsset(name: "plusButton")
   public static let profile = ImageAsset(name: "profile")
+  public static let radioDeselect = ImageAsset(name: "radioDeselect")
+  public static let radioSelect = ImageAsset(name: "radioSelect")
   public static let secondBackButton = ImageAsset(name: "secondBackButton")
   public static let secondImage = ImageAsset(name: "secondImage")
   public static let selectedSortButton = ImageAsset(name: "selectedSortButton")
