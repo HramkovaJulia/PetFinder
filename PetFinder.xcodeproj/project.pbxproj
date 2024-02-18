@@ -64,6 +64,11 @@
 		D822CE7F2B7E0C8700C73C05 /* CustomOrangeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D822CE7E2B7E0C8700C73C05 /* CustomOrangeButton.swift */; };
 		D84297992ADC1E65006D6B06 /* Extansions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D84297982ADC1E65006D6B06 /* Extansions.swift */; };
 		D849998D2B812AE0006A8070 /* MedecineStatusSecondCreateAdView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D849998C2B812AE0006A8070 /* MedecineStatusSecondCreateAdView.swift */; };
+		D84999922B81E551006A8070 /* AdView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D84999912B81E551006A8070 /* AdView.swift */; };
+		D84999952B81E59C006A8070 /* ImageScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D84999942B81E59C006A8070 /* ImageScrollView.swift */; };
+		D84999972B8206F7006A8070 /* MainInfoAboutPetAdView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D84999962B8206F7006A8070 /* MainInfoAboutPetAdView.swift */; };
+		D84999992B820A46006A8070 /* AdditionalInfoAboutPetAdView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D84999982B820A46006A8070 /* AdditionalInfoAboutPetAdView.swift */; };
+		D849999B2B82141C006A8070 /* MapInfoInfoAboutPetAdView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D849999A2B82141C006A8070 /* MapInfoInfoAboutPetAdView.swift */; };
 		D85BE3D62B51A9D400F8D1E8 /* SecondCreateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D85BE3D52B51A9D400F8D1E8 /* SecondCreateViewController.swift */; };
 		D85BE3DA2B51B2C000F8D1E8 /* PhotoCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D85BE3D92B51B2C000F8D1E8 /* PhotoCollectionView.swift */; };
 		D85BE3DC2B51B30B00F8D1E8 /* PhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D85BE3DB2B51B30B00F8D1E8 /* PhotoCollectionViewCell.swift */; };
@@ -167,6 +172,11 @@
 		D822CE7E2B7E0C8700C73C05 /* CustomOrangeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomOrangeButton.swift; sourceTree = "<group>"; };
 		D84297982ADC1E65006D6B06 /* Extansions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extansions.swift; sourceTree = "<group>"; };
 		D849998C2B812AE0006A8070 /* MedecineStatusSecondCreateAdView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedecineStatusSecondCreateAdView.swift; sourceTree = "<group>"; };
+		D84999912B81E551006A8070 /* AdView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdView.swift; sourceTree = "<group>"; };
+		D84999942B81E59C006A8070 /* ImageScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageScrollView.swift; sourceTree = "<group>"; };
+		D84999962B8206F7006A8070 /* MainInfoAboutPetAdView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainInfoAboutPetAdView.swift; sourceTree = "<group>"; };
+		D84999982B820A46006A8070 /* AdditionalInfoAboutPetAdView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdditionalInfoAboutPetAdView.swift; sourceTree = "<group>"; };
+		D849999A2B82141C006A8070 /* MapInfoInfoAboutPetAdView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapInfoInfoAboutPetAdView.swift; sourceTree = "<group>"; };
 		D85BE3D52B51A9D400F8D1E8 /* SecondCreateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondCreateViewController.swift; sourceTree = "<group>"; };
 		D85BE3D92B51B2C000F8D1E8 /* PhotoCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCollectionView.swift; sourceTree = "<group>"; };
 		D85BE3DB2B51B30B00F8D1E8 /* PhotoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -519,6 +529,26 @@
 			path = Help;
 			sourceTree = "<group>";
 		};
+		D84999902B81E532006A8070 /* AdView */ = {
+			isa = PBXGroup;
+			children = (
+				D84999932B81E57A006A8070 /* ImageScrollView */,
+				D84999912B81E551006A8070 /* AdView.swift */,
+				D84999962B8206F7006A8070 /* MainInfoAboutPetAdView.swift */,
+				D84999982B820A46006A8070 /* AdditionalInfoAboutPetAdView.swift */,
+			);
+			path = AdView;
+			sourceTree = "<group>";
+		};
+		D84999932B81E57A006A8070 /* ImageScrollView */ = {
+			isa = PBXGroup;
+			children = (
+				D84999942B81E59C006A8070 /* ImageScrollView.swift */,
+				D849999A2B82141C006A8070 /* MapInfoInfoAboutPetAdView.swift */,
+			);
+			path = ImageScrollView;
+			sourceTree = "<group>";
+		};
 		D85BE3D42B51A9AB00F8D1E8 /* SecondCreateViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -610,6 +640,7 @@
 		D86EA8852ADBD09400B8D961 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				D84999902B81E532006A8070 /* AdView */,
 				D8071AA52B80E4ED00BAECFE /* PhotoScrollView */,
 				D822CE792B7E05C100C73C05 /* CustomDropDownButtonView */,
 				D822CE762B7E03DD00C73C05 /* CustomTextField */,
@@ -998,6 +1029,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D849999B2B82141C006A8070 /* MapInfoInfoAboutPetAdView.swift in Sources */,
 				D849998D2B812AE0006A8070 /* MedecineStatusSecondCreateAdView.swift in Sources */,
 				D87D0DA82B2F57BD00DC5476 /* CustomDownButton.swift in Sources */,
 				D84297992ADC1E65006D6B06 /* Extansions.swift in Sources */,
@@ -1019,6 +1051,7 @@
 				D8B3BB2E2AF64989001259A2 /* ImageAdCollectionViewCell.swift in Sources */,
 				58D4EBF22B72351F00F79810 /* LabelExtension.swift in Sources */,
 				D8B3BB2C2AF6494E001259A2 /* ImagesAdCollectionView.swift in Sources */,
+				D84999952B81E59C006A8070 /* ImageScrollView.swift in Sources */,
 				D86EADAD2AE04D1700FB19B6 /* ColorExtansion.swift in Sources */,
 				D85BE3E12B51D20000F8D1E8 /* ColorCollectionView.swift in Sources */,
 				D898EFDB2B78B84C00D10EA0 /* ProfileSwiftUIView.swift in Sources */,
@@ -1038,6 +1071,7 @@
 				D8B3BB362AFAA4DA001259A2 /* ListServicesCollectionView.swift in Sources */,
 				D8071AA22B80AAC700BAECFE /* TopViewFirstStepCreateAdView.swift in Sources */,
 				D85BE3E32B51D23D00F8D1E8 /* ColorCollectionViewCell.swift in Sources */,
+				D84999992B820A46006A8070 /* AdditionalInfoAboutPetAdView.swift in Sources */,
 				D81A44C82B398AC700DC0C49 /* NotificationTableView.swift in Sources */,
 				D822CE752B7E00FC00C73C05 /* FiltersSectionAboutPet.swift in Sources */,
 				D822CE6C2B7DF78000C73C05 /* FiltersView.swift in Sources */,
@@ -1053,6 +1087,7 @@
 				58D4EBFB2B72604500F79810 /* CountryTableViewCell.swift in Sources */,
 				D822CE7F2B7E0C8700C73C05 /* CustomOrangeButton.swift in Sources */,
 				5873E3A02ADB190200F51501 /* AppDelegate.swift in Sources */,
+				D84999922B81E551006A8070 /* AdView.swift in Sources */,
 				D8B3BB2A2AF63534001259A2 /* AdViewController.swift in Sources */,
 				D8B3BB302AFA8950001259A2 /* ServicesViewController.swift in Sources */,
 				5801E20C2B736AE600DF23FB /* ButtonTableViewCell.swift in Sources */,
@@ -1074,6 +1109,7 @@
 				D822CE622B7CBCC300C73C05 /* CountryManager.swift in Sources */,
 				58D4EBF62B72380200F79810 /* TextFieldExtension.swift in Sources */,
 				D8F70E9D2AEC1E47006543F0 /* STTabbar.swift in Sources */,
+				D84999972B8206F7006A8070 /* MainInfoAboutPetAdView.swift in Sources */,
 				5873E3A22ADB190200F51501 /* SceneDelegate.swift in Sources */,
 				58E02B922B6FF4E700058D21 /* AssetConstants.generated.swift in Sources */,
 				D8DE97FB2B38131400D82318 /* ResponseViewController.swift in Sources */,

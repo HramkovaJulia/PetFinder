@@ -46,7 +46,7 @@ struct FirstStepCreateAdView: View {
                 }
                 CustomOrangeButton(action: {
                     isPresented = true
-                })
+                }, text: "Продолжить")
                     .background(.clear)
                     .padding(.leading, 16)
                     .padding(.trailing, 15)
