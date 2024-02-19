@@ -106,6 +106,7 @@
 		D8DE97F92B37794600D82318 /* GeolocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8DE97F82B37794600D82318 /* GeolocationViewController.swift */; };
 		D8DE97FB2B38131400D82318 /* ResponseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8DE97FA2B38131400D82318 /* ResponseViewController.swift */; };
 		D8DE97FD2B3821DF00D82318 /* StatusRespondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8DE97FC2B3821DE00D82318 /* StatusRespondViewController.swift */; };
+		D8F6FE872B83520C0094304E /* CustomTextEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8F6FE862B83520C0094304E /* CustomTextEditor.swift */; };
 		D8F70E9D2AEC1E47006543F0 /* STTabbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8F70E9C2AEC1E47006543F0 /* STTabbar.swift */; };
 		E6F0B5A79917F100D937E0D1 /* Pods_PetFinder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE2ACC640625F2B1CC0E5B2C /* Pods_PetFinder.framework */; };
 /* End PBXBuildFile section */
@@ -214,6 +215,7 @@
 		D8DE97F82B37794600D82318 /* GeolocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeolocationViewController.swift; sourceTree = "<group>"; };
 		D8DE97FA2B38131400D82318 /* ResponseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseViewController.swift; sourceTree = "<group>"; };
 		D8DE97FC2B3821DE00D82318 /* StatusRespondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusRespondViewController.swift; sourceTree = "<group>"; };
+		D8F6FE862B83520C0094304E /* CustomTextEditor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextEditor.swift; sourceTree = "<group>"; };
 		D8F70E9C2AEC1E47006543F0 /* STTabbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = STTabbar.swift; sourceTree = "<group>"; };
 		EE2ACC640625F2B1CC0E5B2C /* Pods_PetFinder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PetFinder.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -653,6 +655,7 @@
 				D898EFCB2B77B46300D10EA0 /* AnimalCollectionView */,
 				D898EFDA2B78B84C00D10EA0 /* ProfileSwiftUIView.swift */,
 				D822CE7E2B7E0C8700C73C05 /* CustomOrangeButton.swift */,
+				D8F6FE862B83520C0094304E /* CustomTextEditor.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1088,6 +1091,7 @@
 				D822CE7F2B7E0C8700C73C05 /* CustomOrangeButton.swift in Sources */,
 				5873E3A02ADB190200F51501 /* AppDelegate.swift in Sources */,
 				D84999922B81E551006A8070 /* AdView.swift in Sources */,
+				D8F6FE872B83520C0094304E /* CustomTextEditor.swift in Sources */,
 				D8B3BB2A2AF63534001259A2 /* AdViewController.swift in Sources */,
 				D8B3BB302AFA8950001259A2 /* ServicesViewController.swift in Sources */,
 				5801E20C2B736AE600DF23FB /* ButtonTableViewCell.swift in Sources */,
