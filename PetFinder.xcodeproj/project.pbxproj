@@ -107,6 +107,11 @@
 		D8DE97FB2B38131400D82318 /* ResponseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8DE97FA2B38131400D82318 /* ResponseViewController.swift */; };
 		D8DE97FD2B3821DF00D82318 /* StatusRespondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8DE97FC2B3821DE00D82318 /* StatusRespondViewController.swift */; };
 		D8F6FE872B83520C0094304E /* CustomTextEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8F6FE862B83520C0094304E /* CustomTextEditor.swift */; };
+		D8F6FE8A2B835BD80094304E /* SecondStepCreateAdView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8F6FE892B835BD80094304E /* SecondStepCreateAdView.swift */; };
+		D8F6FE8C2B835CE60094304E /* TopViewSecondStepCreateAdView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8F6FE8B2B835CE60094304E /* TopViewSecondStepCreateAdView.swift */; };
+		D8F6FE8E2B835D650094304E /* PhotoScrollFirstStepCreateAdView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8F6FE8D2B835D650094304E /* PhotoScrollFirstStepCreateAdView.swift */; };
+		D8F6FE902B83605E0094304E /* ColorCollectionViewFirstStepCreateAdView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8F6FE8F2B83605E0094304E /* ColorCollectionViewFirstStepCreateAdView.swift */; };
+		D8F6FE922B8361780094304E /* SpectialNoteViewFirstStepCreateAdView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8F6FE912B8361780094304E /* SpectialNoteViewFirstStepCreateAdView.swift */; };
 		D8F70E9D2AEC1E47006543F0 /* STTabbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8F70E9C2AEC1E47006543F0 /* STTabbar.swift */; };
 		E6F0B5A79917F100D937E0D1 /* Pods_PetFinder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE2ACC640625F2B1CC0E5B2C /* Pods_PetFinder.framework */; };
 /* End PBXBuildFile section */
@@ -216,6 +221,11 @@
 		D8DE97FA2B38131400D82318 /* ResponseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseViewController.swift; sourceTree = "<group>"; };
 		D8DE97FC2B3821DE00D82318 /* StatusRespondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusRespondViewController.swift; sourceTree = "<group>"; };
 		D8F6FE862B83520C0094304E /* CustomTextEditor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextEditor.swift; sourceTree = "<group>"; };
+		D8F6FE892B835BD80094304E /* SecondStepCreateAdView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondStepCreateAdView.swift; sourceTree = "<group>"; };
+		D8F6FE8B2B835CE60094304E /* TopViewSecondStepCreateAdView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopViewSecondStepCreateAdView.swift; sourceTree = "<group>"; };
+		D8F6FE8D2B835D650094304E /* PhotoScrollFirstStepCreateAdView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoScrollFirstStepCreateAdView.swift; sourceTree = "<group>"; };
+		D8F6FE8F2B83605E0094304E /* ColorCollectionViewFirstStepCreateAdView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorCollectionViewFirstStepCreateAdView.swift; sourceTree = "<group>"; };
+		D8F6FE912B8361780094304E /* SpectialNoteViewFirstStepCreateAdView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpectialNoteViewFirstStepCreateAdView.swift; sourceTree = "<group>"; };
 		D8F70E9C2AEC1E47006543F0 /* STTabbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = STTabbar.swift; sourceTree = "<group>"; };
 		EE2ACC640625F2B1CC0E5B2C /* Pods_PetFinder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PetFinder.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -802,6 +812,7 @@
 		D898EFC22B76BFDB00D10EA0 /* CreateAd */ = {
 			isa = PBXGroup;
 			children = (
+				D8F6FE882B835BBC0094304E /* SecondStepCreateAdView */,
 				D8071A9C2B80A77000BAECFE /* FirstStepCreateAdView */,
 				D898EFAC2B6FFBF200D10EA0 /* SetupColorView */,
 				D898EFC32B76C03100D10EA0 /* Response */,
@@ -902,6 +913,18 @@
 				D802463C2B2D893400B2223C /* CreateLostPetAdvert */,
 			);
 			path = CreateAdViewController;
+			sourceTree = "<group>";
+		};
+		D8F6FE882B835BBC0094304E /* SecondStepCreateAdView */ = {
+			isa = PBXGroup;
+			children = (
+				D8F6FE892B835BD80094304E /* SecondStepCreateAdView.swift */,
+				D8F6FE8B2B835CE60094304E /* TopViewSecondStepCreateAdView.swift */,
+				D8F6FE8D2B835D650094304E /* PhotoScrollFirstStepCreateAdView.swift */,
+				D8F6FE8F2B83605E0094304E /* ColorCollectionViewFirstStepCreateAdView.swift */,
+				D8F6FE912B8361780094304E /* SpectialNoteViewFirstStepCreateAdView.swift */,
+			);
+			path = SecondStepCreateAdView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1058,6 +1081,7 @@
 				D86EADAD2AE04D1700FB19B6 /* ColorExtansion.swift in Sources */,
 				D85BE3E12B51D20000F8D1E8 /* ColorCollectionView.swift in Sources */,
 				D898EFDB2B78B84C00D10EA0 /* ProfileSwiftUIView.swift in Sources */,
+				D8F6FE8E2B835D650094304E /* PhotoScrollFirstStepCreateAdView.swift in Sources */,
 				D898EFAE2B6FFC1300D10EA0 /* SetupNewColorView.swift in Sources */,
 				D8B3BB382AFAA5D8001259A2 /* ListServicesCollectionViewCell.swift in Sources */,
 				D898EFD62B7825B700D10EA0 /* SexSegmentView.swift in Sources */,
@@ -1067,6 +1091,7 @@
 				D86EADAF2AE3B55E00FB19B6 /* AdsCollectionView.swift in Sources */,
 				D8071AA72B80E51F00BAECFE /* PhotoScrollView.swift in Sources */,
 				D8B3BB322AFA974F001259A2 /* ServicesTableView.swift in Sources */,
+				D8F6FE922B8361780094304E /* SpectialNoteViewFirstStepCreateAdView.swift in Sources */,
 				025CB28F2B3837A200AEDAC0 /* RegisterViewController.swift in Sources */,
 				D85BE3DC2B51B30B00F8D1E8 /* PhotoCollectionViewCell.swift in Sources */,
 				D8071A9B2B80A33700BAECFE /* FirstStepCreateAdView.swift in Sources */,
@@ -1093,6 +1118,7 @@
 				D84999922B81E551006A8070 /* AdView.swift in Sources */,
 				D8F6FE872B83520C0094304E /* CustomTextEditor.swift in Sources */,
 				D8B3BB2A2AF63534001259A2 /* AdViewController.swift in Sources */,
+				D8F6FE8A2B835BD80094304E /* SecondStepCreateAdView.swift in Sources */,
 				D8B3BB302AFA8950001259A2 /* ServicesViewController.swift in Sources */,
 				5801E20C2B736AE600DF23FB /* ButtonTableViewCell.swift in Sources */,
 				D85BE3D62B51A9D400F8D1E8 /* SecondCreateViewController.swift in Sources */,
@@ -1107,11 +1133,13 @@
 				D85BE3E62B51F1A200F8D1E8 /* MedecineStatusView.swift in Sources */,
 				D822CE692B7D59AE00C73C05 /* ColorCollection.swift in Sources */,
 				D802463E2B2D89C700B2223C /* CreatePetAdvertViewController.swift in Sources */,
+				D8F6FE8C2B835CE60094304E /* TopViewSecondStepCreateAdView.swift in Sources */,
 				D898EFD32B780E2D00D10EA0 /* SortView.swift in Sources */,
 				D86EADB22AE3B59000FB19B6 /* LostPetCardModel.swift in Sources */,
 				D81A44CD2B398C9100DC0C49 /* NotificationTableViewCell.swift in Sources */,
 				D822CE622B7CBCC300C73C05 /* CountryManager.swift in Sources */,
 				58D4EBF62B72380200F79810 /* TextFieldExtension.swift in Sources */,
+				D8F6FE902B83605E0094304E /* ColorCollectionViewFirstStepCreateAdView.swift in Sources */,
 				D8F70E9D2AEC1E47006543F0 /* STTabbar.swift in Sources */,
 				D84999972B8206F7006A8070 /* MainInfoAboutPetAdView.swift in Sources */,
 				5873E3A22ADB190200F51501 /* SceneDelegate.swift in Sources */,

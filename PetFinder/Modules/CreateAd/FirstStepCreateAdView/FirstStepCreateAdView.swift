@@ -7,15 +7,6 @@
 
 import SwiftUI
 
-struct SecondVC: UIViewControllerRepresentable {
-    func makeUIViewController(context: Context) -> SecondCreateViewController {
-        return SecondCreateViewController()
-    }
-
-    func updateUIViewController(_ uiViewController: SecondCreateViewController, context: Context) {
-    }
-}
-
 struct FirstStepCreateAdView: View {
     @Environment(\.dismiss) var dismiss
     @State private var isPresented = false
@@ -51,11 +42,9 @@ struct FirstStepCreateAdView: View {
                     .padding(.leading, 16)
                     .padding(.trailing, 15)
                     .padding(.bottom, 10)
-                    .fullScreenCover(isPresented: $isPresented){
-                        SecondVC()
-                            .ignoresSafeArea()
+                    .fullScreenCover(isPresented: $isPresented) {
+                        SecondStepCreateAdView()
                     }
-               
             }
             .background(Color(PFAssets.background.color))
         }
