@@ -9,14 +9,15 @@ import SwiftUI
 
 struct CustomOrangeButton: View {
     var action: () -> Void
+    @State var text: String
     var body: some View {
         VStack {
             Button(action: {
                 action()
             }) {
-                Text("Применить")
+                Text(text)
                     .foregroundColor(Color(PFAssets.white.color))
-                    .font(.init(PFFontFamily.SFProText.semibold.font(size: 16)))
+                    .font(.init(PFFontFamily.SFProText.semibold.font(size: 18)))
                     .padding(.vertical, 16)
                     .padding(.horizontal, 10)
             }
