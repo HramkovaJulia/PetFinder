@@ -141,7 +141,7 @@ extension RegisterViewController: UITableViewDelegate, UITableViewDataSource {
         case 4:
             let cell: ButtonTableViewCell = tableView.dequeueReusableCell(withIdentifier: ButtonTableViewCell.identifier) as! ButtonTableViewCell
                 cell.didTap = { [weak self] in
-                    let vc = MainViewController()
+                    let vc = CustomTabBarControllerViewController()
                     self?.navigationController?.pushViewController(vc, animated: true)
                 }
             return cell

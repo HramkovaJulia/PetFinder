@@ -25,7 +25,7 @@ struct CustomDropDownTexFieldView: View {
                                     .font(.init(PFFontFamily.SFProText.light.swiftUIFont(size: 14)))
                                     .foregroundColor(Color(PFAssets.black.color))
                                     .onTapGesture {
-                                        isExpanded = false
+                                        isExpanded.toggle()
                                         selectedText = listData[index]
                                         
                                     }
@@ -35,11 +35,13 @@ struct CustomDropDownTexFieldView: View {
                         .foregroundColor(selectedText == placeholderText  ? Color(PFAssets.darkGray.color) : Color(PFAssets.black.color))
                         .padding()
                         .background(Color(PFAssets.white.color))
+                        .fixedSize(horizontal: false, vertical: true)
                         .overlay(
                             RoundedRectangle(cornerRadius: 25)
                                 .stroke(selectedText == placeholderText ?  .clear : Color(PFAssets.blue.color))
                         )
                         .cornerRadius(25)
+                        
                     }
                     Spacer()
                 }

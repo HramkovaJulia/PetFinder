@@ -10,10 +10,9 @@ import SwiftUI
 struct SortView: View {
     @State var massive: [[String]] = [["По удаленности", "Объявления ближе к указанной точке геолокации"], ["По дате публикации", "Самые свежие объявления"]]
     @State var selectedCell: Int? = nil
-    var dismiss: (() -> Void)
     var body: some View {
         VStack {
-            SortTopView(dismiss: dismiss)
+            SortTopView()
             Divider()
                 .padding(.horizontal, 16)
                 .padding(.top, 20)
@@ -37,7 +36,6 @@ struct SortView: View {
 }
 
 struct SortTopView: View {
-    var dismiss: (() -> Void)
     var body: some View {
         HStack {
             Text("Сортировка")
@@ -46,7 +44,6 @@ struct SortTopView: View {
                 .padding(.top, 24)
             Spacer()
             Button(action: {
-                dismiss()
             }) {
                 Image(uiImage: PFAssets.sortClose.image)
             }

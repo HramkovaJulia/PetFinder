@@ -14,8 +14,7 @@ struct SelectTypePetView: View {
                 .font(.init(PFFontFamily.SFProText.medium.font(size: 20)))
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .padding(.bottom, 8)
-            AnimalCollectinView(showSortView: {
-            }, massiveCell: [ ["dog","Собаки"], ["cat","Кошки"], ["bird","Птицы"], ["mouse","Грызуны"], ["others","Прочее"]])
+            AnimalCollectinView(massiveCell: [ ["dog","Собаки"], ["cat","Кошки"], ["bird","Птицы"], ["mouse","Грызуны"], ["others","Прочее"]])
         }
     }
 }

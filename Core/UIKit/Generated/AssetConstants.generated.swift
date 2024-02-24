@@ -58,6 +58,7 @@ public enum PFAssets {
   public static let dropdownButton = ImageAsset(name: "dropdownButton")
   public static let exitProfile = ImageAsset(name: "exitProfile")
   public static let favoriteButton = ImageAsset(name: "favoriteButton")
+  public static let filters = ImageAsset(name: "filters")
   public static let findingPet = ImageAsset(name: "findingPet")
   public static let firstImage = ImageAsset(name: "firstImage")
   public static let fosterButton = ImageAsset(name: "fosterButton")
