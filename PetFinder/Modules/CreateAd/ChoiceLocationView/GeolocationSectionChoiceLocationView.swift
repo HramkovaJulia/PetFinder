@@ -20,9 +20,9 @@ struct GeolocationSectionChoiceLocationView: View {
                     .padding(.bottom, 8)
                 CurrentContryButtonChoiceLocationView()
                     .padding(.bottom, 12)
-                CustomDropDownTexFieldView(selectedText: "", placeholderText: "Адрес местонахождения или пропажи")
-                    .frame(maxHeight: 50)
-                    .padding(.bottom, 10)
+                    CustomDropDownTexFieldView(selectedText: "", placeholderText: "Адрес местонахождения или пропажи")
+                
+
                 ShowMapButtonChoiceLocationView()
                 Divider()
                     .padding(.vertical, 18)
@@ -100,7 +100,7 @@ struct CustomTextEditorSectionChoiceLocationView: View {
     }
 }
 
-    
+
 #Preview {
     GeolocationSectionChoiceLocationView()
 }

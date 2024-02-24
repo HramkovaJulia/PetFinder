@@ -68,6 +68,10 @@
 		D84999972B8206F7006A8070 /* MainInfoAboutPetAdView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D84999962B8206F7006A8070 /* MainInfoAboutPetAdView.swift */; };
 		D84999992B820A46006A8070 /* AdditionalInfoAboutPetAdView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D84999982B820A46006A8070 /* AdditionalInfoAboutPetAdView.swift */; };
 		D849999B2B82141C006A8070 /* MapInfoInfoAboutPetAdView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D849999A2B82141C006A8070 /* MapInfoInfoAboutPetAdView.swift */; };
+		D86B23122B8A560E00DFF2FD /* AdCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D86B23112B8A560E00DFF2FD /* AdCellView.swift */; };
+		D86B23152B8A567F00DFF2FD /* AdNewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D86B23142B8A567F00DFF2FD /* AdNewView.swift */; };
+		D86B23172B8A600900DFF2FD /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D86B23162B8A600900DFF2FD /* MainView.swift */; };
+		D86B23192B8A651100DFF2FD /* TopSectionMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D86B23182B8A651100DFF2FD /* TopSectionMainView.swift */; };
 		D86DF0D62B6EDD0600A65826 /* ChoiceTypeAd.swift in Sources */ = {isa = PBXBuildFile; fileRef = D86DF0D52B6EDD0600A65826 /* ChoiceTypeAd.swift */; };
 		D86EA8842ADBCAE900B8D961 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = D86EA8832ADBCAE900B8D961 /* Podfile */; };
 		D86EA8882ADBD10300B8D961 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D86EA8872ADBD10300B8D961 /* MainViewController.swift */; };
@@ -175,6 +179,10 @@
 		D84999962B8206F7006A8070 /* MainInfoAboutPetAdView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainInfoAboutPetAdView.swift; sourceTree = "<group>"; };
 		D84999982B820A46006A8070 /* AdditionalInfoAboutPetAdView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdditionalInfoAboutPetAdView.swift; sourceTree = "<group>"; };
 		D849999A2B82141C006A8070 /* MapInfoInfoAboutPetAdView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapInfoInfoAboutPetAdView.swift; sourceTree = "<group>"; };
+		D86B23112B8A560E00DFF2FD /* AdCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdCellView.swift; sourceTree = "<group>"; };
+		D86B23142B8A567F00DFF2FD /* AdNewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdNewView.swift; sourceTree = "<group>"; };
+		D86B23162B8A600900DFF2FD /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		D86B23182B8A651100DFF2FD /* TopSectionMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopSectionMainView.swift; sourceTree = "<group>"; };
 		D86DF0D52B6EDD0600A65826 /* ChoiceTypeAd.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChoiceTypeAd.swift; sourceTree = "<group>"; };
 		D86EA8832ADBCAE900B8D961 /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		D86EA8872ADBD10300B8D961 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -546,6 +554,17 @@
 			path = MedecineView;
 			sourceTree = "<group>";
 		};
+		D86B23102B8A55F700DFF2FD /* AdsView */ = {
+			isa = PBXGroup;
+			children = (
+				D86B23112B8A560E00DFF2FD /* AdCellView.swift */,
+				D86B23142B8A567F00DFF2FD /* AdNewView.swift */,
+				D86B23162B8A600900DFF2FD /* MainView.swift */,
+				D86B23182B8A651100DFF2FD /* TopSectionMainView.swift */,
+			);
+			path = AdsView;
+			sourceTree = "<group>";
+		};
 		D86EA8822ADBCA8E00B8D961 /* Delegate */ = {
 			isa = PBXGroup;
 			children = (
@@ -596,6 +615,7 @@
 		D898EFB42B76BD8300D10EA0 /* MainVC */ = {
 			isa = PBXGroup;
 			children = (
+				D86B23102B8A55F700DFF2FD /* AdsView */,
 				D898EFB92B76BE7C00D10EA0 /* AdsCollectionView */,
 				D898EFB62B76BE2000D10EA0 /* CustomSearchTextField */,
 				D898EFB52B76BDD500D10EA0 /* MainViewController */,
@@ -957,6 +977,7 @@
 				D81A44CA2B398B1400DC0C49 /* NotificationMode.swift in Sources */,
 				D86DF0D62B6EDD0600A65826 /* ChoiceTypeAd.swift in Sources */,
 				D86EA8882ADBD10300B8D961 /* MainViewController.swift in Sources */,
+				D86B23122B8A560E00DFF2FD /* AdCellView.swift in Sources */,
 				D822CE672B7D441500C73C05 /* ChoiceFilterTypeAd.swift in Sources */,
 				D86EADB42AE3B69000FB19B6 /* AdsCollectionViewCell.swift in Sources */,
 				D822CE732B7DFE1300C73C05 /* FilterSectionPlaceFinding.swift in Sources */,
@@ -981,6 +1002,7 @@
 				D8071AA72B80E51F00BAECFE /* PhotoScrollView.swift in Sources */,
 				D8B3BB322AFA974F001259A2 /* ServicesTableView.swift in Sources */,
 				D8F6FE922B8361780094304E /* SpectialNoteViewFirstStepCreateAdView.swift in Sources */,
+				D86B23192B8A651100DFF2FD /* TopSectionMainView.swift in Sources */,
 				025CB28F2B3837A200AEDAC0 /* RegisterViewController.swift in Sources */,
 				D8071A9B2B80A33700BAECFE /* FirstStepCreateAdView.swift in Sources */,
 				D822CE712B7DFCDF00C73C05 /* FilterTypeAd.swift in Sources */,
@@ -1025,6 +1047,8 @@
 				58D4EBF62B72380200F79810 /* TextFieldExtension.swift in Sources */,
 				D8F6FE902B83605E0094304E /* ColorCollectionViewFirstStepCreateAdView.swift in Sources */,
 				D8F70E9D2AEC1E47006543F0 /* STTabbar.swift in Sources */,
+				D86B23152B8A567F00DFF2FD /* AdNewView.swift in Sources */,
+				D86B23172B8A600900DFF2FD /* MainView.swift in Sources */,
 				D84999972B8206F7006A8070 /* MainInfoAboutPetAdView.swift in Sources */,
 				5873E3A22ADB190200F51501 /* SceneDelegate.swift in Sources */,
 				58E02B922B6FF4E700058D21 /* AssetConstants.generated.swift in Sources */,

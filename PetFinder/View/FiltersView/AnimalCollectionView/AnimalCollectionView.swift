@@ -8,14 +8,13 @@
 import SwiftUI
 
 struct AnimalCollectinView: View {
-    var showSortView: (() -> Void)
     @State private var selectedType: String = ""
     @State var massiveCell: [[String]]
     var body: some View {
         ScrollView(.horizontal, showsIndicators: false) {
             HStack(spacing: 17) {
                 ForEach(massiveCell, id: \.self) { data in
-                    AnimalCell(selectedType: $selectedType, imageName: data[0], labelText: data[1], showSortView: showSortView)
+                    AnimalCell(selectedType: $selectedType, imageName: data[0], labelText: data[1])
                         .cornerRadius(16)
                 }
             }
@@ -27,7 +26,7 @@ struct AnimalCell: View {
     @Binding var selectedType: String
     @State var imageName: String
     @State var labelText: String
-    var showSortView: (() -> Void)
+    @State var isPresented: Bool = false
 
     private var backgroundColor: Color {
         selectedType == imageName ? Color(PFAssets.blue.color): Color.clear
@@ -55,12 +54,16 @@ struct AnimalCell: View {
               RoundedRectangle(cornerRadius: 16)
                   .stroke(borderColor, lineWidth: 5)
           )
+        .sheet(isPresented: $isPresented, content: {
+            SortView()
+        })
         .onTapGesture {
             if imageName != "sortImage" {
                 selectedType = imageName
+                isPresented = false
             } else {
                 selectedType = ""
-                showSortView()
+                isPresented = true
             }
         }
     }
