@@ -16,7 +16,7 @@ struct AdView: View {
                     MainInfoAboutPetAdView()
                         .background(Color(PFAssets.white.color))
                         .cornerRadius(12)
-                        .padding(.top, 12)
+                        .padding(.top, 14)
                         .padding(.horizontal, 15)
                     AdditionalInfoAboutPetAdView()
                         .background(Color(PFAssets.white.color))

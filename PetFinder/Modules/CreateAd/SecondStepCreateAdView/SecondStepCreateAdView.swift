@@ -59,7 +59,8 @@ struct SecondStepCreateAdView: View {
                 .padding(.trailing, 15)
                 .padding(.bottom, 10)
                 .fullScreenCover(isPresented: $isPresented) {
-                    SecondStepCreateAdView()
+                    ChoiceLocationView()
+                        .background(Color(PFAssets.background.color))
                 }
                 
             }

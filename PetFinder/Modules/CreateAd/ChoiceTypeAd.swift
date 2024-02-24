@@ -7,14 +7,6 @@
 import SwiftUI
 import UIKit
 
-struct AdvertVC: UIViewControllerRepresentable {
-    func makeUIViewController(context: Context) -> CreatePetAdvertViewController {
-        return CreatePetAdvertViewController()
-    }
-
-    func updateUIViewController(_ uiViewController: CreatePetAdvertViewController, context: Context) {
-    }
-}
 
 struct ChoiceTypeAd: View {
     var dismissAction: () -> Void
