@@ -9,6 +9,7 @@ import SwiftUI
 import MapKit
 
 struct AdView: View {
+    
     var body: some View {
         ZStack {
             ScrollView {

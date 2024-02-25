@@ -9,19 +9,16 @@ import SwiftUI
 
 struct ImageScrollView: View {
     @State private var currentTab = 0
+    @State var images: [UIImage]
     
     var body: some View {
         TabView(selection: $currentTab,
                 content:  {
-            Image(uiImage: PFAssets.dogBack.image)
-                .resizable()
-                .tag(0)
-            Image(uiImage: PFAssets.dogBack.image)
-                .resizable()
-                .tag(1)
-            Image(uiImage: PFAssets.dogBack.image)
-                .resizable()
-                .tag(2)
+            ForEach(0 ..< images.count, id: \.self){ index in
+                Image(uiImage: images[index])
+                    .resizable()
+                    .tag(index)
+            }
         })
         .tabViewStyle(PageTabViewStyle())
         .indexViewStyle(PageIndexViewStyle(backgroundDisplayMode: .interactive))
@@ -29,5 +26,13 @@ struct ImageScrollView: View {
 }
 
 #Preview {
-    ImageScrollView()
+    ImageScrollView(images: [
+        PFAssets.dogBack.image,
+        PFAssets.dogBack.image,
+        PFAssets.dogBack.image
+    ])
 }
+
+//enum ImageScrollViewModel {
+//    let images: [UIImage]
+//}

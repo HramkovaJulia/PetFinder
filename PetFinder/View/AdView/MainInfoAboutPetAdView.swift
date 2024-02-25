@@ -9,19 +9,19 @@ import SwiftUI
 
 struct MainInfoAboutPetAdView: View {
     var body: some View {
-        ZStack {
-            VStack(spacing: 14) {
-                ImageScrollView()
-                    .frame(height: 295)
-                NameSexMainInfoAboutPetAdView()
-                    .padding(.leading, 14)
-                MedecineStatusMainInfoAboutPetAdView()
-                    .padding(.horizontal, 14)
-                
-                DescriptionMainInfoAboutPetAdView()
-                    .padding(.horizontal, 14)
-                    .padding(.bottom, 14)
-            }
+        
+        VStack(spacing: 14) {
+            ImageScrollView(images: [])
+                .frame(height: 295)
+            NameSexMainInfoAboutPetAdView()
+                .padding(.leading, 14)
+            MedecineStatusMainInfoAboutPetAdView()
+                .padding(.horizontal, 14)
+            
+            DescriptionMainInfoAboutPetAdView()
+                .padding(.horizontal, 14)
+                .padding(.bottom, 14)
+            
         }
     }
 }
@@ -89,7 +89,7 @@ struct MedecineStatusMainInfoAboutPetAdView: View {
                 RoundedRectangle(cornerRadius: 10)
                     .stroke(Color(PFAssets.red.color), lineWidth: 1), alignment: .center
             )
-
+            
             
             HStack {
                 Image(uiImage: PFAssets.orangeSelect.image)
