@@ -38,6 +38,7 @@
 		58D4EBFB2B72604500F79810 /* CountryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58D4EBFA2B72604500F79810 /* CountryTableViewCell.swift */; };
 		58E02B922B6FF4E700058D21 /* AssetConstants.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58E02B902B6FF4E700058D21 /* AssetConstants.generated.swift */; };
 		58E02B932B6FF4E700058D21 /* Fonts.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58E02B912B6FF4E700058D21 /* Fonts.generated.swift */; };
+		7D53A6432B8BFAE100A7C74A /* PostModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D53A6422B8BFAE100A7C74A /* PostModel.swift */; };
 		D8071A9B2B80A33700BAECFE /* FirstStepCreateAdView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8071A9A2B80A33700BAECFE /* FirstStepCreateAdView.swift */; };
 		D8071A9E2B80A79300BAECFE /* SelectTypePetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8071A9D2B80A79300BAECFE /* SelectTypePetView.swift */; };
 		D8071AA02B80A97500BAECFE /* DescriptionsFirstStepCreateAdView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8071A9F2B80A97500BAECFE /* DescriptionsFirstStepCreateAdView.swift */; };
@@ -148,6 +149,7 @@
 		58E02B902B6FF4E700058D21 /* AssetConstants.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssetConstants.generated.swift; sourceTree = "<group>"; };
 		58E02B912B6FF4E700058D21 /* Fonts.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fonts.generated.swift; sourceTree = "<group>"; };
 		58EDA3452B387A9A00F1D716 /* swiftgen.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = swiftgen.yml; sourceTree = "<group>"; };
+		7D53A6422B8BFAE100A7C74A /* PostModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostModel.swift; sourceTree = "<group>"; };
 		BF7A263FFCB875A6E2D63AA6 /* Pods-PetFinder.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PetFinder.debug.xcconfig"; path = "Target Support Files/Pods-PetFinder/Pods-PetFinder.debug.xcconfig"; sourceTree = "<group>"; };
 		D8071A9A2B80A33700BAECFE /* FirstStepCreateAdView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstStepCreateAdView.swift; sourceTree = "<group>"; };
 		D8071A9D2B80A79300BAECFE /* SelectTypePetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectTypePetView.swift; sourceTree = "<group>"; };
@@ -600,6 +602,7 @@
 			children = (
 				D86EADB12AE3B59000FB19B6 /* LostPetCardModel.swift */,
 				D81A44C92B398B1400DC0C49 /* NotificationMode.swift */,
+				7D53A6422B8BFAE100A7C74A /* PostModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1031,6 +1034,7 @@
 				D8F6FE8A2B835BD80094304E /* SecondStepCreateAdView.swift in Sources */,
 				D8B3BB302AFA8950001259A2 /* ServicesViewController.swift in Sources */,
 				5801E20C2B736AE600DF23FB /* ButtonTableViewCell.swift in Sources */,
+				7D53A6432B8BFAE100A7C74A /* PostModel.swift in Sources */,
 				D81A44C62B3987A600DC0C49 /* NotificationsViewController.swift in Sources */,
 				587DA3552B73DB1F0001DE45 /* DoublePasswordTableViewCell.swift in Sources */,
 				D8DE97F72B35F9FE00D82318 /* MapView.swift in Sources */,

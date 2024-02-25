@@ -13,7 +13,7 @@ struct MainInfoAboutPetAdView: View {
         VStack(spacing: 14) {
             ImageScrollView(images: [])
                 .frame(height: 295)
-            NameSexMainInfoAboutPetAdView()
+            NameSexMainInfoAboutPetAdView(imageOfSex: PFAssets.menSex.image,titleOfPost: "Найдена собака с таким именем", Date: "Сегодня 16:40")
                 .padding(.leading, 14)
             MedecineStatusMainInfoAboutPetAdView()
                 .padding(.horizontal, 14)
@@ -27,10 +27,15 @@ struct MainInfoAboutPetAdView: View {
 }
 
 struct NameSexMainInfoAboutPetAdView: View {
+    
+    @State var imageOfSex: UIImage
+    @State var titleOfPost: String
+    @State var Date: String
+    
     var body: some View {
         HStack(spacing: 10) {
             VStack {
-                Image(uiImage: PFAssets.menSex.image)
+                Image(uiImage: imageOfSex)
                     .padding(.top, 12)
                     .padding(.bottom, 10)
                     .padding(.horizontal, 11)
@@ -39,9 +44,9 @@ struct NameSexMainInfoAboutPetAdView: View {
             .background(Color(PFAssets.white.color))
             .cornerRadius(50)
             VStack(alignment: .leading, spacing: 4) {
-                Text("Найдена собака c длинным именем")
+                Text(titleOfPost)
                     .font(.init(PFFontFamily.SFProText.semibold.swiftUIFont(size: 20)))
-                Text("Сегодня, 16:40")
+                Text(Date)
                     .font(.init(PFFontFamily.SFProText.regular.swiftUIFont(size: 12)))
                     .foregroundColor(Color(PFAssets.darkGray.color))
             }
@@ -161,5 +166,5 @@ struct ButtonStackMainInfoAboutPetAdView: View {
 
 
 #Preview {
-    MainInfoAboutPetAdView()
+    NameSexMainInfoAboutPetAdView(imageOfSex: PFAssets.menSex.image,titleOfPost: "Найдена собака с длинным именем", Date: "Сегодня 16:40")
 }
