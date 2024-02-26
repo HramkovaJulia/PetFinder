@@ -38,7 +38,7 @@ struct MedecineStatusMainInfoAboutPetAdModel {
 }
 
 struct DescriptionMainInfoAboutPetAdModel {
-    
+    var description: String
 }
 
 struct AdditionalInfoAboutPetAdModel {

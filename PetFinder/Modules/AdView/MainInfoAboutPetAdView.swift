@@ -18,7 +18,7 @@ struct MainInfoAboutPetAdView: View {
             MedecineStatusMainInfoAboutPetAdView(vaccinated: true, sterilized: true)
                 .padding(.horizontal, 14)
             
-            DescriptionMainInfoAboutPetAdView()
+            DescriptionMainInfoAboutPetAdView(description: "Пропал пёс в районе центрального рынка. На нём был красный ошейник с косточкой, откликается на кличку Джек, понимает много команд. Очень дружелюбный, ко всем подходит, любит давать лапу. Очень прошу помочь найти любимца нашей семьи.")
                 .padding(.horizontal, 14)
                 .padding(.bottom, 14)
             
@@ -56,10 +56,11 @@ struct NameSexMainInfoAboutPetAdView: View {
 }
 
 struct DescriptionMainInfoAboutPetAdView: View {
+    @State var description: String
     @State private var lineLimit = 3
     var body: some View {
         VStack(alignment: .leading, spacing: 4) {
-            Text("Пропал пёс в районе центрального рынка. На нём был красный ошейник с косточкой, откликается на кличку Джек, понимает много команд. Очень дружелюбный, ко всем подходит, любит давать лапу. Очень прошу помочь найти любимца нашей семьи.")
+            Text(description)
                 .font(.init(PFFontFamily.SFProText.regular.swiftUIFont(size: 14)))
                 .lineLimit(lineLimit)
             Button(action: {
@@ -205,17 +206,19 @@ struct MedecineStatusMainInfoAboutPetAdView: View {
         
         VStack{
             
-            MainInfoAboutPetAdView()
+            DescriptionMainInfoAboutPetAdView(description: "Пропал пёс в районе центрального рынка. На нём был красный ошейник с косточкой, откликается на кличку Джек, понимает много команд. Очень дружелюбный, ко всем подходит, любит давать лапу. Очень прошу помочь найти любимца нашей семьи.")
             
             VStack{
                 Color.red
-            }.frame(height: 100)
+            }.frame(height: 10)
+            
+           
             
             NameSexMainInfoAboutPetAdView(imageOfSex: PFAssets.menSex.image,titleOfPost: "Найдена собака с длинным именем", Date: "Сегодня 16:40")
             
             VStack{
                 Color.red
-            }.frame(height: 100)
+            }.frame(height: 10)
             
             MedecineStatusMainInfoAboutPetAdView(vaccinated: true, sterilized: true)
         }
