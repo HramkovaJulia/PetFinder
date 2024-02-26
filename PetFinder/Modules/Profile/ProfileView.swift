@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ProfileSwiftUIView: View {
+struct ProfileView: View {
     var body: some View {
         ZStack {
             BackgroundProfileView()
@@ -149,5 +149,5 @@ struct UserSettingButton: View {
 }
 
 #Preview {
-    ProfileSwiftUIView()
+    ProfileView()
 }
