@@ -33,7 +33,8 @@ struct NameSexMainInfoAboutPetAdModel {
 }
 
 struct MedecineStatusMainInfoAboutPetAdModel {
-    
+    var vaccinated: Bool
+    var sterilized: Bool
 }
 
 struct DescriptionMainInfoAboutPetAdModel {
