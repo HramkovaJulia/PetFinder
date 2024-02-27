@@ -125,27 +125,18 @@ struct Sterilized: View {
 }
 
 struct MedecineStatusMainInfoAboutPetAdView: View {
-    
     @State var vaccinated: Bool
     @State var sterilized: Bool
-    
     var body: some View {
-      
         switch (vaccinated, sterilized) {
-            
         case (true, false): Vaccinated()
-            
         case (false , true): Sterilized()
-            
         case (true,true):
             HStack (spacing: 14){
                 Vaccinated()
                 Sterilized()
             }
-        
-            
-        case (false,false): fatalError()
-           
+        case (false,false): VStack{}.frame(width: 0,height: 0)
         }
     }
 }
