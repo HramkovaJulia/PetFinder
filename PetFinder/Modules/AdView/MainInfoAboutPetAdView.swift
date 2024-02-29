@@ -8,34 +8,34 @@
 import SwiftUI
 
 struct MainInfoAboutPetAdView: View {
+    
+    @State var model: MainInfoAboutPetAdModel
+    
     var body: some View {
         
         VStack(spacing: 14) {
-            ImageScrollView(images: [])
+            ImageScrollView(model: model.imageScrollModel)
                 .frame(height: 295)
-            NameSexMainInfoAboutPetAdView(imageOfSex: PFAssets.menSex.image,titleOfPost: "Найдена собака с таким именем", Date: "Сегодня 16:40")
+            NameSexMainInfoAboutPetAdView(model: model.nameSexMainInfoAboutPetModel)
                 .padding(.leading, 14)
-            MedecineStatusMainInfoAboutPetAdView(vaccinated: true, sterilized: true)
+            MedecineStatusMainInfoAboutPetAdView(model: model.medecineStatusMainInfoAboutPetAdModel)
                 .padding(.horizontal, 14)
             
-            DescriptionMainInfoAboutPetAdView(description: "Пропал пёс в районе центрального рынка. На нём был красный ошейник с косточкой, откликается на кличку Джек, понимает много команд. Очень дружелюбный, ко всем подходит, любит давать лапу. Очень прошу помочь найти любимца нашей семьи.")
+            DescriptionMainInfoAboutPetAdView(model: model.descriptionMainInfoAboutPetAdModel)
                 .padding(.horizontal, 14)
                 .padding(.bottom, 14)
-            
         }
     }
 }
 
 struct NameSexMainInfoAboutPetAdView: View {
     
-    @State var imageOfSex: UIImage
-    @State var titleOfPost: String
-    @State var Date: String
+    @State var model: NameSexMainInfoAboutPetAdModel
     
     var body: some View {
         HStack(spacing: 10) {
             VStack {
-                Image(uiImage: imageOfSex)
+                Image(uiImage: model.imageOfSex)
                     .padding(.top, 12)
                     .padding(.bottom, 10)
                     .padding(.horizontal, 11)
@@ -44,9 +44,9 @@ struct NameSexMainInfoAboutPetAdView: View {
             .background(Color(PFAssets.white.color))
             .cornerRadius(50)
             VStack(alignment: .leading, spacing: 4) {
-                Text(titleOfPost)
+                Text(model.titleOfPost)
                     .font(.init(PFFontFamily.SFProText.semibold.swiftUIFont(size: 20)))
-                Text(Date)
+                Text(model.Date)
                     .font(.init(PFFontFamily.SFProText.regular.swiftUIFont(size: 12)))
                     .foregroundColor(Color(PFAssets.darkGray.color))
             }
@@ -56,11 +56,13 @@ struct NameSexMainInfoAboutPetAdView: View {
 }
 
 struct DescriptionMainInfoAboutPetAdView: View {
-    @State var description: String
+    
+    @State var model: DescriptionMainInfoAboutPetAdModel
     @State private var lineLimit = 3
+    
     var body: some View {
         VStack(alignment: .leading, spacing: 4) {
-            Text(description)
+            Text(model.description)
                 .font(.init(PFFontFamily.SFProText.regular.swiftUIFont(size: 14)))
                 .lineLimit(lineLimit)
             Button(action: {
@@ -125,10 +127,11 @@ struct Sterilized: View {
 }
 
 struct MedecineStatusMainInfoAboutPetAdView: View {
-    @State var vaccinated: Bool
-    @State var sterilized: Bool
+    
+    @State var model: MedecineStatusMainInfoAboutPetAdModel
+
     var body: some View {
-        switch (vaccinated, sterilized) {
+        switch (model.vaccinated, model.sterilized) {
         case (true, false): Vaccinated()
         case (false , true): Sterilized()
         case (true,true):
@@ -193,29 +196,29 @@ struct MedecineStatusMainInfoAboutPetAdView: View {
     }
     
     
-    #Preview {
-        
-        VStack{
-            
-            DescriptionMainInfoAboutPetAdView(description: "Пропал пёс в районе центрального рынка. На нём был красный ошейник с косточкой, откликается на кличку Джек, понимает много команд. Очень дружелюбный, ко всем подходит, любит давать лапу. Очень прошу помочь найти любимца нашей семьи.")
-            
-            VStack{
-                Color.red
-            }.frame(height: 10)
-            
-           
-            
-            NameSexMainInfoAboutPetAdView(imageOfSex: PFAssets.menSex.image,titleOfPost: "Найдена собака с длинным именем", Date: "Сегодня 16:40")
-            
-            VStack{
-                Color.red
-            }.frame(height: 10)
-            
-            MedecineStatusMainInfoAboutPetAdView(vaccinated: true, sterilized: true)
-        }
-        
-        
-    }
+//    #Preview {
+//        
+//        VStack{
+//            
+//            DescriptionMainInfoAboutPetAdView(description: "Пропал пёс в районе центрального рынка. На нём был красный ошейник с косточкой, откликается на кличку Джек, понимает много команд. Очень дружелюбный, ко всем подходит, любит давать лапу. Очень прошу помочь найти любимца нашей семьи.")
+//            
+//            VStack{
+//                Color.red
+//            }.frame(height: 10)
+//            
+//           
+//            
+//            NameSexMainInfoAboutPetAdView(imageOfSex: PFAssets.menSex.image,titleOfPost: "Найдена собака с длинным именем", Date: "Сегодня 16:40")
+//            
+//            VStack{
+//                Color.red
+//            }.frame(height: 10)
+//            
+//            MedecineStatusMainInfoAboutPetAdView(vaccinated: true, sterilized: true)
+//        }
+//        
+//        
+//    }
 
 
 

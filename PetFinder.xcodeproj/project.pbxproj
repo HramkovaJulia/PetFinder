@@ -39,6 +39,9 @@
 		58E02B922B6FF4E700058D21 /* AssetConstants.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58E02B902B6FF4E700058D21 /* AssetConstants.generated.swift */; };
 		58E02B932B6FF4E700058D21 /* Fonts.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58E02B912B6FF4E700058D21 /* Fonts.generated.swift */; };
 		7D53A6432B8BFAE100A7C74A /* PostModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D53A6422B8BFAE100A7C74A /* PostModel.swift */; };
+		7D53A6452B90B6BE00A7C74A /* AdInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D53A6442B90B6BE00A7C74A /* AdInteractor.swift */; };
+		7D53A6472B90B6EF00A7C74A /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D53A6462B90B6EF00A7C74A /* Router.swift */; };
+		7D53A6492B90B99500A7C74A /* AdViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D53A6482B90B99400A7C74A /* AdViewPresenter.swift */; };
 		D8001C3C2B8C9B6A00EB3FDC /* SortTopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8001C3B2B8C9B6A00EB3FDC /* SortTopView.swift */; };
 		D8001C3E2B8C9B8100EB3FDC /* TypeSortButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8001C3D2B8C9B8100EB3FDC /* TypeSortButton.swift */; };
 		D8071A9B2B80A33700BAECFE /* FirstStepCreateAdView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8071A9A2B80A33700BAECFE /* FirstStepCreateAdView.swift */; };
@@ -132,6 +135,9 @@
 		58E02B912B6FF4E700058D21 /* Fonts.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fonts.generated.swift; sourceTree = "<group>"; };
 		58EDA3452B387A9A00F1D716 /* swiftgen.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = swiftgen.yml; sourceTree = "<group>"; };
 		7D53A6422B8BFAE100A7C74A /* PostModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostModel.swift; sourceTree = "<group>"; };
+		7D53A6442B90B6BE00A7C74A /* AdInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdInteractor.swift; sourceTree = "<group>"; };
+		7D53A6462B90B6EF00A7C74A /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		7D53A6482B90B99400A7C74A /* AdViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdViewPresenter.swift; sourceTree = "<group>"; };
 		BF7A263FFCB875A6E2D63AA6 /* Pods-PetFinder.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PetFinder.debug.xcconfig"; path = "Target Support Files/Pods-PetFinder/Pods-PetFinder.debug.xcconfig"; sourceTree = "<group>"; };
 		D8001C3B2B8C9B6A00EB3FDC /* SortTopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortTopView.swift; sourceTree = "<group>"; };
 		D8001C3D2B8C9B8100EB3FDC /* TypeSortButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeSortButton.swift; sourceTree = "<group>"; };
@@ -231,6 +237,7 @@
 				D898EFB42B76BD8300D10EA0 /* MainScreen */,
 				587DA3402B7381A50001DE45 /* Authorization */,
 				587DA33F2B73819B0001DE45 /* Onboarding */,
+				7D53A6462B90B6EF00A7C74A /* Router.swift */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -496,6 +503,8 @@
 			isa = PBXGroup;
 			children = (
 				D84999912B81E551006A8070 /* AdView.swift */,
+				7D53A6442B90B6BE00A7C74A /* AdInteractor.swift */,
+				7D53A6482B90B99400A7C74A /* AdViewPresenter.swift */,
 				D84999932B81E57A006A8070 /* ImageScrollView */,
 				D84999962B8206F7006A8070 /* MainInfoAboutPetAdView.swift */,
 				D849999A2B82141C006A8070 /* MapInfoInfoAboutPetAdView.swift */,
@@ -610,8 +619,8 @@
 			children = (
 				D86DF0D52B6EDD0600A65826 /* ChoiceTypeAd.swift */,
 				D8F6FE932B83911D0094304E /* ChoiceLocationView */,
-				D8F6FE882B835BBC0094304E /* SecondStepCreateAdView */,
 				D8071A9C2B80A77000BAECFE /* FirstStepCreateAdView */,
+				D8F6FE882B835BBC0094304E /* SecondStepCreateAdView */,
 				D898EFAC2B6FFBF200D10EA0 /* SetupColorView */,
 			);
 			path = CreateAd;
@@ -831,6 +840,7 @@
 				D822CE7D2B7E087D00C73C05 /* FiltersAdditionallySectionView.swift in Sources */,
 				D8071AA72B80E51F00BAECFE /* PhotoScrollView.swift in Sources */,
 				D8F6FE922B8361780094304E /* SpectialNoteViewFirstStepCreateAdView.swift in Sources */,
+				7D53A6492B90B99500A7C74A /* AdViewPresenter.swift in Sources */,
 				D86B23192B8A651100DFF2FD /* TopSectionMainView.swift in Sources */,
 				025CB28F2B3837A200AEDAC0 /* RegisterViewController.swift in Sources */,
 				D8071A9B2B80A33700BAECFE /* FirstStepCreateAdView.swift in Sources */,
@@ -843,6 +853,7 @@
 				D8001C3E2B8C9B8100EB3FDC /* TypeSortButton.swift in Sources */,
 				D822CE7B2B7E05DA00C73C05 /* CustomDropDownButtonView.swift in Sources */,
 				D8F6FE972B83918A0094304E /* TopViewChoiceLocationView.swift in Sources */,
+				7D53A6472B90B6EF00A7C74A /* Router.swift in Sources */,
 				D8071A9E2B80A79300BAECFE /* SelectTypePetView.swift in Sources */,
 				D8071AA02B80A97500BAECFE /* DescriptionsFirstStepCreateAdView.swift in Sources */,
 				D86EADA72AE043C900FB19B6 /* CustomTabBarControllerViewController.swift in Sources */,
@@ -857,6 +868,7 @@
 				5801E20C2B736AE600DF23FB /* ButtonTableViewCell.swift in Sources */,
 				7D53A6432B8BFAE100A7C74A /* PostModel.swift in Sources */,
 				587DA3552B73DB1F0001DE45 /* DoublePasswordTableViewCell.swift in Sources */,
+				7D53A6452B90B6BE00A7C74A /* AdInteractor.swift in Sources */,
 				025CB2952B3837A200AEDAC0 /* AuthViewController.swift in Sources */,
 				D822CE782B7E040400C73C05 /* CustomTextFieldView.swift in Sources */,
 				D822CE692B7D59AE00C73C05 /* ColorCollection.swift in Sources */,

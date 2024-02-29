@@ -9,24 +9,27 @@ import SwiftUI
 import MapKit
 
 struct MapInfoInfoAboutPetAdView: View {
+    @State var model: MapInfoInfoAboutPetAdModel
+    
     var body: some View {
         VStack(spacing: 14) {
-            Text("Адрес пропажи")
+            Text(model.missingAddress)
                 .font(.init(PFFontFamily.SFProText.semibold.swiftUIFont(size: 18)))
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .padding([.top, .leading], 14)
-            PossitionButtonsMapInfoInfoAboutPetAdView()
+            PossitionButtonsMapInfoInfoAboutPetAdView(model: model.possitionButtonsMapInfoInfoAboutPetAdModel)
                 .padding(.horizontal, 14)
-            StackMapViewInfoInfoAboutPetAdView()
+            StackMapViewInfoInfoAboutPetAdView(model: model.stackMapViewInfoInfoAboutPetAdModel)
                 .padding(.horizontal,14)
                 .padding(.bottom, 14)
-                
+            
             
         }
     }
 }
 
 struct PossitionButtonsMapInfoInfoAboutPetAdView: View {
+    @State var model: PossitionButtonsMapInfoInfoAboutPetAdModel
     var body: some View {
         HStack {
             Button(action: {
@@ -47,6 +50,8 @@ struct PossitionButtonsMapInfoInfoAboutPetAdView: View {
 }
 
 struct StackMapViewInfoInfoAboutPetAdView: View {
+    
+    @State var model: StackMapViewInfoInfoAboutPetAdModel
     
     var body: some View {
         ZStack {
@@ -99,6 +104,7 @@ struct ButtonMapInfoInfoAboutPetAdView: View {
 struct MapViewInfoInfoAboutPetAdView: UIViewRepresentable {
     func makeUIView(context: Context) -> MKMapView {
         let mapView = MKMapView()
+        
         return mapView
     }
     
@@ -107,6 +113,6 @@ struct MapViewInfoInfoAboutPetAdView: UIViewRepresentable {
     }
 }
 
-#Preview {
-    MapInfoInfoAboutPetAdView()
-}
+//#Preview {
+//    MapInfoInfoAboutPetAdView()
+//}

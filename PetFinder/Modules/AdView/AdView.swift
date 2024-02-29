@@ -8,26 +8,32 @@
 import SwiftUI
 import MapKit
 
+protocol AdViewLogic: AnyObject {
+    
+}
+
 struct AdView: View {
+    
+    @State var model: PostModel
     
     var body: some View {
         ZStack {
             ScrollView {
                 VStack(spacing: 20) {
-                    MainInfoAboutPetAdView()
+                    MainInfoAboutPetAdView(model: model.mainInfoAboutPetModel)
                         .background(Color(PFAssets.white.color))
                         .cornerRadius(12)
                         .padding(.top, 14)
                         .padding(.horizontal, 15)
-                    AdditionalInfoAboutPetAdView()
+                    AdditionalInfoAboutPetAdView(model: model.additionalInfoAboutPetAdModel)
                         .background(Color(PFAssets.white.color))
                         .cornerRadius(12)
                         .padding(.horizontal, 15)
-                    MapInfoInfoAboutPetAdView()
+                    MapInfoInfoAboutPetAdView(model: model.mapInfoInfoAboutPetAdModel)
                         .background(Color(PFAssets.white.color))
                         .cornerRadius(12)
                         .padding(.horizontal, 15)
-                    SpecialnoteInfoAboutPetAdView()
+                    SpecialnoteInfoAboutPetAdView(model: model.specialnoteInfoAboutPetAdModel)
                         .background(Color(PFAssets.white.color))
                         .cornerRadius(12)
                         .padding(.horizontal, 15)
@@ -54,13 +60,16 @@ struct AdView: View {
 }
 
 struct SpecialnoteInfoAboutPetAdView: View {
+    
+    @State var model: SpecialnoteInfoAboutPetAdModel
+ 
     var body: some View {
         VStack(spacing: 12) {
             Text("Особые приметы")
                 .font(.init(PFFontFamily.SFProText.semibold.swiftUIFont(size: 18)))
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .padding([.top, .leading], 14)
-            Text("Красный ошейник с золотой косточкой. На косточке написана кличка. Есть белое пятно на спине.")
+            Text(model.specialSigns)
                 .padding(.horizontal, 14)
                 .padding(.bottom, 14)
                 .font(.init(PFFontFamily.SFProText.regular.swiftUIFont(size: 14)))
@@ -69,6 +78,4 @@ struct SpecialnoteInfoAboutPetAdView: View {
     }
 }
 
-#Preview {
-    AdView()
-}
+

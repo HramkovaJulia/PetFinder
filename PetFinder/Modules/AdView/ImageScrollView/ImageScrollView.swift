@@ -8,14 +8,17 @@
 import SwiftUI
 
 struct ImageScrollView: View {
+    
+    @State var model: ImageScrollModel
+    
     @State private var currentTab = 0
-    @State var images: [UIImage]
+    
     
     var body: some View {
         TabView(selection: $currentTab,
                 content:  {
-            ForEach(0 ..< images.count, id: \.self){ index in
-                Image(uiImage: images[index])
+            ForEach(0 ..< model.images.count, id: \.self){ index in
+                Image(uiImage: model.images[index])
                     .resizable()
                     .tag(index)
             }
@@ -25,14 +28,12 @@ struct ImageScrollView: View {
     }
 }
 
-#Preview {
-    ImageScrollView(images: [
-        PFAssets.dogBack.image,
-        PFAssets.dogBack.image,
-        PFAssets.dogBack.image
-    ])
-}
-
-//enum ImageScrollViewModel {
-//    let images: [UIImage]
+//#Preview {
+//    ImageScrollView(images: [
+//        PFAssets.dogBack.image,
+//        PFAssets.dogBack.image,
+//        PFAssets.dogBack.image
+//    ])
 //}
+
+

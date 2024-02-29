@@ -46,11 +46,16 @@ struct AdditionalInfoAboutPetAdModel {
 }
 
 struct StacksInfoAdditionalInfoAboutPetAdModel{
+    var stackInfoAdditionalInfoAboutPetAdModel: [StackInfoAdditionalInfoAboutPetAdModel]
 }
-    
 
-
+struct StackInfoAdditionalInfoAboutPetAdModel {
+    var mainLabel: String
+    var infoPet: String
+}
+ 
 struct MapInfoInfoAboutPetAdModel {
+    var missingAddress: String
     var possitionButtonsMapInfoInfoAboutPetAdModel: PossitionButtonsMapInfoInfoAboutPetAdModel
     var stackMapViewInfoInfoAboutPetAdModel: StackMapViewInfoInfoAboutPetAdModel
 }
@@ -63,5 +68,5 @@ struct StackMapViewInfoInfoAboutPetAdModel {
 }
 
 struct SpecialnoteInfoAboutPetAdModel {
-    
+    var specialSigns: String
 }
