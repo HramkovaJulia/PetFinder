@@ -6,23 +6,24 @@
 //
 
 import Foundation
+import UIKit
 
-protocol AdViewPresenterProtocol: AdViewBusinessLogic,AdViewDataStoreProtocol {
-    func viewDidLoad()
-}
+class AdPresenter: ObservableObject, AdInteractorOutput,AdInteractorInput {
+    
+    @Published var adModel: PostModel = PostModel(mainInfoAboutPetModel: MainInfoAboutPetAdModel(imageScrollModel: ImageScrollModel(images: [UIImage()]), nameSexMainInfoAboutPetModel: NameSexMainInfoAboutPetAdModel(imageOfSex: UIImage(), titleOfPost: "пусто", Date: "пусто"), medecineStatusMainInfoAboutPetAdModel: MedecineStatusMainInfoAboutPetAdModel(vaccinated: true, sterilized: true), descriptionMainInfoAboutPetAdModel: DescriptionMainInfoAboutPetAdModel(description: "пусто")), additionalInfoAboutPetAdModel: AdditionalInfoAboutPetAdModel(stacksInfoAdditionalInfoAboutPetAdModel: StacksInfoAdditionalInfoAboutPetAdModel(stackInfoAdditionalInfoAboutPetAdModel: [StackInfoAdditionalInfoAboutPetAdModel(mainLabel: "пусто", infoPet: "пусто")])),mapInfoInfoAboutPetAdModel: MapInfoInfoAboutPetAdModel(missingAddress: "пусто", possitionButtonsMapInfoInfoAboutPetAdModel: PossitionButtonsMapInfoInfoAboutPetAdModel(), stackMapViewInfoInfoAboutPetAdModel: StackMapViewInfoInfoAboutPetAdModel()), specialnoteInfoAboutPetAdModel: SpecialnoteInfoAboutPetAdModel(specialSigns: "пусто"))
+    
+    private let interactor: AdInteractor
 
-class AdViewPresenter: ObservableObject {
-    
-    weak var dysplayLogic: AdViewDisplayLogic?
-    var model: PostModel
-    
-    init(model: PostModel){
-        self.model = model
+    init(interactor: AdInteractor) {
+        self.interactor = interactor
+        interactor.output = self
+       }
+
+    func fetchData() {
+        interactor.fetchData()
     }
-    
-    func onViewDidLoad() {
-        dysplayLogic?.displayPostModel(model)
-    }
 
-    
+    func dataFetched(_ model: PostModel) {
+        adModel = model
+    }
 }

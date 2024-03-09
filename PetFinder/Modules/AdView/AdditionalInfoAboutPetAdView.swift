@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct AdditionalInfoAboutPetAdView: View {
-    @State var model: AdditionalInfoAboutPetAdModel
+    @Binding var model: AdditionalInfoAboutPetAdModel
     
     var body: some View {
         VStack(spacing: 14) {

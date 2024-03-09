@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ImageScrollView: View {
     
-    @State var model: ImageScrollModel
+    @Binding var model: ImageScrollModel
     
     @State private var currentTab = 0
     

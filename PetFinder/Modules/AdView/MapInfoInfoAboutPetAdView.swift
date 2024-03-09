@@ -9,7 +9,7 @@ import SwiftUI
 import MapKit
 
 struct MapInfoInfoAboutPetAdView: View {
-    @State var model: MapInfoInfoAboutPetAdModel
+    @Binding var model: MapInfoInfoAboutPetAdModel
     
     var body: some View {
         VStack(spacing: 14) {

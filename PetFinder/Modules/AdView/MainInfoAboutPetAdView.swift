@@ -9,19 +9,19 @@ import SwiftUI
 
 struct MainInfoAboutPetAdView: View {
     
-    @State var model: MainInfoAboutPetAdModel
+    @Binding var model: MainInfoAboutPetAdModel
     
     var body: some View {
         
         VStack(spacing: 14) {
-            ImageScrollView(model: model.imageScrollModel)
+            ImageScrollView(model: $model.imageScrollModel)
                 .frame(height: 295)
-            NameSexMainInfoAboutPetAdView(model: model.nameSexMainInfoAboutPetModel)
+            NameSexMainInfoAboutPetAdView(model: $model.nameSexMainInfoAboutPetModel)
                 .padding(.leading, 14)
-            MedecineStatusMainInfoAboutPetAdView(model: model.medecineStatusMainInfoAboutPetAdModel)
+            MedecineStatusMainInfoAboutPetAdView(model: $model.medecineStatusMainInfoAboutPetAdModel)
                 .padding(.horizontal, 14)
             
-            DescriptionMainInfoAboutPetAdView(model: model.descriptionMainInfoAboutPetAdModel)
+            DescriptionMainInfoAboutPetAdView(model: $model.descriptionMainInfoAboutPetAdModel)
                 .padding(.horizontal, 14)
                 .padding(.bottom, 14)
         }
@@ -30,7 +30,7 @@ struct MainInfoAboutPetAdView: View {
 
 struct NameSexMainInfoAboutPetAdView: View {
     
-    @State var model: NameSexMainInfoAboutPetAdModel
+    @Binding var model: NameSexMainInfoAboutPetAdModel
     
     var body: some View {
         HStack(spacing: 10) {
@@ -57,7 +57,7 @@ struct NameSexMainInfoAboutPetAdView: View {
 
 struct DescriptionMainInfoAboutPetAdView: View {
     
-    @State var model: DescriptionMainInfoAboutPetAdModel
+    @Binding var model: DescriptionMainInfoAboutPetAdModel
     @State private var lineLimit = 3
     
     var body: some View {
@@ -128,7 +128,7 @@ struct Sterilized: View {
 
 struct MedecineStatusMainInfoAboutPetAdView: View {
     
-    @State var model: MedecineStatusMainInfoAboutPetAdModel
+    @Binding var model: MedecineStatusMainInfoAboutPetAdModel
 
     var body: some View {
         switch (model.vaccinated, model.sterilized) {

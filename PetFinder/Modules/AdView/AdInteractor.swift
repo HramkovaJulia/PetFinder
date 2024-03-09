@@ -8,32 +8,30 @@
 import Foundation
 import UIKit
 
-protocol AdInteractorProtocol {
+protocol AdInteractorInput {
     func fetchData()
-    // Добавьте другие методы для обработки бизнес-логики
 }
 
-class AdInteractor: AdInteractorProtocol {
+protocol AdInteractorOutput: AnyObject {
+    func dataFetched(_ model: PostModel)
+}
+
+
+class AdInteractor: AdInteractorInput {
     
-    var presenter: AdViewPresenterProtocol?
-    var dataService: AdViewDataStoreProtocol
-    
-    init (dataService: AdViewDataStoreProtocol){
-        self.dataService = dataService
-    }
-    
-    
-    
-    
+    weak var output: AdInteractorOutput?
     
     func fetchData() {
-        let adDetails = PostModel(mainInfoAboutPetModel: MainInfoAboutPetAdModel(imageScrollModel: ImageScrollModel(images: [UIImage()]), nameSexMainInfoAboutPetModel: NameSexMainInfoAboutPetAdModel(imageOfSex: UIImage(), titleOfPost: "1212", Date: "121212"), medecineStatusMainInfoAboutPetAdModel: MedecineStatusMainInfoAboutPetAdModel(vaccinated: true, sterilized: true), descriptionMainInfoAboutPetAdModel: DescriptionMainInfoAboutPetAdModel(description: "sadasdasdasd")), additionalInfoAboutPetAdModel: AdditionalInfoAboutPetAdModel(stacksInfoAdditionalInfoAboutPetAdModel: StacksInfoAdditionalInfoAboutPetAdModel(stackInfoAdditionalInfoAboutPetAdModel: [StackInfoAdditionalInfoAboutPetAdModel(mainLabel: "adsasdasd", infoPet: "asdasdasd")])),mapInfoInfoAboutPetAdModel: MapInfoInfoAboutPetAdModel(missingAddress: "щыоващыотаыва", possitionButtonsMapInfoInfoAboutPetAdModel: PossitionButtonsMapInfoInfoAboutPetAdModel(), stackMapViewInfoInfoAboutPetAdModel: StackMapViewInfoInfoAboutPetAdModel()), specialnoteInfoAboutPetAdModel: SpecialnoteInfoAboutPetAdModel(specialSigns: "fsidhfisjhdf"))
+        let adDetails = PostModel(mainInfoAboutPetModel: MainInfoAboutPetAdModel(imageScrollModel: ImageScrollModel(images: [UIImage()]), nameSexMainInfoAboutPetModel: NameSexMainInfoAboutPetAdModel(imageOfSex: UIImage(), titleOfPost: "1212", Date: "121212"), medecineStatusMainInfoAboutPetAdModel: MedecineStatusMainInfoAboutPetAdModel(vaccinated: false, sterilized: false), descriptionMainInfoAboutPetAdModel: DescriptionMainInfoAboutPetAdModel(description: "sadasdasdasd")), additionalInfoAboutPetAdModel: AdditionalInfoAboutPetAdModel(stacksInfoAdditionalInfoAboutPetAdModel: StacksInfoAdditionalInfoAboutPetAdModel(stackInfoAdditionalInfoAboutPetAdModel: [StackInfoAdditionalInfoAboutPetAdModel(mainLabel: "adsasdasd", infoPet: "asdasdasd")])),mapInfoInfoAboutPetAdModel: MapInfoInfoAboutPetAdModel(missingAddress: "щыоващыотаыва", possitionButtonsMapInfoInfoAboutPetAdModel: PossitionButtonsMapInfoInfoAboutPetAdModel(), stackMapViewInfoInfoAboutPetAdModel: StackMapViewInfoInfoAboutPetAdModel()), specialnoteInfoAboutPetAdModel: SpecialnoteInfoAboutPetAdModel(specialSigns: "fsidhfisjhdf"))
         
-        presenter?.model = adDetails
-        
+        output?.dataFetched(adDetails)
     }
     
-    
-    
-    
 }
+
+
+
+
+
+
+
