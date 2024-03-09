@@ -11,7 +11,13 @@ import MapKit
 
 struct AdView: View {
     
-    @ObservedObject var presenter: AdPresenter
+    @ObservedObject var presenter: AdPresenter 
+    let interactor: AdInteractor = AdInteractor()
+    
+    init (){
+        self.presenter = AdPresenter(interactor: interactor)
+    }
+    
     
     var body: some View {
         ZStack {
@@ -37,7 +43,7 @@ struct AdView: View {
                         .padding(.bottom, 86)
                     Spacer()
                 }.onAppear{
-                    presenter.fetchData()
+                    interactor.fetchData()
                 }
             }
             

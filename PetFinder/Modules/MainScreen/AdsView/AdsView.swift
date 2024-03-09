@@ -27,7 +27,7 @@ struct AdsView: View {
                         isPresented = true
                     }
                     .fullScreenCover(isPresented: $isPresented, content: {
-                        AdView(presenter: AdPresenter(interactor: AdInteractor()))
+                        AdView()
                     })
                 Spacer()
             }
