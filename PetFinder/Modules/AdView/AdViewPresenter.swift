@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-class AdPresenter: ObservableObject, AdInteractorOutput,AdInteractorInput {
+class AdPresenter: ObservableObject, AdInteractorOutput {
     
     @Published var adModel: PostModel = PostModel(mainInfoAboutPetModel: MainInfoAboutPetAdModel(imageScrollModel: ImageScrollModel(images: [UIImage()]), nameSexMainInfoAboutPetModel: NameSexMainInfoAboutPetAdModel(imageOfSex: UIImage(), titleOfPost: "пусто", Date: "пусто"), medecineStatusMainInfoAboutPetAdModel: MedecineStatusMainInfoAboutPetAdModel(vaccinated: true, sterilized: true), descriptionMainInfoAboutPetAdModel: DescriptionMainInfoAboutPetAdModel(description: "пусто")), additionalInfoAboutPetAdModel: AdditionalInfoAboutPetAdModel(stacksInfoAdditionalInfoAboutPetAdModel: StacksInfoAdditionalInfoAboutPetAdModel(stackInfoAdditionalInfoAboutPetAdModel: [StackInfoAdditionalInfoAboutPetAdModel(mainLabel: "пусто", infoPet: "пусто")])),mapInfoInfoAboutPetAdModel: MapInfoInfoAboutPetAdModel(missingAddress: "пусто", possitionButtonsMapInfoInfoAboutPetAdModel: PossitionButtonsMapInfoInfoAboutPetAdModel(), stackMapViewInfoInfoAboutPetAdModel: StackMapViewInfoInfoAboutPetAdModel()), specialnoteInfoAboutPetAdModel: SpecialnoteInfoAboutPetAdModel(specialSigns: "пусто"))
     
@@ -18,10 +18,6 @@ class AdPresenter: ObservableObject, AdInteractorOutput,AdInteractorInput {
         self.interactor = interactor
         interactor.output = self
        }
-
-    func fetchData() {
-        interactor.fetchData()
-    }
 
     func dataFetched(_ model: PostModel) {
         adModel = model
