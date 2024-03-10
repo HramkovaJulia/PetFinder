@@ -35,10 +35,21 @@ struct NameSexMainInfoAboutPetAdView: View {
     var body: some View {
         HStack(spacing: 10) {
             VStack {
-                Image(uiImage: model.imageOfSex)
-                    .padding(.top, 12)
-                    .padding(.bottom, 10)
-                    .padding(.horizontal, 11)
+                
+                Image( uiImage: {
+                        switch model.sex {
+                        case .he: PFAssets.menSex.image
+                        case .she: PFAssets.womenSex.image
+                        case .it: PFAssets.otherSex.image
+                        }
+                    }())
+                        .padding(.top, 12)
+                        .padding(.bottom, 10)
+                        .padding(.horizontal, 11)
+                    
+                
+                
+                
             }
             .frame(width: 40, height: 40)
             .background(Color(PFAssets.white.color))

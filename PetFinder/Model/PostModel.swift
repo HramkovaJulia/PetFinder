@@ -26,8 +26,14 @@ struct ImageScrollModel {
     var images: [UIImage]
 }
 
+enum Sex {
+    case he
+    case she
+    case it
+}
+
 struct NameSexMainInfoAboutPetAdModel {
-    var imageOfSex: UIImage
+    var sex: Sex
     var titleOfPost: String
     var Date: String
 }
