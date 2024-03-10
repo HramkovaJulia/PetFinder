@@ -13,6 +13,8 @@ struct AdView: View {
     
     @ObservedObject var presenter: AdPresenter 
     let interactor: AdInteractor = AdInteractor()
+    @Environment(\.presentationMode) var presentationMode
+
     
     init (){
         self.presenter = AdPresenter(interactor: interactor)
@@ -49,7 +51,10 @@ struct AdView: View {
             
             .background(Color(PFAssets.background.color))
             VStack {
-                ButtonsStackMainInfoAboutPetAdView()
+                
+                ButtonsStackMainInfoAboutPetAdView(backAction:{
+                    presentationMode.wrappedValue.dismiss()
+                })
                     .padding(.leading, 28)
                     .padding(.trailing, 27)
                     .padding(.top, 26)

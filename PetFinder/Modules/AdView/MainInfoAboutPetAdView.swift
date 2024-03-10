@@ -145,31 +145,35 @@ struct MedecineStatusMainInfoAboutPetAdView: View {
 }
     
     struct ButtonsStackMainInfoAboutPetAdView: View {
+        var backAction: () -> Void
         @State private var imageArray: [UIImage] = [PFAssets.backButton.image, PFAssets.shareImage.image, PFAssets.adsStar.image, PFAssets.lostImage.image]
         var body: some View {
             HStack {
                 ForEach(0..<imageArray.count, id: \.self) { image in
+                        ButtonStackMainInfoAboutPetAdView( backAction: {backAction()}, image: imageArray[image])
+                            .background(Color(PFAssets.white.color))
+                            .cornerRadius(50)
+                            .frame(width: 32, height: 32)
+                 
                     if image == 0 {
-                        ButtonStackMainInfoAboutPetAdView(image: imageArray[image])
-                            .background(Color(PFAssets.white.color))
-                            .cornerRadius(50)
-                            .frame(width: 32, height: 32)
                         Spacer()
-                    } else {
-                        ButtonStackMainInfoAboutPetAdView(image: imageArray[image])
-                            .background(Color(PFAssets.white.color))
-                            .cornerRadius(50)
-                            .frame(width: 32, height: 32)
                     }
+                    
                 }
             }
         }
     }
     
     struct ButtonStackMainInfoAboutPetAdView: View {
+        var backAction: () -> Void
         @State var image: UIImage
         var body: some View {
             Button(action: {
+                
+                switch image {
+                case PFAssets.backButton.image: backAction()
+                default : break
+                }
                 
             }) {
                 switch image {
