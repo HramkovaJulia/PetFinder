@@ -47,9 +47,6 @@ struct NameSexMainInfoAboutPetAdView: View {
                         .padding(.bottom, 10)
                         .padding(.horizontal, 11)
                     
-                
-                
-                
             }
             .frame(width: 40, height: 40)
             .background(Color(PFAssets.white.color))
@@ -166,9 +163,7 @@ struct MedecineStatusMainInfoAboutPetAdView: View {
                             .cornerRadius(50)
                             .frame(width: 32, height: 32)
                  
-                    if image == 0 {
-                        Spacer()
-                    }
+                    image == 0 ? Spacer() : nil 
                     
                 }
             }

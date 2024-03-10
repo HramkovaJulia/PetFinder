@@ -16,7 +16,6 @@ protocol AdInteractorOutput: AnyObject {
     func dataFetched(_ model: PostModel)
 }
 
-
 class AdInteractor: AdInteractorInput {
     
     weak var output: AdInteractorOutput?
