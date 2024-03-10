@@ -24,7 +24,6 @@ enum TypePet {
 enum Gender {
     case male
     case female
-    
 }
 
 struct LostPetCard {
@@ -42,4 +41,3 @@ struct LostPetCard {
     let vaccinated: Bool
     let sterilised: Bool
 }
-
