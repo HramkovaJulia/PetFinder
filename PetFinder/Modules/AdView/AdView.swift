@@ -89,4 +89,9 @@ struct SpecialnoteInfoAboutPetAdView: View {
     }
 }
 
-
+struct SpecialnoteInfoAboutPetAdView_Previews: PreviewProvider {
+    static var previews: some View {
+        let sampleModel = SpecialnoteInfoAboutPetAdModel(specialSigns: "Пример текста для особых примет")
+        return SpecialnoteInfoAboutPetAdView(model: .constant(sampleModel))
+    }
+}

@@ -16,7 +16,7 @@ struct AdditionalInfoAboutPetAdView: View {
                 .font(.init(PFFontFamily.SFProText.semibold.swiftUIFont(size: 18)))
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .padding([.top, .leading], 14)
-            StacksInfoAdditionalInfoAboutPetAdView(model: model.stacksInfoAdditionalInfoAboutPetAdModel)
+            StacksInfoAdditionalInfoAboutPetAdView(model: $model.stacksInfoAdditionalInfoAboutPetAdModel)
                 .padding(.horizontal, 14)
                 .padding(.bottom, 14)
         }
@@ -24,12 +24,12 @@ struct AdditionalInfoAboutPetAdView: View {
 }
 
 struct StacksInfoAdditionalInfoAboutPetAdView: View {
-   @State var model: StacksInfoAdditionalInfoAboutPetAdModel
+   @Binding var model: StacksInfoAdditionalInfoAboutPetAdModel
     
     var body: some View {
         VStack(spacing: 10) {
             
-            ForEach(model.stackInfoAdditionalInfoAboutPetAdModel, id: \.infoPet) { stack in
+            ForEach(model.stackInfoAdditionalInfoAboutPetAdModel, id: \.mainLabel) { stack in
                 StackInfoAdditionalInfoAboutPetAdView(model: stack )
             }
             

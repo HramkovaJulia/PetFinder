@@ -59,15 +59,20 @@ struct StackInfoAdditionalInfoAboutPetAdModel {
     var mainLabel: String
     var infoPet: String
 }
+
+enum TypeOfAdress: String {
+    case missingAdress = "Адрес пропажи"
+    case location = "Местонахождение"
+}
  
 struct MapInfoInfoAboutPetAdModel {
-    var missingAddress: String
+    var typeOfAdress: TypeOfAdress
     var possitionButtonsMapInfoInfoAboutPetAdModel: PossitionButtonsMapInfoInfoAboutPetAdModel
     var stackMapViewInfoInfoAboutPetAdModel: StackMapViewInfoInfoAboutPetAdModel
 }
 
 struct PossitionButtonsMapInfoInfoAboutPetAdModel {
-    
+    var adress: String
 }
 struct StackMapViewInfoInfoAboutPetAdModel {
     

@@ -13,7 +13,7 @@ struct MapInfoInfoAboutPetAdView: View {
     
     var body: some View {
         VStack(spacing: 14) {
-            Text(model.missingAddress)
+            Text(model.typeOfAdress.rawValue)
                 .font(.init(PFFontFamily.SFProText.semibold.swiftUIFont(size: 18)))
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .padding([.top, .leading], 14)
@@ -36,7 +36,7 @@ struct PossitionButtonsMapInfoInfoAboutPetAdView: View {
                 
             }) {
                 Image(uiImage: PFAssets.mapPoint.image)
-                Text("Малинина, 30")
+                Text(model.adress)
                     .font(.init(PFFontFamily.SFProText.regular.swiftUIFont(size: 14)))
                     .foregroundColor(Color(PFAssets.black.color))
                     .underline()
