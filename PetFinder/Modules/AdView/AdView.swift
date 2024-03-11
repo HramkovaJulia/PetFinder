@@ -11,18 +11,23 @@ import MapKit
 
 struct AdView: View {
     
-    @ObservedObject var presenter: AdPresenter 
+    @ObservedObject var presenter: AdPresenter
     let interactor: AdInteractor = AdInteractor()
     @Environment(\.presentationMode) var presentationMode
-
     
     init (){
         self.presenter = AdPresenter(interactor: interactor)
     }
     
-    
     var body: some View {
-        ZStack {
+        VStack {
+            ButtonsStackMainInfoAboutPetAdView(backAction:{
+                presentationMode.wrappedValue.dismiss()
+            }).padding(.leading, 28)
+                .padding(.trailing, 27)
+                .padding(.bottom,8)
+                .background(Color(PFAssets.beige.color))
+            
             ScrollView {
                 VStack(spacing: 20) {
                     MainInfoAboutPetAdView(model: $presenter.adModel.mainInfoAboutPetModel)
@@ -42,30 +47,19 @@ struct AdView: View {
                         .background(Color(PFAssets.white.color))
                         .cornerRadius(12)
                         .padding(.horizontal, 15)
-                        .padding(.bottom, 86)
-                    Spacer()
+                        .padding(.bottom,16)
                 }.onAppear{
                     interactor.fetchData()
                 }
             }
             
             .background(Color(PFAssets.background.color))
-            VStack {
+            
+            CustomOrangeButton(action: {
                 
-                ButtonsStackMainInfoAboutPetAdView(backAction:{
-                    presentationMode.wrappedValue.dismiss()
-                })
-                    .padding(.leading, 28)
-                    .padding(.trailing, 27)
-                    .padding(.top, 26)
-                Spacer()
-                CustomOrangeButton(action: {
-                    
-                }, text: "Откликнуться")
-                .padding(.leading, 16)
-                .padding(.trailing, 15)
-                .padding(.bottom, 0)
-            }
+            }, text: "Откликнуться")
+            .padding(.leading, 16)
+            .padding(.trailing, 15)
         }
     }
 }
@@ -73,7 +67,7 @@ struct AdView: View {
 struct SpecialnoteInfoAboutPetAdView: View {
     
     @Binding var model: SpecialnoteInfoAboutPetAdModel
- 
+    
     var body: some View {
         VStack(spacing: 12) {
             Text("Особые приметы")
