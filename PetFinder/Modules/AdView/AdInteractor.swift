@@ -16,14 +16,22 @@ protocol AdInteractorOutput: AnyObject {
     func dataFetched(_ model: PostModel)
 }
 
-class AdInteractor: AdInteractorInput {
+class AdInteractor: DataManager, AdInteractorInput, ObservableObject {
     
+    var dataAd: DataAdProtocol
     weak var output: AdInteractorOutput?
     
+    init(dataAd: DataAdProtocol){
+        self.dataAd = dataAd
+    }
+    
     func fetchData() {
-        let adDetails = PostModel(mainInfoAboutPetModel: MainInfoAboutPetAdModel(imageScrollModel: ImageScrollModel(images: [PFAssets.dogBack.image]), nameSexMainInfoAboutPetModel: NameSexMainInfoAboutPetAdModel(sex: .he, titleOfPost: "Петрович", Date: "сегодня в 14:30"), medecineStatusMainInfoAboutPetAdModel: MedecineStatusMainInfoAboutPetAdModel(vaccinated: true, sterilized: true), descriptionMainInfoAboutPetAdModel: DescriptionMainInfoAboutPetAdModel(description: "Выгуливал и он убежал в сторону сучки , не смог догнать")), additionalInfoAboutPetAdModel: AdditionalInfoAboutPetAdModel(stacksInfoAdditionalInfoAboutPetAdModel: StacksInfoAdditionalInfoAboutPetAdModel(stackInfoAdditionalInfoAboutPetAdModel: [StackInfoAdditionalInfoAboutPetAdModel(mainLabel: "главный лэйбл", infoPet: "info pet")])),mapInfoInfoAboutPetAdModel: MapInfoInfoAboutPetAdModel(typeOfAdress: .location, possitionButtonsMapInfoInfoAboutPetAdModel: PossitionButtonsMapInfoInfoAboutPetAdModel(adress: "Фиолетовая 45"), stackMapViewInfoInfoAboutPetAdModel: StackMapViewInfoInfoAboutPetAdModel()), specialnoteInfoAboutPetAdModel: SpecialnoteInfoAboutPetAdModel(specialSigns: "Рыжее пятно на боку и висячее правое ухо"))
-        
-        output?.dataFetched(adDetails)
+        let adModel = dataAd.fetchAd()
+        output?.dataFetched(adModel)
+    }
+    
+    func adToData(with newAd: PostModel){
+        dataAd.addNewAd(with: newAd)
     }
     
 }

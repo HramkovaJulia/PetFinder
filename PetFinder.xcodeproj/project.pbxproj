@@ -40,8 +40,8 @@
 		58E02B932B6FF4E700058D21 /* Fonts.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58E02B912B6FF4E700058D21 /* Fonts.generated.swift */; };
 		7D53A6432B8BFAE100A7C74A /* PostModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D53A6422B8BFAE100A7C74A /* PostModel.swift */; };
 		7D53A6452B90B6BE00A7C74A /* AdInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D53A6442B90B6BE00A7C74A /* AdInteractor.swift */; };
-		7D53A6472B90B6EF00A7C74A /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D53A6462B90B6EF00A7C74A /* Router.swift */; };
 		7D53A6492B90B99500A7C74A /* AdViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D53A6482B90B99400A7C74A /* AdViewPresenter.swift */; };
+		7D859E102B9F783900C7AF34 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D859E0F2B9F783900C7AF34 /* DataManager.swift */; };
 		D8001C3C2B8C9B6A00EB3FDC /* SortTopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8001C3B2B8C9B6A00EB3FDC /* SortTopView.swift */; };
 		D8001C3E2B8C9B8100EB3FDC /* TypeSortButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8001C3D2B8C9B8100EB3FDC /* TypeSortButton.swift */; };
 		D8071A9B2B80A33700BAECFE /* FirstStepCreateAdView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8071A9A2B80A33700BAECFE /* FirstStepCreateAdView.swift */; };
@@ -136,8 +136,8 @@
 		58EDA3452B387A9A00F1D716 /* swiftgen.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = swiftgen.yml; sourceTree = "<group>"; };
 		7D53A6422B8BFAE100A7C74A /* PostModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostModel.swift; sourceTree = "<group>"; };
 		7D53A6442B90B6BE00A7C74A /* AdInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdInteractor.swift; sourceTree = "<group>"; };
-		7D53A6462B90B6EF00A7C74A /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		7D53A6482B90B99400A7C74A /* AdViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdViewPresenter.swift; sourceTree = "<group>"; };
+		7D859E0F2B9F783900C7AF34 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		BF7A263FFCB875A6E2D63AA6 /* Pods-PetFinder.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PetFinder.debug.xcconfig"; path = "Target Support Files/Pods-PetFinder/Pods-PetFinder.debug.xcconfig"; sourceTree = "<group>"; };
 		D8001C3B2B8C9B6A00EB3FDC /* SortTopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortTopView.swift; sourceTree = "<group>"; };
 		D8001C3D2B8C9B8100EB3FDC /* TypeSortButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeSortButton.swift; sourceTree = "<group>"; };
@@ -237,7 +237,6 @@
 				D898EFB42B76BD8300D10EA0 /* MainScreen */,
 				587DA3402B7381A50001DE45 /* Authorization */,
 				587DA33F2B73819B0001DE45 /* Onboarding */,
-				7D53A6462B90B6EF00A7C74A /* Router.swift */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -505,6 +504,7 @@
 				D84999912B81E551006A8070 /* AdView.swift */,
 				7D53A6442B90B6BE00A7C74A /* AdInteractor.swift */,
 				7D53A6482B90B99400A7C74A /* AdViewPresenter.swift */,
+				7D859E0F2B9F783900C7AF34 /* DataManager.swift */,
 				D84999932B81E57A006A8070 /* ImageScrollView */,
 				D84999962B8206F7006A8070 /* MainInfoAboutPetAdView.swift */,
 				D849999A2B82141C006A8070 /* MapInfoInfoAboutPetAdView.swift */,
@@ -853,7 +853,6 @@
 				D8001C3E2B8C9B8100EB3FDC /* TypeSortButton.swift in Sources */,
 				D822CE7B2B7E05DA00C73C05 /* CustomDropDownButtonView.swift in Sources */,
 				D8F6FE972B83918A0094304E /* TopViewChoiceLocationView.swift in Sources */,
-				7D53A6472B90B6EF00A7C74A /* Router.swift in Sources */,
 				D8071A9E2B80A79300BAECFE /* SelectTypePetView.swift in Sources */,
 				D8071AA02B80A97500BAECFE /* DescriptionsFirstStepCreateAdView.swift in Sources */,
 				D86EADA72AE043C900FB19B6 /* CustomTabBarControllerViewController.swift in Sources */,
@@ -861,6 +860,7 @@
 				D8F6FE952B8391450094304E /* ChoiceLocationView.swift in Sources */,
 				58D4EBFB2B72604500F79810 /* CountryTableViewCell.swift in Sources */,
 				D822CE7F2B7E0C8700C73C05 /* CustomOrangeButton.swift in Sources */,
+				7D859E102B9F783900C7AF34 /* DataManager.swift in Sources */,
 				5873E3A02ADB190200F51501 /* AppDelegate.swift in Sources */,
 				D84999922B81E551006A8070 /* AdView.swift in Sources */,
 				D8F6FE872B83520C0094304E /* CustomTextEditor.swift in Sources */,

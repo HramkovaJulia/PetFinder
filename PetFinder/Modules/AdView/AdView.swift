@@ -12,13 +12,13 @@ import MapKit
 struct AdView: View {
     
     @ObservedObject var presenter: AdPresenter
-    let interactor: AdInteractor = AdInteractor()
-    @Environment(\.presentationMode) var presentationMode
-    
-    init (){
-        self.presenter = AdPresenter(interactor: interactor)
-    }
-    
+       
+       @Environment(\.presentationMode) var presentationMode
+       
+       init(interactor: AdInteractor) {
+           let adPresenter = AdPresenter(interactor: interactor)
+           self.presenter = adPresenter
+       }
     var body: some View {
         VStack {
             ButtonsStackMainInfoAboutPetAdView(backAction:{
@@ -49,7 +49,7 @@ struct AdView: View {
                         .padding(.horizontal, 15)
                         .padding(.bottom,16)
                 }.onAppear{
-                    interactor.fetchData()
+                    presenter.interactor.fetchData()
                 }
             }
             
