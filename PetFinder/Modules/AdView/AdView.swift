@@ -10,15 +10,16 @@ import MapKit
 
 
 struct AdView: View {
-    
+    var id: String
     @ObservedObject var presenter: AdPresenter
-       
-       @Environment(\.presentationMode) var presentationMode
-       
-       init(interactor: AdInteractor) {
-           let adPresenter = AdPresenter(interactor: interactor)
-           self.presenter = adPresenter
-       }
+    
+    @Environment(\.presentationMode) var presentationMode
+    
+    init(interactor: AdInteractor,id: String) {
+        let adPresenter = AdPresenter(interactor: interactor)
+        self.presenter = adPresenter
+        self.id = id
+    }
     var body: some View {
         VStack {
             ButtonsStackMainInfoAboutPetAdView(backAction:{
@@ -49,11 +50,11 @@ struct AdView: View {
                         .padding(.horizontal, 15)
                         .padding(.bottom,16)
                 }.onAppear{
-                    presenter.interactor.fetchData()
+                    presenter.interactor.returnPostModel(with: id)
                 }
             }
             
-            .background(Color(PFAssets.background.color))
+            
             
             CustomOrangeButton(action: {
                 
@@ -61,6 +62,7 @@ struct AdView: View {
             .padding(.leading, 16)
             .padding(.trailing, 15)
         }
+        .background(Color(PFAssets.background.color))
     }
 }
 
@@ -83,9 +85,13 @@ struct SpecialnoteInfoAboutPetAdView: View {
     }
 }
 
-struct SpecialnoteInfoAboutPetAdView_Previews: PreviewProvider {
+struct AdView_Previews: PreviewProvider {
     static var previews: some View {
-        let sampleModel = SpecialnoteInfoAboutPetAdModel(specialSigns: "Пример текста для особых примет")
-        return SpecialnoteInfoAboutPetAdView(model: .constant(sampleModel))
+        let dataManager = DataManager()
+        let adInteractor = AdInteractor(dataAd: dataManager)
+        let adPresenter = AdPresenter(interactor: adInteractor)
+        
+        return AdView(interactor: adInteractor, id: "123")
+            .environmentObject(adPresenter)
     }
 }

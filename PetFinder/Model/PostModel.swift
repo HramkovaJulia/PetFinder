@@ -9,6 +9,7 @@ import Foundation
 import UIKit
 
 struct PostModel {
+    var id = UUID().uuidString
     var mainInfoAboutPetModel: MainInfoAboutPetAdModel
     var additionalInfoAboutPetAdModel: AdditionalInfoAboutPetAdModel
     var mapInfoInfoAboutPetAdModel: MapInfoInfoAboutPetAdModel

@@ -14,7 +14,7 @@ struct TopSectionMainView: View {
                 Text("Доска объявлений")
                     .foregroundStyle(Color(PFAssets.white.color))
                     .font(.init(PFFontFamily.SFProText.semibold.font(size: 24)))
-                    .padding(.top, 14)
+                    .padding(.top, 8)
                     .padding(.leading, 16)
                 Spacer()
                 Button(action: {
@@ -24,13 +24,13 @@ struct TopSectionMainView: View {
                         .resizable()
                         .frame(width: 28, height: 28)
                 }
-                .padding(.top, 14.5)
+                .padding(.top, 8)
                 .padding(.trailing, 15)
                 
             }
             CustomSearchViewMainView()
                 .padding(.horizontal, 16)
-                .padding(.top, 16)
+                .padding(.top, 8)
                 .padding(.bottom, 20)
         }
     }

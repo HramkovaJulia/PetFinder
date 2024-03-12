@@ -9,15 +9,28 @@ import Foundation
 import UIKit
 
 protocol AdInteractorInput {
-    func fetchData()
+//    func fetchData()
+    func returnPostModel(with id: String)
 }
 
 protocol AdInteractorOutput: AnyObject {
-    func dataFetched(_ model: PostModel)
+//    func dataFetched(_ models: [PostModel])
+    func postModelWithID(_ model: PostModel)
 }
 
 class AdInteractor: DataManager, AdInteractorInput, ObservableObject {
     
+    
+    func returnPostModel(with id: String) {
+        let adModels = dataAd.fetchAd()
+        
+        for index in 0 ..< adModels.count{
+            if adModels[index].id == id {
+                output?.postModelWithID(adModels[index])
+            }
+        }
+    }
+ 
     var dataAd: DataAdProtocol
     weak var output: AdInteractorOutput?
     
@@ -25,11 +38,12 @@ class AdInteractor: DataManager, AdInteractorInput, ObservableObject {
         self.dataAd = dataAd
     }
     
-    func fetchData() {
-        let adModel = dataAd.fetchAd()
-        output?.dataFetched(adModel)
-    }
+//    func fetchData() {
+//        let adModels = dataAd.fetchAd()
+//        output?.dataFetched(adModels)
+//    }
     
+    // в этом интаракторе не нада, живет как пример
     func adToData(with newAd: PostModel){
         dataAd.addNewAd(with: newAd)
     }
