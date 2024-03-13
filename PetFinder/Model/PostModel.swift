@@ -10,6 +10,7 @@ import UIKit
 
 struct PostModel {
     var id = UUID().uuidString
+    var globalInfoAboutPet: GlobalInfoAboutPet
     var mainInfoAboutPetModel: MainInfoAboutPetAdModel
     var additionalInfoAboutPetAdModel: AdditionalInfoAboutPetAdModel
     var mapInfoInfoAboutPetAdModel: MapInfoInfoAboutPetAdModel
@@ -21,6 +22,25 @@ struct MainInfoAboutPetAdModel {
     var nameSexMainInfoAboutPetModel: NameSexMainInfoAboutPetAdModel
     var medecineStatusMainInfoAboutPetAdModel: MedecineStatusMainInfoAboutPetAdModel
     var descriptionMainInfoAboutPetAdModel: DescriptionMainInfoAboutPetAdModel
+}
+
+enum StatusOfPost{
+    case found
+    case lost
+    case lookingForAHome
+}
+
+enum KindOfAnimal{
+    case dog
+    case cat
+    case bird
+    case rodent
+    case other
+}
+
+struct GlobalInfoAboutPet {
+    var statusOFPost: StatusOfPost
+    var kindOfAnimal: KindOfAnimal
 }
 
 struct ImageScrollModel {

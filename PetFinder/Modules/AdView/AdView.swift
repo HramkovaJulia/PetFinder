@@ -50,7 +50,7 @@ struct AdView: View {
                         .padding(.horizontal, 15)
                         .padding(.bottom,16)
                 }.onAppear{
-                    presenter.interactor.returnPostModel(with: id)
+                    presenter.interactor.fetchPostModel(with: id)
                 }
             }
             

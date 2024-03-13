@@ -10,12 +10,12 @@ import UIKit
 
 protocol AdInteractorInput {
     //    func fetchData()
-    func returnPostModel(with id: String)
+    func fetchPostModel(with id: String)
 }
 
 protocol AdInteractorOutput: AnyObject {
     //    func dataFetched(_ models: [PostModel])
-    func postModelWithID(_ model: PostModel)
+    func fetchedPostModel(_ model: PostModel)
 }
 
 class AdInteractor: AdInteractorInput, ObservableObject {
@@ -27,12 +27,12 @@ class AdInteractor: AdInteractorInput, ObservableObject {
         self.dataAd = dataAd
     }
     
-    func returnPostModel(with id: String) {
+    func fetchPostModel(with id: String) {
         let adModels = dataAd.fetchAd()
         
         for index in 0 ..< adModels.count{
             if adModels[index].id == id {
-                output?.postModelWithID(adModels[index])
+                output?.fetchedPostModel(adModels[index])
             }
         }
     }
