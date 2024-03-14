@@ -16,7 +16,9 @@ struct MainView: View {
             ScrollView(showsIndicators: false){
                 AnimalCollectinView(massiveCell: [["sortImage", "Сортировка"], ["dog","Собаки"], ["cat","Кошки"], ["bird","Птицы"], ["mouse","Грызуны"], ["others","Прочее"]])
                     .padding(.leading, 16)
-                AdsView()
+                let dataManager = DataManager()
+                AdsView( dataManager: dataManager)
+                
                     .padding(.top, 24)
                     .padding(.leading, 16)
                     .padding(.trailing, 1)

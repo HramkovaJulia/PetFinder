@@ -42,6 +42,8 @@
 		7D53A6452B90B6BE00A7C74A /* AdInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D53A6442B90B6BE00A7C74A /* AdInteractor.swift */; };
 		7D53A6492B90B99500A7C74A /* AdViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D53A6482B90B99400A7C74A /* AdViewPresenter.swift */; };
 		7D859E102B9F783900C7AF34 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D859E0F2B9F783900C7AF34 /* DataManager.swift */; };
+		7D859E2E2BA3A05F00C7AF34 /* AdsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D859E2D2BA3A05F00C7AF34 /* AdsInteractor.swift */; };
+		7D859E302BA3A06C00C7AF34 /* AdsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D859E2F2BA3A06C00C7AF34 /* AdsPresenter.swift */; };
 		D8001C3C2B8C9B6A00EB3FDC /* SortTopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8001C3B2B8C9B6A00EB3FDC /* SortTopView.swift */; };
 		D8001C3E2B8C9B8100EB3FDC /* TypeSortButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8001C3D2B8C9B8100EB3FDC /* TypeSortButton.swift */; };
 		D8071A9B2B80A33700BAECFE /* FirstStepCreateAdView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8071A9A2B80A33700BAECFE /* FirstStepCreateAdView.swift */; };
@@ -138,6 +140,8 @@
 		7D53A6442B90B6BE00A7C74A /* AdInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdInteractor.swift; sourceTree = "<group>"; };
 		7D53A6482B90B99400A7C74A /* AdViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdViewPresenter.swift; sourceTree = "<group>"; };
 		7D859E0F2B9F783900C7AF34 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		7D859E2D2BA3A05F00C7AF34 /* AdsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdsInteractor.swift; sourceTree = "<group>"; };
+		7D859E2F2BA3A06C00C7AF34 /* AdsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdsPresenter.swift; sourceTree = "<group>"; };
 		BF7A263FFCB875A6E2D63AA6 /* Pods-PetFinder.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PetFinder.debug.xcconfig"; path = "Target Support Files/Pods-PetFinder/Pods-PetFinder.debug.xcconfig"; sourceTree = "<group>"; };
 		D8001C3B2B8C9B6A00EB3FDC /* SortTopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortTopView.swift; sourceTree = "<group>"; };
 		D8001C3D2B8C9B8100EB3FDC /* TypeSortButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeSortButton.swift; sourceTree = "<group>"; };
@@ -550,6 +554,8 @@
 			children = (
 				D86B23112B8A560E00DFF2FD /* AdCellView.swift */,
 				D86B23142B8A567F00DFF2FD /* AdsView.swift */,
+				7D859E2D2BA3A05F00C7AF34 /* AdsInteractor.swift */,
+				7D859E2F2BA3A06C00C7AF34 /* AdsPresenter.swift */,
 			);
 			path = AdsView;
 			sourceTree = "<group>";
@@ -837,6 +843,7 @@
 				D898EFCD2B77B48000D10EA0 /* AnimalCollectionView.swift in Sources */,
 				D81A44CA2B398B1400DC0C49 /* NotificationMode.swift in Sources */,
 				D86DF0D62B6EDD0600A65826 /* ChoiceTypeAd.swift in Sources */,
+				7D859E2E2BA3A05F00C7AF34 /* AdsInteractor.swift in Sources */,
 				D86B23122B8A560E00DFF2FD /* AdCellView.swift in Sources */,
 				D822CE672B7D441500C73C05 /* ChoiceFilterTypeAd.swift in Sources */,
 				D822CE732B7DFE1300C73C05 /* FilterSectionPlaceFinding.swift in Sources */,
@@ -854,6 +861,7 @@
 				58E02B932B6FF4E700058D21 /* Fonts.generated.swift in Sources */,
 				5873E3D82ADEEA7B00F51501 /* FontExtansion.swift in Sources */,
 				D822CE7D2B7E087D00C73C05 /* FiltersAdditionallySectionView.swift in Sources */,
+				7D859E302BA3A06C00C7AF34 /* AdsPresenter.swift in Sources */,
 				D8071AA72B80E51F00BAECFE /* PhotoScrollView.swift in Sources */,
 				D8F6FE922B8361780094304E /* SpectialNoteViewFirstStepCreateAdView.swift in Sources */,
 				7D53A6492B90B99500A7C74A /* AdViewPresenter.swift in Sources */,

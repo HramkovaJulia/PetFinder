@@ -8,16 +8,16 @@
 import SwiftUI
 
 struct AdCellView: View {
-    @State var data: LostPetCard
+    @Binding var model : PostModel
     var body: some View {
         VStack {
-            Image(uiImage: PFAssets.dogBack.image)
+            Image(uiImage: model.mainInfoAboutPetModel.imageScrollModel.images.first ?? UIImage()) // потом сделает из assets картинку
                 .resizable()
-            Text(data.petName)
+            Text(model.mainInfoAboutPetModel.nameSexMainInfoAboutPetModel.titleOfPost)
                 .font(.init(PFFontFamily.SFProText.medium.swiftUIFont(size: 16)))
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .padding(.leading, 12)
-            Text("Сегодня, 18:30")
+            Text(model.mainInfoAboutPetModel.nameSexMainInfoAboutPetModel.Date)
                 .font(.init(PFFontFamily.SFProText.light.swiftUIFont(size: 12)))
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .padding(.leading, 12)
@@ -58,6 +58,7 @@ struct AdCellButtonHStackView: View {
     }
 }
 
-#Preview {
-    AdCellView(data: LostPetCard(petName: "Джек", petType: .dog, adType: .lost, createPost: "Сегодня, 12:33", breed: "Хаски", color: "Серый", age: 2, gender: .male, lastSeenLocation: (55.7558, 37.6176), contactNumber: "+7 (123) 456-7890", additionalInfo: "Носит синий ошейник.", vaccinated: true, sterilised: true))
-}
+//#Preview {
+//    AdCellView(
+//               model: PostModel(globalInfoAboutPet: GlobalInfoAboutPet(statusOFPost: .lookingForAHome, kindOfAnimal: .dog), mainInfoAboutPetModel: MainInfoAboutPetAdModel(imageScrollModel: ImageScrollModel(images: [UIImage()]), nameSexMainInfoAboutPetModel: NameSexMainInfoAboutPetAdModel(sex: .she, titleOfPost: "пусто", Date: "пусто"), medecineStatusMainInfoAboutPetAdModel: MedecineStatusMainInfoAboutPetAdModel(vaccinated: true, sterilized: true), descriptionMainInfoAboutPetAdModel: DescriptionMainInfoAboutPetAdModel(description: "пусто")), additionalInfoAboutPetAdModel: AdditionalInfoAboutPetAdModel(stacksInfoAdditionalInfoAboutPetAdModel: StacksInfoAdditionalInfoAboutPetAdModel(stackInfoAdditionalInfoAboutPetAdModel: [StackInfoAdditionalInfoAboutPetAdModel(mainLabel: "хуй", infoPet: "хуй")])),mapInfoInfoAboutPetAdModel: MapInfoInfoAboutPetAdModel(typeOfAdress: .location, possitionButtonsMapInfoInfoAboutPetAdModel: PossitionButtonsMapInfoInfoAboutPetAdModel(adress: "Фиолетовая 45"), stackMapViewInfoInfoAboutPetAdModel: StackMapViewInfoInfoAboutPetAdModel()), specialnoteInfoAboutPetAdModel: SpecialnoteInfoAboutPetAdModel(specialSigns: "пусто")))
+//}

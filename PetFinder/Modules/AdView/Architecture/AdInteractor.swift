@@ -19,7 +19,7 @@ protocol AdInteractorOutput: AnyObject {
 }
 
 class AdInteractor: AdInteractorInput, ObservableObject {
-    
+
     var dataAd: DataAdProtocol
     weak var output: AdInteractorOutput?
     
