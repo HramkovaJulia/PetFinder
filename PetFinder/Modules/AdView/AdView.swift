@@ -19,7 +19,7 @@ struct AdView: View {
         let adPresenter = AdPresenter(interactor: interactor)
         self.presenter = adPresenter
         self.id = id
-    }
+            }
     var body: some View {
         VStack {
             ButtonsStackMainInfoAboutPetAdView(backAction:{
@@ -51,6 +51,7 @@ struct AdView: View {
                         .padding(.bottom,16)
                 }.onAppear{
                     presenter.interactor.fetchPostModel(with: id)
+                    print("с таким id иду в interactor \(id)")
                 }
             }
             
@@ -91,7 +92,7 @@ struct AdView_Previews: PreviewProvider {
         let adInteractor = AdInteractor(dataAd: dataManager)
         let adPresenter = AdPresenter(interactor: adInteractor)
         
-        return AdView(interactor: adInteractor, id: "123")
+        return AdView(interactor: adInteractor, id:"")
             .environmentObject(adPresenter)
     }
 }

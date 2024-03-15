@@ -8,7 +8,19 @@
 import Foundation
 import UIKit
 
-struct PostModel {
+struct PostModel: Identifiable, Hashable {
+    
+    static func == (lhs: PostModel, rhs: PostModel) -> Bool {
+            // Сравните свойства, которые участвуют в равенстве
+            return lhs.id == rhs.id
+            // Возвращайте true, если свойства равны
+        }
+    
+    func hash(into hasher: inout Hasher) {
+            hasher.combine(id)
+            // Комбинируйте хеш-коды свойств, которые участвуют в равенстве
+        }
+   
     var id = UUID().uuidString
     var globalInfoAboutPet: GlobalInfoAboutPet
     var mainInfoAboutPetModel: MainInfoAboutPetAdModel

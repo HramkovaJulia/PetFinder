@@ -18,10 +18,9 @@ struct MainView: View {
                     .padding(.leading, 16)
                 let dataManager = DataManager()
                 AdsView( dataManager: dataManager)
-                
+                    .padding(.horizontal,8)
                     .padding(.top, 24)
-                    .padding(.leading, 16)
-                    .padding(.trailing, 1)
+                    
                 Spacer()
             }
         }

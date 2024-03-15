@@ -19,6 +19,7 @@ protocol AdInteractorOutput: AnyObject {
 }
 
 class AdInteractor: AdInteractorInput, ObservableObject {
+   
 
     var dataAd: DataAdProtocol
     weak var output: AdInteractorOutput?
@@ -32,7 +33,9 @@ class AdInteractor: AdInteractorInput, ObservableObject {
         
         for index in 0 ..< adModels.count{
             if adModels[index].id == id {
+                print("по такому айди идет поиск модели \(id)")
                 output?.fetchedPostModel(adModels[index])
+                break
             }
         }
     }

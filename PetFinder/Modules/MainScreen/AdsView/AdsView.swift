@@ -11,32 +11,40 @@ import WrappingHStack
 struct AdsView: View {
     @State var dataManager: DataManager
     @ObservedObject var presenter: AdsPresenter
+    let columns: [GridItem] = [
+        GridItem(.flexible()),
+        GridItem(.flexible())
+    ]
     
     init(dataManager: DataManager){
         self.dataManager = dataManager
         let adsInteractor = AdsInteractor(dataAds: dataManager)
         let adsPresenter = AdsPresenter(interactor: adsInteractor)
         self.presenter = adsPresenter
+        
     }
-
+    
     @State private var isPresented: Bool = false
     var body: some View {
         
-        ScrollView(showsIndicators: false) {
-            WrappingHStack(0..<presenter.adsModel.count, id: \.self) { index in
-                AdCellView( model: $presenter.adsModel[index])
-                    .padding(.bottom, 16)
-                    .onTapGesture{
-                        isPresented = true
-                    }
-                    .fullScreenCover(isPresented: $isPresented, content: {
-                        AdView(interactor: AdInteractor(dataAd: dataManager), id: presenter.adsModel[index].id)
-                    })
-                Spacer()
+        NavigationView{
+        ScrollView(showsIndicators: false){
+            LazyVGrid(columns: columns,spacing: 0){
+                
+                ForEach($presenter.adsModel,id: \.self ){ adModel in
+                    
+                            NavigationLink(destination: AdView(interactor: AdInteractor(dataAd: dataManager), id: adModel.id)){
+                                AdCellView(model:adModel)
+                                    .padding(.bottom,16)
+                            }
+//                            print("c таким id инит AdView \(adModel.id)")
+                     
+                }
             }
         }.onAppear{
             presenter.interactor.fetchPostModels()
         }
+    }
     }
 }
 
