@@ -27,13 +27,14 @@ struct AdsView: View {
     @State private var isPresented: Bool = false
     var body: some View {
         
-        NavigationView{
+        NavigationStack{
         ScrollView(showsIndicators: false){
             LazyVGrid(columns: columns,spacing: 0){
                 
                 ForEach($presenter.adsModel,id: \.self ){ adModel in
                     
                             NavigationLink(destination: AdView(interactor: AdInteractor(dataAd: dataManager), id: adModel.id)){
+                                
                                 AdCellView(model:adModel)
                                     .padding(.bottom,16)
                             }
@@ -44,7 +45,7 @@ struct AdsView: View {
         }.onAppear{
             presenter.interactor.fetchPostModels()
         }
-    }
+        }
     }
 }
 

@@ -63,6 +63,7 @@ struct AdView: View {
             .padding(.leading, 16)
             .padding(.trailing, 15)
         }
+        .navigationBarHidden(true)
         .background(Color(PFAssets.background.color))
     }
 }
@@ -92,7 +93,7 @@ struct AdView_Previews: PreviewProvider {
         let adInteractor = AdInteractor(dataAd: dataManager)
         let adPresenter = AdPresenter(interactor: adInteractor)
         
-        return AdView(interactor: adInteractor, id:"")
+        return AdView(interactor: adInteractor, id:"2")
             .environmentObject(adPresenter)
     }
 }
