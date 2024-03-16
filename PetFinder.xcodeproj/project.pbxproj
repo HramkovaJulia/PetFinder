@@ -44,6 +44,8 @@
 		7D859E102B9F783900C7AF34 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D859E0F2B9F783900C7AF34 /* DataManager.swift */; };
 		7D859E2E2BA3A05F00C7AF34 /* AdsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D859E2D2BA3A05F00C7AF34 /* AdsInteractor.swift */; };
 		7D859E302BA3A06C00C7AF34 /* AdsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D859E2F2BA3A06C00C7AF34 /* AdsPresenter.swift */; };
+		7DF519DB2BA5C1B500F8916B /* StartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DF519DA2BA5C1B500F8916B /* StartView.swift */; };
+		7DF519DE2BA63BEE00F8916B /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DF519DD2BA63BEE00F8916B /* RegisterView.swift */; };
 		D8001C3C2B8C9B6A00EB3FDC /* SortTopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8001C3B2B8C9B6A00EB3FDC /* SortTopView.swift */; };
 		D8001C3E2B8C9B8100EB3FDC /* TypeSortButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8001C3D2B8C9B8100EB3FDC /* TypeSortButton.swift */; };
 		D8071A9B2B80A33700BAECFE /* FirstStepCreateAdView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8071A9A2B80A33700BAECFE /* FirstStepCreateAdView.swift */; };
@@ -142,6 +144,8 @@
 		7D859E0F2B9F783900C7AF34 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		7D859E2D2BA3A05F00C7AF34 /* AdsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdsInteractor.swift; sourceTree = "<group>"; };
 		7D859E2F2BA3A06C00C7AF34 /* AdsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdsPresenter.swift; sourceTree = "<group>"; };
+		7DF519DA2BA5C1B500F8916B /* StartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartView.swift; sourceTree = "<group>"; };
+		7DF519DD2BA63BEE00F8916B /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
 		BF7A263FFCB875A6E2D63AA6 /* Pods-PetFinder.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PetFinder.debug.xcconfig"; path = "Target Support Files/Pods-PetFinder/Pods-PetFinder.debug.xcconfig"; sourceTree = "<group>"; };
 		D8001C3B2B8C9B6A00EB3FDC /* SortTopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortTopView.swift; sourceTree = "<group>"; };
 		D8001C3D2B8C9B8100EB3FDC /* TypeSortButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeSortButton.swift; sourceTree = "<group>"; };
@@ -232,6 +236,8 @@
 		5801E20D2B7380DA00DF23FB /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				7DF519D92BA5C19900F8916B /* Start */,
+				7DF519DC2BA63BC800F8916B /* Register */,
 				D822CE6A2B7DF76C00C73C05 /* FiltersView */,
 				D898EFD12B780E1D00D10EA0 /* SortView */,
 				D84999902B81E532006A8070 /* AdView */,
@@ -430,6 +436,22 @@
 				D849999A2B82141C006A8070 /* MapInfoInfoAboutPetAdView.swift */,
 			);
 			path = "Pieces of View";
+			sourceTree = "<group>";
+		};
+		7DF519D92BA5C19900F8916B /* Start */ = {
+			isa = PBXGroup;
+			children = (
+				7DF519DA2BA5C1B500F8916B /* StartView.swift */,
+			);
+			path = Start;
+			sourceTree = "<group>";
+		};
+		7DF519DC2BA63BC800F8916B /* Register */ = {
+			isa = PBXGroup;
+			children = (
+				7DF519DD2BA63BEE00F8916B /* RegisterView.swift */,
+			);
+			path = Register;
 			sourceTree = "<group>";
 		};
 		D8071A9C2B80A77000BAECFE /* FirstStepCreateAdView */ = {
@@ -873,6 +895,7 @@
 				D84999992B820A46006A8070 /* AdditionalInfoAboutPetAdView.swift in Sources */,
 				D822CE752B7E00FC00C73C05 /* FiltersSectionAboutPet.swift in Sources */,
 				D822CE6C2B7DF78000C73C05 /* FiltersView.swift in Sources */,
+				7DF519DB2BA5C1B500F8916B /* StartView.swift in Sources */,
 				D822CE5F2B7CB0B500C73C05 /* ChangeCountryView.swift in Sources */,
 				D8001C3E2B8C9B8100EB3FDC /* TypeSortButton.swift in Sources */,
 				D822CE7B2B7E05DA00C73C05 /* CustomDropDownButtonView.swift in Sources */,
@@ -899,6 +922,7 @@
 				D8F6FE8C2B835CE60094304E /* TopViewSecondStepCreateAdView.swift in Sources */,
 				D898EFD32B780E2D00D10EA0 /* SortView.swift in Sources */,
 				D86EADB22AE3B59000FB19B6 /* LostPetCardModel.swift in Sources */,
+				7DF519DE2BA63BEE00F8916B /* RegisterView.swift in Sources */,
 				D8F6FE9B2B839C9D0094304E /* CustomDropDownTextFieldView.swift in Sources */,
 				D822CE622B7CBCC300C73C05 /* CountryManager.swift in Sources */,
 				58D4EBF62B72380200F79810 /* TextFieldExtension.swift in Sources */,
