@@ -190,6 +190,7 @@ struct RegisterView: View {
             
         }.padding(.horizontal,16)
             .background(Color(cgColor: PFAssets.background.color.cgColor))
+            .navigationBarHidden(true)
     }
 }
 

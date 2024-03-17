@@ -26,7 +26,7 @@ struct MainView: View {
                     Spacer()
                 }
             }
-        }
+        }.navigationBarHidden(true)
     }
 }
 

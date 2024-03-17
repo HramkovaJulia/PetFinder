@@ -36,9 +36,7 @@ struct AdsView: View {
                                 
                                 AdCellView(model:adModel)
                                     .padding(.bottom,16)
-                            }
-//                            print("c таким id инит AdView \(adModel.id)")
-                     
+                            }.foregroundColor(.black)
                 }
             }
         }.onAppear{
