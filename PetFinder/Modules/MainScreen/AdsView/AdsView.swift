@@ -10,9 +10,10 @@ import SwiftUI
 struct AdsView: View {
     @State var dataManager: DataManager
     @ObservedObject var presenter: AdsPresenter
+    
     let columns: [GridItem] = [
-        GridItem(.flexible(minimum: 0, maximum: .infinity)),
-        GridItem(.flexible(minimum: 0, maximum: .infinity))
+        GridItem(.flexible()),
+        GridItem(.flexible())
     ]
     
     init(dataManager: DataManager){
@@ -20,30 +21,30 @@ struct AdsView: View {
         let adsInteractor = AdsInteractor(dataAds: dataManager)
         let adsPresenter = AdsPresenter(interactor: adsInteractor)
         self.presenter = adsPresenter
-        
     }
     
-    @State private var isPresented: Bool = false
     var body: some View {
-        
-        NavigationStack{
-        ScrollView(showsIndicators: false){
+
             LazyVGrid(columns: columns,spacing: 0){
                 
                 ForEach($presenter.adsModel,id: \.self ){ adModel in
-                    
-                            NavigationLink(destination: AdView(interactor: AdInteractor(dataAd: dataManager), id: adModel.id)){
-                                
-                                AdCellView(model:adModel)
-                                    .padding(.bottom,16)
-                            }.foregroundColor(.black)
+                    NavigationStack{
+                        NavigationLink(destination: AdView(interactor: AdInteractor(dataAd: dataManager), id: adModel.id)){
+                            
+                            // цифра больше - ячейка меньше
+                            let width =  (UIScreen.main.bounds.width  / CGFloat(columns.count)) - 24
+                            let height =  width * 1.45
+                            
+                            AdCellView(model:adModel, width: width, height: height )
+                                .padding(.bottom,16)
+                        }.foregroundColor(.black)
+                    }
                 }
+            }.onAppear{
+                presenter.interactor.fetchPostModels()
             }
-        }.onAppear{
-            presenter.interactor.fetchPostModels()
         }
-        }
-    }
+    
 }
 
 struct AdsView_Previews: PreviewProvider {
