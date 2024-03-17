@@ -57,7 +57,7 @@ struct RegisterView: View {
                 HStack{
                     Text("parol")
                         .padding(.leading,24)
-                        
+                    
                     Spacer(minLength: 8)
                     Button(action: {
                         
@@ -126,7 +126,7 @@ struct RegisterView: View {
                     
                     Text("Apple ID")
                         .font(PFFontFamily.SFProText.medium.swiftUIFont(size: 16))
-                        
+                    
                     
                     Spacer()
                     
@@ -136,24 +136,6 @@ struct RegisterView: View {
                     .foregroundColor(.white)
                 
             }
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
             
             Spacer()
             
