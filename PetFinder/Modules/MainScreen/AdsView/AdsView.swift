@@ -6,14 +6,13 @@
 //
 
 import SwiftUI
-import WrappingHStack
 
 struct AdsView: View {
     @State var dataManager: DataManager
     @ObservedObject var presenter: AdsPresenter
     let columns: [GridItem] = [
-        GridItem(.flexible()),
-        GridItem(.flexible())
+        GridItem(.flexible(minimum: 0, maximum: .infinity)),
+        GridItem(.flexible(minimum: 0, maximum: .infinity))
     ]
     
     init(dataManager: DataManager){

@@ -8,6 +8,12 @@
 import SwiftUI
 
 struct RegisterView: View {
+    
+    @State var mail: String = ""
+    @State var password: String = ""
+    @State var hideImage: UIImage = PFAssets.hide.image
+    @State private var isSecure: Bool = true
+    
     @Environment(\.presentationMode) var presentationMode
     var body: some View {
         VStack{
@@ -36,13 +42,15 @@ struct RegisterView: View {
                 }.padding(.bottom,10)
                 
                 HStack {
-                    Text("ivanov@example. com")
+                    TextField("Веддите вашу почту", text: $mail)
                         .font(PFFontFamily.SFProText.light.swiftUIFont(size: 14))
-                        .foregroundColor(Color(uiColor: .lightGray))
+                        .keyboardType(.emailAddress)
+                        .disableAutocorrection(true)
                         .padding(.leading,24)
+                    
                     Spacer()
                 }.frame(height: 53)
-                    .foregroundColor(Color(uiColor: .lightGray))
+                
                     .background(.white)
                     .cornerRadius(100)
                     .padding(.bottom,18)
@@ -50,20 +58,32 @@ struct RegisterView: View {
                 HStack{
                     Text("Пароль")
                         .font(PFFontFamily.SFProText.medium.swiftUIFont(size: 16))
+                    
                         .padding(.leading,8)
                     Spacer()
                 }.padding(.bottom,10)
                 
                 HStack{
-                    Text("parol")
-                        .padding(.leading,24)
+                    Group {
+                        if isSecure {
+                            SecureField("Enter your password", text: $password)
+                        } else {
+                            TextField("Enter your password", text: $password)
+                        }
+                    }
+                    .textContentType(.password)
+                    .disableAutocorrection(true)
+                    .keyboardType(.asciiCapable)
+                    .font(PFFontFamily.SFProText.light.swiftUIFont(size: 14))
+                    .padding(.leading, 24)
                     
                     Spacer(minLength: 8)
                     Button(action: {
-                        
+                        hideImage = (hideImage == PFAssets.hide.image) ? PFAssets.show.image : PFAssets.hide.image
+                        isSecure.toggle()
                     }){
                         // картинки называются hide и show
-                        Image(uiImage: PFAssets.hide.image)
+                        Image(uiImage: hideImage)
                             .resizable()
                             .frame(width: 24,height: 22)
                     }.padding(.trailing,24)
@@ -134,7 +154,6 @@ struct RegisterView: View {
                     .background(Color.black)
                     .cornerRadius(100)
                     .foregroundColor(.white)
-                
             }
             
             Spacer()
