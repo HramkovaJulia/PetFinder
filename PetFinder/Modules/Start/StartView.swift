@@ -38,7 +38,7 @@ struct StartView: View {
                     HStack{
                         Spacer()
                         
-                        NavigationLink(destination: MainView()){
+                        NavigationLink(destination: MainTabView()){
                             Text("Пропустить")
                                 .font(PFFontFamily.SFProText.semibold.swiftUIFont(size: 18))
                                 .foregroundColor(PFAssets.ginger.swiftUIColor)

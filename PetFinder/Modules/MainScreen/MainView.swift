@@ -24,10 +24,6 @@ struct MainView: View {
                             .padding(.top, 24)
                             
                     }
-                    HStack{
-                        Spacer()
-                    }.frame(height: 50)
-                        .background(Color.blue)
                 }.navigationBarHidden(true)
             }
         }

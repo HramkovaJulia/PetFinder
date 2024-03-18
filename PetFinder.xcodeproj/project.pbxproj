@@ -44,6 +44,7 @@
 		7D859E102B9F783900C7AF34 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D859E0F2B9F783900C7AF34 /* DataManager.swift */; };
 		7D859E2E2BA3A05F00C7AF34 /* AdsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D859E2D2BA3A05F00C7AF34 /* AdsInteractor.swift */; };
 		7D859E302BA3A06C00C7AF34 /* AdsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D859E2F2BA3A06C00C7AF34 /* AdsPresenter.swift */; };
+		7D95DB882BA8F0DF00A11070 /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D95DB872BA8F0DF00A11070 /* MainTabView.swift */; };
 		7DF519DB2BA5C1B500F8916B /* StartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DF519DA2BA5C1B500F8916B /* StartView.swift */; };
 		7DF519DE2BA63BEE00F8916B /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DF519DD2BA63BEE00F8916B /* RegisterView.swift */; };
 		D8001C3C2B8C9B6A00EB3FDC /* SortTopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8001C3B2B8C9B6A00EB3FDC /* SortTopView.swift */; };
@@ -144,6 +145,7 @@
 		7D859E0F2B9F783900C7AF34 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		7D859E2D2BA3A05F00C7AF34 /* AdsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdsInteractor.swift; sourceTree = "<group>"; };
 		7D859E2F2BA3A06C00C7AF34 /* AdsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdsPresenter.swift; sourceTree = "<group>"; };
+		7D95DB872BA8F0DF00A11070 /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
 		7DF519DA2BA5C1B500F8916B /* StartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartView.swift; sourceTree = "<group>"; };
 		7DF519DD2BA63BEE00F8916B /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
 		BF7A263FFCB875A6E2D63AA6 /* Pods-PetFinder.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PetFinder.debug.xcconfig"; path = "Target Support Files/Pods-PetFinder/Pods-PetFinder.debug.xcconfig"; sourceTree = "<group>"; };
@@ -442,6 +444,7 @@
 			isa = PBXGroup;
 			children = (
 				7DF519DA2BA5C1B500F8916B /* StartView.swift */,
+				7D95DB872BA8F0DF00A11070 /* MainTabView.swift */,
 			);
 			path = Start;
 			sourceTree = "<group>";
@@ -915,6 +918,7 @@
 				5801E20C2B736AE600DF23FB /* ButtonTableViewCell.swift in Sources */,
 				7D53A6432B8BFAE100A7C74A /* PostModel.swift in Sources */,
 				587DA3552B73DB1F0001DE45 /* DoublePasswordTableViewCell.swift in Sources */,
+				7D95DB882BA8F0DF00A11070 /* MainTabView.swift in Sources */,
 				7D53A6452B90B6BE00A7C74A /* AdInteractor.swift in Sources */,
 				025CB2952B3837A200AEDAC0 /* AuthViewController.swift in Sources */,
 				D822CE782B7E040400C73C05 /* CustomTextFieldView.swift in Sources */,
