@@ -12,7 +12,7 @@ struct AdsView: View {
     @ObservedObject var presenter: AdsPresenter
     
     let columns: [GridItem] = [
-        GridItem(.flexible()),
+        GridItem(.flexible(),spacing: 16),
         GridItem(.flexible())
     ]
     
@@ -35,7 +35,8 @@ struct AdsView: View {
                             let width =  (UIScreen.main.bounds.width  / CGFloat(columns.count)) - 24
                             let height =  width * 1.45
                             
-                            AdCellView(model:adModel, width: width, height: height )
+                            AdCellView(model:adModel)
+                                .frame(width: width,height: height)
                                 .padding(.bottom,16)
                         }.foregroundColor(.black)
                     }
