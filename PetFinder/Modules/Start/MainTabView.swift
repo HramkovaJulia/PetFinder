@@ -9,26 +9,15 @@ import SwiftUI
 
 struct MainTabView: View {
     var body: some View {
-   
         CustomTabBarUIKit().navigationBarHidden(true).ignoresSafeArea(.all)
-    
-        
-        
     }
-    
     struct CustomTabBarUIKit: UIViewControllerRepresentable {
-        
         func makeUIViewController(context: Context) -> CustomTabBarControllerViewController {
             return CustomTabBarControllerViewController()
         }
-        
-        func updateUIViewController(_ uiViewController: CustomTabBarControllerViewController, context: Context) {
-            // Update the view controller if needed
-        }
+        func updateUIViewController(_ uiViewController: CustomTabBarControllerViewController, context: Context) {}
     }
-    
 }
-
 #Preview {
     MainTabView()
 }

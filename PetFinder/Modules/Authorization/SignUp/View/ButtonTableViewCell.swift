@@ -18,7 +18,7 @@ class ButtonTableViewCell: UITableViewCell {
         button.setTitle("Зарегистрироваться", for: .normal)
         button.backgroundColor = PFAssets.ginger.color
         button.tintColor = .white
-        button.addTarget(self, action: #selector(didTapSignin), for: .touchUpInside)
+        button.addTarget(ButtonTableViewCell.self, action: #selector(didTapSignin), for: .touchUpInside)
         return button
     }()
     
