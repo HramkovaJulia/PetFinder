@@ -37,6 +37,7 @@ public enum PFAssets {
   public static let red = ColorAsset(name: "Red")
   public static let white = ColorAsset(name: "White")
   public static let bell = ImageAsset(name: "Bell")
+  public static let clearPlus = ImageAsset(name: "ClearPlus")
   public static let heart = ImageAsset(name: "Heart")
   public static let adsStar = ImageAsset(name: "adsStar")
   public static let adsStarFull = ImageAsset(name: "adsStarFull")
@@ -48,7 +49,6 @@ public enum PFAssets {
   public static let bird = ImageAsset(name: "bird")
   public static let cancel = ImageAsset(name: "cancel")
   public static let cat = ImageAsset(name: "cat")
-  public static let clearPlus = ImageAsset(name: "clearPlus")
   public static let clipboard = ImageAsset(name: "clipboard")
   public static let closeButton = ImageAsset(name: "closeButton")
   public static let closedButton = ImageAsset(name: "closedButton")
@@ -97,6 +97,7 @@ public enum PFAssets {
   public static let womenSex = ImageAsset(name: "womenSex")
   public static let zoomMinus = ImageAsset(name: "zoomMinus")
   public static let zoomPlus = ImageAsset(name: "zoomPlus")
+  public static let plusAdd = ImageAsset(name: "plusAdd")
 }
 // swiftlint:enable identifier_name line_length nesting type_body_length type_name
 
