@@ -41,6 +41,7 @@
 		7D53A6432B8BFAE100A7C74A /* PostModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D53A6422B8BFAE100A7C74A /* PostModel.swift */; };
 		7D53A6452B90B6BE00A7C74A /* AdInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D53A6442B90B6BE00A7C74A /* AdInteractor.swift */; };
 		7D53A6492B90B99500A7C74A /* AdViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D53A6482B90B99400A7C74A /* AdViewPresenter.swift */; };
+		7D5C99BF2BB0214C00444953 /* KindOfAnimals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5C99BE2BB0214C00444953 /* KindOfAnimals.swift */; };
 		7D859E102B9F783900C7AF34 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D859E0F2B9F783900C7AF34 /* DataManager.swift */; };
 		7D859E2E2BA3A05F00C7AF34 /* AdsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D859E2D2BA3A05F00C7AF34 /* AdsInteractor.swift */; };
 		7D859E302BA3A06C00C7AF34 /* AdsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D859E2F2BA3A06C00C7AF34 /* AdsPresenter.swift */; };
@@ -142,6 +143,7 @@
 		7D53A6422B8BFAE100A7C74A /* PostModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostModel.swift; sourceTree = "<group>"; };
 		7D53A6442B90B6BE00A7C74A /* AdInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdInteractor.swift; sourceTree = "<group>"; };
 		7D53A6482B90B99400A7C74A /* AdViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdViewPresenter.swift; sourceTree = "<group>"; };
+		7D5C99BE2BB0214C00444953 /* KindOfAnimals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KindOfAnimals.swift; sourceTree = "<group>"; };
 		7D859E0F2B9F783900C7AF34 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		7D859E2D2BA3A05F00C7AF34 /* AdsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdsInteractor.swift; sourceTree = "<group>"; };
 		7D859E2F2BA3A06C00C7AF34 /* AdsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdsPresenter.swift; sourceTree = "<group>"; };
@@ -463,6 +465,7 @@
 				D898EFCB2B77B46300D10EA0 /* AnimalCollectionView */,
 				D898EFD42B7825A400D10EA0 /* SegmentSexView */,
 				D8071A9A2B80A33700BAECFE /* FirstStepCreateAdView.swift */,
+				7D5C99BE2BB0214C00444953 /* KindOfAnimals.swift */,
 				D8071A9D2B80A79300BAECFE /* SelectTypePetView.swift */,
 				D8071A9F2B80A97500BAECFE /* DescriptionsFirstStepCreateAdView.swift */,
 				D8071AA12B80AAC700BAECFE /* TopViewFirstStepCreateAdView.swift */,
@@ -882,6 +885,7 @@
 				D898EFDB2B78B84C00D10EA0 /* ProfileView.swift in Sources */,
 				D8F6FE8E2B835D650094304E /* PhotoScrollFirstStepCreateAdView.swift in Sources */,
 				D898EFAE2B6FFC1300D10EA0 /* SetupNewColorView.swift in Sources */,
+				7D5C99BF2BB0214C00444953 /* KindOfAnimals.swift in Sources */,
 				D898EFD62B7825B700D10EA0 /* SexSegmentView.swift in Sources */,
 				58E02B932B6FF4E700058D21 /* Fonts.generated.swift in Sources */,
 				5873E3D82ADEEA7B00F51501 /* FontExtansion.swift in Sources */,

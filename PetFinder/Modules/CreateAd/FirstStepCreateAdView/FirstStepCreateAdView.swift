@@ -9,7 +9,8 @@ import SwiftUI
 
 struct FirstStepCreateAdView: View {
     @Environment(\.dismiss) var dismiss
-    @State private var isPresented = false
+    @State private var selectedPet: KindOfAnimal = .none
+    
     var body: some View {
         ZStack {
             VStack {
@@ -19,35 +20,56 @@ struct FirstStepCreateAdView: View {
                     .padding(.top, 0)
                 ScrollView {
                     VStack {
-                        SelectTypePetView()
-                            .padding(.top, 24)
-                            .padding(.leading, 16)
-                        Divider()
-                            .background(Color(PFAssets.white.color))
+                        
+                        HStack{
+                            Text("Вид питомца").font(PFFontFamily.SFProText.medium.swiftUIFont(size: 20))
+                            Spacer()
+                        }
+                        .padding(.leading,16)
+                        .padding(.top,20)
+
+                        ChoiceFilterTypeAd()
+                            .padding(.top,16)
+                            .padding(.horizontal,16)
+                        
+                        HStack{Spacer()}.frame(height: 1.5)
+                            .background(PFAssets.white.swiftUIColor)
+                            .padding(.horizontal,16)
+                            .padding(.vertical,18)
+                        
+                        
+                        KindOFAnimals(selectedPet: $selectedPet)
+                            .padding(.horizontal, 16)
+                        HStack{Spacer()}.frame(height: 1.5)
+                            .background(PFAssets.white.swiftUIColor)
+                            .padding(.horizontal,16)
                             .padding(.top, 20)
-                            .padding(.leading, 16)
-                            .padding(.trailing, 15)
+                            
                         DescriptionsFirstStepCreateAdView()
                             .padding(.top, 20)
-                            .padding(.leading, 16)
-                            .padding(.trailing, 15)
+                            .padding(.horizontal, 16)
+                            
                         Spacer()
                     }
                     
                 }
-                CustomOrangeButton(action: {
-                    isPresented = true
-                }, text: "Продолжить")
-                    .background(.clear)
-                    .padding(.leading, 16)
-                    .padding(.trailing, 15)
-                    .padding(.bottom, 10)
-                    .fullScreenCover(isPresented: $isPresented) {
-                        SecondStepCreateAdView()
-                    }
+                
+                NavigationLink(destination: SecondStepCreateAdView()){
+                    HStack {
+                        Spacer()
+                        Text("Далее").font(PFFontFamily.SFProText.semibold.swiftUIFont(size: 18))
+                            .foregroundColor(.white)
+                        Spacer()
+                    }.frame( height: 62, alignment: .center)
+                        .background(PFAssets.ginger.swiftUIColor)
+                        .cornerRadius(100).padding(.horizontal,16)
+                }
+                
             }
             .background(Color(PFAssets.background.color))
-        }
+        }.navigationBarHidden(true)
+        
+        
         
         
     }
@@ -55,5 +77,6 @@ struct FirstStepCreateAdView: View {
 
 
 #Preview {
-    FirstStepCreateAdView()
+    FirstStepCreateAdView( )
 }
+

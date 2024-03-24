@@ -34,3 +34,7 @@ struct SortView: View {
         .background(Color(PFAssets.background.color))
     }
 }
+
+#Preview {
+    SortView()
+}

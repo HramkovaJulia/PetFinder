@@ -48,6 +48,7 @@ enum KindOfAnimal{
     case bird
     case rodent
     case other
+    case none
 }
 
 struct GlobalInfoAboutPet {

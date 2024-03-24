@@ -8,38 +8,41 @@ import SwiftUI
 import UIKit
 
 
-struct ChoiceTypeAd: View {
-    var dismissAction: () -> Void
-    @State private var isPresented = false
-    @State private var dataMassive = [["firstImage", "Пропал питомец"], ["secondImage", "Найден питомец"], ["thirdImage", "Пристроить питомца"], ["fourImage", "Завести питомца"]]
-
-    var body: some View {
-        VStack {
-            TopView(dismissAction: dismissAction)
-                .frame(maxWidth: .infinity)
-                .background(Color(UIColor(hex: 0xEFBFA5)))
-                .ignoresSafeArea()
-            VStack {
-                ForEach(dataMassive, id: \.self) { data in
-                    CellView(imageName: data[0], buttonLabel: data[1])
-                        .frame(maxWidth: UIScreen.main.bounds.width)
-                        .padding(.top, 16)
-                        .onTapGesture {
-                            print(data[0])
-                            isPresented = true
-                        }
-                }
-            }
-            .background(Color(UIColor(hex: 0xFCF4EF)))
-            .padding(.top, -24)
-            Spacer()
-        }
-        .background(Color(UIColor(hex: 0xFCF4EF)))
-        .fullScreenCover(isPresented: $isPresented) {
-            FirstStepCreateAdView()
-        }
-    }
-}
+//struct ChoiceTypeAd: View {
+//    var dismissAction: () -> Void
+//    @State private var dataMassive = [["firstImage", "Пропал питомец"], ["secondImage", "Найден питомец"], ["thirdImage", "Пристроить питомца"], ["fourImage", "Завести питомца"]]
+//    
+//    private var imageCells: [UIImage] = [
+//        PFAssets.firstImage.image,
+//        PFAssets.secondImage.image,
+//        PFAssets.thirdImage.image
+//    ]
+//    
+//    var body: some View {
+//        VStack {
+//            TopView(dismissAction: dismissAction)
+//                .frame(maxWidth: .infinity)
+//                .background(Color(UIColor(hex: 0xEFBFA5)))
+//                .ignoresSafeArea()
+//            VStack {
+//                
+//                ForEach(imageCells) { image in
+//                    
+//                    CellView(image: image)
+//                        .frame(maxWidth: UIScreen.main.bounds.width)
+//                        .padding(.top, 16)
+//                    
+//                    
+//                }
+//            }
+//            
+//            .background(Color(UIColor(hex: 0xFCF4EF)))
+//            .padding(.top, -24)
+//            Spacer()
+//        }
+//        .background(Color(UIColor(hex: 0xFCF4EF)))
+//    }
+//}
 
 
 
@@ -68,42 +71,75 @@ struct TopView: View {
     }
 }
 
-struct CellView: View {
-    @State var imageName: String
-    @State var buttonLabel: String
-    
-    var body: some View {
-        let isFourImage = imageName == "fourImage"
-        let backgroundColor = isFourImage ? Color(UIColor(hex: 0xF8E0CA)) : Color(UIColor(hex: 0xBCE3FF))
-        let buttonColor = isFourImage ? Color(UIColor(hex: 0xFF975F)) : Color(UIColor(hex: 0x6DC2FF))
-        
-        return HStack(spacing: 35) {
-            switch imageName {
-            case "firstImage":
-                Image(uiImage: PFAssets.firstImage.image)
-                    .padding(.leading, 15)
-            case "secondImage":
-                Image(uiImage: PFAssets.secondImage.image)
-                    .padding(.leading, 15)
-            case "thirdImage":
-                Image(uiImage: PFAssets.thirdImage.image)
-                    .padding(.leading, 15)
-            default :
-                Image(uiImage: PFAssets.fourImage.image)
-                    .padding(.leading, 15)
-            }
-            ButtonView(buttonLabel: buttonLabel)
-                .frame(width: 180, height: 70)
-                .background(buttonColor)
-                .cornerRadius(16)
-                .padding(.trailing, 16)
-            
-        }
-        .frame(width: UIScreen.main.bounds.width)
-        .padding(.vertical, -10)
-        .background(backgroundColor)
-    }
-}
+//struct CellView: View {
+//    
+//    @State var image: UIImage
+//    
+//    var body: some View {
+//        HStack {
+//            
+//            Image(uiImage: image)
+//                .padding(.leading,16)
+//            
+//            HStack{
+//                
+//                switch image {
+//                case PFAssets.firstImage.image: let text = "Пропал питомец"
+//                case PFAssets.secondImage.image: let text = "Найдет питомец"
+//                case PFAssets.thirdImage.image: let text = "Пристроить питомца"
+//                case PFAssets.fourImage.image: let text = "Создать шаблон"
+//                default: let  text = ""
+//                    
+//                    Text(text).font(PFFontFamily.SFProText.semibold.swiftUIFont(size: 16)).padding(.trailing,10)
+//                    
+//                }
+//                
+//                Image(uiImage: PFAssets.plusButton.image).frame(width:34 , height: 34)
+//            }.padding(.trailing,16)
+//                .frame(width: 189,height: 170)
+//            
+//        }.frame(height: 142)
+//    }
+//    
+//}
+
+//struct CellView: View {
+//    @State var imageName: String
+//    @State var buttonLabel: String
+//
+//    var body: some View {
+//        let isFourImage = imageName == "fourImage"
+//        let backgroundColor = isFourImage ? Color(UIColor(hex: 0xF8E0CA)) : Color(UIColor(hex: 0xBCE3FF))
+//        let buttonColor = isFourImage ? Color(UIColor(hex: 0xFF975F)) : Color(UIColor(hex: 0x6DC2FF))
+//
+//        return HStack(spacing: 35) {
+//            switch imageName {
+//            case "firstImage":
+//                Image(uiImage: PFAssets.firstImage.image)
+//                    .padding(.leading, 15)
+//            case "secondImage":
+//                Image(uiImage: PFAssets.secondImage.image)
+//                    .padding(.leading, 15)
+//            case "thirdImage":
+//                Image(uiImage: PFAssets.thirdImage.image)
+//                    .padding(.leading, 15)
+//            default :
+//                Image(uiImage: PFAssets.fourImage.image)
+//                    .padding(.leading, 15)
+//            }
+//            ButtonView(buttonLabel: buttonLabel)
+//                .frame(width: 180, height: 70)
+//                .background(buttonColor)
+//                .cornerRadius(16)
+//                .padding(.trailing, 16)
+//
+//        }
+//
+//        .frame(width: UIScreen.main.bounds.width)
+//        .padding(.vertical, -10)
+//        .background(backgroundColor)
+//    }
+//}
 
 
 struct ButtonView: View {
