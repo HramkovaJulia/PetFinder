@@ -10,9 +10,11 @@ import SwiftUI
 struct FirstStepCreateAdView: View {
     @Environment(\.dismiss) var dismiss
     @State private var selectedPet: KindOfAnimal = .none
+    @State private var statusOfPost: StatusOfPost = .zero
     
     var body: some View {
         ZStack {
+            NavigationStack{
             VStack {
                 TopViewFirstStepCreateAdView()
                     .background(Color(PFAssets.darkBeige.color))
@@ -20,7 +22,6 @@ struct FirstStepCreateAdView: View {
                     .padding(.top, 0)
                 ScrollView {
                     VStack {
-                        
                         HStack{
                             Text("Вид питомца").font(PFFontFamily.SFProText.medium.swiftUIFont(size: 20))
                             Spacer()
@@ -28,7 +29,7 @@ struct FirstStepCreateAdView: View {
                         .padding(.leading,16)
                         .padding(.top,20)
 
-                        ChoiceFilterTypeAd()
+                        ChoiceFilterTypeAd(currentStatus: $statusOfPost)
                             .padding(.top,16)
                             .padding(.horizontal,16)
                         
@@ -54,17 +55,17 @@ struct FirstStepCreateAdView: View {
                     
                 }
                 
-                NavigationLink(destination: SecondStepCreateAdView()){
-                    HStack {
-                        Spacer()
-                        Text("Далее").font(PFFontFamily.SFProText.semibold.swiftUIFont(size: 18))
-                            .foregroundColor(.white)
-                        Spacer()
-                    }.frame( height: 62, alignment: .center)
-                        .background(PFAssets.ginger.swiftUIColor)
-                        .cornerRadius(100).padding(.horizontal,16)
+                    NavigationLink(destination: SecondStepCreateAdView()){
+                        HStack {
+                            Spacer()
+                            Text("Далее").font(PFFontFamily.SFProText.semibold.swiftUIFont(size: 18))
+                                .foregroundColor(.white)
+                            Spacer()
+                        }.frame( height: 62, alignment: .center)
+                            .background(PFAssets.ginger.swiftUIColor)
+                            .cornerRadius(100).padding(.horizontal,16)
+                    }
                 }
-                
             }
             .background(Color(PFAssets.background.color))
         }.navigationBarHidden(true)

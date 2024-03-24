@@ -40,6 +40,7 @@ enum StatusOfPost{
     case found
     case lost
     case lookingForAHome
+    case zero
 }
 
 enum KindOfAnimal{

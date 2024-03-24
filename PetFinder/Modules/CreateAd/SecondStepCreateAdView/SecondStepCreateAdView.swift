@@ -65,6 +65,7 @@ struct SecondStepCreateAdView: View {
                 
             }
         }
+        .navigationBarHidden(true)
         .background(Color(PFAssets.background.color))
     }
 }
