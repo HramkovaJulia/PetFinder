@@ -12,6 +12,8 @@ import SwiftUI
 
 class CustomTabBarControllerViewController: UITabBarController {
     
+    @Binding var dataManager: DataManager
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupCustomTabBar()
@@ -19,9 +21,19 @@ class CustomTabBarControllerViewController: UITabBarController {
         configureTabBar()
         
     }
+    
+    init(dataManager: Binding<DataManager>) {
+            self._dataManager = dataManager
+            super.init(nibName: nil, bundle: nil)
+        }
+
+        // Обязательный инициализатор, который необходимо реализовать
+        required init?(coder aDecoder: NSCoder) {
+            fatalError("init(coder:) has not been implemented")
+        }
 
     func setupCustomTabBar() {
-        let customTabBar = STTabbar()
+        let customTabBar = STTabbar(dataManager: $dataManager)
         setValue(customTabBar, forKey: "tabBar")
         customTabBar.centerButtonColor = PFAssets.ginger.color
         customTabBar.buttonImage = PFAssets.plusAdd.image
@@ -36,7 +48,7 @@ class CustomTabBarControllerViewController: UITabBarController {
     func setupTabBar() {
         let profileView = ProfileView()
         let hostingController = UIHostingController(rootView: profileView)
-        let mainView = MainView()
+        let mainView = MainView(dataManager: $dataManager)
         let mainHostingController = UIHostingController(rootView: mainView)
         mainHostingController.view.backgroundColor = PFAssets.background.color
 

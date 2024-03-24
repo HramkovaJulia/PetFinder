@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct MainView: View {
-    
+    @Binding var dataManager: DataManager
     var body: some View {
         VStack {
             TopSectionMainView()
@@ -16,7 +16,7 @@ struct MainView: View {
             ScrollView(showsIndicators: false){
                 AnimalCollectinView(massiveCell: [["sortImage", "Сортировка"], ["dog","Собаки"], ["cat","Кошки"], ["bird","Птицы"], ["mouse","Грызуны"], ["others","Прочее"]])
                     .padding(.leading, 16)
-                let dataManager = DataManager()
+                
                 AdsView(dataManager: dataManager)
                     .foregroundColor(.black)
                     .padding(.horizontal,16)
@@ -27,6 +27,6 @@ struct MainView: View {
     }
 }
 
-#Preview {
-    MainView()
-}
+//#Preview {
+//    MainView()
+//}

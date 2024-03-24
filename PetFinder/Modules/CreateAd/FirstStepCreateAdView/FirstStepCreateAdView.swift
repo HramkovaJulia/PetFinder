@@ -11,6 +11,7 @@ struct FirstStepCreateAdView: View {
     @Environment(\.dismiss) var dismiss
     @State private var selectedPet: KindOfAnimal = .none
     @State private var statusOfPost: StatusOfPost = .zero
+    @Binding var dataManager: DataManager
     
     var body: some View {
         ZStack {
@@ -77,7 +78,7 @@ struct FirstStepCreateAdView: View {
 }
 
 
-#Preview {
-    FirstStepCreateAdView( )
-}
+//#Preview {
+//    FirstStepCreateAdView( )
+//}
 

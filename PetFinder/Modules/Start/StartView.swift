@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct StartView: View {
+    @State var dataManager = DataManager()
     var body: some View {
         NavigationStack{
             VStack{
@@ -31,7 +32,7 @@ struct StartView: View {
                 }){
                     HStack{
                         Spacer()
-                        NavigationLink(destination: MainTabView()){
+                        NavigationLink(destination: MainTabView(dataManager: $dataManager)){
                             Text("Пропустить")
                                 .font(PFFontFamily.SFProText.semibold.swiftUIFont(size: 18))
                                 .foregroundColor(PFAssets.ginger.swiftUIColor)

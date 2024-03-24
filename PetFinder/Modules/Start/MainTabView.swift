@@ -8,16 +8,23 @@
 import SwiftUI
 
 struct MainTabView: View {
+    @Binding var dataManager: DataManager
     var body: some View {
-        CustomTabBarUIKit().navigationBarHidden(true).ignoresSafeArea(.all)
+        CustomTabBarUIKit(dataManager: $dataManager).navigationBarHidden(true).ignoresSafeArea(.all)
     }
-    struct CustomTabBarUIKit: UIViewControllerRepresentable {
-        func makeUIViewController(context: Context) -> CustomTabBarControllerViewController {
-            return CustomTabBarControllerViewController()
-        }
-        func updateUIViewController(_ uiViewController: CustomTabBarControllerViewController, context: Context) {}
-    }
+   
 }
-#Preview {
-    MainTabView()
+
+struct CustomTabBarUIKit: UIViewControllerRepresentable {
+    @Binding var dataManager: DataManager
+    func makeUIViewController(context: Context) -> CustomTabBarControllerViewController {
+        return CustomTabBarControllerViewController(dataManager: $dataManager)
+    }
+    func updateUIViewController(_ uiViewController: CustomTabBarControllerViewController, context: Context) {}
+}
+
+struct MainTabView_Previews: PreviewProvider {
+    static var previews: some View {
+        MainTabView(dataManager: .constant(DataManager())) // Здесь можно передать любое значение DataManager
+    }
 }

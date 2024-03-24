@@ -8,6 +8,8 @@ public final class STTabbar: UITabBar {
     // MARK:- Variables -
     @objc public var centerButtonActionHandler: ()-> () = {}
     
+    @Binding var dataManager: DataManager
+    
     @IBInspectable public var centerButtonColor: UIColor?
     @IBInspectable public var centerButtonHeight: CGFloat = 50.0
     @IBInspectable public var padding: CGFloat = 5.0
@@ -18,6 +20,15 @@ public final class STTabbar: UITabBar {
     @IBInspectable public var unselectedItemColor: UIColor = UIColor.white
     
     private var shapeLayer: CALayer?
+    
+    init(dataManager: Binding<DataManager>) {
+           self._dataManager = dataManager
+           super.init(frame: .zero)
+       }
+       
+       required init?(coder: NSCoder) {
+           fatalError("init(coder:) has not been implemented")
+       }
     
     private func addShape() {
         let shapeLayer = CAShapeLayer()
@@ -100,7 +111,7 @@ public final class STTabbar: UITabBar {
     @objc func centerButtonAction(sender: UIButton) {
         self.centerButtonActionHandler()
         guard let viewController = UIApplication.shared.keyWindow?.rootViewController else { return }
-        let hostingVC = UIHostingController(rootView: FirstStepCreateAdView())
+        let hostingVC = UIHostingController(rootView: FirstStepCreateAdView(dataManager: $dataManager))
         hostingVC.view.backgroundColor = .clear
         hostingVC.modalPresentationStyle = .overFullScreen
         viewController.present(hostingVC, animated: true)
