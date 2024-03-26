@@ -42,6 +42,8 @@
 		7D53A6452B90B6BE00A7C74A /* AdInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D53A6442B90B6BE00A7C74A /* AdInteractor.swift */; };
 		7D53A6492B90B99500A7C74A /* AdViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D53A6482B90B99400A7C74A /* AdViewPresenter.swift */; };
 		7D5C99BF2BB0214C00444953 /* KindOfAnimals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5C99BE2BB0214C00444953 /* KindOfAnimals.swift */; };
+		7D5C99C22BB049B400444953 /* FirstStepCreateAdInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5C99C12BB049B400444953 /* FirstStepCreateAdInteractor.swift */; };
+		7D5C99C42BB049C300444953 /* FirstStepCreateAdPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5C99C32BB049C300444953 /* FirstStepCreateAdPresenter.swift */; };
 		7D859E102B9F783900C7AF34 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D859E0F2B9F783900C7AF34 /* DataManager.swift */; };
 		7D859E2E2BA3A05F00C7AF34 /* AdsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D859E2D2BA3A05F00C7AF34 /* AdsInteractor.swift */; };
 		7D859E302BA3A06C00C7AF34 /* AdsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D859E2F2BA3A06C00C7AF34 /* AdsPresenter.swift */; };
@@ -144,6 +146,8 @@
 		7D53A6442B90B6BE00A7C74A /* AdInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdInteractor.swift; sourceTree = "<group>"; };
 		7D53A6482B90B99400A7C74A /* AdViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdViewPresenter.swift; sourceTree = "<group>"; };
 		7D5C99BE2BB0214C00444953 /* KindOfAnimals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KindOfAnimals.swift; sourceTree = "<group>"; };
+		7D5C99C12BB049B400444953 /* FirstStepCreateAdInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstStepCreateAdInteractor.swift; sourceTree = "<group>"; };
+		7D5C99C32BB049C300444953 /* FirstStepCreateAdPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstStepCreateAdPresenter.swift; sourceTree = "<group>"; };
 		7D859E0F2B9F783900C7AF34 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		7D859E2D2BA3A05F00C7AF34 /* AdsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdsInteractor.swift; sourceTree = "<group>"; };
 		7D859E2F2BA3A06C00C7AF34 /* AdsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdsPresenter.swift; sourceTree = "<group>"; };
@@ -423,6 +427,15 @@
 			path = Core;
 			sourceTree = "<group>";
 		};
+		7D5C99C02BB0498A00444953 /* Architecture */ = {
+			isa = PBXGroup;
+			children = (
+				7D5C99C12BB049B400444953 /* FirstStepCreateAdInteractor.swift */,
+				7D5C99C32BB049C300444953 /* FirstStepCreateAdPresenter.swift */,
+			);
+			path = Architecture;
+			sourceTree = "<group>";
+		};
 		7D859E112BA106A700C7AF34 /* Architecture */ = {
 			isa = PBXGroup;
 			children = (
@@ -464,6 +477,7 @@
 			children = (
 				D898EFCB2B77B46300D10EA0 /* AnimalCollectionView */,
 				D898EFD42B7825A400D10EA0 /* SegmentSexView */,
+				7D5C99C02BB0498A00444953 /* Architecture */,
 				D8071A9A2B80A33700BAECFE /* FirstStepCreateAdView.swift */,
 				7D5C99BE2BB0214C00444953 /* KindOfAnimals.swift */,
 				D8071A9D2B80A79300BAECFE /* SelectTypePetView.swift */,
@@ -906,6 +920,7 @@
 				D822CE5F2B7CB0B500C73C05 /* ChangeCountryView.swift in Sources */,
 				D8001C3E2B8C9B8100EB3FDC /* TypeSortButton.swift in Sources */,
 				D822CE7B2B7E05DA00C73C05 /* CustomDropDownButtonView.swift in Sources */,
+				7D5C99C22BB049B400444953 /* FirstStepCreateAdInteractor.swift in Sources */,
 				D8F6FE972B83918A0094304E /* TopViewChoiceLocationView.swift in Sources */,
 				D8071A9E2B80A79300BAECFE /* SelectTypePetView.swift in Sources */,
 				D8071AA02B80A97500BAECFE /* DescriptionsFirstStepCreateAdView.swift in Sources */,
@@ -915,6 +930,7 @@
 				58D4EBFB2B72604500F79810 /* CountryTableViewCell.swift in Sources */,
 				D822CE7F2B7E0C8700C73C05 /* CustomOrangeButton.swift in Sources */,
 				7D859E102B9F783900C7AF34 /* DataManager.swift in Sources */,
+				7D5C99C42BB049C300444953 /* FirstStepCreateAdPresenter.swift in Sources */,
 				5873E3A02ADB190200F51501 /* AppDelegate.swift in Sources */,
 				D84999922B81E551006A8070 /* AdView.swift in Sources */,
 				D8F6FE872B83520C0094304E /* CustomTextEditor.swift in Sources */,

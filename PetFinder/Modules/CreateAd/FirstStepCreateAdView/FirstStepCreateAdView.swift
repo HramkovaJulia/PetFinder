@@ -9,9 +9,13 @@ import SwiftUI
 
 struct FirstStepCreateAdView: View {
     @Environment(\.dismiss) var dismiss
-    @State private var selectedPet: KindOfAnimal = .none
-    @State private var statusOfPost: StatusOfPost = .zero
-    @Binding var dataManager: DataManager
+  
+    @ObservedObject var presenter: FirstStepCreateAdPresenter
+    
+    init(interactor: FirstStepCreateAdInteractor) {
+        let adPresenter = FirstStepCreateAdPresenter(interactor: interactor)
+        self.presenter = adPresenter
+            }
     
     var body: some View {
         ZStack {
@@ -30,7 +34,7 @@ struct FirstStepCreateAdView: View {
                         .padding(.leading,16)
                         .padding(.top,20)
 
-                        ChoiceFilterTypeAd(currentStatus: $statusOfPost)
+                        ChoiceFilterTypeAd(currentStatus: $presenter.statusOfPost)
                             .padding(.top,16)
                             .padding(.horizontal,16)
                         
@@ -40,14 +44,14 @@ struct FirstStepCreateAdView: View {
                             .padding(.vertical,18)
                         
                         
-                        KindOFAnimals(selectedPet: $selectedPet)
+                        KindOFAnimals(selectedPet: $presenter.selectedPet)
                             .padding(.horizontal, 16)
                         HStack{Spacer()}.frame(height: 1.5)
                             .background(PFAssets.white.swiftUIColor)
                             .padding(.horizontal,16)
                             .padding(.top, 20)
                             
-                        DescriptionsFirstStepCreateAdView()
+                        DescriptionsFirstStepCreateAdView(descriptionsFirstStepCreateAdModel: $presenter.descriptionsFirstStepCreateAdModel)
                             .padding(.top, 20)
                             .padding(.horizontal, 16)
                             
@@ -65,6 +69,7 @@ struct FirstStepCreateAdView: View {
                         }.frame( height: 62, alignment: .center)
                             .background(PFAssets.ginger.swiftUIColor)
                             .cornerRadius(100).padding(.horizontal,16)
+                            
                     }
                 }
             }
@@ -77,6 +82,11 @@ struct FirstStepCreateAdView: View {
     }
 }
 
+struct DescriptionsFirstStepCreateAdModel {
+    var name: String
+    var age : String
+    var sex : Sex
+}
 
 //#Preview {
 //    FirstStepCreateAdView( )

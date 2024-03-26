@@ -53,9 +53,8 @@ struct AdView: View {
                     presenter.interactor.fetchPostModel(with: id)
                     print("с таким id иду в interactor \(id)")
                 }
+                
             }
-            
-            
             
             CustomOrangeButton(action: {
                 

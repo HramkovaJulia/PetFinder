@@ -44,7 +44,6 @@ class CustomTabBarControllerViewController: UITabBarController {
 //        customTabBar.centerButtonAction(sender: UIButton())
     }
 
-    
     func setupTabBar() {
         let profileView = ProfileView()
         let hostingController = UIHostingController(rootView: profileView)

@@ -111,7 +111,7 @@ public final class STTabbar: UITabBar {
     @objc func centerButtonAction(sender: UIButton) {
         self.centerButtonActionHandler()
         guard let viewController = UIApplication.shared.keyWindow?.rootViewController else { return }
-        let hostingVC = UIHostingController(rootView: FirstStepCreateAdView(dataManager: $dataManager))
+        let hostingVC = UIHostingController(rootView: FirstStepCreateAdView(interactor: FirstStepCreateAdInteractor(dataAd: dataManager)))
         hostingVC.view.backgroundColor = .clear
         hostingVC.modalPresentationStyle = .overFullScreen
         viewController.present(hostingVC, animated: true)

@@ -46,7 +46,7 @@ class AdInteractor: AdInteractorInput, ObservableObject {
     //    }
     
     // в этом интаракторе не нада, живет как пример
-    func adToData(with newAd: PostModel){
-        dataAd.addNewAd(with: newAd)
-    }
+//    func adToData(with newAd: PostModel){
+//        dataAd.addNewAd(with: newAd)
+//    }
 }

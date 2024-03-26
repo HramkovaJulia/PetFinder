@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct CustomTextFieldView: View {
-    @State var text: String = ""
+    @Binding var text: String 
     @State var placeholder: String
     @State var errorMessage: String
     @State var hasEnteredText: Bool = false
